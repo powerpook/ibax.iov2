@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 09:57:20
+ * @LastEditTime: 2021-09-07 14:56:41
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -16,7 +16,6 @@ const plugins = [
     }
   ]
 ];
-// console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV !== 'production') {
   pattern = true;
 } else {
