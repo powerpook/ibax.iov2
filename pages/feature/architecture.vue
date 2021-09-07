@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 11:23:22
+ * @LastEditTime: 2021-09-07 18:55:22
  * @Description: architecture
 -->
 <template>
@@ -12,7 +12,7 @@
         <div class="home-new">
           <h6 class="global-h6">{{ $t('high.technical') }}</h6>
           <el-row type="flex" justify="space-between">
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="12">
               <h2 class="bass-h2">{{ $t('high.chain') }}</h2>
               <p class="home-new-p">{{ $t('high.low') }}</p>
               <p class="home-new-bottom">
@@ -24,7 +24,7 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="6">
               <div class="home-new-img">
                 <img src="../../assets/image/diamond.svg" mode="powerful" />
               </div>
@@ -315,7 +315,7 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-056"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('feature.network') }}</h4>
+                <h4 class="high-bottom-h4">{{ $t('high.cross-chain') }}</h4>
                 <p class="high-bottom-h6">{{ $t('nav.decen') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"

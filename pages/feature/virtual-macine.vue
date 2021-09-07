@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 11:53:18
+ * @LastEditTime: 2021-09-07 18:56:39
  * @Description: 
 -->
 <template>
@@ -12,7 +12,7 @@
         <div class="home-new">
           <h6 class="global-h6">{{ $t('high.technical') }}</h6>
           <el-row type="flex" justify="space-between">
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="12">
               <h2 class="bass-h2">{{ $t('nav.virtual') }}</h2>
               <p class="home-new-p">
                 {{ $t('high.virtual') }}
@@ -26,7 +26,7 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="6">
               <div class="home-new-img">
                 <img src="../../assets/image/diamond.svg" mode="powerful" />
               </div>
@@ -115,9 +115,11 @@
               <el-col :xs="23" :lg="8">
                 <p class="home-new-title">
                   <i class="el-iconfont iconfont el-a-051"></i>
-                  <span class="home-new-title-text"> 导入外部合约 </span>
+                  <span class="home-new-title-text">
+                    {{ $t('high.import') }}
+                  </span>
                 </p>
-                <h2 class="bass-h2">一键导入其他区块链的智能合约</h2>
+                <h2 class="bass-h2">{{ $t('high.from') }}</h2>
                 <p>
                   Weaver支持ABI、Json等格式的智能合约文件，可以将智能合约以模块化的形式，快速导入到用户生态DAO中使用。
                 </p>
@@ -167,7 +169,7 @@
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
           <h3 class="global-h4">{{ $t('feature.about') }}</h3>
-          <el-row type="flex" justify="space-between" align="middle">
+          <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
                 <div class="high-bottom-img">
@@ -189,7 +191,7 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-001"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('feature.network') }}</h4>
+                <h4 class="high-bottom-h4">{{ $t('high.cross-chain') }}</h4>
                 <p class="high-bottom-h6">{{ $t('nav.decen') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"
@@ -205,7 +207,7 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-003"></i>
                 </div>
-                <h4 class="high-bottom-h4">隐私交易</h4>
+                <h4 class="high-bottom-h4">{{ $t('nav.private') }}</h4>
                 <p class="high-bottom-h6">{{ $t('nav.decen') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"

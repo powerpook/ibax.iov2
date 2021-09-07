@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 10:59:52
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 12:02:54
+ * @LastEditTime: 2021-09-07 19:19:34
  * @Description: nav
 -->
 <template>
@@ -23,7 +23,13 @@
       @select="handleSelect"
     >
       <template v-for="items in arrNav">
-        <el-submenu v-if="items.children" :key="items.key" :index="items.path">
+        <el-submenu
+          v-if="items.children"
+          :key="items.key"
+          :index="items.path"
+          popper-class="subMenu--horizontal"
+          :popper-append-to-body="boo"
+        >
           <template slot="title">{{ $t(items.title) }}</template>
           <div class="nav-child">
             <div
@@ -115,6 +121,7 @@ export default {
   props: {},
   data() {
     return {
+      boo: true,
       activeIndex: '1',
       strLang: 'English',
       arrLang: [
@@ -149,25 +156,18 @@ export default {
                   key: '1-1-1'
                 },
                 {
-                  title: 'nav.virtual',
-                  describe: 'nav.smart',
-                  icon: 'iconfont el-private',
-                  path: '/feature/virtual-macine',
-                  key: '1-1-2'
-                },
-                {
-                  title: 'nav.tran',
-                  describe: 'nav.improve',
-                  icon: 'iconfont el-elastic',
-                  path: '/feature/sharding',
-                  key: '1-1-3'
-                },
-                {
                   title: 'nav.security',
                   describe: 'nav.encryption',
                   icon: 'iconfont el-protection',
                   path: '/feature/security-privacy',
-                  key: '1-1-4'
+                  key: '1-1-2'
+                },
+                {
+                  title: 'nav.virtual',
+                  describe: 'nav.eth',
+                  icon: 'iconfont el-private',
+                  path: '/feature/virtual-macine',
+                  key: '1-1-3'
                 }
               ]
             },
@@ -177,31 +177,52 @@ export default {
               content: [
                 {
                   title: 'nav.chain',
-                  describe: 'nav.decen',
+                  describe: 'nav.cross-chain',
                   icon: 'iconfont el-cloud-computing',
                   path: '/feature/cross-chain',
                   key: '1-2-1'
                 },
                 {
-                  title: 'nav.multi',
-                  describe: 'nav.dec',
-                  icon: 'iconfont el-algorithm',
-                  path: '/feature/multisig',
+                  title: 'nav.tran',
+                  describe: 'nav.improve',
+                  icon: 'iconfont el-elastic',
+                  path: '/feature/sharding',
                   key: '1-2-2'
                 },
+
                 {
                   title: 'nav.cross',
                   describe: 'nav.basis',
                   icon: 'iconfont el-transfer',
                   path: '/feature/clb',
                   key: '1-2-3'
+                }
+              ]
+            },
+            {
+              title: 'nav.user',
+              key: '1-3',
+              content: [
+                {
+                  title: 'nav.multi',
+                  describe: 'nav.ledger',
+                  icon: 'iconfont el-algorithm',
+                  path: '/feature/multisig',
+                  key: '1-3-1'
                 },
                 {
                   title: 'nav.private',
                   describe: 'nav.fouds',
                   icon: 'iconfont el-private',
                   path: '/feature/privite-transaction',
-                  key: '1-2-4'
+                  key: '1-3-2'
+                },
+                {
+                  title: 'nav.self',
+                  describe: 'nav.cross-chain',
+                  icon: 'iconfont el-cloud-computing',
+                  path: '/feature/ecolib-governance',
+                  key: '1-3-3'
                 }
               ]
             }
@@ -218,7 +239,7 @@ export default {
           key: '3',
           children: [
             {
-              title: 'resource.project',
+              // title: 'resource.project',
               key: '3-1',
               content: [
                 {
@@ -236,7 +257,7 @@ export default {
                 },
                 {
                   title: 'resource.video',
-                  icon: 'iconfont el-a-Videoresource',
+                  icon: 'iconfont el-video',
                   path: '/resource/video-resources',
                   key: '3-1-3'
                 },
@@ -250,7 +271,7 @@ export default {
               ]
             },
             {
-              title: 'resource.external',
+              // title: 'resource.external',
               key: '3-2',
               content: [
                 {
@@ -282,7 +303,7 @@ export default {
               ]
             },
             {
-              title: 'resource.more',
+              //  title: 'resource.more',
               key: '3-3',
               content: [
                 {

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 11:22:14
+ * @LastEditTime: 2021-09-07 18:56:19
  * @Description: 
 -->
 <template>
@@ -10,9 +10,9 @@
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <h6 class="global-h6">隐私</h6>
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="12">
+              <h6 class="global-h6">隐私</h6>
               <h2 class="bass-h2">高于客戶隐私安全的追求</h2>
               <p class="home-new-p">
                 IBAX各个方面的关键组成是"深度防御"，保障客户安全和数据隐私是加密货币的基础。IBAX部署了多层安全矩阵，以确保客户资产安全免受网络攻击，内部攻击和人为错误的影响。
@@ -26,7 +26,7 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="6">
               <div class="home-new-img">
                 <img src="../../assets/image/diamond.svg" mode="powerful" />
               </div>
@@ -154,14 +154,14 @@
     <div class="media-a high-bottom">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
-          <h3 class="global-h4">$t('feature.about')</h3>
-          <el-row type="flex" justify="space-between" align="middle">
+          <h3 class="global-h4">{{ $t('feature.about') }}</h3>
+          <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-003"></i>
                 </div>
-                <h4 class="high-bottom-h4">隐私交易</h4>
+                <h4 class="high-bottom-h4">{{ $t('nav.private') }}</h4>
                 <p class="high-bottom-h6">资金安全，匿名交易</p>
                 <nuxt-link
                   class="high-bottom-more link"

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-06 19:02:41
+ * @LastEditTime: 2021-09-07 18:57:06
  * @Description: 
 -->
 <template>
@@ -10,9 +10,9 @@
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <h6 class="global-h6">专为跨链设计</h6>
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="12">
+              <h6 class="global-h6">专为跨链设计</h6>
               <h2 class="bass-h2">扩展更多链外连接</h2>
               <p class="home-new-p">
                 IBAX网络中的跨账本通信节点(CLB)专为跨链设计的，灵活地根据需求配置CLB性能和部署，无需重复劳动，轻松获取外部系统数据，创建连接，也可以自行对数据进行加工和格式转换。
@@ -26,7 +26,7 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="6">
               <div class="home-new-img">
                 <img src="../../assets/image/diamond.svg" mode="powerful" />
               </div>
@@ -154,8 +154,8 @@
     <div class="media-a high-bottom">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
-          <h3 class="global-h4">$t('feature.about')</h3>
-          <el-row type="flex" justify="space-between" align="middle">
+          <h3 class="global-h4">{{ $t('feature.about') }}</h3>
+          <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
                 <div class="high-bottom-img">
@@ -174,7 +174,7 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-003"></i>
                 </div>
-                <h4 class="high-bottom-h4">隐私交易</h4>
+                <h4 class="high-bottom-h4">{{ $t('nav.private') }}</h4>
                 <p class="high-bottom-h6">资金安全，匿名交易</p>
                 <p class="high-bottom-more link">
                   <span>{{ $t('bass.learn') }}</span>

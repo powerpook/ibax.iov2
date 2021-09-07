@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-06 18:32:48
+ * @LastEditTime: 2021-09-07 17:03:58
  * @Description: home
 -->
 <template>
@@ -574,9 +574,11 @@ export default {
       this.offsetHeight = this.domStory.offsetHeight;
       this.domEmpty.style.height = this.offsetHeight + 'px';
       this.numMain = this.domEmpty.getBoundingClientRect().bottom;
-      // console.log(this.numMain);
+      console.log(this.numMain);
       this.domGlobal = document.getElementById('global').firstChild;
-      this.domGlobal.addEventListener('scroll', this.handleScroll);
+      if (this.numMain) {
+        this.domGlobal.addEventListener('scroll', this.handleScroll);
+      }
     });
   },
   methods: {
@@ -584,7 +586,7 @@ export default {
       const scrollTop = this.domGlobal.scrollTop;
       if (scrollTop >= this.numMain) {
         this.domEmpty.style.position = 'fixed';
-        this.domEmpty.style.height = '0px';
+        this.domEmpty.style.height = this.offsetHeight + 'px';
         this.domStory.style.position = 'static';
       } else {
         this.domEmpty.style.position = 'static';

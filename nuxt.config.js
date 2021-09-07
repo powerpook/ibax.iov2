@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 14:56:41
+ * @LastEditTime: 2021-09-07 16:30:01
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -50,7 +50,7 @@ export default {
       {
         rel: 'stylesheet',
         type: 'text/css',
-        href: '//at.alicdn.com/t/font_2762091_xnh0yvngqf.css'
+        href: '//at.alicdn.com/t/font_2762091_s7n8z4drowq.css'
       }
     ],
     script: [{ src: '' }]

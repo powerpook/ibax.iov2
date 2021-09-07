@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 11:22:08
+ * @LastEditTime: 2021-09-07 18:58:03
  * @Description: 
 -->
 <template>
@@ -10,9 +10,9 @@
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <h6 class="global-h6">分散权限</h6>
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="12">
+              <h6 class="global-h6">分散权限</h6>
               <h2 class="bass-h2">使用多重签名分散账户权限</h2>
               <p class="home-new-p">
                 多重签名账户(N)转移资金时，需要得到(M)个多重签名账户的授权。M+N>51%才能完成转账。
@@ -26,7 +26,7 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="6">
               <div class="home-new-img">
                 <img src="../../assets/image/diamond.svg" mode="powerful" />
               </div>
@@ -152,14 +152,14 @@
     <div class="media-a high-bottom">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
-          <h3 class="global-h4">$t('feature.about')</h3>
-          <el-row type="flex" justify="space-between" align="middle">
+          <h3 class="global-h4">{{ $t('feature.about') }}</h3>
+          <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-001"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('feature.network') }}</h4>
+                <h4 class="high-bottom-h4">{{ $t('high.cross-chain') }}</h4>
                 <p class="high-bottom-h6">{{ $t('nav.decen') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"

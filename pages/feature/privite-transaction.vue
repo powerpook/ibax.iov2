@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-06 19:23:30
+ * @LastEditTime: 2021-09-07 18:58:20
  * @Description: 
 -->
 <template>
@@ -10,9 +10,9 @@
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <h6 class="global-h6">隐私交易</h6>
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="12">
+              <h6 class="global-h6">{{ $t('nav.private') }}</h6>
               <h2 class="bass-h2">匿名交易，保护隐私安全</h2>
               <p class="home-new-p">
                 在IBAX网络中，我们设计了交易零知识证明和智能合约零知识证明两种实现方式，在所有以智能合约为驱动的现代区块链网络中，只有智能合约的零知识证明，才能保证交易数据的安全性和隐私性。
@@ -26,7 +26,7 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="6">
               <div class="home-new-img">
                 <img src="../../assets/image/diamond.svg" mode="powerful" />
               </div>
@@ -152,14 +152,14 @@
     <div class="media-a high-bottom">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
-          <h3 class="global-h4">$t('feature.about')</h3>
+          <h3 class="global-h4">{{ $t('feature.about') }}</h3>
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-056"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('feature.network') }}</h4>
+                <h4 class="high-bottom-h4">{{ $t('high.cross-chain') }}</h4>
                 <p class="high-bottom-h6">{{ $t('nav.decen') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"

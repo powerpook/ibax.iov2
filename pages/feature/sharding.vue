@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 11:23:30
+ * @LastEditTime: 2021-09-07 18:57:27
  * @Description: sharding
 -->
 <template>
@@ -10,9 +10,9 @@
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <h6 class="global-h6">{{ $t('high.technical') }}</h6>
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="12">
+              <h6 class="global-h6">{{ $t('high.technical') }}</h6>
               <h2 class="bass-h2">通过交易分片提升事务效率</h2>
               <p class="home-new-p">
                 交易分片就像是同一个泳池的不同泳道一样，这是一种分隔业务提升效率的有效方法。理论上切片的越细，执行效率越高，但也要综合考虑大量跨片区业务出现时的情况，因此平衡才是最重要的。
@@ -26,7 +26,7 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="23" :lg="6">
               <div class="home-new-img">
                 <img src="../../assets/image/diamond.svg" mode="powerful" />
               </div>
@@ -152,8 +152,8 @@
     <div class="media-a high-bottom">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
-          <h3 class="global-h4">$t('feature.about')</h3>
-          <el-row type="flex" justify="space-between" align="middle">
+          <h3 class="global-h4">{{ $t('feature.about') }}</h3>
+          <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
                 <div class="high-bottom-img">
