@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 14:44:39
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 17:56:23
+ * @LastEditTime: 2021-09-08 10:48:24
  * @Description: 
 -->
 <template>
@@ -142,6 +142,10 @@ export default {
         {
           title: 'nav.private',
           key: '/feature/privite-transaction'
+        },
+        {
+          title: 'nav.self',
+          key: '/feature/ecolib-governance'
         }
       ],
       arrBass: [

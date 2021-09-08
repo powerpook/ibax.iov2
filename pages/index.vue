@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 17:03:58
+ * @LastEditTime: 2021-09-08 15:11:29
  * @Description: home
 -->
 <template>
@@ -210,7 +210,7 @@
                   target="_blank"
                   class="home-new-bottom link"
                 >
-                  <span>查看白皮书</span>
+                  <span>{{ $t('home.pub') }}</span>
                   <i class="el-icon-right"></i>
                 </a>
               </el-col>
@@ -573,9 +573,9 @@ export default {
       this.domStory = this.$refs.story;
       this.offsetHeight = this.domStory.offsetHeight;
       this.domEmpty.style.height = this.offsetHeight + 'px';
+      this.domGlobal = document.getElementById('global').firstChild;
       this.numMain = this.domEmpty.getBoundingClientRect().bottom;
       console.log(this.numMain);
-      this.domGlobal = document.getElementById('global').firstChild;
       if (this.numMain) {
         this.domGlobal.addEventListener('scroll', this.handleScroll);
       }
@@ -586,11 +586,9 @@ export default {
       const scrollTop = this.domGlobal.scrollTop;
       if (scrollTop >= this.numMain) {
         this.domEmpty.style.position = 'fixed';
-        this.domEmpty.style.height = this.offsetHeight + 'px';
         this.domStory.style.position = 'static';
       } else {
         this.domEmpty.style.position = 'static';
-        this.domEmpty.style.height = this.offsetHeight + 'px';
         this.domStory.style.position = 'fixed';
       }
     },

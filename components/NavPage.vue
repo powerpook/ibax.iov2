@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 10:59:52
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 19:19:34
+ * @LastEditTime: 2021-09-08 11:20:57
  * @Description: nav
 -->
 <template>
@@ -13,6 +13,7 @@
       </nuxt-link>
     </div>
     <el-menu
+      :collapse-transition="false"
       :default-active="$route.path"
       router
       background-color="#274235"
@@ -288,7 +289,7 @@ export default {
                 }, */
                 {
                   title: 'resource.community',
-                  icon: 'iconfont el-a-communityexchange',
+                  icon: 'iconfont el-communities',
                   // path: '/resource/community',
                   link: 'https://github.com/orgs/IBAX-io/people',
                   key: '3-2-2'

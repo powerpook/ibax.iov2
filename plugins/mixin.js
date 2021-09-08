@@ -3,7 +3,7 @@
  * @LastEditors: abc
  * @Description: Vu
  * @Date: 2019-04-12 14:08:12
- * @LastEditTime: 2021-08-30 18:04:12
+ * @LastEditTime: 2021-09-08 14:10:10
  */
 
 import Vue from 'vue';
@@ -13,6 +13,11 @@ import Vue from 'vue';
 //     return this.$seo(this.detail.title, this.detail.summary)
 // }
 Vue.mixin({
+  data() {
+    return {
+      domGlobal: ''
+    };
+  },
   methods: {
     $analysis(str, dataArr) {
       const arr = str.match(/\[(.*?)\]/g);

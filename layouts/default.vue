@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 15:01:26
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 16:53:07
+ * @LastEditTime: 2021-09-08 14:08:26
  * @Description:
 -->
 <template>
@@ -49,13 +49,11 @@
   </div>
 </template>
 <script>
-import PageFooter from '~/components/PageFooter.vue';
 if (process.client) {
   // eslint-disable-next-line no-var
   var { WOW } = require('wowjs');
 }
 export default {
-  components: { PageFooter },
   props: {},
   data() {
     return {
@@ -104,11 +102,9 @@ export default {
     });
   },
   methods: {
-    //
     handleBackTop() {
       return this.domGlobal;
     },
-    //
     handleScroll() {
       const scrollTop = this.domGlobal.scrollTop;
       // console.log(this.domGlobal);

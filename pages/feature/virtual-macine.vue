@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 18:56:39
+ * @LastEditTime: 2021-09-08 17:36:31
  * @Description: 
 -->
 <template>
@@ -92,7 +92,7 @@
           </div>
           <div class="global-h6">
             <span class="other-center-strong">{{ $t('high.basic') }}</span>
-            <span>{{ $t('high.never') }}</span>
+            <!--  <span>{{ $t('high.never') }}</span> -->
           </div>
           <div class="global-h6">Simon Hemmrich</div>
           <div class="global-h6">Senior Consultant</div>
@@ -121,7 +121,7 @@
                 </p>
                 <h2 class="bass-h2">{{ $t('high.from') }}</h2>
                 <p>
-                  Weaver支持ABI、Json等格式的智能合约文件，可以将智能合约以模块化的形式，快速导入到用户生态DAO中使用。
+                  {{ $t('bass.weaver') }}
                 </p>
               </el-col>
             </el-row>
@@ -137,11 +137,13 @@
               <el-col :xs="23" :lg="8">
                 <p class="home-new-title">
                   <i class="el-iconfont iconfont el-a-043"></i>
-                  <span class="home-new-title-text"> 智能合约管理器 </span>
+                  <span class="home-new-title-text">
+                    {{ $t('bass.manager') }}
+                  </span>
                 </p>
-                <h2 class="bass-h2">智能合约面板预览及管理</h2>
+                <h2 class="bass-h2">{{ $t('bass.panel') }}</h2>
                 <p>
-                  Weaver提供了合约管理功能，在进入您的生态管理界面后，可以清晰的查看生态内的所有智能合约、数据表、字段，让你更轻松的维护和扩展生态内容。
+                  {{ $t('bass.provides') }}
                 </p>
               </el-col>
               <el-col :xs="23" :lg="14">
@@ -237,12 +239,12 @@ export default {
       activeName: 'first',
       arrTags: [
         {
-          label: '本地存储',
+          label: 'bass.local',
           name: 'first',
           img: img1
         },
         {
-          label: '安全数据',
+          label: 'bass.security',
           name: 'second',
           img: img2
         }

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 18:58:03
+ * @LastEditTime: 2021-09-08 18:07:04
  * @Description: 
 -->
 <template>
@@ -12,10 +12,10 @@
         <div class="home-new">
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="12">
-              <h6 class="global-h6">分散权限</h6>
-              <h2 class="bass-h2">使用多重签名分散账户权限</h2>
+              <h6 class="global-h6">{{ $t('bass.authority') }}</h6>
+              <h2 class="bass-h2">{{ $t('bass.permissions') }}</h2>
               <p class="home-new-p">
-                多重签名账户(N)转移资金时，需要得到(M)个多重签名账户的授权。M+N>51%才能完成转账。
+                {{ $t('bass.transferring') }}
               </p>
               <p class="home-new-bottom">
                 <a
@@ -36,26 +36,26 @@
         <div class="other">
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">账户权限分散等同私钥分散</div>
+              <div class="other-ease">{{ $t('bass.account') }}</div>
             </el-col>
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">多方协同时，规避权限集中</div>
+              <div class="other-ease">{{ $t('bass.centralized') }}</div>
             </el-col>
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">一致性，每个账户权限相同</div>
+              <div class="other-ease">{{ $t('bass.each') }}</div>
             </el-col>
           </el-row>
         </div>
         <div class="home-new">
           <p class="home-new-title">
             <i class="el-iconfont iconfont el-a-059"></i>
-            <span class="home-new-title-text"> 钱包安全 </span>
+            <span class="home-new-title-text"> {{ $t('bass.secur') }} </span>
           </p>
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="8">
-              <h2 class="bass-h2">多重签名钱包防止私钥泄露</h2>
+              <h2 class="bass-h2">{{ $t('bass.wallet') }}</h2>
               <p>
-                在不安全的环境下使用私钥可能发生私钥泄露的情况，通过多重签名的钱包将有效的防止黑客入侵而造成的私钥泄露。
+                {{ $t('bass.insecure') }}
               </p>
             </el-col>
             <el-col :xs="23" :lg="14">
@@ -73,12 +73,10 @@
     <div class="other other-center">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="12">
-          <div class="global-h6">执行效率</div>
+          <div class="global-h6">{{ $t('bass.effectiveness') }}</div>
           <div class="global-h6">
-            <span class="other-center-strong"
-              >"去中心化理念是区块链的根本，多重签名技术很好的维护及应用了这个理念。这项技术还能很好的避免了中心化权限的问题，应用的范围包括：Defi、交易所等业务场景。"</span
-            >
-            <span>{{ $t('high.never') }}</span>
+            <span class="other-center-strong">{{ $t('bass.concept') }}</span>
+            <!--  <span>{{ $t('high.never') }}</span> -->
           </div>
           <div class="global-h6">Simon Hemmrich</div>
           <div class="global-h6">Senior Consultant</div>
@@ -101,11 +99,13 @@
               <el-col :xs="23" :lg="8">
                 <p class="home-new-title">
                   <i class="el-iconfont iconfont el-a-001"></i>
-                  <span class="home-new-title-text"> 链上通知 </span>
+                  <span class="home-new-title-text">
+                    {{ $t('bass.notifce') }}
+                  </span>
                 </p>
-                <h2 class="bass-h2">签名转账会在链上通知关联账户</h2>
+                <h2 class="bass-h2">{{ $t('bass.signed') }}</h2>
                 <p>
-                  发起签名转账时IBAX链会同步通知到关联账户，无需你再通过其他方式告知关联账户。
+                  {{ $t('bass.signature') }}
                 </p>
               </el-col>
             </el-row>
@@ -121,11 +121,13 @@
               <el-col :xs="23" :lg="8">
                 <p class="home-new-title">
                   <i class="el-iconfont iconfont el-a-034"></i>
-                  <span class="home-new-title-text"> 相比冷钱包 </span>
+                  <span class="home-new-title-text">
+                    {{ $t('bass.to') }}
+                  </span>
                 </p>
-                <h2 class="bass-h2">比冷钱包更安全可靠</h2>
+                <h2 class="bass-h2">{{ $t('bass.safer') }}</h2>
                 <p>
-                  多重签名账户与冷钱包相比更安全可靠，多重私钥具有灵活的存储方式，分散的权限远比集中的管理要安全的多。
+                  {{ $t('bass.compared') }}
                 </p>
               </el-col>
               <el-col :xs="23" :lg="14">
@@ -218,12 +220,12 @@ export default {
       activeName: 'first',
       arrTags: [
         {
-          label: '跨链交互',
+          label: 'bass.cold',
           name: 'first',
           img: img1
         },
         {
-          label: '资产安全',
+          label: 'bass.mul',
           name: 'second',
           img: img2
         }
