@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 14:44:39
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 10:48:24
+ * @LastEditTime: 2021-09-10 10:11:36
  * @Description: 
 -->
 <template>
@@ -115,29 +115,28 @@ export default {
           key: '/feature/architecture'
         },
         {
+          title: 'nav.security',
+          key: '/feature/security-privacy'
+        },
+        {
           title: 'nav.virtual',
           key: '/feature/virtual-macine'
+        },
+        {
+          title: 'nav.chain',
+          key: '/feature/cross-chain'
         },
         {
           title: 'nav.tran',
           key: '/feature/sharding'
         },
         {
-          title: 'nav.security',
-          key: '/feature/security-privacy'
-        },
-
-        {
-          title: 'nav.chain',
-          key: '/feature/cross-chain'
+          title: 'nav.clb',
+          key: '/feature/clb'
         },
         {
           title: 'nav.multi',
           key: '/feature/multisig'
-        },
-        {
-          title: 'nav.cross',
-          key: '/feature/clb'
         },
         {
           title: 'nav.private',
@@ -212,8 +211,19 @@ export default {
       ],
       arrSolution: [
         {
-          title: 'nav.solution',
-          path: '/solutions'
+          title: 'nav.supply',
+          path: '/solutions/supply-chain',
+          key: '1'
+        },
+        {
+          title: 'nav.copyright',
+          path: '/solutions/copyright',
+          key: '2'
+        },
+        {
+          title: 'nav.assets',
+          path: '/solutions/assets',
+          key: '3'
         }
       ],
       arrDevelop: [

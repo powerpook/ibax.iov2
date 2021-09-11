@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 15:11:29
+ * @LastEditTime: 2021-09-09 19:00:07
  * @Description: home
 -->
 <template>
@@ -20,10 +20,11 @@
                 class="btn btn-primary"
                 >{{ $t('home.using') }}</a
               >
-              <nuxt-link
-                to="/resource/video-resources"
-                class="btn btn-default"
-                >{{ $t('home.watch') }}</nuxt-link
+              <a
+                href="https://github.com/orgs/IBAX-io/people"
+                target="_blank"
+                class="btn btn-primary"
+                >{{ $t('home.join') }}</a
               >
             </div>
           </div>
@@ -210,7 +211,7 @@
                   target="_blank"
                   class="home-new-bottom link"
                 >
-                  <span>{{ $t('home.pub') }}</span>
+                  <span>{{ $t('home.view') }}</span>
                   <i class="el-icon-right"></i>
                 </a>
               </el-col>
@@ -317,12 +318,9 @@
           </ul>
         </div>
         <div class="home-top-btn">
-          <a
-            href="https://weaver.ibax.io/"
-            target="_blank"
-            class="btn btn-primary"
-            >{{ $t('home.using') }}</a
-          >
+          <nuxt-link to="/about" class="btn btn-primary">{{
+            $t('nav.about')
+          }}</nuxt-link>
         </div>
       </div>
     </div>
@@ -552,6 +550,14 @@ export default {
         },
         {
           icon: 'iconfont el-postgreSQL_logo',
+          img: postgreLogo
+        },
+        {
+          icon: 'iconfont el-pusher',
+          img: protocolLogo
+        },
+        {
+          icon: 'iconfont el-TITBIT_logo',
           img: postgreLogo
         }
       ],

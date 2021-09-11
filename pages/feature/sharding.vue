@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 17:37:25
+ * @LastEditTime: 2021-09-10 11:34:08
  * @Description: sharding
 -->
 <template>
@@ -174,7 +174,7 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-038"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('nav.virtual') }}</h4>
+                <h4 class="high-bottom-h4">{{ $t('nav.with') }}</h4>
                 <p class="high-bottom-h6">{{ $t('nav.smart') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"

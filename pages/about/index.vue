@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 17:50:10
  * @LastEditors: abc
- * @LastEditTime: 2021-08-30 10:30:53
+ * @LastEditTime: 2021-09-10 18:24:09
  * @Description: conact us
 -->
 <template>
@@ -20,20 +20,20 @@
           />
           <span>CONTACT US</span>
         </div>
-        <h1 class="bass-h1">你可以通过以下方式跟我们交谈</h1>
-        <p>我们在各媒体平台都有社交账号，你可以关注我们，跟我们留言互动</p>
+        <h1 class="bass-h1">{{ $t('about.can') }}</h1>
+        <p>{{ $t('about.have') }}</p>
         <ul class="award-list">
           <a href="https://www.facebook.com/ibaxproject" target="_blank">
             <div class="logo-hold">
               <img src="@/assets/logo/facebook.svg" width="30" alt="facebook" />
             </div>
-            <span class="caption">我们对项目进度的公布和区块链见</span>
+            <span class="caption">{{ $t('about.our') }}</span>
           </a>
           <a href="https://twitter.com/IbaxNetwork" target="_blank">
             <div class="logo-hold">
               <img src="@/assets/logo/twitter.svg" width="30" alt="twitter" />
             </div>
-            <span class="caption">发布活动和区块链新闻相关的内容</span>
+            <span class="caption">{{ $t('about.events') }}</span>
           </a>
           <a
             href="https://www.youtube.com/channel/UC-oneUwzz01xaCkFTTyR0QQ/featured"
@@ -42,11 +42,11 @@
             <div class="logo-hold">
               <img src="@/assets/logo/youtube.svg" width="30" alt="youtube" />
             </div>
-            <span class="caption">视频资源的重要发布渠道</span>
+            <span class="caption">{{ $t('about.an') }}</span>
           </a>
         </ul>
         <div class="logo-row">
-          <span class="title">还可以通过以下方式加入：</span>
+          <span class="title">{{ $t('about.you') }}</span>
           <ul class="logo-list">
             <a href="https://t.me/IBAXNetwork" target="_blank">
               <img src="@/assets/logo/telegram.svg" width="40" alt="telegram" />
@@ -76,7 +76,7 @@
           href="https://github.com/orgs/IBAX-io/people"
           target="_blank"
           class="link"
-          >想要获得技术问题解答？前往技术论坛 -></a
+          >{{ $t('about.want') }} -></a
         >
       </div>
     </div>

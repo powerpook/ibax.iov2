@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 18:07:04
+ * @LastEditTime: 2021-09-10 11:45:34
  * @Description: 
 -->
 <template>
@@ -159,13 +159,29 @@
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
                 <div class="high-bottom-img">
-                  <i class="el-iconfont iconfont el-a-001"></i>
+                  <i class="el-iconfont iconfont el-a-003"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('high.cross-chain') }}</h4>
-                <p class="high-bottom-h6">{{ $t('nav.decen') }}</p>
+                <h4 class="high-bottom-h4">{{ $t('nav.private') }}</h4>
+                <p class="high-bottom-h6">{{ $t('nav.fouds') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"
-                  to="/feature/cross-chain"
+                  to="/feature/privite-transaction"
+                >
+                  <span>{{ $t('bass.learn') }}</span>
+                  <i class="el-icon-right"></i>
+                </nuxt-link>
+              </div>
+            </el-col>
+            <el-col :xs="23" :lg="7">
+              <div class="high-bottom-box">
+                <div class="high-bottom-img">
+                  <i class="el-iconfont iconfont el-a-038"></i>
+                </div>
+                <h4 class="high-bottom-h4">{{ $t('nav.with') }}</h4>
+                <p class="high-bottom-h6">{{ $t('nav.smart') }}</p>
+                <nuxt-link
+                  class="high-bottom-more link"
+                  to="/feature/virtual-macine"
                 >
                   <span>{{ $t('bass.learn') }}</span>
                   <i class="el-icon-right"></i>
@@ -178,24 +194,8 @@
                   <i class="el-iconfont iconfont el-a-007"></i>
                 </div>
                 <h4 class="high-bottom-h4">{{ $t('nav.tran') }}</h4>
-                <p class="high-bottom-h6">{{ $t('nav.improve') }}</p>
+                <p class="high-bottom-h6">{{ $t('high.divides') }}</p>
                 <nuxt-link class="high-bottom-more link" to="/feature/sharding">
-                  <span>{{ $t('bass.learn') }}</span>
-                  <i class="el-icon-right"></i>
-                </nuxt-link>
-              </div>
-            </el-col>
-            <el-col :xs="23" :lg="7">
-              <div class="high-bottom-box">
-                <div class="high-bottom-img">
-                  <i class="el-iconfont iconfont el-a-031"></i>
-                </div>
-                <h4 class="high-bottom-h4">{{ $t('nav.high') }}</h4>
-                <p class="high-bottom-h6">{{ $t('feature.efficiency') }}</p>
-                <nuxt-link
-                  class="high-bottom-more link"
-                  to="/feature/architecture"
-                >
                   <span>{{ $t('bass.learn') }}</span>
                   <i class="el-icon-right"></i>
                 </nuxt-link>

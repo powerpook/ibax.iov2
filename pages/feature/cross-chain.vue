@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 17:37:00
+ * @LastEditTime: 2021-09-10 11:21:19
  * @Description: 
 -->
 <template>
@@ -12,7 +12,7 @@
         <div class="home-new">
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="12">
-              <h6 class="global-h6">{{ $t('bass.design') }}</h6>
+              <h6 class="global-h6">{{ $t('high.cross') }}</h6>
               <h2 class="bass-h2">{{ $t('bass.expand') }}</h2>
               <p class="home-new-p">
                 {{ $t('bass.cross') }}
@@ -163,7 +163,7 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-056"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('nav.cross') }}</h4>
+                <h4 class="high-bottom-h4">{{ $t('nav.clb') }}</h4>
                 <p class="high-bottom-h6">{{ $t('nav.basis') }}</p>
                 <p class="high-bottom-more link">
                   <span>{{ $t('bass.learn') }}</span>
@@ -189,8 +189,8 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-052"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('nav.high') }}</h4>
-                <p class="high-bottom-h6">{{ $t('feature.efficiency') }}</p>
+                <h4 class="high-bottom-h4">{{ $t('high.lead') }}</h4>
+                <p class="high-bottom-h6">{{ $t('nav.each') }}</p>
                 <p class="high-bottom-more link">
                   <span>{{ $t('bass.learn') }}</span>
                   <i class="el-icon-right"></i>

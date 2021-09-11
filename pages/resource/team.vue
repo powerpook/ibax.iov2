@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-09-01 14:12:57
+ * @LastEditTime: 2021-09-09 16:23:42
  * @Description: team
 -->
 <template>
@@ -15,75 +15,14 @@
       >
         <el-row type="flex" justify="center">
           <el-col :xs="23" :sm="22" :md="20" :lg="18">
-            <strong class="block-title lg">Our mission</strong>
+            <!-- <strong class="block-title lg">Our mission</strong> -->
             <h1>
-              我们致力于技术研究<br />
-              <strong>运用区块链技术改变社会现状</strong>
+              {{ $t('resource.technical') }}<br />
+              <strong> {{ $t('resource.committed') }}</strong>
             </h1>
             <ul class="customers-list">
-              <li>
-                <img
-                  src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/11/logo-docusign-1.svg"
-                  class="attachment-medium"
-                  alt="logo-docusign-1"
-                  width="134"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/logo-uber.svg"
-                  class="attachment-medium"
-                  alt="logo-uber"
-                  width="80"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/logo-rakuten-viber-white.svg"
-                  class="attachment-medium"
-                  alt="logo-rakuten-viber-white"
-                  width="171"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/logo-twitter.svg"
-                  class="attachment-medium"
-                  alt="logo-twitter"
-                  width="46"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/07/sweetgreen-2.svg"
-                  class="attachment-medium"
-                  alt="sweetgreen"
-                  width="160"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/logo-lemonade.svg"
-                  class="attachment-medium"
-                  alt="logo-lemonade"
-                  width="142"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/expedia.svg"
-                  class="attachment-medium"
-                  alt="expedia"
-                  width="124"
-                />
-              </li>
-              <li>
-                <img
-                  src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/ziprecruiter-logo-small.svg"
-                  class="attachment-medium"
-                  alt="ziprecruiter-logo-small"
-                  width="151"
-                />
+              <li v-for="(item, index) in arrPatter" :key="index">
+                <img :src="item.img" class="attachment-medium" />
               </li>
             </ul>
             <a
@@ -91,7 +30,7 @@
               target="_blank"
               class="home-new-bottom link"
             >
-              <span>了解我们的合作伙伴</span>
+              <span>{{ $t('resource.know') }}</span>
               <i class="el-icon-right"></i>
             </a>
           </el-col>
@@ -107,25 +46,24 @@
           </div>
           <div class="team-fixed-content">
             <p>
-              IBAX
-              是由一群来自全球各地热爱区块链技术的人组成，我们追求区块链技术的研究到实际的应用，不断探索区块链前沿知识。为所有认可加入我们的团队提供一个成熟稳定的区块链平台。
+              {{ $t('resource.composed') }}
             </p>
             <p>
-              技术需要为人类解决实际问题，我们希望通过区块链去中心化的理念打造一个去中心化自治的平台，你可以在这里购物、消费、出行等，做你想做的任何事情，无需担心数据泄露、资产安全、隐私问题，因为这些数据都将由你自己保管，自行授权。
+              {{ $t('resource.needs') }}
             </p>
           </div>
           <div class="team-fixed-box">
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="7">
                 <div class="inner">
-                  <strong>上百人的</strong>
-                  <div>研发团队</div>
+                  <strong>{{ $t('resourse.hundreds') }}</strong>
+                  <div>{{ $t('resourse.r') }}</div>
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
                 <div class="inner">
-                  <strong>链</strong>
-                  <div>区块链底层架构</div>
+                  <strong>{{ $t('resourse.chain') }}</strong>
+                  <div>{{ $t('resourse.underlying') }}</div>
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
@@ -140,20 +78,20 @@
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="7">
                 <div class="inner">
-                  <strong>5项</strong>
-                  <div>区块链领先技术</div>
+                  <strong>{{ $t('resourse.items') }}</strong>
+                  <div>{{ $t('resourse.leading') }}</div>
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
                 <div class="inner">
-                  <strong>应用</strong>
-                  <div>区块链BaaS系统</div>
+                  <strong>{{ $t('resourse.application') }}</strong>
+                  <div>{{ $t('resourse.system') }}</div>
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
                 <div class="inner">
-                  <strong>合约虚拟机</strong>
-                  <div>兼容多种合约语言</div>
+                  <strong>{{ $t('resourse.machine') }}</strong>
+                  <div>{{ $t('resourse.languages') }}</div>
                 </div>
               </el-col>
             </el-row>
@@ -165,7 +103,7 @@
       <div class="team-rate-icon">
         <i class="iconfont el-twitter"></i>
       </div>
-      <h3>我们仍在创新突破</h3>
+      <h3>{{ $t('resourse.still') }}</h3>
       <div class="team-loop">
         <div v-if="iconList.length" class="team-loop-content">
           <client-only>
@@ -198,22 +136,22 @@
             </vue-seamless-scroll>
           </client-only>
         </div>
-        <div v-else class="team-loop-no">暂无数据</div>
+        <div v-else class="team-loop-no">{{ $t('resourse.no') }}</div>
       </div>
       <div>
         <a
           href="https://github.com/orgs/IBAX-io/people"
           target="_blank"
           class="btn btn-primary"
-          >查看更多技术留言</a
+          >{{ $t('resourse.view') }}</a
         >
       </div>
     </div>
     <div class="team-leader">
       <div class="team-leader-top">
-        <h2 class="h1">团队主要负责人</h2>
+        <h2 class="h1">{{ $t('resourse.person') }}</h2>
         <p>
-          IBAX团队的每位负责人都是各领域非常杰出的人才，为IBAX做出了很多的贡献
+          {{ $t('resourse.charge') }}
         </p>
       </div>
       <div class="team-slick">
@@ -252,7 +190,7 @@
       <el-row type="flex" justify="center">
         <el-col :xs="23" :sm="22" :md="20" :lg="18">
           <div class="team-serving-header">
-            <h3>来自于全球的技术团队</h3>
+            <h3>{{ $t('resourse.from') }}</h3>
           </div>
           <el-row
             type="flex"
@@ -303,6 +241,32 @@ export default {
         slidesToScroll: 1
         // swipeToSlide: true
       },
+      arrPatter: [
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/11/logo-docusign-1.svg'
+        },
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/logo-uber.svg'
+        },
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/logo-rakuten-viber-white.svg'
+        },
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/logo-twitter.svg'
+        },
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/07/sweetgreen-2.svg'
+        },
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/expedia.svg'
+        },
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/ziprecruiter-logo-small.svg'
+        },
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/ziprecruiter-logo-small.svg'
+        }
+      ],
       arrPeople: [
         {
           img: ceo1,

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 17:36:31
+ * @LastEditTime: 2021-09-10 11:07:16
  * @Description: 
 -->
 <template>
@@ -13,9 +13,9 @@
           <h6 class="global-h6">{{ $t('high.technical') }}</h6>
           <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="12">
-              <h2 class="bass-h2">{{ $t('nav.virtual') }}</h2>
+              <h2 class="bass-h2">{{ $t('home.multiple') }}</h2>
               <p class="home-new-p">
-                {{ $t('high.virtual') }}
+                {{ $t('nav.smart') }}
               </p>
               <p class="home-new-bottom">
                 <a
@@ -49,7 +49,7 @@
         <div class="home-new">
           <p class="home-new-title">
             <i class="el-iconfont iconfont el-a-042"></i>
-            <span class="home-new-title-text">{{ $t('high.smart') }} </span>
+            <span class="home-new-title-text">{{ $t('high.editor') }} </span>
           </p>
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="8">
@@ -116,7 +116,7 @@
                 <p class="home-new-title">
                   <i class="el-iconfont iconfont el-a-051"></i>
                   <span class="home-new-title-text">
-                    {{ $t('high.import') }}
+                    {{ $t('high.cont') }}
                   </span>
                 </p>
                 <h2 class="bass-h2">{{ $t('high.from') }}</h2>
@@ -177,8 +177,8 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-052"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('nav.high') }}</h4>
-                <p class="high-bottom-h6">{{ $t('feature.efficiency') }}</p>
+                <h4 class="high-bottom-h4">{{ $t('high.lead') }}</h4>
+                <p class="high-bottom-h6">{{ $t('nav.each') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"
                   to="/feature/architecture"
@@ -210,7 +210,7 @@
                   <i class="el-iconfont iconfont el-a-003"></i>
                 </div>
                 <h4 class="high-bottom-h4">{{ $t('nav.private') }}</h4>
-                <p class="high-bottom-h6">{{ $t('nav.decen') }}</p>
+                <p class="high-bottom-h6">{{ $t('nav.fouds') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"
                   to="/feature/privite-transaction"

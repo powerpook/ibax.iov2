@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-26 15:28:58
  * @LastEditors: abc
- * @LastEditTime: 2021-08-26 16:37:52
+ * @LastEditTime: 2021-09-10 15:54:40
  * @Description: 
 -->
 <template>
@@ -37,7 +37,8 @@
           href="https://mixpanel.com/register/?utm_content=top-nav"
           target=""
           class="btn btn--pri"
-          >Get Started</a
+        >
+          {{ $t('home.using') }}</a
         >
       </div>
     </div>

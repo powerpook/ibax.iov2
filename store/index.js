@@ -3,7 +3,7 @@
  * @LastEditors: abc
  * @Description: vuex
  * @Date: 2019-04-11 09:26:40
- * @LastEditTime: 2021-09-07 11:55:38
+ * @LastEditTime: 2021-09-10 14:46:47
  */
 import { handleGetLang } from '../assets/js/public';
 console.log(handleGetLang());
@@ -26,7 +26,6 @@ export const actions = {
 export const getters = {
   handdleLang(state) {
     const { lang } = state;
-    console.log(lang);
     // console.log(authUser);
     return lang;
   }

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 12:02:25
+ * @LastEditTime: 2021-09-10 17:56:37
  * @Description: 
 -->
 <template>
@@ -10,13 +10,12 @@
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <h6 class="global-h6">可视化工具</h6>
+          <h6 class="global-h6">{{ $t('develope.tool') }}</h6>
           <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="10">
-              <h2 class="bass-h2">Functions of Weaver</h2>
+              <h2 class="bass-h2">{{ $t('develope.functions') }}</h2>
               <p>
-                How to Create a New ecoLib ? EcoLib creation is fast with LESS.
-                The creator has all the management permissions.
+                {{ $t('develope.ecoLib') }}
               </p>
             </el-col>
             <el-col :xs="23" :lg="12">
@@ -36,16 +35,16 @@
           </el-row>
           <div class="bass-top-box-content-btn">
             <button class="btn btn-primary" @click="handleVideo">
-              观看操作视频
+              {{ $t('develope.operation') }}
             </button>
           </div>
         </div>
       </el-col>
     </el-row>
     <div class="other other-center" style="padding-bottom: 100px">
-      <h2 class="bass-h2">Weaver是为IBAX开发者提供的</h2>
+      <h2 class="bass-h2">{{ $t('develope.weaver') }}</h2>
       <div class="global-h6">
-        在Weaver中已经添加了BaaS功能，你可以使用他创建和管理你的生态。
+        {{ $t('develope.bass') }}
       </div>
       <div class="home-top-btn">
         <a
@@ -60,9 +59,9 @@
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
           <div class="bass-white-content">
-            <h2 class="bass-h2">如果遇到开发困难</h2>
+            <h2 class="bass-h2">{{ $t('develope.encounter') }}</h2>
             <p>
-              IBAX团队以技术为主导，对所有的研发问题都很感兴趣，我们会及时回复社区内的问题。
+              {{ $t('develope.technology') }}
             </p>
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="11">
@@ -72,17 +71,17 @@
                       <i
                         class="bass-white-icon iconfont el-a-customerservice"
                       ></i>
-                      开发文档
+                      {{ $t('develope.document') }}
                     </h4>
-                    <p>1、关于IBAX链的使用文档</p>
-                    <p>2、Weaver说明文档</p>
+                    <p>{{ $t('develope.use') }}</p>
+                    <p>{{ $t('develope.doc') }}</p>
                   </div>
                   <a
                     href="https://github.com/IBAX-io/documentation"
                     target="_blank"
                     class="bass-white-bottom"
                   >
-                    <span>前往查看</span>
+                    <span>{{ $t('home.go') }}</span>
                     <i class="el-icon-right"></i>
                   </a>
                 </div>
@@ -94,10 +93,10 @@
                       <i
                         class="bass-white-icon iconfont el-a-customerservice"
                       ></i
-                      >工程师论坛
+                      >{{ $t('develope.engineer') }}
                     </h4>
                     <p>
-                      你可以在这里查找相关的问题，如果没能得到解决，你一定要及时提问，社区的其他开发者会及时给你想要的答案
+                      {{ $t('develope.can') }}
                     </p>
                   </div>
                   <a
@@ -105,7 +104,7 @@
                     target="_blank"
                     class="bass-white-bottom"
                   >
-                    <span>进入论坛</span>
+                    <span>{{ $t('develope.enter') }}</span>
                     <i class="el-icon-right"></i>
                   </a>
                 </div>
@@ -116,10 +115,82 @@
       </el-row>
     </div>
     <div class="develop-center">
+      <h2 class="bass-h2">{{ $t('develope.open') }}</h2>
+      <p>{{ $t('develope.has') }}</p>
+    </div>
+    <div class="media-a">
+      <el-row type="flex" justify="center">
+        <el-col :xs="23" :lg="18">
+          <div class="home-new">
+            <el-row type="flex" justify="space-between" align="middle">
+              <el-col :xs="23" :lg="14">
+                <div class="home-new-img">
+                  <img
+                    src="../../assets/image/funnel-report-1.png"
+                    mode="powerful"
+                  />
+                </div>
+              </el-col>
+              <el-col :xs="23" :lg="8">
+                <h4 class="bass-h4 home-new-title">
+                  <img
+                    src="../../assets/image/ico-insights.svg"
+                    alt="ico-insights"
+                  />
+                  <span>{{ $t('develope.paid') }}</span>
+                </h4>
+                <p>
+                  {{ $t('develope.there') }}
+                </p>
+                <p>
+                  {{ $t('develope.fees') }}
+                </p>
+                <p>
+                  {{ $t('develope.deducted') }}
+                </p>
+                <p>
+                  {{ $t('develope.deduction') }}
+                </p>
+              </el-col>
+            </el-row>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
+    <div class="media-b">
+      <el-row type="flex" justify="center">
+        <el-col :xs="23" :lg="18">
+          <div class="home-new">
+            <el-row type="flex" justify="space-between" align="middle">
+              <el-col :xs="23" :lg="8">
+                <h4 class="bass-h4 home-new-title">
+                  <img
+                    src="../../assets/image/ico-insights.svg"
+                    alt="ico-insights"
+                  />
+                  <span>{{ $t('develope.audit') }}</span>
+                </h4>
+                <p>
+                  {{ $t('develope.review') }}
+                </p>
+              </el-col>
+              <el-col :xs="23" :lg="14">
+                <div class="home-new-img">
+                  <img
+                    src="../../assets/image/funnel-report-1.png"
+                    mode="powerful"
+                  />
+                </div>
+              </el-col>
+            </el-row>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
+    <div class="develop-center">
       <h2 class="bass-h2">Low Code</h2>
       <p>
-        Low Code对于所有的开发者都是极为友好的，为此IBAX团队提供了一个Low
-        Code开发平台，我们称她为“Weaver" .
+        {{ $t('develope.code') }}
       </p>
     </div>
     <div class="media-a">
@@ -141,13 +212,13 @@
                     src="../../assets/image/ico-insights.svg"
                     alt="ico-insights"
                   />
-                  <span>生态管理</span>
+                  <span>{{ $t('develope.ecological') }}</span>
                 </h4>
                 <p>
-                  在Weaver中你可以通过可视化页面快速创建一个生态，采用选择配置的方式初始化生态规则，加入生态的成员将必须遵守你的生态规则。
+                  {{ $t('develope.quickly') }}
                 </p>
                 <p>
-                  Weaver还支持可视化操作的一键导入其他链的合约，如果是一个成熟的生态开发者，你可以使用这个功能无缝引用你在其他链的生态。
+                  {{ $t('develope.also') }}
                 </p>
               </el-col>
             </el-row>
@@ -166,15 +237,15 @@
                     src="../../assets/image/ico-insights.svg"
                     alt="ico-insights"
                   />
-                  <span>在线智能合约编辑器</span>
+                  <span>{{ $t('develope.online') }}</span>
                 </h4>
                 <p>
-                  在线智能合约编辑器，提供合约框架和模板，帮助开发者快速开发生态合约。
+                  {{ $t('develope.frameworks') }}
                 </p>
                 <p>
-                  保存即上链，编写完的合约保存成功后可选择发布上链，应用于生态。
+                  {{ $t('develope.means') }}
                 </p>
-                <p>提供拖拽效果添加控件，降低重复开发工作，减少代码量。</p>
+                <p>{{ $t('develope.drag') }}</p>
                 <p></p>
               </el-col>
               <el-col :xs="23" :lg="14">
@@ -209,10 +280,10 @@
                     src="../../assets/image/ico-insights.svg"
                     alt="ico-insights"
                   />
-                  <span>模板</span>
+                  <span>{{ $t('develope.template') }}</span>
                 </h4>
                 <p>
-                  Weaver中已经添加了大量的基础模板，比如：投票模板、消息模板、BaaS应用、成员管理等，这些模板可以通过可视化页面直接添加到你的生态内。
+                  {{ $t('develope.number') }}
                 </p>
               </el-col>
             </el-row>
@@ -226,7 +297,7 @@
     <div class="about-five">
       <el-row type="flex" justify="center">
         <el-col :md="16" :xs="23">
-          <h2 class="about-five-title">技术路线图</h2>
+          <h2 class="about-five-title">{{ $t('develope.roadmap') }}</h2>
           <div class="about-five-content">
             <div class="about-five-content-item">
               <div class="about-five-content-item-img">
@@ -301,7 +372,7 @@
       </el-row>
     </div>
     <!-- bottom -->
-    <page-bottom class="gray"></page-bottom>
+    <page-bottom class="gray" :obj="obj"></page-bottom>
     <el-dialog
       :visible.sync="dialogVideo"
       :before-close="handleClose"

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:43:39
  * @LastEditors: abc
- * @LastEditTime: 2021-08-25 17:41:26
+ * @LastEditTime: 2021-09-10 19:08:36
  * @Description: video resources
 -->
 <template>
@@ -13,14 +13,17 @@
           <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="8">
               <div class="resource-top">
-                <strong class="resource-box-btn">合作案例</strong>
-                <h2 class="bass-h2">Jutkey Wallt加入IBAX的收获</h2>
+                <strong class="resource-box-btn">{{
+                  $t('resourse.case')
+                }}</strong>
+                <h2 class="bass-h2">{{ $t('resourse.gains') }}</h2>
                 <p>
-                  Jutkey
-                  Wallt的团队通过使用IBAX链作为钱包的基础应用，和IBAX团队保持沟通，获得了IBAX的多项技术支持。
+                  {{ $t('resourse.used') }}
                 </p>
                 <div class="resource-top-bottom">
-                  <button class="btn btn-primary">查看全部故事</button>
+                  <button class="btn btn-primary">
+                    {{ $t('resourse.story') }}
+                  </button>
                 </div>
               </div>
             </el-col>
@@ -37,7 +40,7 @@
         </div>
         <div class="resource-video">
           <div class="resource-partners-title">
-            优秀的团队已经加入到IBAX生态中
+            {{ $t('resourse.excellent') }}
           </div>
           <ul
             class="resource-partners-list"
@@ -102,10 +105,10 @@
           <div class="resource-middle-top">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="8">
-                <h2 class="bass-h3">了解IBAX生态的更多应用</h2>
+                <h2 class="bass-h3">{{ $t('resourse.learn') }}</h2>
               </el-col>
               <el-col :xs="23" :lg="12">
-                <span>这些应用通过IBAX合约兼容的特性，一键完成生态部署</span>
+                <span>{{ $t('resourse.compatible') }}</span>
               </el-col>
             </el-row>
           </div>
@@ -150,7 +153,7 @@
         <el-row type="flex" justify="center">
           <el-col :xs="23" :sm="22" :md="12" :lg="10">
             <div class="resource-top">
-              <h4 class="bass-h4">生态名称</h4>
+              <h4 class="bass-h4">{{ $t('resourse.name') }}</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
                 euismod bibendum laoreet. Proin gravida dolor sit amet lacus
@@ -165,7 +168,7 @@
                 Senior Director of Product Management
               </div>
               <div class="home-new-bottom link">
-                <span>查看全部案例</span>
+                <span>{{ $t('resourse.cases') }}</span>
                 <i class="el-icon-right"></i>
               </div>
             </div>
@@ -182,12 +185,12 @@
                     src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/11/icon-impact.svg"
                     alt="ico-insights"
                   />
-                  <span>相比冷钱包</span>
+                  <span>{{ $t('resourse.advantage') }}</span>
                 </div>
               </div>
-              <h3 class="bass-h3">使用IBAX将为你带来哪些收获</h3>
+              <h3 class="bass-h3">{{ $t('resourse.gain') }}</h3>
               <p data-transition-delay="0.3s" style="transition-delay: 0.3s">
-                这些问题是开发者所面临是实际问题，通过IBAX你将轻松面对。
+                {{ $t('resourse.problems') }}
               </p>
             </div>
           </el-col>
@@ -200,44 +203,44 @@
               <el-col :xs="23" :lg="11">
                 <div class="resource-partners-box-content">
                   <div class="resource-partners-box-left">
-                    <h4 class="bass-h4">开发门槛</h4>
+                    <h4 class="bass-h4">{{ $t('resourse.threshold') }}</h4>
                     <p class="resource-partners-box-left-text">
-                      每个开发团队都希望用最少的人力完成自己的创意，IBAX网络会为你提供完善的开发文档，你可以在这里创建你想命名的生态应用，同时我们提供的在线BaaS系统中还支持智能合约的在线编辑。
+                      {{ $t('resourse.every') }}
                     </p>
                     <div class="resource-partners-box-left-name">
-                      <p>姓名</p>
-                      <p>研发总监</p>
+                      <p>{{ $t('resourse.names') }}</p>
+                      <p>{{ $t('resourse.d') }}</p>
                     </div>
                     <div class="home-new-bottom link">
-                      <span>查看更多资料</span>
+                      <span>{{ $t('resourse.information') }}</span>
                       <i class="el-icon-right"></i>
                     </div>
                   </div>
                   <div class="resource-partners-box-right">
-                    <div class="resource-partners-box-right-percent">15%</div>
-                    <div>节省开发时间</div>
+                    <div class="resource-partners-box-right-percent">50%</div>
+                    <div>{{ $t('resourse.time') }}</div>
                   </div>
                 </div>
               </el-col>
               <el-col :xs="23" :lg="11">
                 <div class="resource-partners-box-content">
                   <div class="resource-partners-box-left">
-                    <h4 class="bass-h4">降低费用</h4>
+                    <h4 class="bass-h4">{{ $t('resourse.cost') }}</h4>
                     <p class="resource-partners-box-left-text">
-                      我们已经注意到，很多优秀的开发团队因为某些链手续费过高的问题大受打击。而BAX网络具有高执行效率和高区块容量的特性，因此在IBAX宽阔的网络中交易费用是极为低廉的。
+                      {{ $t('resourse.noticed') }}
                     </p>
                     <div class="resource-partners-box-left-name">
-                      <p>姓名</p>
-                      <p>运营总监</p>
+                      <p>{{ $t('resourse.names') }}</p>
+                      <p>{{ $t('resourse.operations') }}</p>
                     </div>
                     <div class="home-new-bottom link">
-                      <span>获得更多帮助</span>
+                      <span>{{ $t('resourse.help') }}</span>
                       <i class="el-icon-right"></i>
                     </div>
                   </div>
                   <div class="resource-partners-box-right">
                     <div class="resource-partners-box-right-percent">80%</div>
-                    <div>减少手续费</div>
+                    <div>{{ $t('resourse.handling') }}</div>
                   </div>
                 </div>
               </el-col>
@@ -318,7 +321,7 @@
       </div>
     </div>
     <!-- bottom -->
-    <page-bottom class="lime"></page-bottom>
+    <page-bottom class="lime" :obj="obj"></page-bottom>
   </div>
 </template>
 <script>
@@ -326,7 +329,13 @@ export default {
   props: {},
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      obj: {
+        path: '/about',
+        text: 'nav.about',
+        label: 'footer.compete',
+        title: 'footer.creative'
+      }
     };
   },
   computed: {},

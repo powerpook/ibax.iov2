@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 17:35:28
+ * @LastEditTime: 2021-09-10 11:45:18
  * @Description: 
 -->
 <template>
@@ -178,7 +178,7 @@
                   <i class="el-iconfont iconfont el-a-007"></i>
                 </div>
                 <h4 class="high-bottom-h4">{{ $t('nav.tran') }}</h4>
-                <p class="high-bottom-h6">{{ $t('nav.improve') }}</p>
+                <p class="high-bottom-h6">{{ $t('high.divides') }}</p>
                 <nuxt-link class="high-bottom-more link" to="/feature/sharding">
                   <span>{{ $t('bass.learn') }}</span>
                   <i class="el-icon-right"></i>
@@ -190,7 +190,7 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-038"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('nav.virtual') }}</h4>
+                <h4 class="high-bottom-h4">{{ $t('nav.with') }}</h4>
                 <p class="high-bottom-h6">{{ $t('nav.smart') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"
@@ -220,12 +220,12 @@ export default {
       activeName: 'first',
       arrTags: [
         {
-          label: 'bass.honor',
+          label: 'high.authentication',
           name: 'first',
           img: img1
         },
         {
-          label: 'nav.tran',
+          label: 'high.validation',
           name: 'second',
           img: img2
         }

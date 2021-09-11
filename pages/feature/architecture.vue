@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-07 18:55:22
+ * @LastEditTime: 2021-09-09 18:51:41
  * @Description: architecture
 -->
 <template>
@@ -140,14 +140,12 @@
                     {{ $t('feature.node') }}
                   </span>
                 </p>
-                <h2 class="bass-h2">HONOR NODE</h2>
+                <h2 class="bass-h2">{{ $t('feature.hor') }}</h2>
                 <p>
-                  An Honor Node is one of the key components of IBAX Public
-                  Network. It executes and validates transactions, collects
-                  transaction information from other nodes, addstransactions to
-                  the queue, and verifies the correctness and validity of new
-                  blocks using the confirmation mechanism. Generally, it has two
-                  states: packaging and non-packaging.
+                  {{ $t('feature.honor') }}
+                </p>
+                <p>
+                  {{ $t('feature.any') }}
                 </p>
               </el-col>
               <el-col :xs="23" :lg="14">
@@ -170,14 +168,12 @@
             <i class="el-iconfont iconfont el-a-035"></i>
             <span class="home-new-title-text"> {{ $t('feature.node') }} </span>
           </p>
-          <h2 class="bass-h2">GUARDIAN NODE</h2>
+          <h2 class="bass-h2">{{ $t('feature.guard') }}</h2>
           <p>
-            A Guardian Node stores data, witnesses services, and can obtain
-            block information actively. Guardian Nodes are critical data
-            guardians in IBAX Network. Even if all the data on Honor Nodes is
-            lost (though it could never happen), as long as the data is
-            available on one Guardian Node, IBAX Network can quickly return to
-            normal operation.
+            {{ $t('feature.as') }}
+          </p>
+          <p>
+            {{ $t('feature.ecological') }}
           </p>
           <div class="media-a-img">
             <img
@@ -200,9 +196,15 @@
                     {{ $t('feature.node') }}
                   </span>
                 </p>
-                <h2 class="bass-h2">MINT NODE</h2>
+                <h2 class="bass-h2">{{ $t('feature.casting') }}</h2>
                 <p>
                   {{ $t('high.etc') }}
+                </p>
+                <p>
+                  {{ $t('high.reward') }}
+                </p>
+                <p>
+                  {{ $t('high.running') }}
                 </p>
               </el-col>
               <el-col :xs="23" :lg="14">
@@ -259,7 +261,7 @@
                     {{ $t('feature.node') }}
                   </span>
                 </p>
-                <h2 class="bass-h2">CLB (CROSS LEDGERS BASE)</h2>
+                <h2 class="bass-h2">{{ $t('nav.cross') }}</h2>
                 <p>
                   {{ $t('high.of') }}
                 </p>
@@ -290,7 +292,7 @@
                   <i class="el-iconfont iconfont el-a-007"></i>
                 </div>
                 <h4 class="high-bottom-h4">{{ $t('nav.tran') }}</h4>
-                <p class="high-bottom-h6">{{ $t('nav.improve') }}</p>
+                <p class="high-bottom-h6">{{ $t('high.divides') }}</p>
                 <nuxt-link class="high-bottom-more link" to="/feature/sharding">
                   <span>{{ $t('bass.learn') }}</span>
                   <i class="el-icon-right"></i>

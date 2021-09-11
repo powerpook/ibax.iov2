@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 18:53:27
+ * @LastEditTime: 2021-09-10 11:52:36
  * @Description: 
 -->
 <template>
@@ -131,6 +131,7 @@
                 <p>
                   {{ $t('bass.information') }}
                 </p>
+                <p>{{ $t('bass.safe') }}</p>
               </el-col>
               <el-col :xs="23" :lg="14">
                 <div class="home-tag">
@@ -195,8 +196,8 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-052"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('nav.high') }}</h4>
-                <p class="high-bottom-h6">{{ $t('feature.efficiency') }}</p>
+                <h4 class="high-bottom-h4">{{ $t('high.lead') }}</h4>
+                <p class="high-bottom-h6">{{ $t('nav.each') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"
                   to="/feature/architecture"

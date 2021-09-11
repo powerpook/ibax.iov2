@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 10:59:52
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 11:20:57
+ * @LastEditTime: 2021-09-09 17:54:04
  * @Description: nav
 -->
 <template>
@@ -192,7 +192,7 @@ export default {
                 },
 
                 {
-                  title: 'nav.cross',
+                  title: 'nav.clb',
                   describe: 'nav.basis',
                   icon: 'iconfont el-transfer',
                   path: '/feature/clb',
@@ -220,7 +220,7 @@ export default {
                 },
                 {
                   title: 'nav.self',
-                  describe: 'nav.cross-chain',
+                  describe: 'nav.gas',
                   icon: 'iconfont el-cloud-computing',
                   path: '/feature/ecolib-governance',
                   key: '1-3-3'

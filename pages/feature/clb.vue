@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 17:39:36
+ * @LastEditTime: 2021-09-10 11:38:50
  * @Description: 
 -->
 <template>
@@ -177,8 +177,8 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-052"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('nav.high') }}</h4>
-                <p class="high-bottom-h6">{{ $t('nav.each') }}</p>
+                <h4 class="high-bottom-h4">{{ $t('nav.multi') }}</h4>
+                <p class="high-bottom-h6">{{ $t('nav.dec') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"
                   to="/feature/architecture"
@@ -193,7 +193,7 @@
                 <div class="high-bottom-img">
                   <i class="el-iconfont iconfont el-a-003"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('nav.private') }}</h4>
+                <h4 class="high-bottom-h4">{{ $t('nav.security') }}</h4>
                 <p class="high-bottom-h6">{{ $t('nav.fouds') }}</p>
                 <nuxt-link
                   class="high-bottom-more link"
