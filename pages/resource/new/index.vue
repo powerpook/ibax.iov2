@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-09-01 09:42:51
+ * @LastEditTime: 2021-09-13 14:31:48
  * @Description: news
 -->
 <template>
@@ -10,8 +10,8 @@
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="news-header">
-          <h2 class="news-h2">新闻中心</h2>
-          <p>跟踪新闻内容，了解更多IBAX内容</p>
+          <h2 class="news-h2">{{ $t('resourse.news') }}</h2>
+          <p>{{ $t('resourse.follow') }}</p>
         </div>
         <div class="news-select">
           <div class="news-select-box">

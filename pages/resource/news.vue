@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-08-26 15:24:57
+ * @LastEditTime: 2021-09-13 19:43:20
  * @Description: news
 -->
 <template>
@@ -10,12 +10,12 @@
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="news-header">
-          <h2 class="news-h2">新闻中心</h2>
-          <p>跟踪新闻内容，了解更多IBAX内容</p>
+          <h2 class="news-h2">{{ $t('resourse.news') }}</h2>
+          <p>{{ $t('resourse.follow') }}</p>
         </div>
         <div class="news-select">
           <div class="news-select-box">
-            <el-select v-model="topics" placeholder="来源">
+            <el-select v-model="topics" :placeholder="$t('resourse.source')">
               <el-option
                 v-for="item in arrTopics"
                 :key="item.value"
@@ -26,7 +26,7 @@
             </el-select>
             <el-select
               v-model="type"
-              placeholder="类型"
+              :placeholder="$t('resourse.type')"
               class="news-select-box-second"
             >
               <el-option
@@ -39,7 +39,11 @@
             </el-select>
           </div>
           <div class="news-select-box">
-            <el-input v-model="input" type="text" placeholder="搜索">
+            <el-input
+              v-model="input"
+              type="text"
+              :placeholder="$t('resourse.search')"
+            >
               <template #prefix>
                 <i class="el-icon-search"></i>
               </template>
@@ -127,44 +131,60 @@ export default {
       isAppend: false,
       arrTopics: [
         {
-          value: '1',
+          value: 1,
           label: '官方'
         },
         {
-          value: '2',
+          value: 2,
           label: '脸书'
         },
         {
-          value: '3',
+          value: 3,
           label: '推特'
         },
         {
-          value: '4',
+          value: 4,
           label: '社区'
         }
       ],
       topics: '',
       arrType: [
         {
-          value: '1',
+          value: 1,
           label: '技术相关'
         },
         {
-          value: '2',
+          value: 2,
           label: '生态相关'
         },
         {
-          value: '3',
+          value: 3,
           label: '活动相关'
         }
       ],
-      type: ''
+      type: '',
+      params: {
+        where: {
+          source: '',
+          type: '',
+          keywords: ''
+        },
+        page: 1,
+        limit: 10
+      }
     };
   },
   computed: {},
   watch: {},
-  created() {},
+  created() {
+    this.handleNewsList(this.params);
+  },
   mounted() {},
-  methods: {}
+  methods: {
+    async handleNewsList(params) {
+      const data = await this.$axios.$post('/newsfind', params);
+      console.log(data);
+    }
+  }
 };
 </script>

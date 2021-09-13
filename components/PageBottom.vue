@@ -2,25 +2,27 @@
  * @Author: abc
  * @Date: 2021-08-23 14:22:23
  * @LastEditors: abc
- * @LastEditTime: 2021-09-01 16:35:32
+ * @LastEditTime: 2021-09-13 18:27:41
  * @Description: 
 -->
 <template>
   <!-- bottom -->
   <div class="cta">
     <div class="container">
-      <h1 v-if="obj.path === '/about'">{{ $t(obj.title) }}</h1>
-      <h1 v-else>{{ $t(obj.title) }}</h1>
+      <h1 v-if="obj.path === '/about'" class="wow fadeInUp">
+        {{ $t(obj.title) }}
+      </h1>
+      <h1 v-else class="wow fadeInUp">{{ $t(obj.title) }}</h1>
       <div class="text-wrap">
-        <p v-if="obj.path === '/about'">
+        <p v-if="obj.path === '/about'" class="wow fadeInUp">
           {{ $t(obj.label) }}
         </p>
-        <p v-else>
+        <p v-else class="wow fadeInUp">
           {{ $t(obj.label) }}
         </p>
       </div>
       <slot v-if="$slots.btn" name="btn"> </slot>
-      <div v-else class="btns-list">
+      <div v-else class="btns-list wow fadeInUp">
         <a
           href="https://weaver.ibax.io/"
           target="_blank"

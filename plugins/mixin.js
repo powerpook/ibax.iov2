@@ -3,15 +3,10 @@
  * @LastEditors: abc
  * @Description: Vu
  * @Date: 2019-04-12 14:08:12
- * @LastEditTime: 2021-09-08 14:10:10
+ * @LastEditTime: 2021-09-13 16:52:45
  */
 
 import Vue from 'vue';
-// ，seo   head    nuxt  plugin
-//   head  ：
-// head() {
-//     return this.$seo(this.detail.title, this.detail.summary)
-// }
 Vue.mixin({
   data() {
     return {
@@ -19,6 +14,14 @@ Vue.mixin({
     };
   },
   methods: {
+    handleThrottle(callback, time) {
+      if (this.throttleTimer) return;
+      this.throttleTimer = true;
+      setTimeout(() => {
+        callback();
+        this.throttleTimer = false;
+      }, time);
+    },
     $analysis(str, dataArr) {
       const arr = str.match(/\[(.*?)\]/g);
       // console.log(arr);

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-09 19:00:07
+ * @LastEditTime: 2021-09-13 17:48:52
  * @Description: home
 -->
 <template>
@@ -23,7 +23,7 @@
               <a
                 href="https://github.com/orgs/IBAX-io/people"
                 target="_blank"
-                class="btn btn-primary"
+                class="btn btn-default"
                 >{{ $t('home.join') }}</a
               >
             </div>
@@ -113,22 +113,28 @@
             </el-row>
           </div>
           <div class="home-new">
-            <p class="subtitle">{{ $t('home.innovate') }}</p>
+            <p class="subtitle wow fadeInUp">{{ $t('home.innovate') }}</p>
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="12">
-                <h2 class="bass-h2">{{ $t('home.framework') }}</h2>
-                <p>{{ $t('home.bottom') }}</p>
+                <div class="wow fadeInUp">
+                  <h2 class="bass-h2">{{ $t('home.framework') }}</h2>
+                  <p>{{ $t('home.bottom') }}</p>
+                  <nuxt-link
+                    to="/feature/architecture"
+                    class="home-new-bottom link"
+                  >
+                    <span>{{ $t('home.learn') }}</span>
+                    <i class="el-icon-right"></i>
+                  </nuxt-link>
+                </div>
               </el-col>
               <el-col :xs="23" :lg="6">
                 <div class="home-new-img">
-                  <img src="@/assets/image/diamond.svg" mode="powerful" />
+                  <img src="../assets/image/earth.svg" mode="powerful" />
+                  <!-- <img src="@/assets/image/ball_1.svg" mode="powerful" /> -->
                 </div>
               </el-col>
             </el-row>
-            <nuxt-link to="/feature/architecture" class="home-new-bottom link">
-              <span>{{ $t('home.learn') }}</span>
-              <i class="el-icon-right"></i>
-            </nuxt-link>
           </div>
           <div class="home-new">
             <p class="home-new-title">
@@ -139,8 +145,10 @@
             </p>
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="8">
-                <h2 class="bass-h2">{{ $t('home.machine') }}</h2>
-                <p>{{ $t('home.can') }}</p>
+                <div class="wow fadeInUp">
+                  <h2 class="bass-h2">{{ $t('home.machine') }}</h2>
+                  <p>{{ $t('home.can') }}</p>
+                </div>
               </el-col>
               <el-col :xs="23" :lg="14">
                 <div class="home-new-img">
@@ -161,8 +169,10 @@
             </p>
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="8">
-                <h2 class="bass-h2">{{ $t('home.dpoa') }}</h2>
-                <p>{{ $t('home.good') }}</p>
+                <div class="wow fadeInUp">
+                  <h2 class="bass-h2">{{ $t('home.dpoa') }}</h2>
+                  <p>{{ $t('home.good') }}</p>
+                </div>
               </el-col>
               <el-col :xs="23" :lg="14">
                 <div class="home-new-img">
@@ -183,8 +193,10 @@
             </p>
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="8">
-                <h2 class="bass-h2">{{ $t('home.honor') }}</h2>
-                <p>{{ $t('home.unified') }}</p>
+                <div class="wow fadeInUp">
+                  <h2 class="bass-h2">{{ $t('home.honor') }}</h2>
+                  <p>{{ $t('home.unified') }}</p>
+                </div>
               </el-col>
               <el-col :xs="23" :lg="14">
                 <div class="home-new-img">
@@ -200,24 +212,26 @@
             <p class="subtitle">{{ $t('home.economics') }}</p>
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="12">
-                <h2 class="bass-h2">
-                  {{ $t('home.benefits') }}
-                </h2>
-                <p>
-                  {{ $t('home.matter') }}
-                </p>
-                <a
-                  href="https://ibax.io/IBAX_Public_Network_Whitepaper_V1.1.pdf"
-                  target="_blank"
-                  class="home-new-bottom link"
-                >
-                  <span>{{ $t('home.view') }}</span>
-                  <i class="el-icon-right"></i>
-                </a>
+                <div class="wow fadeInUp">
+                  <h2 class="bass-h2">
+                    {{ $t('home.benefits') }}
+                  </h2>
+                  <p>
+                    {{ $t('home.matter') }}
+                  </p>
+                  <a
+                    href="https://ibax.io/IBAX_Public_Network_Whitepaper_V1.1.pdf"
+                    target="_blank"
+                    class="home-new-bottom link"
+                  >
+                    <span>{{ $t('home.view') }}</span>
+                    <i class="el-icon-right"></i>
+                  </a>
+                </div>
               </el-col>
               <el-col :xs="23" :lg="6">
                 <div class="home-new-img">
-                  <img src="../assets/image/Simple.svg" mode="powerful" />
+                  <img src="../assets/image/cube_pure.svg" mode="powerful" />
                 </div>
               </el-col>
             </el-row>
@@ -257,26 +271,31 @@
           <div class="home-new">
             <p class="subtitle">{{ $t('home.lead') }}</p>
             <el-row type="flex" justify="space-between">
-              <el-col :xs="23" :lg="18">
-                <h2 class="bass-h2">{{ $t('home.driven') }}</h2>
-                <p class="global-h6">{{ $t('home.chain') }}</p>
+              <el-col :xs="23" :lg="12">
+                <div class="wow fadeInUp">
+                  <h2 class="bass-h2">{{ $t('home.driven') }}</h2>
+                  <p class="global-h6">{{ $t('home.chain') }}</p>
+                  <nuxt-link
+                    to="/feature/cross-chain"
+                    class="home-new-bottom link"
+                  >
+                    <span>{{ $t('home.we') }}</span>
+                    <i class="el-icon-right"></i>
+                  </nuxt-link>
+                </div>
               </el-col>
-              <el-col :xs="23" :lg="4">
+              <el-col :xs="23" :lg="6">
                 <div class="home-new-img">
-                  <img src="../assets/image/connect.svg" mode="connect" />
+                  <img src="../assets/image/ball_1.svg" mode="connect" />
                 </div>
               </el-col>
             </el-row>
-            <nuxt-link to="/feature/cross-chain" class="home-new-bottom link">
-              <span>{{ $t('home.we') }}</span>
-              <i class="el-icon-right"></i>
-            </nuxt-link>
           </div>
         </el-col>
       </el-row>
     </div>
     <div class="home-loop">
-      <h6 class="global-h4">{{ $t('home.have') }}</h6>
+      <h6 class="global-h4 wow fadeInUp">{{ $t('home.have') }}</h6>
       <div class="home-loop-content">
         <client-only>
           <vue-seamless-scroll
@@ -299,7 +318,7 @@
           <vue-p5 @setup="setup" @draw="draw"></vue-p5>
         </client-only>
       </div>
-      <div class="home-appeared">
+      <div class="home-appeared wow fadeInUp">
         <h1>{{ $t('home.your') }}</h1>
         <div class="home-appeared-box">
           <ul class="home-appeared-item">
@@ -382,7 +401,7 @@
       </el-row>
     </div>
     <!-- develop -->
-    <div class="home-product">
+    <div class="home-product wow fadeIn">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
           <h6 class="bass-h2">{{ $t('home.develop') }}</h6>

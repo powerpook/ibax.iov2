@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 15:01:26
  * @LastEditors: abc
- * @LastEditTime: 2021-09-08 14:08:26
+ * @LastEditTime: 2021-09-13 16:53:16
  * @Description:
 -->
 <template>
@@ -62,7 +62,8 @@ export default {
       visibilityHeight: 10,
       isFixed: false,
       back: false,
-      isInUp: false
+      isInUp: false,
+      throttleTimer: false
     };
   },
   computed: {},
@@ -88,11 +89,13 @@ export default {
       this.domGlobal = document.getElementById('global').firstChild;
       this.domHeaderTop = this.$refs.headerTop.$el;
       console.log(this.domGlobal);
-      this.domGlobal.addEventListener('scroll', this.handleScroll);
+      this.domGlobal.addEventListener('scroll', () => {
+        this.handleThrottle(this.handleScroll, 250);
+      });
       const wow = new WOW({
         boxClass: 'wow',
         animateClass: 'animated',
-        scrollContainer: '.__panel',
+        scrollContainer: '.el-scrollbar__wrap',
         offset: 0,
         mobile: true,
         live: false

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-09 18:59:33
+ * @LastEditTime: 2021-09-13 18:32:08
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -105,8 +105,23 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
-
+  axios: {
+    proxy: true, // 表示开启代理
+    prefix: '/api', // 表示给请求url加个前缀 /api
+    retry: { retries: 3 },
+    credentials: true // 表示跨域时是否需要凭证
+  },
+  proxy: {
+    '/api': {
+      // 这个网站是开源的可以请求到数据的
+      target: 'http://192.168.1.192:9034/', // 开发环境
+      changeOrigin: true, // 是否跨域
+      pathRewrite: {
+        '^/api/*': '' // 把/api替换成///这里理解成用‘/api’代替target里面的地址，组件中我们调接口时直接用/api代替
+        // 比如我要调用'http://0.0:300/user/add'，直接写‘/api/user/add’即可 代理后地址栏显示/
+      }
+    }
+  },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     icon: {

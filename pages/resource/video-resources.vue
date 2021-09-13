@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:43:39
  * @LastEditors: abc
- * @LastEditTime: 2021-08-25 15:54:46
+ * @LastEditTime: 2021-09-13 15:16:46
  * @Description: video resources
 -->
 <template>
@@ -13,8 +13,12 @@
           <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="8">
               <div class="resource-top">
-                <strong class="resource-box-btn">介绍</strong>
-                <h4 class="bass-h4">用视频讲解的方式了解IBAX</h4>
+                <strong
+                  class="resource-box-btn"
+                  style="text-transform: uppercase"
+                  >{{ $t('resourse.introduce') }}</strong
+                >
+                <h4 class="bass-h4">{{ $t('resourse.explanation') }}</h4>
                 <div class="resource-top-warp">
                   <div
                     class="resource-top-warp-content"
@@ -62,9 +66,11 @@
                   </div>
                 </div>
                 <div>
-                  <p>查看数据来源</p>
+                  <p>{{ $t('resourse.sourceview') }}</p>
                   <div>
-                    <button class="btn btn-primary">开始播放</button>
+                    <button class="btn btn-primary">
+                      {{ $t('resourse.start') }}
+                    </button>
                   </div>
                 </div>
               </div>
@@ -84,34 +90,36 @@
           <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="8">
               <div class="resource-top">
-                <h4 class="bass-h4">如何使用Weaver:</h4>
+                <h4 class="bass-h4">{{ $t('resourse.how') }}</h4>
                 <div>
                   <p class="home-new-title">
                     <img
                       src="../../assets/image/ico-insights.svg"
                       alt="ico-insights"
                     />
-                    <span>通过Weaver快速的创建生态</span>
+                    <span>{{ $t('resourse.quickly') }}</span>
                   </p>
                   <p class="home-new-title">
                     <img
                       src="../../assets/image/ico-insights.svg"
                       alt="ico-insights"
                     />
-                    <span>一键发币</span>
+                    <span>{{ $t('resourse.issuance') }}</span>
                   </p>
                   <p class="home-new-title">
                     <img
                       src="../../assets/image/ico-insights.svg"
                       alt="ico-insights"
                     />
-                    <span>可视化的生态治理页面</span>
+                    <span>{{ $t('resourse.visual') }}</span>
                   </p>
                 </div>
                 <div class="resource-top-bottom">
-                  <p>查看数据来源</p>
+                  <p>{{ $t('resourse.sourceview') }}</p>
                   <div>
-                    <button class="btn btn-primary">开始播放</button>
+                    <button class="btn btn-primary">
+                      {{ $t('resourse.start') }}
+                    </button>
                   </div>
                 </div>
               </div>
@@ -133,7 +141,7 @@
       <el-row type="flex" justify="center">
         <el-col :xs="23" :sm="22" :md="20" :lg="18">
           <div class="resource-middle-h3">
-            <h3 class="bass-h3">IBAX团队的视频介绍</h3>
+            <h3 class="bass-h3">{{ $t('resourse.video') }}</h3>
           </div>
           <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="7">

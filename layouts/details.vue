@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 15:01:26
  * @LastEditors: abc
- * @LastEditTime: 2021-08-26 16:08:53
+ * @LastEditTime: 2021-09-13 14:36:35
  * @Description:
 -->
 <template>
@@ -50,6 +50,7 @@
   </div>
 </template>
 <script>
+import { handleGetLang } from '../assets/js/public.js';
 if (process.client) {
   // eslint-disable-next-line no-var
   var { WOW } = require('wowjs');
@@ -63,7 +64,17 @@ export default {
       visibilityHeight: 10,
       isFixed: false,
       back: false,
-      isInUp: false
+      isInUp: false,
+      arrLang: [
+        {
+          label: 'English',
+          lang: 'en'
+        },
+        {
+          label: '简体中文',
+          lang: 'zh'
+        }
+      ]
     };
   },
   computed: {},
@@ -85,6 +96,13 @@ export default {
   },
   created() {},
   mounted() {
+    const val = handleGetLang();
+    this.arrLang.map((item) => {
+      if (val === item.lang) {
+        this.strLang = item.label;
+      }
+    });
+    this.$store.commit('handleChangeLang', val);
     this.$nextTick(() => {
       this.domGlobal = document.getElementById('global').firstChild;
       this.domHeaderTop = this.$refs.headerTop.$el;
