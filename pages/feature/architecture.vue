@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-13 18:26:22
+ * @LastEditTime: 2021-09-15 18:32:46
  * @Description: architecture
 -->
 <template>
@@ -14,7 +14,7 @@
             {{ $t('high.technical') }}
           </h6>
           <el-row type="flex" justify="space-between">
-            <el-col :xs="23" :lg="12">
+            <el-col :xs="23" :lg="18">
               <h2 class="bass-h2 animated fadeInUp">{{ $t('high.chain') }}</h2>
               <p class="home-new-p animated fadeInUp">{{ $t('high.low') }}</p>
               <p class="home-new-bottom animated fadeIn">
@@ -26,14 +26,14 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="6">
+            <!-- <el-col :xs="23" :lg="6">
               <div
                 class="home-new-img animated fadeIn"
                 style="animation-duration: 3s"
               >
                 <img src="@/assets/image/diamond.svg" mode="powerful" />
               </div>
-            </el-col>
+            </el-col> -->
           </el-row>
         </div>
         <div class="other">
@@ -371,6 +371,29 @@ export default {
   props: {},
   data() {
     return {};
+  },
+  head() {
+    return {
+      title: `${this.$t('nav.high')}-IBAX`,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA,BaaS,Mining,PostgreSQL, Honor Node,Guardian Node,Mint Node,Sub Nodes, CLB (CROSS LEDGERS BASE),Smart contracts,ecoLib,ecoGroup, Weaver'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.$t('nav.high')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `${this.$t('nav.high')}`
+        }
+      ]
+    };
   },
   computed: {},
   watch: {},

@@ -72,14 +72,38 @@ section,
 summary {
   display: block;
 }
+
 @font-face {
   font-family: "Apercu Pro";
-  src: url("./font/Apercu Pro/Apercu Pro.eot");
-  src: url("./font/Apercu Pro/Apercu Pro-iefix.eot?#iefix") format("embedded-opentype"),
-    url("./font/Apercu Pro/Apercu Pro.woff2") format("woff2"), url("./font/Apercu Pro/Apercu Pro.woff") format("woff"),
-    url("./font/Apercu Pro/Apercu Pro.ttf") format("truetype"),
-    url("http://db.onlinewebfonts.com/t/0406c39d71726a4efe1134bf8e3feb71.svg#Apercu Pro") format("svg");
+  src: url("./font/Apercu Pro/ApercuPro-Thin.woff2") format("woff2"),
+    url("./font/Apercu Pro/ApercuPro-Thin.woff") format("woff"),
+    url("./font/Apercu Pro/ApercuPro-Thin.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Apercu Pro";
+  src: local("Apercu Pro Extra Light"), local("Apercu-Pro-Extra-Light"),
+    url("./font/ApercuPro-ExtraLight/ApercuPro-ExtraLight.woff2") format("woff2"),
+    url("./font/ApercuPro-ExtraLight/ApercuPro-ExtraLight.woff") format("woff"),
+    url("./font/ApercuPro-ExtraLight/ApercuPro-ExtraLight.ttf") format("truetype");
+}
+/* @font-face {
+  font-family: "Apercu Pro";
+  src: local("Apercu Pro Extra Light Italic"), local("Apercu-Pro-Extra-Light-Italic"),
+    url("./font/ApercuPro-ExtraLightItalic/ApercuPro-ExtraLightItalic.woff2") format("woff2"),
+    url("./font/ApercuPro-ExtraLightItalic/ApercuPro-ExtraLightItalic.woff") format("woff"),
+    url("./font/ApercuPro-ExtraLightItalic/ApercuPro-ExtraLightItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Apercu Pro";
+  src: local("Apercu Pro Thin Italic"), local("Apercu-Pro-Thin-Italic"),
+    url("./font/ApercuPro-ThinItalic/ApercuPro-ThinItalic.woff2") format("woff2"),
+    url("./font/ApercuPro-ThinItalic/ApercuPro-ThinItalic.woff") format("woff"),
+    url("./font/ApercuPro-ThinItalic/ApercuPro-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+} */
 @font-face {
   font-family: "Untitled Sans Regular";
   src: url("./font/Untitled Sans Regular/Untitled Sans Regular.eot") format("truetype");
@@ -196,7 +220,7 @@ p {
     position: fixed;
     top: 20px;
     z-index: 999;
-    padding: 20px 20px;
+    padding: 14px 20px;
     background-color: $primary-color;
     box-shadow: 0 0 2px rgb(0 0 0 / 80%), 0 4px 12px rgb(0 0 0 / 36%), inset 0 0 0 0.5px rgb(237 237 237 / 36%);
     border-radius: 16px;
@@ -222,7 +246,9 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 20px 20px;
-  background-color: $primary-color;
+  .el-logo1 {
+    font-size: 35px;
+  }
   .el-menu.el-menu--horizontal {
     border: none;
   }
@@ -247,10 +273,16 @@ p {
   }
   .el-menu--horizontal > .el-menu-item.is-active {
     border-bottom: 2px solid transparent !important;
+    color: #f3ac34 !important;
     //border-bottom: none !important;
+  }
+  .el-menu--horizontal > .el-submenu:focus .el-submenu__title,
+  .el-menu--horizontal > .el-submenu:hover .el-submenu__title {
+    color: #8c8c90 !important;
   }
   .el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
     border-bottom: 2px solid transparent !important;
+    color: #f3ac34 !important;
   }
   .el-submenu__icon-arrow {
     display: none;
@@ -264,7 +296,10 @@ p {
       width: 100%;
     }
   }
-
+  .el-translate {
+    font-size: 25px;
+    color: #fff;
+  }
   &-child {
     display: flex;
     justify-content: space-between;
@@ -363,11 +398,6 @@ p {
 }
 .nuxt-link-exact-active {
   color: #e6dede;
-}
-.el-menu--horizontal .el-menu--popup {
-  border: 1px solid #8f8989;
-  box-shadow: 0 0 2px rgb(0 0 0 / 80%), 0 4px 12px rgb(0 0 0 / 36%), inset 0 0 0 0.5px rgb(237 237 237 / 36%);
-  border-radius: 20px;
 }
 .el-menu--horizontal .el-menu .el-menu-item.el-menu-nav-item {
   height: auto;
@@ -516,127 +546,6 @@ p {
   font-size: 24px;
   margin-bottom: 20px;
 }
-$light: #7856ff;
-.details {
-  color: #37383c;
-  &-header {
-    height: auto !important;
-  }
-  .nav-news {
-    padding: 40px 0;
-    display: flex;
-    align-items: center;
-    &-index {
-      padding-right: 20px;
-    }
-    .blog {
-      height: 30px;
-      padding-left: 20px;
-      border-left: 1px solid $light;
-      img {
-        width: 218px;
-      }
-    }
-    &-right {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
-      &-box {
-        position: relative;
-        display: flex;
-        &-email {
-          width: 190px;
-          background: #f4f4f4;
-          padding: 5px 52px 5px 12px;
-          height: 40px;
-          border-top-left-radius: 8px;
-          border-bottom-left-radius: 8px;
-        }
-        &-btn {
-          height: 40px;
-          font-size: 20px;
-          margin: 0;
-          outline: none;
-          color: #fff;
-          background: $light;
-          padding: 0 10px;
-          border-top-right-radius: 8px;
-          border-bottom-right-radius: 8px;
-        }
-      }
-    }
-  }
-  .el-logo {
-    color: $light;
-    font-size: 25px;
-  }
-  .btn-wrap {
-    margin-left: 32px;
-  }
-  .btn--pri {
-    color: $light;
-    border: 2px solid $light;
-    border-radius: 4px;
-    min-width: 144px;
-    padding: 14px 10px;
-    font-size: 14px;
-    line-height: 1;
-    text-align: center;
-    display: inline-block;
-    &:hover {
-      color: #fff;
-      background: $light;
-      border-color: $light;
-    }
-  }
-  .lead-img {
-    width: 100%;
-    img {
-      width: 100%;
-    }
-  }
-  .inner {
-    padding: 64px 112px;
-  }
-  &-articles {
-    margin: 55px auto 57px;
-    &-h2 {
-      text-align: center;
-      font-size: 56px;
-      margin-bottom: 50px;
-    }
-    &-h4 {
-      font-size: 24px;
-      color: #37383c;
-    }
-    .news-content-item-text {
-      padding: 22px 24px;
-      color: #6b7c93;
-    }
-    .blog-cite {
-      padding: 30px 24px;
-    }
-    .blog-cite-a {
-      display: flex;
-      align-items: center;
-      color: #37383c;
-    }
-    .per-info {
-      margin-left: 20px;
-      & > * {
-        display: block;
-      }
-    }
-    .blog-cite .avatar {
-      width: 48px;
-      overflow: hidden;
-      img {
-        border-radius: 50%;
-        width: 100%;
-      }
-    }
-  }
-}
 .icon {
   width: 2em;
   height: 2em;
@@ -686,4 +595,38 @@ $light: #7856ff;
 .subMenu--horizontal {
   top: 123px !important;
   left: calc(calc(100vw - 1152px) / 2) !important;
+  .el-menu--popup {
+    border: 1px solid #8f8989;
+    box-shadow: 0 0 2px rgb(0 0 0 / 80%), 0 4px 12px rgb(0 0 0 / 36%), inset 0 0 0 0.5px rgb(237 237 237 / 36%);
+    border-radius: 20px;
+  }
+}
+.news--horizontal {
+  top: 123px !important;
+  left: calc(calc(100vw - 1152px) / 2) !important;
+  .el-menu--popup {
+    box-shadow: inset 0 0 0 0.5px rgb(114 111 111 / 20%), 0 0 15px rgb(0 0 0 / 5%);
+    border-radius: 20px;
+  }
+  .nav-child-item-content-title-text,
+  .nav-child-title {
+    color: #37383c;
+  }
+  .nav-child-item-content-title-text {
+    font-weight: 500;
+  }
+  .nav-child .el-menu-item.is-active .nav-child-item-content-img i {
+    color: $primary-color;
+  }
+  .el-menu-item {
+    .nav-child-item-content-img i {
+      font-size: 25px;
+      color: $btn-color;
+    }
+    &:hover {
+      .nav-child-item-content-img i {
+        color: $primary-color;
+      }
+    }
+  }
 }

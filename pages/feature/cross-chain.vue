@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-10 11:21:19
+ * @LastEditTime: 2021-09-15 19:23:48
  * @Description: 
 -->
 <template>
@@ -11,7 +11,7 @@
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="12">
+            <el-col :xs="23" :lg="18">
               <h6 class="global-h6">{{ $t('high.cross') }}</h6>
               <h2 class="bass-h2">{{ $t('bass.expand') }}</h2>
               <p class="home-new-p">
@@ -26,11 +26,11 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="6">
+            <!--  <el-col :xs="23" :lg="6">
               <div class="home-new-img">
                 <img src="../../assets/image/diamond.svg" mode="powerful" />
               </div>
-            </el-col>
+            </el-col> -->
           </el-row>
         </div>
         <div class="other">
@@ -75,13 +75,15 @@
     <div class="other other-center">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="12">
-          <div class="global-h6">{{ $t('bass.effectiveness') }}</div>
-          <div class="global-h6">
-            <span class="other-center-strong">{{ $t('bass.always') }}</span>
-            <!-- <span>{{ $t('high.never') }}</span> -->
+          <div class="global-h6 wow fadeInUp">
+            {{ $t('bass.effectiveness') }}
           </div>
-          <div class="global-h6">Simon Hemmrich</div>
-          <div class="global-h6">Senior Consultant</div>
+          <div class="other-center-span wow fadeInUp">
+            <strong class="other-center-strong">{{ $t('bass.always') }}</strong>
+            {{ $t('bass.only') }}
+          </div>
+          <div class="global-h6 wow fadeInUp">Simon Hemmrich</div>
+          <div class="global-h6 wow fadeInUp">Senior Consultant</div>
         </el-col>
       </el-row>
     </div>
@@ -224,6 +226,29 @@ export default {
           label: 'bass.asset',
           name: 'second',
           img: img2
+        }
+      ]
+    };
+  },
+  head() {
+    return {
+      title: `${this.$t('high.cross-chain')}-IBAX`,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA,BlockChain,BaaS,NFT'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.$t('high.cross-chain')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `${this.$t('high.cross-chain')}`
         }
       ]
     };

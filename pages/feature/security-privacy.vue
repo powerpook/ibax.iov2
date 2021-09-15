@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-10 11:45:18
+ * @LastEditTime: 2021-09-15 19:05:52
  * @Description: 
 -->
 <template>
@@ -11,13 +11,15 @@
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="12">
-              <h6 class="global-h6">{{ $t('bass.privacy') }}</h6>
-              <h2 class="bass-h2">{{ $t('bass.go') }}</h2>
-              <p class="home-new-p">
+            <el-col :xs="23" :lg="18">
+              <h6 class="global-h6 animated fadeInUp">
+                {{ $t('bass.privacy') }}
+              </h6>
+              <h2 class="bass-h2 animated fadeInUp">{{ $t('bass.go') }}</h2>
+              <p class="home-new-p animated fadeInUp">
                 {{ $t('bass.key') }}
               </p>
-              <p class="home-new-bottom">
+              <p class="home-new-bottom animated fadeInUp">
                 <a
                   href="https://weaver.ibax.io/"
                   target="_blank"
@@ -26,40 +28,46 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="6">
+            <!-- <el-col :xs="23" :lg="6">
               <div class="home-new-img">
                 <img src="../../assets/image/diamond.svg" mode="powerful" />
               </div>
-            </el-col>
+            </el-col> -->
           </el-row>
         </div>
         <div class="other">
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">{{ $t('bass.keep') }}</div>
+              <div class="other-ease animated fadeInUp">
+                {{ $t('bass.keep') }}
+              </div>
             </el-col>
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">{{ $t('bass.comply') }}</div>
+              <div class="other-ease animated fadeInUp">
+                {{ $t('bass.comply') }}
+              </div>
             </el-col>
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">{{ $t('bass.data') }}</div>
+              <div class="other-ease animated fadeInUp">
+                {{ $t('bass.data') }}
+              </div>
             </el-col>
           </el-row>
         </div>
         <div class="home-new">
-          <p class="home-new-title">
+          <p class="home-new-title wow fadeInUp">
             <i class="el-iconfont iconfont el-a-010"></i>
             <span class="home-new-title-text"> {{ $t('nav.security') }} </span>
           </p>
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="8">
-              <h2 class="bass-h2">{{ $t('bass.bank') }}</h2>
-              <p>
+              <h2 class="bass-h2 wow fadeInUp">{{ $t('bass.bank') }}</h2>
+              <p class="wow fadeInUp">
                 {{ $t('bass.attribute') }}
               </p>
             </el-col>
             <el-col :xs="23" :lg="14">
-              <div class="home-new-img">
+              <div class="home-new-img wow fadeInUp">
                 <img
                   src="../../assets/image/img-insights-report2.png"
                   mode="powerful"
@@ -73,13 +81,15 @@
     <div class="other other-center">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="12">
-          <div class="global-h6">{{ $t('bass.effectiveness') }}</div>
-          <div class="global-h6">
-            <span class="other-center-strong">{{ $t('bass.spire') }}</span>
-            <!-- <span>{{ $t('high.never') }}</span> -->
+          <div class="global-h6 wow fadeInUp">
+            {{ $t('bass.effectiveness') }}
           </div>
-          <div class="global-h6">Simon Hemmrich</div>
-          <div class="global-h6">Senior Consultant</div>
+          <div class="other-center-span wow fadeInUp">
+            <strong class="other-center-strong">{{ $t('bass.spire') }}</strong>
+            {{ $t('bass.attach') }}
+          </div>
+          <div class="global-h6 wow fadeInUp">Simon Hemmrich</div>
+          <div class="global-h6 wow fadeInUp">Senior Consultant</div>
         </el-col>
       </el-row>
     </div>
@@ -228,6 +238,29 @@ export default {
           label: 'high.validation',
           name: 'second',
           img: img2
+        }
+      ]
+    };
+  },
+  head() {
+    return {
+      title: `${this.$t('nav.security')}-IBAX`,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA,BlockChain,BaaS,Mining,Security,Secret,dataSecurity'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.$t('nav.security')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `${this.$t('nav.security')}`
         }
       ]
     };

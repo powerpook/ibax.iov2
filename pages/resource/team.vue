@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-09-09 16:23:42
+ * @LastEditTime: 2021-09-15 14:59:43
  * @Description: team
 -->
 <template>
@@ -186,33 +186,49 @@
         </el-row>
       </div>
     </div>
+    <div class="team-bod">
+      <div class="container">
+        <h3>{{ $t('resourse.senior') }}</h3>
+        <ul class="investors-bod-list">
+          <li v-for="item in arrBod" :key="item.alt">
+            <div class="avatar-wrap">
+              <img :src="item.img" class="attachment-full" :alt="item.alt" />
+            </div>
+            <div class="info-wrap">
+              <strong class="name">{{ item.name }}</strong>
+              <strong class="post">{{ $t(item.introduce) }}</strong>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="team-serving">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :sm="22" :md="20" :lg="18">
           <div class="team-serving-header">
             <h3>{{ $t('resourse.from') }}</h3>
           </div>
-          <el-row
-            type="flex"
-            justify="center"
-            align="top"
-            style="flex-flow: wrap"
-          >
-            <el-col v-for="i in 8" :key="i" :xs="23" :sm="12" :md="8" :lg="7">
+          <el-row type="flex" justify="center" style="flex-flow: wrap">
+            <el-col
+              v-for="item in arrTeam"
+              :key="item.name"
+              :xs="23"
+              :sm="12"
+              :md="8"
+              :lg="7"
+            >
               <div class="team-serving-content">
-                <div class="inner">
-                  <div class="img-wrap">
-                    <img
-                      src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/icon-san-francisco-1.svg"
-                      class="attachment-medium"
-                      alt="icon-san-francisco-1"
-                    />
-                  </div>
-                  <strong class="place">San Francisco</strong>
-                  <div>
-                    One Front Street, 28th floor<br />
-                    San Francisco, CA 94111
-                  </div>
+                <div class="team-serving-content-img">
+                  <img
+                    :src="item.img"
+                    class="attachment-medium"
+                    alt="item.name"
+                  />
+                </div>
+                <strong class="place">{{ item.name }}</strong>
+                <div class="team-serving-content-text">
+                  {{ item.label }}<br />
+                  {{ $t(item.des) }}
                 </div>
               </div>
             </el-col>
@@ -226,6 +242,17 @@
 const ceo1 = require('../../assets/image/ceo-1.png');
 const ceo2 = require('../../assets/image/ceo-2.png');
 const ceo3 = require('../../assets/image/ceo-3.png');
+const adviser1 = require('../../assets/image/avatars/adviser-1.png');
+const adviser2 = require('../../assets/image/avatars/adviser-2.png');
+const adviser3 = require('../../assets/image/avatars/adviser-3.png');
+const member1 = require('../../assets/image/avatars/member-1.png');
+const member2 = require('../../assets/image/avatars/member-2.png');
+const member3 = require('../../assets/image/avatars/member-3.png');
+const member4 = require('../../assets/image/avatars/member-4.png');
+const member5 = require('../../assets/image/avatars/member-5.png');
+const member6 = require('../../assets/image/avatars/member-6.png');
+const member7 = require('../../assets/image/avatars/member-7.png');
+const member8 = require('../../assets/image/avatars/member-8.png');
 export default {
   props: {},
   data() {
@@ -241,6 +268,76 @@ export default {
         slidesToScroll: 1
         // swipeToSlide: true
       },
+      arrTeam: [
+        {
+          img: member1,
+          name: 'Scotland',
+          label: 'Clifford G.Gordon',
+          des: 'resourse.developer'
+        },
+        {
+          img: member2,
+          name: 'Singapore',
+          label: 'Leslie J. Otero',
+          des: 'resourse.designer'
+        },
+        {
+          img: member3,
+          name: 'Australia',
+          label: 'Leslie J. Otero',
+          des: 'resourse.soon'
+        },
+        {
+          img: member4,
+          name: 'Chen Ren',
+          label: 'Singapore',
+          des: 'resourse.joined'
+        },
+        {
+          img: member5,
+          name: 'US',
+          label: 'Harold R. Johansson',
+          des: 'resourse.responsible'
+        },
+        {
+          img: member6,
+          name: 'US',
+          label: 'Nathan Conley',
+          des: 'resourse.hum'
+        },
+        {
+          img: member7,
+          name: 'Italy',
+          label: 'Alberto Angelo',
+          des: 'resourse.our'
+        },
+        {
+          img: member8,
+          name: 'US',
+          label: 'Rebecca J. Bourquin',
+          des: 'resourse.administrative'
+        }
+      ],
+      arrBod: [
+        {
+          img: adviser1,
+          alt: 'adviser-1',
+          name: 'Scotland',
+          introduce: 'Professor(Institut polytechnique de Paris)'
+        },
+        {
+          img: adviser2,
+          alt: 'adviser-2',
+          name: 'Rakib Sajid',
+          introduce: 'resourse.doctor'
+        },
+        {
+          img: adviser3,
+          alt: 'adviser-3',
+          name: 'Priscilla Wang ',
+          introduce: 'resourse.affairs'
+        }
+      ],
       arrPatter: [
         {
           img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/11/logo-docusign-1.svg'
@@ -291,14 +388,14 @@ export default {
       domGlobal: '',
       optionLeft: {
         width: '100%',
-        step: 1, // 数值越大速度滚动越快
-        // limitMoveNum: 11, // 开始无缝滚动的数据量 this.dataList.length
-        hoverStop: true, // 是否开启鼠标悬停stop
-        direction: 2, // 0向下 1向上 2向左 3向右
-        openWatch: true, // 开启数据实时监控刷新dom
-        singleHeight: 0, // 单步运动停止的高度(默认值0是无缝不停止的滚动) direction => 0/1
-        singleWidth: 0, // 单步运动停止的宽度(默认值0是无缝不停止的滚动) direction => 2/3
-        waitTime: 10 // 单步运动停止的时间(默认值1000ms)
+        step: 1,
+        // limitMoveNum: 11,
+        hoverStop: true,
+        direction: 2, // 0-dwon 1-up 2-left 3-right
+        openWatch: true,
+        singleHeight: 0,
+        singleWidth: 0,
+        waitTime: 10
       },
       iconList: []
     };
@@ -350,8 +447,9 @@ export default {
     },
     async handleGethubIssues() {
       const url = 'https://api.github.com/repos/renleiabc/blockChain/issues';
-      this.iconList = await this.$axios.get(url);
-      // console.log(JSON.stringify(this.iconList));
+      const { data } = await this.$axios.get(url);
+      this.iconList = data;
+      console.log(JSON.stringify(this.iconList));
     }
   }
 };

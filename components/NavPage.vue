@@ -2,23 +2,23 @@
  * @Author: abc
  * @Date: 2021-08-17 10:59:52
  * @LastEditors: abc
- * @LastEditTime: 2021-09-09 17:54:04
+ * @LastEditTime: 2021-09-15 17:52:57
  * @Description: nav
 -->
 <template>
   <div class="nav">
     <div class="nav-index">
       <nuxt-link :to="{ name: 'index' }">
-        <img src="../assets/image/logo-ib.svg" alt="logo" />
+        <i class="iconfont el-logo1"></i>
       </nuxt-link>
     </div>
     <el-menu
+      :router="isRouter"
       :collapse-transition="false"
       :default-active="$route.path"
-      router
-      background-color="#274235"
-      text-color="#fff"
-      active-text-color="#fff"
+      :background-color="headerColor"
+      :text-color="color"
+      :active-text-color="color"
       class="el-menu-nav"
       mode="horizontal"
       @select="handleSelect"
@@ -28,7 +28,7 @@
           v-if="items.children"
           :key="items.key"
           :index="items.path"
-          popper-class="subMenu--horizontal"
+          :popper-class="popperClass"
           :popper-append-to-body="boo"
         >
           <template slot="title">{{ $t(items.title) }}</template>
@@ -94,7 +94,7 @@
       <div class="nav-right-dropdown">
         <el-dropdown @command="handleCommand">
           <span class="el-dropdown-link">
-            <img src="../assets/image/translate.svg" alt="" />
+            <i class="iconfont el-translate"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item
@@ -123,6 +123,7 @@ export default {
   data() {
     return {
       boo: true,
+      isRouter: true,
       activeIndex: '1',
       strLang: 'English',
       arrLang: [
@@ -382,7 +383,19 @@ export default {
       ]
     };
   },
-  computed: {},
+  computed: {
+    headerColor() {
+      console.log(this.$store.getters.handleHeaderColor);
+      return this.$store.getters.handleHeaderColor;
+    },
+    color() {
+      console.log(this.$store.getters.handleColor);
+      return this.$store.getters.handleColor;
+    },
+    popperClass() {
+      return this.$store.getters.handdlePopperClass;
+    }
+  },
   watch: {},
   created() {},
   mounted() {

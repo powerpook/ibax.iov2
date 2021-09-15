@@ -2,22 +2,26 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-10 11:07:16
- * @Description: 
+ * @LastEditTime: 2021-09-15 19:02:01
+ * @Description: virtual macine
 -->
 <template>
   <div class="other">
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <h6 class="global-h6">{{ $t('high.technical') }}</h6>
+          <h6 class="global-h6 animated fadeInUp">
+            {{ $t('high.technical') }}
+          </h6>
           <el-row type="flex" justify="space-between">
-            <el-col :xs="23" :lg="12">
-              <h2 class="bass-h2">{{ $t('home.multiple') }}</h2>
-              <p class="home-new-p">
+            <el-col :xs="23" :lg="18">
+              <h2 class="bass-h2 animated fadeInUp">
+                {{ $t('home.multiple') }}
+              </h2>
+              <p class="home-new-p animated fadeInUp">
                 {{ $t('nav.smart') }}
               </p>
-              <p class="home-new-bottom">
+              <p class="home-new-bottom animated fadeInUp">
                 <a
                   href="https://weaver.ibax.io/"
                   target="_blank"
@@ -26,33 +30,41 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="6">
+            <!-- <el-col :xs="23" :lg="6">
               <div class="home-new-img">
                 <img src="../../assets/image/diamond.svg" mode="powerful" />
               </div>
-            </el-col>
+            </el-col> -->
           </el-row>
         </div>
         <div class="other">
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">{{ $t('high.most') }}</div>
+              <div class="other-ease animated fadeInUp">
+                {{ $t('high.most') }}
+              </div>
             </el-col>
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">{{ $t('high.one') }}</div>
+              <div class="other-ease animated fadeInUp">
+                {{ $t('high.one') }}
+              </div>
             </el-col>
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">{{ $t('high.contract') }}</div>
+              <div class="other-ease animated fadeInUp">
+                {{ $t('high.contract') }}
+              </div>
             </el-col>
           </el-row>
         </div>
         <div class="home-new">
-          <p class="home-new-title">
-            <i class="el-iconfont iconfont el-a-042"></i>
-            <span class="home-new-title-text">{{ $t('high.editor') }} </span>
-          </p>
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="8">
+              <p class="home-new-title">
+                <i class="el-iconfont iconfont el-a-042"></i>
+                <span class="home-new-title-text"
+                  >{{ $t('high.editor') }}
+                </span>
+              </p>
               <h2 class="bass-h2">{{ $t('high.simple') }}</h2>
               <p>
                 {{ $t('home.system') }}
@@ -90,9 +102,9 @@
               alt="viewpoint_es"
             />
           </div>
-          <div class="global-h6">
-            <span class="other-center-strong">{{ $t('high.basic') }}</span>
-            <!--  <span>{{ $t('high.never') }}</span> -->
+          <div class="other-center-span wow fadeInUp">
+            <strong class="other-center-strong">{{ $t('bass.spire') }}</strong>
+            {{ $t('high.very') }}
           </div>
           <div class="global-h6">Simon Hemmrich</div>
           <div class="global-h6">Senior Consultant</div>
@@ -247,6 +259,29 @@ export default {
           label: 'bass.security',
           name: 'second',
           img: img2
+        }
+      ]
+    };
+  },
+  head() {
+    return {
+      title: `${this.$t('nav.virtual')}-IBAX`,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA,BaaS,Mining,PostgreSQL, Honor Node,Guardian Node,Mint Node,Sub Nodes, CLB (CROSS LEDGERS BASE),Smart contracts,ecoLib,ecoGroup, Weaver,Oracle,Solidity,Go,Rust,DAO'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.$t('nav.virtual')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `${this.$t('nav.security')}`
         }
       ]
     };

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-10 15:58:16
+ * @LastEditTime: 2021-09-15 17:59:27
  * @Description: architecture
 -->
 <template>
@@ -11,7 +11,7 @@
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="10">
+            <el-col :xs="23" :lg="18">
               <h6 class="global-h6">{{ $t('solutions.financial') }}</h6>
               <h2 class="bass-h2">{{ $t('solutions.supply') }}</h2>
               <p class="home-new-p">
@@ -32,14 +32,14 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="12">
+            <!-- <el-col :xs="23" :lg="12">
               <div class="home-new-img">
                 <img
                   src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/hero-retention.png"
                   mode="powerful"
                 />
               </div>
-            </el-col>
+            </el-col> -->
           </el-row>
         </div>
         <div class="other">

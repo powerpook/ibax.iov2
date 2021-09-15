@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-09-10 17:56:37
+ * @LastEditTime: 2021-09-15 18:22:47
  * @Description: 
 -->
 <template>
@@ -68,9 +68,7 @@
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
                     <h4 class="bass-h4">
-                      <i
-                        class="bass-white-icon iconfont el-a-customerservice"
-                      ></i>
+                      <i class="bass-white-icon iconfont el-developer"></i>
                       {{ $t('develope.document') }}
                     </h4>
                     <p>{{ $t('develope.use') }}</p>
@@ -90,9 +88,7 @@
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
                     <h4 class="bass-h4">
-                      <i
-                        class="bass-white-icon iconfont el-a-customerservice"
-                      ></i
+                      <i class="bass-white-icon iconfont el-forum"></i
                       >{{ $t('develope.engineer') }}
                     </h4>
                     <p>
@@ -115,8 +111,12 @@
       </el-row>
     </div>
     <div class="develop-center">
-      <h2 class="bass-h2">{{ $t('develope.open') }}</h2>
-      <p>{{ $t('develope.has') }}</p>
+      <el-row type="flex" justify="center">
+        <el-col :xs="23" :lg="16">
+          <h2 class="bass-h2">{{ $t('develope.open') }}</h2>
+          <p>{{ $t('develope.has') }}</p>
+        </el-col>
+      </el-row>
     </div>
     <div class="media-a">
       <el-row type="flex" justify="center">
@@ -187,7 +187,7 @@
         </el-col>
       </el-row>
     </div>
-    <div class="develop-center">
+    <div class="develop-center" style="padding-top: 50px">
       <h2 class="bass-h2">Low Code</h2>
       <p>
         {{ $t('develope.code') }}

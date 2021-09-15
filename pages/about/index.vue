@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 17:50:10
  * @LastEditors: abc
- * @LastEditTime: 2021-09-10 18:24:09
+ * @LastEditTime: 2021-09-14 17:14:22
  * @Description: conact us
 -->
 <template>
@@ -10,7 +10,7 @@
     <div class="about-left">
       <div class="about-left-box">
         <nuxt-link to="/" class="about-left-box-icon">
-          <i class="iconfont el-logo"></i>
+          <i class="iconfont el-logo1"></i>
         </nuxt-link>
         <div class="about-left-box-head">
           <img
@@ -84,7 +84,7 @@
 </template>
 <script>
 export default {
-  layout: 'about',
+  layout: 'aboutLayouts',
   props: {},
   data() {
     return {

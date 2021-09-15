@@ -1,7 +1,166 @@
+$light: #7856ff;
 .news {
   background-color: #fff;
   color: #37383c;
   font: 16px/1.8125 "Untitled Sans", "Helvetica Neue", Helvetica, sans-serif;
+  .el-translate {
+    font-size: 25px;
+    color: #37383c;
+  }
+  &-header {
+    height: 140px !important;
+  }
+  .nav-child-item-content-title-text {
+    color: #37383c;
+  }
+  .el-menu--horizontal > .el-submenu .el-submenu__title {
+    color: #37383c;
+  }
+  .el-menu--horizontal > .el-menu-item {
+    color: #37383c;
+  }
+  .el-submenu__title:hover,
+  .el-submenu__title:focus,
+  .el-menu-item:focus,
+  .el-menu-item:hover {
+    background-color: transparent !important;
+    color: #37383c !important;
+    border-bottom: 2px solid #f5c067 !important;
+  }
+  .el-menu-item:hover {
+    background-color: transparent !important;
+    color: #37383c !important;
+    border-bottom: 2px solid #f5c067 !important;
+  }
+  .el-menu--horizontal > .el-menu-item.is-active {
+    border-bottom: 2px solid transparent !important;
+    color: #37383c !important;
+    //border-bottom: none !important;
+  }
+  .el-menu--horizontal > .el-submenu.is-active .el-submenu__title {
+    border-bottom: 2px solid transparent !important;
+    color: #37383c !important;
+  }
+  .el-submenu__icon-arrow {
+    display: none;
+  }
+  .nav-link {
+    color: #37383c;
+  }
+  .nav-news {
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    &-index {
+      padding-right: 20px;
+    }
+    .blog {
+      height: 30px;
+      padding-left: 20px;
+      border-left: 1px solid $light;
+      img {
+        width: 218px;
+      }
+    }
+    &-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      &-box {
+        position: relative;
+        display: flex;
+        &-email {
+          width: 190px;
+          background: #f4f4f4;
+          padding: 5px 52px 5px 12px;
+          height: 40px;
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+        }
+        &-btn {
+          height: 40px;
+          font-size: 20px;
+          margin: 0;
+          outline: none;
+          color: #fff;
+          background: $light;
+          padding: 0 10px;
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+      }
+    }
+  }
+  .el-logo1 {
+    color: $light;
+    font-size: 35px;
+  }
+  .btn-wrap {
+    margin-left: 32px;
+  }
+  .btn--pri {
+    color: $light;
+    border: 2px solid $light;
+    border-radius: 4px;
+    min-width: 144px;
+    padding: 14px 10px;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    display: inline-block;
+    &:hover {
+      color: #fff;
+      background: $light;
+      border-color: $light;
+    }
+  }
+  .lead-img {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+  .inner {
+    padding: 64px 112px;
+  }
+  &-articles {
+    margin: 55px auto 57px;
+    &-h2 {
+      text-align: center;
+      font-size: 56px;
+      margin-bottom: 50px;
+    }
+    &-h4 {
+      font-size: 24px;
+      color: #37383c;
+    }
+    .news-content-item-text {
+      padding: 22px 24px;
+      color: #6b7c93;
+    }
+    .blog-cite {
+      padding: 30px 24px;
+    }
+    .blog-cite-a {
+      display: flex;
+      align-items: center;
+      color: #37383c;
+    }
+    .per-info {
+      margin-left: 20px;
+      & > * {
+        display: block;
+      }
+    }
+    .blog-cite .avatar {
+      width: 48px;
+      overflow: hidden;
+      img {
+        border-radius: 50%;
+        width: 100%;
+      }
+    }
+  }
   &-header {
     padding: 40px 0 20px;
     font-size: 18px;
@@ -38,6 +197,7 @@
       padding-bottom: 60px;
       &-card {
         width: 100%;
+        height: 100%;
         display: block;
         position: relative;
         color: #37383c;
@@ -63,6 +223,7 @@
         width: 100%;
         img {
           width: 100%;
+          height: 300px;
         }
       }
       &-text {
@@ -95,5 +256,9 @@
       color: #f3ac34;
       font-size: 14px;
     }
+  }
+  &-page {
+    text-align: center;
+    margin-bottom: 50px;
   }
 }

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 15:01:26
  * @LastEditors: abc
- * @LastEditTime: 2021-09-13 16:53:16
+ * @LastEditTime: 2021-09-15 18:29:50
  * @Description:
 -->
 <template>
@@ -10,7 +10,10 @@
     <el-scrollbar id="global" ref="scroll" style="height: 100%" class="global">
       <el-container class="global-screen">
         <!-- header -->
-        <el-header class="global-header">
+        <el-header
+          class="global-header"
+          :style="{ 'background-color': headerColor }"
+        >
           <el-row type="flex" justify="center">
             <!-- PC nav -->
             <el-col
@@ -66,24 +69,17 @@ export default {
       throttleTimer: false
     };
   },
-  computed: {},
-  watch: {
-    /*  $route(newVal, oldVal) {
-      const { scroll } = newVal.query;
-      console.log(scroll);
-      if (scroll) {
-        console.log(newVal);
-        this.$refs.scroll.scrollTo(
-          {
-            y: scroll
-          },
-          500,
-          'easeInQuad'
-        );
-      }
-    } */
+  computed: {
+    headerColor() {
+      return this.$store.getters.handleHeaderColor;
+    }
   },
-  created() {},
+  watch: {},
+  created() {
+    const obj = { headerColor: '#274235', color: '#fff' };
+    this.$store.commit('handleChangeColor', obj);
+    this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+  },
   mounted() {
     this.$nextTick(() => {
       this.domGlobal = document.getElementById('global').firstChild;
@@ -126,3 +122,13 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.el-menu--horizontal {
+  .el-menu--popup {
+    border: 1px solid #b99e9e;
+    box-shadow: 0 0 2px rgb(0 0 0 / 80%), 0 4px 12px rgb(0 0 0 / 36%),
+      inset 0 0 0 0.5px rgb(237 237 237 / 36%);
+    border-radius: 20px;
+  }
+}
+</style>

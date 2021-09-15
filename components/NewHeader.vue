@@ -2,14 +2,14 @@
  * @Author: abc
  * @Date: 2021-08-26 15:28:58
  * @LastEditors: abc
- * @LastEditTime: 2021-09-10 15:54:40
+ * @LastEditTime: 2021-09-14 17:14:13
  * @Description: 
 -->
 <template>
   <div class="nav-news">
     <div class="nav-news-index">
       <nuxt-link :to="{ name: 'index' }">
-        <i class="iconfont el-logo"></i>
+        <i class="iconfont el-logo1"></i>
       </nuxt-link>
     </div>
     <a href="/blog" class="blog">

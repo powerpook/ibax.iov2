@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-13 17:48:52
+ * @LastEditTime: 2021-09-15 15:45:41
  * @Description: home
 -->
 <template>
@@ -185,17 +185,25 @@
             </el-row>
           </div>
           <div class="home-new">
-            <p class="home-new-title">
-              <i class="el-iconfont iconfont el-a-036"></i>
-              <span class="home-new-title-text">
-                {{ $t('home.bifurcation') }}
-              </span>
-            </p>
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="8">
+                <p class="home-new-title wow fadeInUp">
+                  <i class="el-iconfont iconfont el-a-036"></i>
+                  <span class="home-new-title-text">
+                    {{ $t('home.bifurcation') }}
+                  </span>
+                </p>
                 <div class="wow fadeInUp">
                   <h2 class="bass-h2">{{ $t('home.honor') }}</h2>
                   <p>{{ $t('home.unified') }}</p>
+                  <p>{{ $t('home.unif') }}</p>
+                  <nuxt-link
+                    class="home-new-bottom link"
+                    to="/feature/ecolib-governance"
+                  >
+                    <span>{{ $t('home.features') }}</span>
+                    <i class="el-icon-right"></i>
+                  </nuxt-link>
                 </div>
               </el-col>
               <el-col :xs="23" :lg="14">
@@ -271,7 +279,7 @@
           <div class="home-new">
             <p class="subtitle">{{ $t('home.lead') }}</p>
             <el-row type="flex" justify="space-between">
-              <el-col :xs="23" :lg="12">
+              <el-col :xs="23" :lg="14">
                 <div class="wow fadeInUp">
                   <h2 class="bass-h2">{{ $t('home.driven') }}</h2>
                   <p class="global-h6">{{ $t('home.chain') }}</p>
@@ -284,9 +292,9 @@
                   </nuxt-link>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="6">
+              <el-col :xs="23" :lg="8">
                 <div class="home-new-img">
-                  <img src="../assets/image/ball_1.svg" mode="connect" />
+                  <img src="../assets/image/shield_points.svg" mode="connect" />
                 </div>
               </el-col>
             </el-row>
@@ -347,9 +355,9 @@
     <div ref="story" class="home-story">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :sm="22" :md="20" :lg="18">
-          <p class="subtitle">{{ $t('home.partner') }}</p>
           <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="8">
+              <p class="subtitle">{{ $t('home.partner') }}</p>
               <h3 class="global-h3">{{ $t('home.ibaa') }}</h3>
               <li class="home-story-text-li">
                 {{ $t('home.official') }}
@@ -361,12 +369,12 @@
                 {{ $t('home.manage') }}
               </li>
             </el-col>
-            <el-col :xs="23" :lg="6">
+            <el-col :xs="23" :lg="5">
               <div class="home-new-img">
                 <img src="../assets/image/device-494x1024.png" mode="connect" />
               </div>
             </el-col>
-            <el-col :xs="23" :lg="6">
+            <el-col :xs="23" :lg="9">
               <p class="global-h6 home-story-title">
                 {{ $t('home.wallet') }}
               </p>
@@ -480,13 +488,13 @@ export default {
       tabPosition: 'bottom',
       activeName: 'first',
       boo: false,
-      xSpacing: 20, // 每个水平位置的距离
-      waveWidth: 0, // 波的宽度
-      theta: 0.0, // 初始角度为 0
-      amplitude: 80, // 波的高度
-      period: 400, // 波在重复前的像素个数
-      xWave: 0, // x 的增量
-      arrWave: [], // 保存波的高度的数组
+      xSpacing: 20,
+      waveWidth: 0,
+      theta: 0.0,
+      amplitude: 80,
+      period: 400,
+      xWave: 0,
+      arrWave: [],
       helf: 0,
       color: 'rgba(243,172,52,0.5)',
       arrTags: [
@@ -525,14 +533,13 @@ export default {
       ],
       optionLeft: {
         width: '100%',
-        step: 1, // 数值越大速度滚动越快
-        // limitMoveNum: 11, // 开始无缝滚动的数据量 this.dataList.length
-        hoverStop: true, // 是否开启鼠标悬停stop
-        direction: 3, // 0向下 1向上 2向左 3向右
-        openWatch: true, // 开启数据实时监控刷新dom
-        singleHeight: 0, // 单步运动停止的高度(默认值0是无缝不停止的滚动) direction => 0/1
-        singleWidth: 0, // 单步运动停止的宽度(默认值0是无缝不停止的滚动) direction => 2/3
-        waitTime: 10 // 单步运动停止的时间(默认值1000ms)
+        step: 1,
+        hoverStop: true,
+        direction: 3,
+        openWatch: true,
+        singleHeight: 0,
+        singleWidth: 0,
+        waitTime: 10
       },
       iconList: [
         {
@@ -589,6 +596,29 @@ export default {
       numMain: '',
       colorPrimary: '#f3ac34',
       colorLine: 'rgba(243,172,52,0.2)'
+    };
+  },
+  head() {
+    return {
+      title: `${this.$t('nav.home')}-IBAX`,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA,BlockChain BaaS,Mining'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.$t('nav.home')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `${this.$t('nav.home')}`
+        }
+      ]
     };
   },
   computed: {},

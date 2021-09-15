@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-01-08 14:39:29
  * @LastEditors: abc
- * @LastEditTime: 2021-08-30 17:57:46
+ * @LastEditTime: 2021-09-14 17:06:15
  * @Description:axios 配置
  */
 import { Message } from 'element-ui';
@@ -27,13 +27,13 @@ export default function ({ $axios, redirect, store }) {
     // if (response.data.code == 401) {
     //   store.commit("handleIsLogin", true);
     // }
-    return response.data;
+    return response;
   });
   $axios.onError((error) => {
+    console.log(error.response);
     const code = parseInt(error.response && error.response.status);
-    // console.log(code);
     Message.error({
-      content: `Data call error, status code：${code}`,
+      message: `Data call error, status code：${code}`,
       duration: 0,
       showClose: true
     });

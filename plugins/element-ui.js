@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-08-26 11:50:11
+ * @LastEditTime: 2021-09-14 16:42:21
  * @Description:
  */
 import Vue from 'vue';
@@ -36,7 +36,8 @@ import {
   TabPane,
   Select,
   Option,
-  OptionGroup
+  OptionGroup,
+  Pagination
 } from 'element-ui';
 
 Vue.use(Scrollbar);
@@ -66,6 +67,7 @@ Vue.use(Loading.directive);
 Vue.use(Select);
 Vue.use(Option);
 Vue.use(OptionGroup);
+Vue.use(Pagination);
 Vue.prototype.$loading = Loading.service;
 Vue.prototype.$msgbox = MessageBox;
 Vue.prototype.$alert = MessageBox.alert;
