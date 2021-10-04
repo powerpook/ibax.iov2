@@ -2,8 +2,8 @@
  * @Author: abc
  * @Date: 2021-01-08 14:39:29
  * @LastEditors: abc
- * @LastEditTime: 2021-09-14 17:06:15
- * @Description:axios 配置
+ * @LastEditTime: 2021-09-24 15:54:12
+ * @Description:axios
  */
 import { Message } from 'element-ui';
 // import qs from "qs";
@@ -22,11 +22,6 @@ export default function ({ $axios, redirect, store }) {
     }
   );
   $axios.onResponse((response) => {
-    // console.log(response);
-    // response.data.errCode是接口返回的值，如果值为401，登录过期，然后跳转到登录页，
-    // if (response.data.code == 401) {
-    //   store.commit("handleIsLogin", true);
-    // }
     return response;
   });
   $axios.onError((error) => {

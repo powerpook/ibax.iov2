@@ -6,7 +6,7 @@
  * @Description: 
 -->
 <template>
-  <div>页面404</div>
+  <div>404</div>
 </template>
 <script>
 export default {

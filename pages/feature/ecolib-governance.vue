@@ -2,8 +2,8 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-15 17:34:05
- * @Description: 
+ * @LastEditTime: 2021-09-28 12:21:20
+ * @Description:
 -->
 <template>
   <div class="other">
@@ -11,7 +11,7 @@
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="12">
+            <el-col :xs="23" :lg="18">
               <h6 class="global-h6 animated fadeInUp">
                 {{ $t('featrue.ecolog') }}
               </h6>
@@ -30,41 +30,59 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="6">
+            <!--  <el-col :xs="23" :lg="6">
               <div class="home-new-img animated fadeInUp">
                 <img src="../../assets/image/diamond.svg" mode="powerful" />
               </div>
-            </el-col>
+            </el-col> -->
           </el-row>
         </div>
         <div class="other">
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="6">
-              <div class="other-ease wow fadeInUp">
-                {{ $t('feature.consensus') }}
+            <el-col :xs="23" :lg="8">
+              <div
+                class="other-easeplus wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 1s"
+              >
+                <div class="other-easeplus-strong">
+                  {{ $t('feature.consensus') }}
+                </div>
+                <div>{{ $t('feature.costs') }}</div>
               </div>
             </el-col>
-            <el-col :xs="23" :lg="6">
-              <div class="other-ease wow fadeInUp">
-                {{ $t('feature.issuing') }}
+            <el-col :xs="23" :lg="8">
+              <div
+                class="other-easeplus wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 1.5s"
+              >
+                <div class="other-easeplus-strong">
+                  {{ $t('feature.issuing') }}
+                </div>
+                <div>{{ $t('feature.economic') }}</div>
               </div>
             </el-col>
-            <el-col :xs="23" :lg="6">
-              <div class="other-ease wow fadeInUp">
-                {{ $t('feature.mining') }}
+            <el-col :xs="23" :lg="8">
+              <div
+                class="other-easeplus wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 2s"
+              >
+                <div class="other-easeplus-strong">
+                  {{ $t('feature.mining') }}
+                </div>
+                <div>{{ $t('feature.incentives') }}</div>
               </div>
             </el-col>
           </el-row>
         </div>
         <div class="home-new">
-          <p class="home-new-title wow fadeInUp">
-            <i class="el-iconfont iconfont el-a-054"></i>
-            <span class="home-new-title-text">
-              {{ $t('feature.model') }}
-            </span>
-          </p>
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="8">
+              <p class="home-new-title wow fadeInUp">
+                <i class="el-iconfont iconfont el-a-054"></i>
+                <span class="home-new-title-text">
+                  {{ $t('feature.model') }}
+                </span>
+              </p>
               <h2 class="bass-h2 wow fadeInUp">{{ $t('feature.eco') }}</h2>
               <p class="wow fadeInUp">
                 {{ $t('feature.choose') }}
@@ -82,11 +100,13 @@
         </div>
       </el-col>
     </el-row>
-    <div class="other other-center">
+    <div id="implement" class="other other-center">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="15">
-          <div class="global-h6 wow fadeInUp">
-            {{ $t('bass.effectiveness') }}
+          <div class="other-center-img wow fadeInUp">
+            <i v-if="lang === 'zh'" class="iconfont el-efficiency_cn"></i>
+            <i v-if="lang === 'en'" class="iconfont el-efficiency"></i>
+            <i v-if="lang === 'tw'" class="iconfont el-efficiency_zh"></i>
           </div>
           <div class="other-center-span wow fadeInUp">
             <strong class="other-center-strong">{{
@@ -94,8 +114,10 @@
             }}</strong>
             {{ $t('feature.tokens') }}
           </div>
-          <div class="global-h6 wow fadeInUp">Simon Hemmrich</div>
-          <div class="global-h6 wow fadeInUp">Senior Consultant</div>
+          <div class="other-center-bottom wow fadeInUp">
+            <strong class="other-center-bottom-strong">Simon Hemmrich</strong>
+            <span class="other-center-bottom-text">Senior Consultant</span>
+          </div>
         </el-col>
       </el-row>
     </div>
@@ -167,7 +189,7 @@
         </el-col>
       </el-row>
     </div>
-    <div class="media-a high-bottom">
+    <div id="refBottom" class="media-a high-bottom">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
           <h3 class="global-h4 wow fadeInUp">{{ $t('feature.about') }}</h3>
@@ -210,13 +232,15 @@
             </el-col>
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
-                <div class="high-bottom-img">
+                <div class="high-bottom-img wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-003"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('nav.private') }}</h4>
-                <p class="high-bottom-h6">{{ $t('nav.fouds') }}</p>
+                <h4 class="high-bottom-h4 wow fadeInUp">
+                  {{ $t('nav.private') }}
+                </h4>
+                <p class="high-bottom-h6 wow fadeInUp">{{ $t('nav.fouds') }}</p>
                 <nuxt-link
-                  class="high-bottom-more link"
+                  class="high-bottom-more link wow fadeInUp"
                   to="/feature/privite-transaction"
                 >
                   <span>{{ $t('bass.learn') }}</span>
@@ -252,7 +276,8 @@ export default {
           name: 'second',
           img: img2
         }
-      ]
+      ],
+      refBottom: ''
     };
   },
   head() {
@@ -275,13 +300,56 @@ export default {
           name: 'og:description',
           content: `${this.$t('nav.self')}`
         }
-      ]
+      ],
+      numImplement: 0,
+      numBottom: 0
     };
   },
   computed: {},
   watch: {},
   created() {},
-  mounted() {},
-  methods: {}
+  beforeDestroy() {
+    this.domGlobal.removeEventListener('scroll', this.handleScroll);
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.numArchite =
+        document.getElementById('implement').getBoundingClientRect().bottom -
+        105;
+      console.log(this.numArchite);
+      this.numArchiteBottom =
+        document.getElementById('refBottom').getBoundingClientRect().bottom -
+        105;
+      if (this.numArchite) {
+        this.domGlobal.addEventListener('scroll', () => {
+          this.handleThrottle(this.handleAlwaysScroll, 250);
+        });
+      }
+    });
+  },
+  methods: {
+    handleAlwaysScroll() {
+      const scrollTop = this.domGlobal.scrollTop;
+      const topHeight = document.getElementById('headerTop').offsetTop;
+      const isFixed = scrollTop > topHeight;
+      this.$store.commit('handleIsFixed', isFixed);
+      if (scrollTop >= this.numArchite && scrollTop < this.numArchiteBottom) {
+        const obj = { headerColor: '#fff', color: '#37383c' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'news--horizontal');
+        this.$store.commit('handleIsTop', false);
+      } else if (scrollTop >= this.numArchiteBottom) {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      } else {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      }
+    }
+  }
 };
 </script>

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-09-14 18:46:38
+ * @LastEditTime: 2021-09-26 12:19:21
  * @Description: news
 -->
 <template>
@@ -15,7 +15,12 @@
         </div>
         <div class="news-select">
           <div class="news-select-box">
-            <el-select v-model="topics" :placeholder="$t('resourse.source')">
+            <el-select
+              v-model="topics"
+              clearable
+              :placeholder="$t('resourse.source')"
+              @change="handleChange($event, 'topics')"
+            >
               <el-option
                 v-for="item in arrTopics"
                 :key="item.value"
@@ -26,8 +31,10 @@
             </el-select>
             <el-select
               v-model="type"
+              clearable
               :placeholder="$t('resourse.type')"
               class="news-select-box-second"
+              @change="handleChange($event, 'type')"
             >
               <el-option
                 v-for="item in arrType"
@@ -40,9 +47,11 @@
           </div>
           <div class="news-select-box">
             <el-input
-              v-model="input"
+              v-model="keywords"
               type="text"
+              clearable
               :placeholder="$t('resourse.search')"
+              @keyup.enter.native="handleKeywords"
             >
               <template #prefix>
                 <i class="el-icon-search"></i>
@@ -51,45 +60,63 @@
           </div>
         </div>
         <div class="news-content">
-          <div class="news-content-helf">
-            <div class="news-content-item-img">
-              <img
-                src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/04/Blog-Image-1-1.png"
-                class="attachment-full"
-                alt="Blog-Image 1"
-              />
-            </div>
+          <div v-if="!objTop" class="news-no">
+            {{ $t('resourse.no') }}
           </div>
-          <div class="news-content-helf">
-            <div class="inner">
-              <strong class="subtitle">Ebook</strong>
-              <h3>Guide to Product Analytics</h3>
-              <p>A book of questions and answers.</p>
-              <div class="home-new-bottom link">
-                <span>Read now </span><i class="el-icon-right"></i>
+          <template v-else>
+            <div class="news-content-helf">
+              <div class="news-content-item-img">
+                <img :src="objTop.icon" alt="picture" />
               </div>
             </div>
-          </div>
+            <div class="news-content-helf">
+              <div class="inner">
+                <strong v-if="objTop.type" class="subtitle">{{
+                  $t(`${handleType(objTop.type)}`)
+                }}</strong>
+                <h3>{{ objTop.title }}</h3>
+                <p>{{ objTop.introduction }}</p>
+                <nuxt-link
+                  :to="{ name: 'resource-news-id', params: { id: objTop.id } }"
+                  class="home-new-bottom link"
+                >
+                  <span>{{ $t('news.read') }} </span
+                  ><i class="el-icon-right"></i>
+                </nuxt-link>
+              </div>
+            </div>
+          </template>
         </div>
         <div class="news-content">
-          <div v-for="item in arrNews" :key="item.id" class="news-content-item">
-            <nuxt-link
-              :to="{ name: 'resource-news-id', params: { id: item.id } }"
-              class="news-content-item-card"
-            >
-              <div class="news-content-item-img" v-html="item.icon"></div>
-              <div class="news-content-item-text">
-                <strong class="subtitle">
-                  {{ $t(`${handleType(item.type)}`) }}
-                </strong>
-                <p>
-                  {{ item.title }}
-                </p>
-              </div>
-            </nuxt-link>
+          <div v-if="arrNews.length === 0" class="news-no">
+            {{ $t('resourse.no') }}
           </div>
+          <template v-else>
+            <div
+              v-for="item in arrNews"
+              :key="item.id"
+              class="news-content-item"
+            >
+              <nuxt-link
+                :to="{ name: 'resource-news-id', params: { id: item.id } }"
+                class="news-content-item-card"
+              >
+                <div class="news-content-img">
+                  <img :src="item.icon" :alt="item.icon" />
+                </div>
+                <div class="news-content-item-text">
+                  <strong class="subtitle">
+                    {{ $t(`${handleType(item.type)}`) }}
+                  </strong>
+                  <p>
+                    {{ item.title }}
+                  </p>
+                </div>
+              </nuxt-link>
+            </div>
+          </template>
         </div>
-        <div class="news-page">
+        <div class="news-page" style="display: none">
           <el-pagination
             :page-size="pageParams.limit"
             layout="prev, pager, next"
@@ -107,7 +134,7 @@ export default {
   props: {},
   data() {
     return {
-      input: '',
+      keywords: '',
       isAppend: false,
       arrTopics: [
         {
@@ -128,20 +155,6 @@ export default {
         }
       ],
       topics: '',
-      arrType: [
-        {
-          value: 1,
-          label: 'resourse.technology'
-        },
-        {
-          value: 2,
-          label: 'resourse.ecologically'
-        },
-        {
-          value: 3,
-          label: 'resourse.activities'
-        }
-      ],
       type: '',
       params: {
         where: {
@@ -157,20 +170,45 @@ export default {
         page: 1,
         limit: 10
       },
-      arrNews: []
+      topParams: {
+        where: {
+          source: '',
+          type: '',
+          keywords: ''
+        },
+        istop: true,
+        start_limit: 0,
+        end_limit: 1
+      },
+      arrNews: [],
+      objTop: []
     };
   },
   computed: {},
   watch: {},
   created() {
+    console.log(this.uploads);
     this.handleNewsList(this.params);
+    this.handleNewsIstop(this.topParams);
+    this.handleNewsource();
   },
-  mounted() {},
+  deactivated() {
+    this.domGlobal.removeEventListener('scroll', this.handleScroll);
+  },
+  mounted() {
+    const that = this;
+    document.onkeydown = function (event) {
+      const e = event || window.event;
+      if (e && e.keyCode === 13) {
+        that.handleKeywords();
+      }
+    };
+  },
   methods: {
     async handleNewsList(params) {
       const res = await this.$axios.$post('/newsfind', params);
       const { data } = res;
-      console.log(JSON.stringify(data));
+      // console.log(JSON.stringify(data));
       if (res.code === 0) {
         this.pageParams.page = data.page;
         this.pageParams.limit = data.limit;
@@ -178,12 +216,39 @@ export default {
         this.arrNews = data.rets;
       }
     },
-    handleType(val) {
-      const obj = this.arrType.find((item) => item.value === val);
-      return obj.label;
+    async handleNewsIstop(params) {
+      const res = await this.$axios.$post('/newsfinds', params);
+      const { data } = res;
+      console.log(JSON.stringify(data));
+      if (res.code === 0) {
+        this.objTop = data.rets[0];
+        console.log(JSON.stringify(this.objTop));
+      }
+    },
+    async handleNewsource() {
+      const res = await this.$axios.$get('/newsource');
+      const { data } = res;
+      if (res.code === 0) {
+        this.arrTopics = data.rets;
+        console.log(JSON.stringify(this.arrTopics));
+      }
     },
     handleCurrentChange(page) {
       console.log(page);
+    },
+    handleChange($event, str) {
+      console.log($event, str);
+      if (str === 'topics') {
+        this.params.where.source = $event;
+      } else {
+        this.params.where.type = $event;
+      }
+      this.handleNewsList(this.params);
+    },
+    handleKeywords() {
+      console.log(this.keywords);
+      this.params.where.keywords = this.keywords;
+      this.handleNewsList(this.params);
     }
   }
 };

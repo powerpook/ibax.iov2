@@ -2,17 +2,17 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-15 18:32:46
+ * @LastEditTime: 2021-09-28 12:17:48
  * @Description: architecture
 -->
 <template>
   <div class="other">
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
-        <div class="home-new">
-          <h6 class="global-h6 animated fadeInUp">
+        <div class="home-new" style="margin-top: 30px">
+          <p class="home-new-title-text animated fadeInUp">
             {{ $t('high.technical') }}
-          </h6>
+          </p>
           <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="18">
               <h2 class="bass-h2 animated fadeInUp">{{ $t('high.chain') }}</h2>
@@ -36,35 +36,34 @@
             </el-col> -->
           </el-row>
         </div>
-        <div class="other">
+        <div class="other other-middle">
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="8">
               <div
-                class="other-easeplus animated fadeIn"
+                class="other-easeplus wow fadeIn"
                 style="animation-duration: 1s; animation-delay: 1s"
               >
-                <!-- {{ $t('high.enough') }} -->
-                <div>{{ $t('high.globalization') }}</div>
+                <div class="other-easeplus-strong">
+                  {{ $t('high.globalization') }}
+                </div>
                 <div>{{ $t('high.to') }}</div>
               </div>
             </el-col>
             <el-col :xs="23" :lg="7">
               <div
-                class="other-easeplus animated fadeIn"
+                class="other-easeplus wow fadeIn"
                 style="animation-duration: 1s; animation-delay: 1.5s"
               >
-                <!--   {{ $t('high.compatibility') }} -->
-                <div>{{ $t('high.compat') }}</div>
+                <div class="other-easeplus-strong">{{ $t('high.compat') }}</div>
                 <div>{{ $t('high.rich') }}</div>
               </div>
             </el-col>
             <el-col :xs="23" :lg="8">
               <div
-                class="other-easeplus animated fadeIn"
+                class="other-easeplus wow fadeIn"
                 style="animation-duration: 1s; animation-delay: 2s"
               >
-                <!--  {{ $t('high.ease') }} -->
-                <div>{{ $t('high.use') }}</div>
+                <div class="other-easeplus-strong">{{ $t('high.use') }}</div>
                 <div>{{ $t('high.provide') }}</div>
               </div>
             </el-col>
@@ -94,18 +93,27 @@
         </div>
       </el-col>
     </el-row>
-    <div class="other other-center">
+    <div id="archite" class="other other-center">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="12">
-          <div class="global-h6 wow fadeInUp">
-            {{ $t('high.insights') }}
+        <el-col :xs="23" :lg="15">
+          <div class="other-center-img wow fadeInUp">
+            <i v-if="lang === 'zh'" class="iconfont el-techinsights_cn"></i>
+            <i v-if="lang === 'en'" class="iconfont el-techinsights"></i>
+            <i v-if="lang === 'tw'" class="iconfont el-techinsights_zh"></i>
           </div>
-          <div class="global-h6 wow fadeInUp">
-            <span class="other-center-strong">{{ $t('high.team') }}</span>
+          <!--  <div class="global-h6 wow fadeInUp">
+            {{ $t('high.insights') }}
+          </div> -->
+          <div class="other-center-box wow fadeInUp">
+            <strong class="other-center-box-strong">{{
+              $t('high.team')
+            }}</strong>
             <span>{{ $t('high.never') }}</span>
           </div>
-          <div class="global-h6 wow fadeInUp">Stuart Nichols</div>
-          <div class="global-h6 wow fadeInUp">IBAX CEO</div>
+          <div class="other-center-bottom wow fadeInUp">
+            <strong class="other-center-bottom-strong">Stuart Nichols</strong>
+            <span class="other-center-bottom-text">IBAX CEO</span>
+          </div>
         </el-col>
       </el-row>
     </div>
@@ -288,7 +296,7 @@
                 <p class="wow fadeInUp">{{ $t('high.meet') }}</p>
               </el-col>
               <el-col :xs="23" :lg="14">
-                <div class="home-new-img">
+                <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
                     mode="powerful"
@@ -300,7 +308,7 @@
         </el-col>
       </el-row>
     </div>
-    <div class="media-a high-bottom">
+    <div id="architeBottom" class="media-a high-bottom">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
           <h3 class="global-h4 wow fadeInUp">{{ $t('feature.about') }}</h3>
@@ -392,13 +400,52 @@ export default {
           name: 'og:description',
           content: `${this.$t('nav.high')}`
         }
-      ]
+      ],
+      numArchite: 0,
+      numArchiteBottom: 0
     };
   },
   computed: {},
   watch: {},
   created() {},
-  mounted() {},
-  methods: {}
+  mounted() {
+    this.$nextTick(() => {
+      this.numArchite =
+        document.getElementById('archite').getBoundingClientRect().bottom - 105;
+      console.log(this.numArchite);
+      this.numArchiteBottom =
+        document.getElementById('architeBottom').getBoundingClientRect()
+          .bottom - 105;
+      if (this.numArchite) {
+        this.domGlobal.addEventListener('scroll', () => {
+          this.handleThrottle(this.handleArchiteScroll, 250);
+        });
+      }
+    });
+  },
+  methods: {
+    handleArchiteScroll() {
+      const scrollTop = this.domGlobal.scrollTop;
+      const topHeight = document.getElementById('headerTop').offsetTop;
+      const isFixed = scrollTop > topHeight;
+      this.$store.commit('handleIsFixed', isFixed);
+      if (scrollTop >= this.numArchite && scrollTop < this.numArchiteBottom) {
+        const obj = { headerColor: '#fff', color: '#37383c' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'news--horizontal');
+        this.$store.commit('handleIsTop', false);
+      } else if (scrollTop >= this.numArchiteBottom) {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      } else {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      }
+    }
+  }
 };
 </script>

@@ -4,10 +4,11 @@
     font-size: 84px;
   }
   &-h2 {
-    font-size: 55px;
+    font-size: 50px;
+    line-height: 1.127;
   }
   &-h3 {
-    font-size: 55px;
+    font-size: 50px;
     line-height: 1.127;
   }
   &-h4 {
@@ -18,6 +19,17 @@
   }
   &-top {
     text-align: center;
+    margin-bottom: 80px;
+    display: block;
+    font: 700 16px/2 "Apercu Mono", "Helvetica Neue", "Helvetica", sans-serif;
+    letter-spacing: 0.1em;
+    &-text {
+      font-family: "Apercu Pro", "Helvetica Neue", "Helvetica", sans-serif;
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 2.62px;
+      margin-bottom: 19px;
+    }
     &-warp {
       margin-bottom: 200px;
       position: relative;
@@ -60,11 +72,22 @@
           padding: 14px;
           min-width: 172px;
           letter-spacing: -0.6px;
+          display: inline-block;
         }
         &-blod {
-          font-weight: bold;
           font-size: 18px;
           margin-bottom: 14px;
+          text-align: left;
+          display: flex;
+          justify-content: center;
+          &-box {
+            flex-wrap: wrap;
+            margin: auto;
+          }
+          strong {
+            display: block;
+            font-weight: bold;
+          }
         }
         &-line {
           padding: 10px;
@@ -87,6 +110,11 @@
     padding-top: 254px;
     padding-bottom: 154px;
     font-size: 16px;
+    &-title {
+      font-size: 36px;
+      display: flex;
+      align-items: center;
+    }
     &-content {
       padding-bottom: 154px;
     }
@@ -98,6 +126,7 @@
       font-size: 16px;
       line-height: 1.75;
       cursor: pointer;
+      height: 100%;
       .el-icon-right {
         margin-left: 5px;
       }
@@ -225,6 +254,13 @@
           }
         }
       }
+    }
+  }
+  &-col {
+    margin-bottom: 20px;
+    &-h4 {
+      font-size: 36px;
+      line-height: 1.3em;
     }
   }
 }

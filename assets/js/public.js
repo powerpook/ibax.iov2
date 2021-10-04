@@ -3,7 +3,7 @@
  * @LastEditors: abc
  * @Description:
  * @Date: 2019-04-10 14:49:19
- * @LastEditTime: 2021-08-17 16:25:22
+ * @LastEditTime: 2021-09-20 17:11:24
  */
 import Cookie from 'js-cookie';
 // translate router.meta.title, be used in breadcrumb sidebar tagsview
@@ -46,13 +46,13 @@ export function generateSkinColor(color) {
  */
 export function handleGetLang() {
   const objLang = Cookie.get('lang');
-  let str = 'en';
+  let str = '';
   if (objLang) {
     // str = JSON.parse(decodeURIComponent(objLang)).lang;
     str = JSON.parse(objLang).lang;
     return str;
   } else {
-    return str;
+    return 'en';
   }
 }
 // cooki

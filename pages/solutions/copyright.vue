@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-10 15:56:01
+ * @LastEditTime: 2021-09-24 17:24:01
  * @Description: architecture
 -->
 <template>
@@ -12,12 +12,14 @@
         <div class="home-new">
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="10">
-              <h6 class="global-h6">{{ $t('solutions.make') }}</h6>
-              <h2 class="bass-h2">{{ $t('solutions.copyright') }}</h2>
-              <p class="home-new-p">
+              <h6 class="global-h6 wow fadeInUp">{{ $t('solutions.make') }}</h6>
+              <h2 class="bass-h2 wow fadeInUp">
+                {{ $t('solutions.copyright') }}
+              </h2>
+              <p class="home-new-p wow fadeInUp">
                 {{ $t('solutions.protection') }}
               </p>
-              <p class="home-new-bottom">
+              <p class="home-new-bottom wow fadeInUp">
                 <a
                   href="https://weaver.ibax.io/"
                   target="_blank"
@@ -33,7 +35,7 @@
               </p>
             </el-col>
             <el-col :xs="23" :lg="12">
-              <div class="home-new-img">
+              <div class="home-new-img wow fadeInUp">
                 <img
                   src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/hero-retention.png"
                   mode="powerful"
@@ -44,21 +46,27 @@
         </div>
         <div class="other">
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="6">
-              <div class="other-ease">
-                <!-- {{ $t('high.enough') }} -->
+            <el-col :xs="23" :lg="8">
+              <div
+                class="other-ease wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 1s"
+              >
                 {{ $t('solutions.stop') }}
               </div>
             </el-col>
-            <el-col :xs="23" :lg="6">
-              <div class="other-ease">
-                <!--   {{ $t('high.compatibility') }} -->
+            <el-col :xs="23" :lg="7">
+              <div
+                class="other-ease wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 1.5s"
+              >
                 {{ $t('solutions.reduce') }}
               </div>
             </el-col>
-            <el-col :xs="23" :lg="6">
-              <div class="other-ease">
-                <!--  {{ $t('high.ease') }} -->
+            <el-col :xs="23" :lg="8">
+              <div
+                class="other-ease wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 2s"
+              >
                 {{ $t('solutions.value') }}
               </div>
             </el-col>
@@ -67,23 +75,23 @@
         <div class="home-new">
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="10">
-              <p class="home-new-title">
+              <p class="home-new-title wow fadeInUp">
                 <i class="el-iconfont iconfont el-a-011"></i>
                 <span class="home-new-title-text">
                   {{ $t('solutions.deposit') }}
                 </span>
               </p>
-              <h2 class="bass-h2">{{ $t('solutions.stop') }}</h2>
-              <p>
+              <h2 class="bass-h2 wow fadeInUp">{{ $t('solutions.stop') }}</h2>
+              <p class="wow fadeInUp">
                 {{ $t('solutions.quick') }}
               </p>
-              <div class="home-new-bottom link">
+              <div class="home-new-bottom link wow fadeInUp">
                 <span> {{ $t('home.using') }}</span>
                 <i class="el-icon-right"></i>
               </div>
             </el-col>
             <el-col :xs="23" :lg="12">
-              <div class="home-new-img">
+              <div class="home-new-img wow fadeInUp">
                 <img
                   src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/retention-img01.png"
                   mode="powerful"
@@ -94,18 +102,20 @@
         </div>
       </el-col>
     </el-row>
-    <div class="other other-center">
+    <div id="integrate" class="other other-center">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="12">
-          <div class="global-h6">
-            <img
-              src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/logo-domain.svg"
-              alt=""
-            />
+          <div class="other-center-img wow fadeInUp">
+            <i v-if="lang === 'zh'" class="iconfont el-technicaldomains_cn"></i>
+            <i v-if="lang === 'en'" class="iconfont el-technicaldomains"></i>
+            <i v-if="lang === 'tw'" class="iconfont el-technicaldomains_zh"></i>
           </div>
-          <div class="global-h6">
+          <div class="other-center-box wow fadeInUp">
             <!--  <span class="other-center-strong"> </span> -->
-            <span>{{ $t('solutions.integrate') }}</span>
+            <span class="other-center-strong">{{
+              $t('solutions.integrate')
+            }}</span>
+            <span>{{ $t('solutions.rights') }}</span>
           </div>
           <!--   <div class="global-h6">Stuart Nichols</div>
           <div class="global-h6">IBAX CEO</div> -->
@@ -118,7 +128,7 @@
           <div class="home-new">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="12">
-                <div class="home-new-img">
+                <div class="home-new-img wow fadeInUp">
                   <img
                     src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/funnel-analysis.png"
                     mode="powerful"
@@ -126,14 +136,16 @@
                 </div>
               </el-col>
               <el-col :xs="23" :lg="8">
-                <p class="home-new-title">
+                <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-019"></i>
                   <span class="home-new-title-text">
                     {{ $t('solutions.strong') }}
                   </span>
                 </p>
-                <h2 class="bass-h2">{{ $t('solutions.spread') }}</h2>
-                <p>
+                <h2 class="bass-h2 wow fadeInUp">
+                  {{ $t('solutions.spread') }}
+                </h2>
+                <p class="wow fadeInUp">
                   {{ $t('solutions.precision') }}
                 </p>
               </el-col>
@@ -142,25 +154,27 @@
         </el-col>
       </el-row>
     </div>
-    <div class="media-b">
+    <div id="trustworthy" class="media-b">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
           <div class="home-new">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="8">
-                <p class="home-new-title">
+                <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-035"></i>
                   <span class="home-new-title-text">
                     {{ $t('solutions.costs') }}
                   </span>
                 </p>
-                <h2 class="bass-h2">{{ $t('solutions.reshaping') }}</h2>
-                <p>
+                <h2 class="bass-h2 wow fadeInUp">
+                  {{ $t('solutions.reshaping') }}
+                </h2>
+                <p class="wow fadeInUp">
                   {{ $t('solutions.trustworthy') }}
                 </p>
               </el-col>
               <el-col :xs="23" :lg="12">
-                <div class="home-new-img">
+                <div class="home-new-img wow fadeInUp">
                   <img
                     src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/retention-img03.png"
                     mode="powerful"
@@ -196,10 +210,71 @@ export default {
       }
     };
   },
+  head() {
+    return {
+      title: `${this.$t('solutions.copyright')}-IBAX`,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA,BlockChain,copyright'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.$t('solutions.copyright')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `${this.$t('solutions.copyright')}`
+        }
+      ]
+    };
+  },
   computed: {},
   watch: {},
   created() {},
-  mounted() {},
-  methods: {}
+  mounted() {
+    this.$nextTick(() => {
+      this.numArchite =
+        document.getElementById('integrate').getBoundingClientRect().bottom -
+        105;
+      console.log(this.numArchite);
+      this.numArchiteBottom =
+        document.getElementById('trustworthy').getBoundingClientRect().bottom -
+        105;
+      if (this.numArchite) {
+        this.domGlobal.addEventListener('scroll', () => {
+          this.handleThrottle(this.handleAlwaysScroll, 100);
+        });
+      }
+    });
+  },
+  methods: {
+    handleAlwaysScroll() {
+      const scrollTop = this.domGlobal.scrollTop;
+      const topHeight = document.getElementById('headerTop').offsetTop;
+      const isFixed = scrollTop > topHeight;
+      this.$store.commit('handleIsFixed', isFixed);
+      if (scrollTop >= this.numArchite && scrollTop < this.numArchiteBottom) {
+        const obj = { headerColor: '#fff', color: '#37383c' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'news--horizontal');
+        this.$store.commit('handleIsTop', false);
+      } else if (scrollTop >= this.numArchiteBottom) {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      } else {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      }
+    }
+  }
 };
 </script>

@@ -2,7 +2,7 @@
  * @Author: renlei
  * @Date: 2019-11-08 15:06:37
  * @LastEditors: abc
- * @LastEditTime: 2021-08-17 17:03:42
+ * @LastEditTime: 2021-09-20 17:12:53
  * @Description
  */
 import Vue from 'vue';
@@ -29,7 +29,7 @@ export default ({ app, store }) => {
   // This way we can use it in middleware and pages asyncData/fetch
   app.i18n = new VueI18n({
     locale: strLang,
-    fallbackLocale: 'en',
+    fallbackLocale: strLang,
     messages: {
       en: mergeEN,
       zh: mergeZH,

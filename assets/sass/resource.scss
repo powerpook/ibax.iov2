@@ -22,8 +22,17 @@
   &-top {
     position: relative;
     height: 100%;
+    .el-application1 {
+      font-size: 40px;
+      color: #7856ff;
+    }
+    &-icon {
+      font-size: 30px;
+      margin-right: 10px;
+      color: #f3ac34;
+    }
     &-bottom {
-      position: absolute;
+      margin-top: 30px;
       width: 100%;
       bottom: 0;
       left: 0;
@@ -58,7 +67,7 @@
       &-content {
         height: 150px;
         overflow: hidden;
-        transition: height 0.5s;
+        transition: height 0.9s;
         p {
           margin-bottom: 18px;
         }
@@ -80,6 +89,11 @@
         }
       }
     }
+  }
+  &-bottom {
+    margin-top: 30px;
+    left: 0;
+    bottom: 0;
   }
   &-middle {
     background: #fcfcfc;

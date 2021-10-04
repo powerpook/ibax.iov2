@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-09-15 14:59:43
+ * @LastEditTime: 2021-09-26 18:07:39
  * @Description: team
 -->
 <template>
@@ -16,19 +16,19 @@
         <el-row type="flex" justify="center">
           <el-col :xs="23" :sm="22" :md="20" :lg="18">
             <!-- <strong class="block-title lg">Our mission</strong> -->
-            <h1>
-              {{ $t('resource.technical') }}<br />
-              <strong> {{ $t('resource.committed') }}</strong>
+            <h1 class="wow fadeInUp">
+              {{ $t('resource.technical') }}
             </h1>
             <ul class="customers-list">
               <li v-for="(item, index) in arrPatter" :key="index">
-                <img :src="item.img" class="attachment-medium" />
+                <i :class="item.icon"></i>
+                <img :src="item.img" class="attachment-medium wow fadeInUp" />
               </li>
             </ul>
             <a
               href="https://github.com/IBAX-io/go-ibax/issues"
               target="_blank"
-              class="home-new-bottom link"
+              class="home-new-bottom link wow fadeInUp"
             >
               <span>{{ $t('resource.know') }}</span>
               <i class="el-icon-right"></i>
@@ -41,33 +41,33 @@
     <div ref="fixed" class="team-fixed">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :sm="22" :md="20" :lg="18">
-          <div class="header">
+          <div class="header wow fadeInUp">
             <h3>Who we are</h3>
           </div>
           <div class="team-fixed-content">
-            <p>
+            <p class="wow fadeInUp">
               {{ $t('resource.composed') }}
             </p>
-            <p>
+            <p class="wow fadeInUp">
               {{ $t('resource.needs') }}
             </p>
           </div>
           <div class="team-fixed-box">
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="7">
-                <div class="inner">
+                <div class="inner wow fadeInUp">
                   <strong>{{ $t('resourse.hundreds') }}</strong>
                   <div>{{ $t('resourse.r') }}</div>
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
-                <div class="inner">
+                <div class="inner wow fadeInUp">
                   <strong>{{ $t('resourse.chain') }}</strong>
                   <div>{{ $t('resourse.underlying') }}</div>
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
-                <div class="inner">
+                <div class="inner wow fadeInUp">
                   <strong>3000</strong>
                   <div>TPS/S</div>
                 </div>
@@ -77,19 +77,19 @@
           <div class="team-fixed-box">
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="7">
-                <div class="inner">
+                <div class="inner wow fadeInUp">
                   <strong>{{ $t('resourse.items') }}</strong>
                   <div>{{ $t('resourse.leading') }}</div>
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
-                <div class="inner">
+                <div class="inner wow fadeInUp">
                   <strong>{{ $t('resourse.application') }}</strong>
                   <div>{{ $t('resourse.system') }}</div>
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
-                <div class="inner">
+                <div class="inner wow fadeInUp">
                   <strong>{{ $t('resourse.machine') }}</strong>
                   <div>{{ $t('resourse.languages') }}</div>
                 </div>
@@ -100,10 +100,10 @@
       </el-row>
     </div>
     <div class="team-rate">
-      <div class="team-rate-icon">
+      <div class="team-rate-icon wow fadeInUp">
         <i class="iconfont el-twitter"></i>
       </div>
-      <h3>{{ $t('resourse.still') }}</h3>
+      <h3 class="wow fadeInUp">{{ $t('resourse.still') }}</h3>
       <div class="team-loop">
         <div v-if="iconList.length" class="team-loop-content">
           <client-only>
@@ -142,15 +142,15 @@
         <a
           href="https://github.com/orgs/IBAX-io/people"
           target="_blank"
-          class="btn btn-primary"
+          class="btn btn-primary wow fadeInUp"
           >{{ $t('resourse.view') }}</a
         >
       </div>
     </div>
     <div class="team-leader">
       <div class="team-leader-top">
-        <h2 class="h1">{{ $t('resourse.person') }}</h2>
-        <p>
+        <h2 class="h1 wow fadeInUp">{{ $t('resourse.person') }}</h2>
+        <p class="wow fadeInUp">
           {{ $t('resourse.charge') }}
         </p>
       </div>
@@ -186,15 +186,15 @@
         </el-row>
       </div>
     </div>
-    <div class="team-bod">
+    <div id="introduce" class="team-bod">
       <div class="container">
-        <h3>{{ $t('resourse.senior') }}</h3>
+        <h3 class="wow fadeInUp">{{ $t('resourse.senior') }}</h3>
         <ul class="investors-bod-list">
           <li v-for="item in arrBod" :key="item.alt">
-            <div class="avatar-wrap">
+            <div class="avatar-wrap wow fadeInUp">
               <img :src="item.img" class="attachment-full" :alt="item.alt" />
             </div>
-            <div class="info-wrap">
+            <div class="info-wrap wow fadeInUp">
               <strong class="name">{{ item.name }}</strong>
               <strong class="post">{{ $t(item.introduce) }}</strong>
             </div>
@@ -205,13 +205,13 @@
     <div class="team-serving">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :sm="22" :md="20" :lg="18">
-          <div class="team-serving-header">
+          <div class="team-serving-header wow fadeInUp">
             <h3>{{ $t('resourse.from') }}</h3>
           </div>
           <el-row type="flex" justify="center" style="flex-flow: wrap">
             <el-col
-              v-for="item in arrTeam"
-              :key="item.name"
+              v-for="(item, index) in arrTeam"
+              :key="index"
               :xs="23"
               :sm="12"
               :md="8"
@@ -221,12 +221,12 @@
                 <div class="team-serving-content-img">
                   <img
                     :src="item.img"
-                    class="attachment-medium"
+                    class="attachment-medium wow fadeInUp"
                     alt="item.name"
                   />
                 </div>
-                <strong class="place">{{ item.name }}</strong>
-                <div class="team-serving-content-text">
+                <strong class="place wow fadeInUp">{{ item.name }}</strong>
+                <div class="team-serving-content-text wow fadeInUp">
                   {{ item.label }}<br />
                   {{ $t(item.des) }}
                 </div>
@@ -340,7 +340,7 @@ export default {
       ],
       arrPatter: [
         {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/11/logo-docusign-1.svg'
+          icon: 'iconfont el-pusher_logo'
         },
         {
           img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/logo-uber.svg'
@@ -415,15 +415,22 @@ export default {
       console.log(this.container);
       this.wScroll = this.fixed.scrollHeight;
       this.parallax.style.height = this.wScroll + 'px';
-      this.domGlobal = document.getElementById('global').firstChild;
-      this.domGlobal.addEventListener('scroll', this.handleScroll);
+      this.numIntroduce =
+        document.getElementById('introduce').getBoundingClientRect().bottom -
+        140;
+      if (this.container) {
+        this.domGlobal.addEventListener('scroll', () => {
+          this.handleThrottle(this.handleTeamScroll, 100);
+        });
+      }
     });
   },
   methods: {
-    handleScroll() {
+    handleTeamScroll() {
       const scrollTop = this.domGlobal.scrollTop;
-      //  console.log(scrollTop);
-      // console.log(this.container);
+      const topHeight = document.getElementById('headerTop').offsetTop;
+      const isFixed = scrollTop > topHeight;
+      this.$store.commit('handleIsFixed', isFixed);
       if (scrollTop >= this.container) {
         this.parallax.style.position = 'fixed';
         this.parallax.style.height = '0px';
@@ -432,6 +439,22 @@ export default {
         this.parallax.style.position = 'static';
         this.parallax.style.height = this.wScroll + 'px';
         this.fixed.style.position = 'fixed';
+      }
+      if (scrollTop >= this.container && scrollTop < this.numIntroduce) {
+        const obj = { headerColor: '#fff', color: '#37383c' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'news--horizontal');
+        this.$store.commit('handleIsTop', false);
+      } else if (scrollTop >= this.numIntroduce) {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      } else {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
       }
     },
     handleAfterChange(e) {

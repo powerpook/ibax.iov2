@@ -1,12 +1,12 @@
 <!--
  * @Author: abc
- * @Date: 2021-08-24 16:15:10
+ * @Date: 2021-09-07 14:08:14
  * @LastEditors: abc
- * @LastEditTime: 2021-08-24 16:16:18
- * @Description: events
+ * @LastEditTime: 2021-09-28 16:09:32
+ * @Description: 
 -->
 <template>
-  <div>活动</div>
+  <nuxt />
 </template>
 <script>
 export default {

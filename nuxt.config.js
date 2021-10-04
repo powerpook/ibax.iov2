@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-15 18:15:51
+ * @LastEditTime: 2021-10-04 23:10:41
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -25,12 +25,31 @@ if (process.env.NODE_ENV !== 'production') {
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'ibax-os',
+    title: 'Home-IBAX',
     meta: [
       { charset: 'utf-8' },
+      {
+        name: 'robots',
+        content: 'noindex,nofollow'
+      },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA,BlockChain BaaS,Mining'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: `Home`
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: `Home`
+      },
       {
         hid: 'ie',
         'http-equiv': 'X-UA-Compatible',
@@ -50,7 +69,7 @@ export default {
       {
         rel: 'stylesheet',
         type: 'text/css',
-        href: '//at.alicdn.com/t/font_2762091_od8bdza4w2e.css'
+        href: '//at.alicdn.com/t/font_2762091_ysw8pzgie8.css'
       }
     ],
     script: [{ src: '' }]
@@ -69,7 +88,6 @@ export default {
     { src: '@/plugins/vueSroll.js', ssr: false },
     { src: '@/plugins/vueP5.js', ssr: false }
   ],
-
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
@@ -103,29 +121,28 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content'
   ],
-
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    proxy: true, // 表示开启代理
-    prefix: '/api', // 表示给请求url加个前缀 /api
+    // baseUrl: 'https://node23.ibax.io:9095/',
+    proxy: true,
+    prefix: '/api',
     retry: { retries: 3 },
-    credentials: true // 表示跨域时是否需要凭证
+    credentials: true
   },
   proxy: {
     '/api': {
-      // 这个网站是开源的可以请求到数据的
-      target: 'http://192.168.1.192:9034/', // 开发环境
-      changeOrigin: true, // 是否跨域
+      target: 'https://node23.ibax.io:9095/',
+      // target: 'http://192.168.1.192:8888/',
+      changeOrigin: true,
       pathRewrite: {
-        '^/api/*': '' // 把/api替换成///这里理解成用‘/api’代替target里面的地址，组件中我们调接口时直接用/api代替
-        // 比如我要调用'http://0.0:300/user/add'，直接写‘/api/user/add’即可 代理后地址栏显示/
+        '^/api/*': ''
       }
     }
   },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     icon: {
-      source: '/icon.png', // 路径为static中的icon2.png
+      source: '/icon.png',
       fileName: 'icon.png'
     },
     manifest: {
@@ -135,7 +152,6 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
-
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [/^element-ui/],
@@ -152,7 +168,6 @@ export default {
     babel: {
       plugins
     },
-    //
     filenames: {
       app: ({ isDev }) => (isDev ? '[name].js' : '[chunkhash].js'),
       chunk: ({ isDev }) => (isDev ? '[name].js' : '[id].[name].js'),

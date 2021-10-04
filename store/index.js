@@ -3,16 +3,20 @@
  * @LastEditors: abc
  * @Description: vuex
  * @Date: 2019-04-11 09:26:40
- * @LastEditTime: 2021-09-15 17:55:01
+ * @LastEditTime: 2021-09-23 10:09:24
  */
 import { handleGetLang } from '../assets/js/public';
 console.log(handleGetLang());
+// console.log(handleGetLang());
 export const state = () => ({
   headerColor: '#274235',
   color: '#fff',
   locales: ['zh', 'en', 'tw'],
   lang: handleGetLang(),
-  popperClass: 'subMenu--horizontal'
+  domClass: 'subMenu--horizontal',
+  isTop: true,
+  isFixed: false,
+  isWhite: true
 });
 export const mutations = {
   handleChangeLang(state, lang) {
@@ -24,8 +28,20 @@ export const mutations = {
     state.headerColor = headerColor;
     state.color = color;
   },
-  handleChangeClass(state, popperClass) {
-    state.popperClass = popperClass;
+  handleChangeClass(state, domClass) {
+    state.domClass = domClass;
+  },
+  handleBoxShadow(state, boxShadow) {
+    state.boxShadow = boxShadow;
+  },
+  handleIsTop(state, boo) {
+    state.isTop = boo;
+  },
+  handleIsFixed(state, boo) {
+    state.isFixed = boo;
+  },
+  handleIsWhite(state, boo) {
+    state.isWhite = boo;
   }
 };
 
@@ -49,9 +65,26 @@ export const getters = {
     // console.log(authUser);
     return color;
   },
-  handdlePopperClass(state) {
-    const { popperClass } = state;
+  handlePopperClass(state) {
+    const { domClass } = state;
     // console.log(authUser);
-    return popperClass;
+    return domClass;
+  },
+  handleBoxShadow(state) {
+    const { boxShadow } = state;
+    // console.log(authUser);
+    return boxShadow;
+  },
+  handleIsTop(state) {
+    const { isTop } = state;
+    return isTop;
+  },
+  handleIsFixed(state) {
+    const { isFixed } = state;
+    return isFixed;
+  },
+  handleIsWhite(state) {
+    const { isWhite } = state;
+    return isWhite;
   }
 };

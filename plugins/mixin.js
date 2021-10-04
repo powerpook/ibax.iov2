@@ -3,17 +3,113 @@
  * @LastEditors: abc
  * @Description: Vu
  * @Date: 2019-04-12 14:08:12
- * @LastEditTime: 2021-09-14 11:03:46
+ * @LastEditTime: 2021-09-26 11:57:04
  */
 
 import Vue from 'vue';
+import { handleSaveCookie } from '../assets/js/public.js';
 Vue.mixin({
   data() {
     return {
-      domGlobal: ''
+      domGlobal: '',
+      domHeaderTop: '',
+      arrLang: [
+        {
+          label: 'English',
+          lang: 'en'
+        },
+        {
+          label: '简体中文',
+          lang: 'zh'
+        },
+        {
+          label: '繁体中文',
+          lang: 'tw'
+        }
+      ],
+      arrType: [
+        {
+          value: 1,
+          label: 'resourse.technology'
+        },
+        {
+          value: 2,
+          label: 'resourse.ecologically'
+        },
+        {
+          value: 3,
+          label: 'resourse.activities'
+        }
+      ],
+      dialogVideo: false,
+      isMobile: true
     };
   },
+  computed: {
+    lang() {
+      return this.$store.getters.handdleLang;
+    },
+    headerColor() {
+      // console.log(this.$store.getters.handleHeaderColor);
+      return this.$store.getters.handleHeaderColor;
+    },
+    color() {
+      //  console.log(this.$store.getters.handleColor);
+      return this.$store.getters.handleColor;
+    },
+    domClass() {
+      return this.$store.getters.handlePopperClass;
+    },
+    boxShadow() {
+      //  console.log(this.$store.getters.handleBoxShadow);
+      return this.$store.getters.handleBoxShadow;
+    },
+    isTop() {
+      return this.$store.getters.handleIsTop;
+    }
+  },
+  mounted() {
+    if (document.getElementById('global')) {
+      this.domGlobal = document.getElementById('global').firstChild;
+    }
+    const that = this;
+    that.initIsMobile(that);
+    window.addEventListener('resize', function () {
+      that.initIsMobile(that);
+    });
+  },
   methods: {
+    initIsMobile(that) {
+      if (process.client) {
+        const width = document.body.offsetWidth;
+        if (width > 992) {
+          that.isMobile = false;
+        } else {
+          that.isMobile = true;
+        }
+      }
+    },
+    handleVideoOpen() {
+      this.dialogVideo = true;
+    },
+    handleVideoClose() {
+      this.dialogVideo = false;
+    },
+    handleCommand(val) {
+      console.log(val);
+      this.arrLang.map((item) => {
+        if (val === item.lang) {
+          this.strLang = item.label;
+        }
+      });
+      this.$store.commit('handleChangeLang', val);
+      this.$i18n.locale = val;
+      handleSaveCookie('lang', { lang: val }, 7);
+    },
+    handleType(val) {
+      const obj = this.arrType.find((item) => item.value === val);
+      return obj.label;
+    },
     handleThrottle(callback, time) {
       if (this.throttleTimer) return;
       this.throttleTimer = true;

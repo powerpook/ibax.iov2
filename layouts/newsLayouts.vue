@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 15:01:26
  * @LastEditors: abc
- * @LastEditTime: 2021-09-14 15:15:30
+ * @LastEditTime: 2021-09-24 10:27:25
  * @Description:
 -->
 <template>
@@ -19,8 +19,18 @@
               :lg="18"
               :md="23"
               class="hidden-sm-and-down animated"
+              :class="{
+                'global-fixed': isFixed
+              }"
             >
-              <nav-page></nav-page>
+              <div
+                :class="{
+                  'global-fiexd-limes': isTop,
+                  'global-fixed-white': !isTop
+                }"
+              >
+                <nav-page></nav-page>
+              </div>
             </el-col>
             <!-- mobile nav-->
             <el-col :xs="23" class="hidden-sm-and-up">
@@ -57,23 +67,15 @@ export default {
     return {
       domGlobal: '',
       domHeaderTop: '',
-      visibilityHeight: 10,
-      isFixed: false,
-      back: false,
-      isInUp: false,
-      arrLang: [
-        {
-          label: 'English',
-          lang: 'en'
-        },
-        {
-          label: '简体中文',
-          lang: 'zh'
-        }
-      ]
+      visibilityHeight: 10
     };
   },
-  computed: {},
+  computed: {
+    isFixed() {
+      console.log(this.$store.getters.handleIsFixed);
+      return this.$store.getters.handleIsFixed;
+    }
+  },
   watch: {
     /*  $route(newVal, oldVal) {
       const { scroll } = newVal.query;
@@ -94,6 +96,7 @@ export default {
     const obj = { headerColor: '#fff', color: '#37383c' };
     this.$store.commit('handleChangeColor', obj);
     this.$store.commit('handleChangeClass', 'news--horizontal');
+    this.$store.commit('handleIsTop', false);
   },
   mounted() {
     const val = handleGetLang();
@@ -121,22 +124,14 @@ export default {
     });
   },
   methods: {
-    //
     handleBackTop() {
       return this.domGlobal;
     },
-    //
     handleScroll() {
       const scrollTop = this.domGlobal.scrollTop;
-      // console.log(this.domGlobal);
-      if (scrollTop > 300) {
-        this.back = true;
-      } else {
-        this.back = false;
-      }
       const topHeight = this.domHeaderTop.offsetTop;
-      this.isFixed = scrollTop > topHeight;
-      this.isInUp = scrollTop === topHeight;
+      const isFixed = scrollTop > topHeight;
+      this.$store.commit('handleIsFixed', isFixed);
     },
     handleChange(val, oldVal) {
       this.locale = this.$i18n.messages[val];

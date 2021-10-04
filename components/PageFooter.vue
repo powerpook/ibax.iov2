@@ -2,37 +2,37 @@
  * @Author: abc
  * @Date: 2021-08-19 14:44:39
  * @LastEditors: abc
- * @LastEditTime: 2021-09-10 10:11:36
- * @Description: 
+ * @LastEditTime: 2021-09-28 15:53:01
+ * @Description: footer
 -->
 <template>
   <div>
-    <el-row type="flex" justify="space-between">
-      <el-col :xs="23" :lg="3">
-        <div class="nav-index-img">
+    <el-row type="flex" justify="space-between" class="el-row-wrap">
+      <el-col :xs="24" :lg="3">
+        <div class="nav-index">
           <nuxt-link :to="{ name: 'index' }">
-            <img src="../assets/image/logo.png" alt="logo" />
+            <i class="iconfont el-logo1"></i>
           </nuxt-link>
         </div>
       </el-col>
-      <el-col :xs="23" :lg="4">
-        <h6 class="global-h6">{{ $t('footer.feature') }}</h6>
+      <el-col :xs="12" :lg="4">
+        <h6 class="title-h6">{{ $t('footer.feature') }}</h6>
         <div v-for="item in arrFeature" :key="item.key" class="footer-link">
           <nuxt-link :to="{ path: item.key }">
             {{ $t(item.title) }}
           </nuxt-link>
         </div>
       </el-col>
-      <el-col :xs="23" :lg="4">
-        <h6 class="global-h6">{{ $t('nav.bass') }}</h6>
+      <el-col :xs="12" :lg="4">
+        <h6 class="title-h6">{{ $t('nav.bass') }}</h6>
         <div v-for="item in arrBass" :key="item.key" class="footer-link">
           <nuxt-link :to="{ path: item.key }">
             {{ $t(item.title) }}
           </nuxt-link>
         </div>
       </el-col>
-      <el-col :xs="23" :lg="4">
-        <h6 class="global-h6">{{ $t('nav.resource') }}</h6>
+      <el-col :xs="12" :lg="4">
+        <h6 class="title-h6">{{ $t('nav.resource') }}</h6>
         <div v-for="item in arrResource" :key="item.key" class="footer-link">
           <nuxt-link v-if="item.path" :to="{ path: item.path }">
             {{ $t(item.title) }}
@@ -42,24 +42,24 @@
           </a>
         </div>
       </el-col>
-      <el-col :xs="23" :lg="4">
-        <h6 class="global-h6">{{ $t('nav.solution') }}</h6>
+      <el-col :xs="12" :lg="4">
+        <h6 class="title-h6">{{ $t('nav.solution') }}</h6>
         <div v-for="item in arrSolution" :key="item.path" class="footer-link">
           <nuxt-link :to="{ path: item.path }">
             {{ $t(item.title) }}
           </nuxt-link>
         </div>
       </el-col>
-      <el-col :xs="23" :lg="4">
-        <h6 class="global-h6">{{ $t('nav.development') }}</h6>
+      <el-col :xs="12" :lg="4">
+        <h6 class="title-h6">{{ $t('nav.development') }}</h6>
         <div v-for="item in arrDevelop" :key="item.path" class="footer-link">
           <nuxt-link :to="{ path: item.path }">
             {{ $t(item.title) }}
           </nuxt-link>
         </div>
       </el-col>
-      <el-col :xs="23" :lg="4">
-        <h6 class="global-h6">{{ $t('footer.more') }}</h6>
+      <el-col :xs="12" :lg="4">
+        <h6 class="title-h6">{{ $t('footer.more') }}</h6>
         <div v-for="item in arrAbout" :key="item.path" class="footer-link">
           <nuxt-link :to="{ path: item.path }">
             {{ $t(item.title) }}
@@ -69,7 +69,7 @@
     </el-row>
     <div class="footer-icon">
       <div class="footer-icon-content">
-        <a href="https://www.facebook.com/ibaxproject" target="_blank">
+        <a href="https://www.facebook.com/IBAXNetwork" target="_blank">
           <i class="iconfont el-facebook"></i>
         </a>
         <a href="https://github.com/IBAX-io/documentation" target="_blank">
@@ -149,7 +149,7 @@ export default {
       ],
       arrBass: [
         {
-          title: 'nav.bass',
+          title: 'market.application',
           key: '/bass-markeplace'
         },
         {
@@ -166,6 +166,7 @@ export default {
         {
           title: 'resource.white',
           path: '/resource/white-paper',
+          link: 'https://ibax.io/IBAX_Public_Network_Whitepaper_V1.1.pdf',
           key: '2'
         },
         {

@@ -2,15 +2,19 @@
  * @Author: abc
  * @Date: 2020-10-16 16:45:00
  * @LastEditors: abc
- * @LastEditTime: 2020-11-27 15:15:58
+ * @LastEditTime: 2021-09-24 14:57:19
  * @Description:
  */
 export default ({ app }) => {
   app.router.afterEach((to, from, next) => {
     if (process.client) {
-      document.getElementById("global").firstChild.scrollTop = 0;
+      window.location.reload();
+      const global = document.getElementById('global');
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
+      if (global) {
+        global.firstChild.scrollTop = 0;
+      }
     }
     // scrollTop = 0
   });

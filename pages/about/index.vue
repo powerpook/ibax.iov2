@@ -2,28 +2,46 @@
  * @Author: abc
  * @Date: 2021-08-17 17:50:10
  * @LastEditors: abc
- * @LastEditTime: 2021-09-14 17:14:22
+ * @LastEditTime: 2021-09-28 12:05:16
  * @Description: conact us
 -->
 <template>
   <div class="about">
     <div class="about-left">
       <div class="about-left-box">
-        <nuxt-link to="/" class="about-left-box-icon">
-          <i class="iconfont el-logo1"></i>
-        </nuxt-link>
+        <div class="about-left-box-icon">
+          <nuxt-link to="/">
+            <i class="iconfont el-logo1"></i>
+          </nuxt-link>
+          <div class="nav-right-dropdown about-left-box-icon-right">
+            <el-dropdown @command="handleCommand">
+              <span class="el-dropdown-link">
+                <i class="iconfont el-translate" style="color: #274235"></i>
+              </span>
+              <el-dropdown-menu slot="dropdown">
+                <el-dropdown-item
+                  v-for="item in arrLang"
+                  :key="item.lang"
+                  :command="item.lang"
+                >
+                  {{ item.label }}
+                </el-dropdown-item>
+              </el-dropdown-menu>
+            </el-dropdown>
+          </div>
+        </div>
         <div class="about-left-box-head">
           <img
             class="icon"
             src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/11/ico-contact.svg"
             alt=""
           />
-          <span>CONTACT US</span>
+          <span>{{ $t('about.contact') }}</span>
         </div>
         <h1 class="bass-h1">{{ $t('about.can') }}</h1>
         <p>{{ $t('about.have') }}</p>
         <ul class="award-list">
-          <a href="https://www.facebook.com/ibaxproject" target="_blank">
+          <a href="https://www.facebook.com/IBAXNetwork" target="_blank">
             <div class="logo-hold">
               <img src="@/assets/logo/facebook.svg" width="30" alt="facebook" />
             </div>
@@ -61,14 +79,21 @@
     <div class="about-right">
       <div class="about-right-box">
         <el-input
-          v-model="textarea"
+          v-model="params.message"
+          maxlength="200"
           type="textarea"
-          placeholder="Talk to us"
+          :placeholder="$t('about.talk')"
           class="about-right-textarea"
         >
         </el-input>
         <div class="about-right-btn">
-          <button class="btn btn-default">Send</button>
+          <button
+            class="btn btn-default"
+            :disabled="disabled"
+            @click="handleSend"
+          >
+            {{ $t('about.send') }}
+          </button>
         </div>
       </div>
       <div class="about-right-btn-text">
@@ -88,13 +113,64 @@ export default {
   props: {},
   data() {
     return {
-      textarea: ''
+      params: {
+        message: ''
+      },
+      disabled: false
+    };
+  },
+  head() {
+    return {
+      title: `${this.$t('nav.about')}-IBAX`,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA,BlockChain,BaaS,About,Contact,Message'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.$t('nav.about')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `${this.$t('nav.about')}`
+        }
+      ]
     };
   },
   computed: {},
   watch: {},
   created() {},
   mounted() {},
-  methods: {}
+  methods: {
+    async handleSend() {
+      if (this.params.message === '') {
+        return this.$message({
+          message: this.$t('about.input'),
+          type: 'warning'
+        });
+      } else {
+        this.disabled = true;
+        const res = await this.$axios.$post('/message', this.params);
+        this.disabled = false;
+        if (res.code === 0) {
+          this.params.message = '';
+          return this.$message({
+            message: this.$t('about.success'),
+            type: 'success'
+          });
+        } else {
+          return this.$message({
+            message: this.$t('about.fail'),
+            type: 'error'
+          });
+        }
+      }
+    }
+  }
 };
 </script>

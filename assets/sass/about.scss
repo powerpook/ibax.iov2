@@ -12,8 +12,14 @@
       max-width: 515px;
       margin-left: auto;
       &-icon {
-        display: block;
+        display: flex;
         margin-bottom: 63px;
+        align-items: center;
+        &-right {
+          margin-left: auto;
+          margin-top: 0;
+          cursor: pointer;
+        }
         .el-logo1 {
           font-size: 40px;
           color: $primary-color;
@@ -53,6 +59,7 @@
         margin-right: 11px;
         img {
           display: block;
+          width: 30px;
         }
       }
       .award-list .caption {
@@ -78,7 +85,7 @@
         margin-bottom: 30px;
         img {
           border: 0;
-          max-width: 100%;
+          width: 30px;
           height: auto;
         }
       }
@@ -95,10 +102,12 @@
       margin: 0;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       .about-right-textarea {
         background: #fff;
         border-radius: 6px;
         padding: 37px 26px;
+        width: 430px;
         .el-textarea__inner {
           height: 100px;
         }

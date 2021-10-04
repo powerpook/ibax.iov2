@@ -1,15 +1,29 @@
 .other {
   width: 100%;
   background-color: $primary-color;
+  &-middle {
+    padding: 40px 0;
+  }
   &-easeplus {
+    font-family: "Apercu Pro", "Helvetica Neue", Helvetica, sans-serif;
     border-left: 2px solid #f3ac34;
     height: 100px;
     padding-left: 10px;
-    padding-top: 10px;
     font-size: 24px;
     font-weight: 400;
+    display: table-cell;
+    vertical-align: middle;
+    & > * {
+      line-height: 1;
+      width: 100%;
+    }
+    &-strong {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
   }
   &-ease {
+    font-family: "Apercu Pro", "Helvetica Neue", Helvetica, sans-serif;
     border-left: 2px solid #f3ac34;
     height: 100px;
     padding-left: 10px;
@@ -17,12 +31,32 @@
     align-items: center;
     font-size: 24px;
     font-weight: 400;
+    line-height: 1.333;
   }
   &-center {
     text-align: center;
-    padding-bottom: 50px;
-    .global-h6 {
-      margin-bottom: 20px;
+    padding-bottom: 190px;
+    &-img {
+      text-align: center;
+      margin-bottom: 10px;
+      img {
+        width: 200px;
+      }
+      .iconfont {
+        font-size: 40px;
+      }
+    }
+    &-box {
+      font-family: "Apercu Pro", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 32px;
+      line-height: 1.5;
+      margin-bottom: 32px;
+      display: block;
+      font-weight: 200;
+      letter-spacing: -0.05em;
+      &-strong {
+        font-weight: 700;
+      }
     }
     &-span {
       font-family: "Apercu Pro", "Helvetica Neue", Helvetica, sans-serif;
@@ -39,6 +73,26 @@
       font-size: 32px;
       line-height: 1.5;
       letter-spacing: -0.05em;
+    }
+    &-bottom {
+      font-family: "Apercu Pro", "Helvetica Neue", Helvetica, sans-serif;
+      font-style: normal;
+      font-size: 18px;
+      line-height: 1.333;
+      letter-spacing: -0.03em;
+      & > * {
+        display: block;
+      }
+      &-strong {
+        font-weight: 700;
+      }
+    }
+    .develop-h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .develop-text {
+      margin-bottom: 30px;
     }
   }
   .home-new-p {
@@ -164,7 +218,7 @@
     margin-bottom: 20px;
   }
   .text-wrap {
-    max-width: 610px;
+    max-width: 900px;
     margin: 0 auto 33px;
   }
   .btns-list {
@@ -180,6 +234,8 @@
     margin: 0 auto;
     a {
       margin: 0 10px;
+      min-width: 172px;
+      display: inline-block;
     }
   }
 }

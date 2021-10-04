@@ -2,23 +2,20 @@
  * @Author: abc
  * @Date: 2021-08-17 10:59:52
  * @LastEditors: abc
- * @LastEditTime: 2021-09-15 17:52:57
+ * @LastEditTime: 2021-09-28 15:53:21
  * @Description: nav
 -->
 <template>
-  <div class="nav">
+  <div :class="{ nav: isTop, 'nav-white': !isTop }">
     <div class="nav-index">
       <nuxt-link :to="{ name: 'index' }">
-        <i class="iconfont el-logo1"></i>
+        <i class="iconfont el-logo1" :style="{ color: color }"></i>
       </nuxt-link>
     </div>
     <el-menu
-      :router="isRouter"
-      :collapse-transition="false"
-      :default-active="$route.path"
-      :background-color="headerColor"
-      :text-color="color"
-      :active-text-color="color"
+      router
+      :collapse-transition="!boo"
+      :default-active="activeIndex"
       class="el-menu-nav"
       mode="horizontal"
       @select="handleSelect"
@@ -28,7 +25,7 @@
           v-if="items.children"
           :key="items.key"
           :index="items.path"
-          :popper-class="popperClass"
+          :popper-class="domClass"
           :popper-append-to-body="boo"
         >
           <template slot="title">{{ $t(items.title) }}</template>
@@ -85,16 +82,30 @@
             </div>
           </div>
         </el-submenu>
-        <el-menu-item v-else :key="items.path" :index="items.path">
-          {{ $t(items.title) }}
-        </el-menu-item>
+        <template v-else>
+          <el-menu-item
+            v-if="items.path !== '/'"
+            :key="items.path"
+            :index="items.path"
+          >
+            {{ $t(items.title) }}
+          </el-menu-item>
+          <el-menu-item
+            v-else
+            :key="items.path"
+            :index="items.path"
+            style="display: none"
+          >
+            {{ $t(items.title) }}
+          </el-menu-item>
+        </template>
       </template>
     </el-menu>
     <div class="nav-right">
       <div class="nav-right-dropdown">
         <el-dropdown @command="handleCommand">
           <span class="el-dropdown-link">
-            <i class="iconfont el-translate"></i>
+            <i class="iconfont el-translate" :style="{ color: color }"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item
@@ -107,17 +118,24 @@
           </el-dropdown-menu>
         </el-dropdown>
       </div>
-      <nuxt-link :to="{ name: 'login' }" class="nav-link nav-link-middle">{{
-        $t('nav.log')
-      }}</nuxt-link>
-      <nuxt-link :to="{ name: 'login-register' }" class="btn btn-primary">{{
-        $t('nav.sign')
-      }}</nuxt-link>
+      <nuxt-link
+        :to="{ name: 'login' }"
+        class="nav-link nav-link-middle"
+        style="display: none"
+        :style="{ color: color }"
+        >{{ $t('nav.log') }}</nuxt-link
+      >
+      <nuxt-link
+        style="display: none"
+        :to="{ name: 'login-register' }"
+        class="btn btn-primary"
+        >{{ $t('nav.sign') }}</nuxt-link
+      >
     </div>
   </div>
 </template>
 <script>
-import { handleSaveCookie, handleGetLang } from '../assets/js/public.js';
+import { handleGetLang } from '../assets/js/public.js';
 export default {
   props: {},
   data() {
@@ -126,21 +144,12 @@ export default {
       isRouter: true,
       activeIndex: '1',
       strLang: 'English',
-      arrLang: [
-        {
-          label: 'English',
-          lang: 'en'
-        },
-        {
-          label: '简体中文',
-          lang: 'zh'
-        }
-      ],
+      num: 0,
       arrNav: [
-        /*  {
+        {
           title: 'nav.home',
           path: '/'
-        }, */
+        },
         {
           title: 'nav.features',
           path: '/feature',
@@ -253,7 +262,6 @@ export default {
                 {
                   title: 'resource.white',
                   icon: 'iconfont el-whitepaper',
-                  //  path: '/resource/white-paper',
                   link: 'https://ibax.io/IBAX_Public_Network_Whitepaper_V1.1.pdf',
                   key: '3-1-2'
                 },
@@ -266,7 +274,6 @@ export default {
                 {
                   title: 'resource.document',
                   icon: 'iconfont el-document',
-                  // path: '/resource/document',
                   link: 'https://github.com/IBAX-io/documentation',
                   key: '3-1-4'
                 }
@@ -291,14 +298,12 @@ export default {
                 {
                   title: 'resource.community',
                   icon: 'iconfont el-communities',
-                  // path: '/resource/community',
-                  link: 'https://github.com/orgs/IBAX-io/people',
+                  link: 'https://github.com/IBAX-io/go-ibax/discussions',
                   key: '3-2-2'
                 },
                 {
                   title: 'resource.download',
                   icon: 'iconfont el-Download',
-                  //  path: '/resource/download',
                   link: 'https://github.com/orgs/IBAX-io/repositories',
                   key: '3-2-3'
                 }
@@ -321,11 +326,6 @@ export default {
                   alt: 'resource.partner',
                   key: '3-3-2'
                 }
-                /* {
-                  title: 'resource.recruitment',
-                  icon: 'iconfont el-transfer',
-                  path: '/resource/carees'
-                } */
               ]
             }
           ]
@@ -383,20 +383,20 @@ export default {
       ]
     };
   },
-  computed: {
-    headerColor() {
-      console.log(this.$store.getters.handleHeaderColor);
-      return this.$store.getters.handleHeaderColor;
-    },
-    color() {
-      console.log(this.$store.getters.handleColor);
-      return this.$store.getters.handleColor;
-    },
-    popperClass() {
-      return this.$store.getters.handdlePopperClass;
+  computed: {},
+  watch: {
+    $route: {
+      handler() {
+        const { name } = this.$route;
+        if (name === 'resource-news-id') {
+          this.activeIndex = '/resource/news';
+        } else {
+          this.activeIndex = this.$route.path;
+        }
+      },
+      immediate: true
     }
   },
-  watch: {},
   created() {},
   mounted() {
     const val = handleGetLang();
@@ -410,17 +410,6 @@ export default {
   methods: {
     handleSelect(path, keyPath) {
       console.log(path, keyPath);
-    },
-    handleCommand(val) {
-      console.log(val);
-      this.arrLang.map((item) => {
-        if (val === item.lang) {
-          this.strLang = item.label;
-        }
-      });
-      this.$store.commit('handleChangeLang', val);
-      this.$i18n.locale = val;
-      handleSaveCookie('lang', { lang: val }, 7);
     }
   }
 };

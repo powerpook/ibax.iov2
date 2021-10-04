@@ -2,60 +2,69 @@
  * @Author: abc
  * @Date: 2021-08-26 14:35:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-14 18:27:23
+ * @LastEditTime: 2021-09-24 14:11:16
  * @Description: news  news
 -->
 <template>
   <el-row type="flex" justify="center">
     <el-col :sm="22" :lg="16" :md="20">
-      <div class="lead-img" v-html="objNews.icon"></div>
+      <div class="lead-img">
+        <img :src="objNews.icon" alt="banner" />
+      </div>
       <div class="inner">
-        <div class="news-content" v-html="objNews.content"></div>
+        <h1 class="news-articles-h2">{{ objNews.title }}</h1>
+        <div class="news-box" v-html="objNews.content"></div>
       </div>
       <div class="news-articles">
-        <h2 class="news-articles-h2">相关文章</h2>
+        <h2 class="news-articles-h2">{{ $t('feature.articles') }}</h2>
         <div class="news-content">
-          <div v-for="i in 3" :key="i" class="news-content-item">
-            <nuxt-link
-              :to="{ name: 'resource-news-id', params: { id: i } }"
-              class="news-content-item-card"
+          <div v-if="arrNew.length === 0" class="news-no">
+            {{ $t('resourse.no') }}
+          </div>
+          <template v-else>
+            <div
+              v-for="item in arrNew"
+              :key="item.id"
+              class="news-content-item"
             >
-              <div class="news-content-item-img">
-                <img
-                  src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/07/Mixpanel-Implementation-Final-Compressed.jpg"
-                  class="attachment-full"
-                  alt="Mixpanel-Implementation-Final-Compressed"
-                />
-              </div>
-              <div class="news-content-item-text">
-                <strong class="subtitle">Product Foundations</strong>
-                <h4 class="news-articles-h4">
-                  How to protect customer data while running smarter A/B tests
-                </h4>
-                <p>
-                  How long does it take to implement Mixpanel? A 3-step
-                  evaluation
-                </p>
-              </div>
-              <div class="blog-cite">
-                <a
-                  href="https://mixpanel.com/blog/author/natasha-wahid/"
-                  class="blog-cite-a"
+              <div class="news-content-item-card">
+                <nuxt-link
+                  :to="{ name: 'resource-news-id', params: { id: item.id } }"
                 >
-                  <div class="avatar">
+                  <div class="news-content-item-card-img">
                     <img
-                      src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/08/Natasha_HS-e1629333888646.jpeg"
-                      alt=""
+                      :src="item.icon"
+                      class="attachment-full"
+                      alt="Mixpanel-Implementation-Final-Compressed"
                     />
                   </div>
-                  <div class="per-info">
-                    <strong class="name">Natasha Wahid</strong>
-                    <span class="designation">AB Tasty</span>
+                  <div class="news-content-item-text">
+                    <strong class="subtitle">{{
+                      $t(`${handleType(item.type)}`)
+                    }}</strong>
+                    <h4 class="news-articles-h4">
+                      {{ item.title }}
+                    </h4>
+                    <p class="news-articles-text">
+                      {{ item.introduction.trim() }}
+                    </p>
                   </div>
+                </nuxt-link>
+                <a
+                  :href="item.source_url"
+                  target="_blank"
+                  class="news-content-item-avatar"
+                >
+                  <img
+                    v-if="item.sourceicon"
+                    :src="item.sourceicon"
+                    alt="sourceicon"
+                  />
+                  <span v-if="item.source">{{ item.source }}</span>
                 </a>
               </div>
-            </nuxt-link>
-          </div>
+            </div>
+          </template>
         </div>
       </div>
     </el-col>
@@ -88,11 +97,14 @@ export default {
   },
 
   data() {
-    return {};
+    return {
+      objNews: '',
+      arrNew: []
+    };
   },
   head() {
     return {
-      title: ` ${this.objNews.title} - 深圳智乾 | 深圳智乾区块链`,
+      title: ` ${this.objNews.title} - IBAX`,
       meta: [
         {
           hid: 'keywords',
@@ -114,8 +126,19 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
+  created() {
+    this.handleNewsrandow();
+  },
   mounted() {},
-  methods: {}
+  methods: {
+    async handleNewsrandow() {
+      const res = await this.$axios.$get('/newsrandow');
+      const { data } = res;
+      if (res.code === 0) {
+        this.arrNew = data.rets;
+        console.log(JSON.stringify(this.arrNew));
+      }
+    }
+  }
 };
 </script>

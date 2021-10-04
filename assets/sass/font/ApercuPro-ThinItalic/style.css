@@ -1,9 +1,0 @@
-@font-face {
-    font-family: 'Apercu Pro';
-    src: local('Apercu Pro Thin Italic'), local('Apercu-Pro-Thin-Italic'),
-        url('ApercuPro-ThinItalic.woff2') format('woff2'),
-        url('ApercuPro-ThinItalic.woff') format('woff'),
-        url('ApercuPro-ThinItalic.ttf') format('truetype');
-    font-weight: 100;
-    font-style: italic;
-  }

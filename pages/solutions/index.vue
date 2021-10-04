@@ -6,7 +6,7 @@
  * @Description: 
 -->
 <template>
-  <div class="solutions">解决方案</div>
+  <div class="solutions">solutions</div>
 </template>
 <script>
 export default {

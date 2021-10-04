@@ -2,11 +2,11 @@
  * @Author: abc
  * @Date: 2021-08-19 14:16:42
  * @LastEditors: abc
- * @LastEditTime: 2021-08-19 14:16:55
+ * @LastEditTime: 2021-09-24 15:53:46
  * @Description: 
 -->
 <template>
-  <div>注册</div>
+  <div>register</div>
 </template>
 <script>
 export default {

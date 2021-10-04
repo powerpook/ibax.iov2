@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-10 11:52:36
+ * @LastEditTime: 2021-09-28 12:21:03
  * @Description: 
 -->
 <template>
@@ -11,13 +11,17 @@
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="12">
-              <h6 class="global-h6">{{ $t('nav.private') }}</h6>
-              <h2 class="bass-h2">{{ $t('bass.anonymous') }}</h2>
-              <p class="home-new-p">
+            <el-col :xs="23" :lg="18">
+              <h6 class="global-h6 animated fadeInUp">
+                {{ $t('nav.private') }}
+              </h6>
+              <h2 class="bass-h2 animated fadeInUp">
+                {{ $t('bass.anonymous') }}
+              </h2>
+              <p class="home-new-p animated fadeInUp">
                 {{ $t('bass.implementation') }}
               </p>
-              <p class="home-new-bottom">
+              <p class="home-new-bottom animated fadeInUp">
                 <a
                   href="https://weaver.ibax.io/"
                   target="_blank"
@@ -26,42 +30,57 @@
                 >
               </p>
             </el-col>
-            <el-col :xs="23" :lg="6">
+            <!--  <el-col :xs="23" :lg="6">
               <div class="home-new-img">
                 <img src="@/assets/image/diamond.svg" mode="powerful" />
               </div>
-            </el-col>
+            </el-col> -->
           </el-row>
         </div>
         <div class="other">
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">{{ $t('bass.protection') }}</div>
+              <div
+                class="other-ease wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 1s"
+              >
+                {{ $t('bass.protection') }}
+              </div>
             </el-col>
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">{{ $t('bass.process') }}</div>
+              <div
+                class="other-ease wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 1.5s"
+              >
+                {{ $t('bass.process') }}
+              </div>
             </el-col>
             <el-col :xs="23" :lg="6">
-              <div class="other-ease">{{ $t('bass.leaked') }}</div>
+              <div
+                class="other-ease wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 2s"
+              >
+                {{ $t('bass.leaked') }}
+              </div>
             </el-col>
           </el-row>
         </div>
         <div class="home-new">
-          <p class="home-new-title">
-            <i class="el-iconfont iconfont el-a-051"></i>
-            <span class="home-new-title-text">
-              {{ $t('bass.technical') }}
-            </span>
-          </p>
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="8">
-              <h2 class="bass-h2">{{ $t('bass.black') }}</h2>
-              <p>
+              <p class="home-new-title wow fadeInUp">
+                <i class="el-iconfont iconfont el-a-051"></i>
+                <span class="home-new-title-text">
+                  {{ $t('bass.technical') }}
+                </span>
+              </p>
+              <h2 class="bass-h2 wow fadeInUp">{{ $t('bass.black') }}</h2>
+              <p class="wow fadeInUp">
                 {{ $t('bass.homomorphic') }}
               </p>
             </el-col>
             <el-col :xs="23" :lg="14">
-              <div class="home-new-img">
+              <div class="home-new-img wow fadeInUp">
                 <img
                   src="../../assets/image/img-insights-report2.png"
                   mode="powerful"
@@ -72,16 +91,22 @@
         </div>
       </el-col>
     </el-row>
-    <div class="other other-center">
+    <div id="frequenc" class="other other-center">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="12">
-          <div class="global-h6">{{ $t('bass.effectiveness') }}</div>
-          <div class="global-h6">
-            <span class="other-center-strong">{{ $t('bass.since') }}</span>
-            <!-- <span>{{ $t('high.never') }}</span> -->
+        <el-col :xs="23" :lg="15">
+          <div class="other-center-img wow fadeInUp">
+            <i v-if="lang === 'zh'" class="iconfont el-efficiency_cn"></i>
+            <i v-if="lang === 'en'" class="iconfont el-efficiency"></i>
+            <i v-if="lang === 'tw'" class="iconfont el-efficiency_zh"></i>
           </div>
-          <div class="global-h6">Simon Hemmrich</div>
-          <div class="global-h6">Senior Consultant</div>
+          <div class="other-center-box wow fadeInUp">
+            <span class="other-center-box-strong">{{ $t('bass.since') }}</span>
+            <span>{{ $t('bass.frequenc') }}</span>
+          </div>
+          <div class="other-center-bottom wow fadeInUp">
+            <strong class="other-center-bottom-strong">Simon Hemmrich</strong>
+            <span class="other-center-bottom-text">Senior Consultant</span>
+          </div>
         </el-col>
       </el-row>
     </div>
@@ -91,7 +116,7 @@
           <div class="home-new">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="14">
-                <div class="home-new-img">
+                <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
                     mode="powerful"
@@ -99,14 +124,14 @@
                 </div>
               </el-col>
               <el-col :xs="23" :lg="8">
-                <p class="home-new-title">
+                <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-003"></i>
                   <span class="home-new-title-text">
                     {{ $t('bass.transac') }}
                   </span>
                 </p>
-                <h2 class="bass-h2">{{ $t('bass.system') }}</h2>
-                <p>
+                <h2 class="bass-h2 wow fadeInUp">{{ $t('bass.system') }}</h2>
+                <p class="wow fadeInUp">
                   {{ $t('bass.financial') }}
                 </p>
               </el-col>
@@ -121,20 +146,20 @@
           <div class="home-new">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="8">
-                <p class="home-new-title">
+                <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-003"></i>
                   <span class="home-new-title-text">
                     {{ $t('bass.secure') }}
                   </span>
                 </p>
-                <h2 class="bass-h2">{{ $t('bass.make') }}</h2>
-                <p>
+                <h2 class="bass-h2 wow fadeInUp">{{ $t('bass.make') }}</h2>
+                <p class="wow fadeInUp">
                   {{ $t('bass.information') }}
                 </p>
                 <p>{{ $t('bass.safe') }}</p>
               </el-col>
               <el-col :xs="23" :lg="14">
-                <div class="home-tag">
+                <div class="home-tag wow fadeInUp">
                   <el-tabs v-model="activeName" :tab-position="tabPosition">
                     <el-tab-pane
                       v-for="item in arrTags"
@@ -154,20 +179,22 @@
         </el-col>
       </el-row>
     </div>
-    <div class="media-a high-bottom">
+    <div id="security" class="media-a high-bottom">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
-          <h3 class="global-h4">{{ $t('feature.about') }}</h3>
+          <h3 class="global-h4 wow fadeInUp">{{ $t('feature.about') }}</h3>
           <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
-                <div class="high-bottom-img">
+                <div class="high-bottom-img wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-056"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('high.cross-chain') }}</h4>
-                <p class="high-bottom-h6">{{ $t('nav.decen') }}</p>
+                <h4 class="high-bottom-h4 wow fadeInUp">
+                  {{ $t('high.cross-chain') }}
+                </h4>
+                <p class="high-bottom-h6 wow fadeInUp">{{ $t('nav.decen') }}</p>
                 <nuxt-link
-                  class="high-bottom-more link"
+                  class="high-bottom-more link wow fadeInUp"
                   to="/feature/cross-chain"
                 >
                   <span>{{ $t('bass.learn') }}</span>
@@ -177,13 +204,15 @@
             </el-col>
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
-                <div class="high-bottom-img">
+                <div class="high-bottom-img wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-010"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('nav.security') }}</h4>
-                <p class="high-bottom-h6">{{ $t('nav.fouds') }}</p>
+                <h4 class="high-bottom-h4 wow fadeInUp">
+                  {{ $t('nav.security') }}
+                </h4>
+                <p class="high-bottom-h6 wow fadeInUp">{{ $t('nav.fouds') }}</p>
                 <nuxt-link
-                  class="high-bottom-more link"
+                  class="high-bottom-more link wow fadeInUp"
                   to="/feature/security-privacy"
                 >
                   <span>{{ $t('bass.learn') }}</span>
@@ -193,13 +222,15 @@
             </el-col>
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
-                <div class="high-bottom-img">
+                <div class="high-bottom-img wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-052"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('high.lead') }}</h4>
-                <p class="high-bottom-h6">{{ $t('nav.each') }}</p>
+                <h4 class="high-bottom-h4 wow fadeInUp">
+                  {{ $t('high.lead') }}
+                </h4>
+                <p class="high-bottom-h6 wow fadeInUp">{{ $t('nav.each') }}</p>
                 <nuxt-link
-                  class="high-bottom-more link"
+                  class="high-bottom-more link wow fadeInUp"
                   to="/feature/architecture"
                 >
                   <span>{{ $t('bass.learn') }}</span>
@@ -238,10 +269,71 @@ export default {
       ]
     };
   },
+  head() {
+    return {
+      title: `${this.$t('nav.private')}-IBAX`,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA,BlockChain,BaaS,CLB,HybridSmartContracts'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.$t('nav.private')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `${this.$t('nav.private')}`
+        }
+      ]
+    };
+  },
   computed: {},
   watch: {},
   created() {},
-  mounted() {},
-  methods: {}
+  mounted() {
+    this.$nextTick(() => {
+      this.numArchite =
+        document.getElementById('frequenc').getBoundingClientRect().bottom -
+        105;
+      console.log(this.numArchite);
+      this.numArchiteBottom =
+        document.getElementById('security').getBoundingClientRect().bottom -
+        105;
+      if (this.numArchite) {
+        this.domGlobal.addEventListener('scroll', () => {
+          this.handleThrottle(this.handleAlwaysScroll, 250);
+        });
+      }
+    });
+  },
+  methods: {
+    handleAlwaysScroll() {
+      const scrollTop = this.domGlobal.scrollTop;
+      const topHeight = document.getElementById('headerTop').offsetTop;
+      const isFixed = scrollTop > topHeight;
+      this.$store.commit('handleIsFixed', isFixed);
+      if (scrollTop >= this.numArchite && scrollTop < this.numArchiteBottom) {
+        const obj = { headerColor: '#fff', color: '#37383c' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'news--horizontal');
+        this.$store.commit('handleIsTop', false);
+      } else if (scrollTop >= this.numArchiteBottom) {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      } else {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      }
+    }
+  }
 };
 </script>

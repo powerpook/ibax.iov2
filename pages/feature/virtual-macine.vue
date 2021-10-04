@@ -2,14 +2,14 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-15 19:02:01
+ * @LastEditTime: 2021-09-20 16:41:43
  * @Description: virtual macine
 -->
 <template>
   <div class="other">
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
-        <div class="home-new">
+        <div class="home-new" style="margin-top: 30px">
           <h6 class="global-h6 animated fadeInUp">
             {{ $t('high.technical') }}
           </h6>
@@ -37,21 +37,37 @@
             </el-col> -->
           </el-row>
         </div>
-        <div class="other">
+        <div class="other other-middle">
           <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="6">
-              <div class="other-ease animated fadeInUp">
-                {{ $t('high.most') }}
+            <el-col :xs="23" :lg="8">
+              <div
+                class="other-easeplus wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 1s"
+              >
+                <div class="other-easeplus-strong">
+                  {{ $t('high.most') }}
+                </div>
+                <div>{{ $t('high.engine') }}</div>
               </div>
             </el-col>
-            <el-col :xs="23" :lg="6">
-              <div class="other-ease animated fadeInUp">
-                {{ $t('high.one') }}
+            <el-col :xs="23" :lg="7">
+              <div
+                class="other-easeplus wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 1.5s"
+              >
+                <div class="other-easeplus-strong">{{ $t('high.one') }}</div>
+                <div>{{ $t('high.chains') }}</div>
               </div>
             </el-col>
-            <el-col :xs="23" :lg="6">
-              <div class="other-ease animated fadeInUp">
-                {{ $t('high.contract') }}
+            <el-col :xs="23" :lg="8">
+              <div
+                class="other-easeplus wow fadeIn"
+                style="animation-duration: 1s; animation-delay: 2s"
+              >
+                <div class="other-easeplus-strong">
+                  {{ $t('high.contract') }}
+                </div>
+                <div>{{ $t('high.trigger') }}</div>
               </div>
             </el-col>
           </el-row>
@@ -59,19 +75,19 @@
         <div class="home-new">
           <el-row type="flex" justify="space-between" align="middle">
             <el-col :xs="23" :lg="8">
-              <p class="home-new-title">
+              <p class="home-new-title wow fadeInUp">
                 <i class="el-iconfont iconfont el-a-042"></i>
                 <span class="home-new-title-text"
                   >{{ $t('high.editor') }}
                 </span>
               </p>
-              <h2 class="bass-h2">{{ $t('high.simple') }}</h2>
-              <p>
+              <h2 class="bass-h2 wow fadeInUp">{{ $t('high.simple') }}</h2>
+              <p class="wow fadeInUp">
                 {{ $t('home.system') }}
               </p>
             </el-col>
             <el-col :xs="23" :lg="14">
-              <div class="home-new-img">
+              <div class="home-new-img wow fadeInUp">
                 <img
                   src="../../assets/image/img-insights-report2.png"
                   mode="powerful"
@@ -82,32 +98,24 @@
         </div>
       </el-col>
     </el-row>
-    <div class="other other-center">
+    <div id="most" class="other other-center">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="12">
-          <div class="global-h6">
-            <img
-              v-if="lang === 'en'"
-              src="@/assets/icons/viewpoint.svg"
-              alt="viewpoint_es"
-            />
-            <img
-              v-if="lang === 'zh'"
-              src="@/assets/icons/viewpoint_zh.svg"
-              alt="viewpoint_es"
-            />
-            <img
-              v-if="lang === 'tw'"
-              src="@/assets/icons/viewpoint_tw.svg"
-              alt="viewpoint_es"
-            />
+        <el-col :xs="23" :lg="15">
+          <div class="other-center-img">
+            <i v-if="lang === 'zh'" class="iconfont el-viewpoint_zh"></i>
+            <i v-if="lang === 'en'" class="iconfont el-viewpoint"></i>
+            <i v-if="lang === 'tw'" class="iconfont el-viewpoint_tw"></i>
           </div>
-          <div class="other-center-span wow fadeInUp">
-            <strong class="other-center-strong">{{ $t('bass.spire') }}</strong>
-            {{ $t('high.very') }}
+          <div class="other-center-box wow fadeInUp">
+            <strong class="other-center-box-strong">{{
+              $t('home.basic')
+            }}</strong>
+            {{ $t('home.important') }}
           </div>
-          <div class="global-h6">Simon Hemmrich</div>
-          <div class="global-h6">Senior Consultant</div>
+          <div class="other-center-bottom wow fadeInUp">
+            <strong class="other-center-bottom-strong">Simon Hemmrich</strong>
+            <span class="other-center-bottom-text">Senior Consultant</span>
+          </div>
         </el-col>
       </el-row>
     </div>
@@ -117,7 +125,7 @@
           <div class="home-new">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="14">
-                <div class="home-new-img">
+                <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
                     mode="powerful"
@@ -125,14 +133,14 @@
                 </div>
               </el-col>
               <el-col :xs="23" :lg="8">
-                <p class="home-new-title">
+                <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-051"></i>
                   <span class="home-new-title-text">
                     {{ $t('high.cont') }}
                   </span>
                 </p>
-                <h2 class="bass-h2">{{ $t('high.from') }}</h2>
-                <p>
+                <h2 class="bass-h2 wow fadeInUp">{{ $t('high.from') }}</h2>
+                <p class="wow fadeInUp">
                   {{ $t('bass.weaver') }}
                 </p>
               </el-col>
@@ -147,19 +155,19 @@
           <div class="home-new">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="8">
-                <p class="home-new-title">
+                <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-043"></i>
                   <span class="home-new-title-text">
                     {{ $t('bass.manager') }}
                   </span>
                 </p>
-                <h2 class="bass-h2">{{ $t('bass.panel') }}</h2>
-                <p>
+                <h2 class="bass-h2 wow fadeInUp">{{ $t('bass.panel') }}</h2>
+                <p class="wow fadeInUp">
                   {{ $t('bass.provides') }}
                 </p>
               </el-col>
               <el-col :xs="23" :lg="14">
-                <div class="home-tag">
+                <div class="home-tag wow fadeInUp">
                   <el-tabs v-model="activeName" :tab-position="tabPosition">
                     <el-tab-pane
                       v-for="item in arrTags"
@@ -179,20 +187,22 @@
         </el-col>
       </el-row>
     </div>
-    <div class="media-a high-bottom">
+    <div id="lead" class="media-a high-bottom">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
-          <h3 class="global-h4">{{ $t('feature.about') }}</h3>
+          <h3 class="global-h4 wow fadeInUp">{{ $t('feature.about') }}</h3>
           <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
-                <div class="high-bottom-img">
+                <div class="high-bottom-img wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-052"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('high.lead') }}</h4>
+                <h4 class="high-bottom-h4 wow fadeInUp">
+                  {{ $t('high.lead') }}
+                </h4>
                 <p class="high-bottom-h6">{{ $t('nav.each') }}</p>
                 <nuxt-link
-                  class="high-bottom-more link"
+                  class="high-bottom-more link wow fadeInUp"
                   to="/feature/architecture"
                 >
                   <span>{{ $t('bass.learn') }}</span>
@@ -202,13 +212,15 @@
             </el-col>
             <el-col :xs="23" :lg="7">
               <div class="high-bottom-box">
-                <div class="high-bottom-img">
+                <div class="high-bottom-img wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-001"></i>
                 </div>
-                <h4 class="high-bottom-h4">{{ $t('high.cross-chain') }}</h4>
-                <p class="high-bottom-h6">{{ $t('nav.decen') }}</p>
+                <h4 class="high-bottom-h4 wow fadeInUp">
+                  {{ $t('high.cross-chain') }}
+                </h4>
+                <p class="high-bottom-h6 wow fadeInUp">{{ $t('nav.decen') }}</p>
                 <nuxt-link
-                  class="high-bottom-more link"
+                  class="high-bottom-more link wow fadeInUp"
                   to="/feature/cross-chain"
                 >
                   <span>{{ $t('bass.learn') }}</span>
@@ -286,14 +298,46 @@ export default {
       ]
     };
   },
-  computed: {
-    lang() {
-      return this.$store.getters.handdleLang;
-    }
-  },
+  computed: {},
   watch: {},
   created() {},
-  mounted() {},
-  methods: {}
+  mounted() {
+    this.$nextTick(() => {
+      this.numArchite =
+        document.getElementById('most').getBoundingClientRect().bottom - 105;
+      console.log(this.numArchite);
+      this.numArchiteBottom =
+        document.getElementById('lead').getBoundingClientRect().bottom - 105;
+      if (this.numArchite) {
+        this.domGlobal.addEventListener('scroll', () => {
+          this.handleThrottle(this.handleMostScroll, 250);
+        });
+      }
+    });
+  },
+  methods: {
+    handleMostScroll() {
+      const scrollTop = this.domGlobal.scrollTop;
+      const topHeight = document.getElementById('headerTop').offsetTop;
+      const isFixed = scrollTop > topHeight;
+      this.$store.commit('handleIsFixed', isFixed);
+      if (scrollTop >= this.numArchite && scrollTop < this.numArchiteBottom) {
+        const obj = { headerColor: '#fff', color: '#37383c' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'news--horizontal');
+        this.$store.commit('handleIsTop', false);
+      } else if (scrollTop >= this.numArchiteBottom) {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      } else {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      }
+    }
+  }
 };
 </script>

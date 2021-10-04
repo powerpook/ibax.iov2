@@ -28,9 +28,14 @@
     padding: 33px 20px;
     text-align: center;
     img {
+      width: auto;
       border: 0;
       max-width: 100%;
       height: auto;
+    }
+    .iconfont {
+      font-size: 30px;
+      color: #fff;
     }
   }
   .link {

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-14 16:42:21
+ * @LastEditTime: 2021-09-27 11:47:22
  * @Description:
  */
 import Vue from 'vue';
@@ -37,7 +37,11 @@ import {
   Select,
   Option,
   OptionGroup,
-  Pagination
+  Pagination,
+  Carousel,
+  CarouselItem,
+  Collapse,
+  CollapseItem
 } from 'element-ui';
 
 Vue.use(Scrollbar);
@@ -68,6 +72,10 @@ Vue.use(Select);
 Vue.use(Option);
 Vue.use(OptionGroup);
 Vue.use(Pagination);
+Vue.use(Carousel);
+Vue.use(CarouselItem);
+Vue.use(Collapse);
+Vue.use(CollapseItem);
 Vue.prototype.$loading = Loading.service;
 Vue.prototype.$msgbox = MessageBox;
 Vue.prototype.$alert = MessageBox.alert;

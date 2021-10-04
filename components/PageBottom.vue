@@ -2,18 +2,18 @@
  * @Author: abc
  * @Date: 2021-08-23 14:22:23
  * @LastEditors: abc
- * @LastEditTime: 2021-09-13 18:27:41
+ * @LastEditTime: 2021-09-20 15:32:52
  * @Description: 
 -->
 <template>
   <!-- bottom -->
   <div class="cta">
     <div class="container">
-      <h1 v-if="obj.path === '/about'" class="wow fadeInUp">
-        {{ $t(obj.title) }}
-      </h1>
-      <h1 v-else class="wow fadeInUp">{{ $t(obj.title) }}</h1>
       <div class="text-wrap">
+        <h1 v-if="obj.path === '/about'" class="wow fadeInUp">
+          {{ $t(obj.title) }}
+        </h1>
+        <h1 v-else class="wow fadeInUp">{{ $t(obj.title) }}</h1>
         <p v-if="obj.path === '/about'" class="wow fadeInUp">
           {{ $t(obj.label) }}
         </p>

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 15:01:26
  * @LastEditors: abc
- * @LastEditTime: 2021-09-13 14:36:35
+ * @LastEditTime: 2021-09-24 17:40:22
  * @Description:
 -->
 <template>
@@ -62,38 +62,12 @@ export default {
       domGlobal: '',
       domHeaderTop: '',
       visibilityHeight: 10,
-      isFixed: false,
       back: false,
-      isInUp: false,
-      arrLang: [
-        {
-          label: 'English',
-          lang: 'en'
-        },
-        {
-          label: '简体中文',
-          lang: 'zh'
-        }
-      ]
+      isInUp: false
     };
   },
   computed: {},
-  watch: {
-    /*  $route(newVal, oldVal) {
-      const { scroll } = newVal.query;
-      console.log(scroll);
-      if (scroll) {
-        console.log(newVal);
-        this.$refs.scroll.scrollTo(
-          {
-            y: scroll
-          },
-          500,
-          'easeInQuad'
-        );
-      }
-    } */
-  },
+  watch: {},
   created() {},
   mounted() {
     const val = handleGetLang();

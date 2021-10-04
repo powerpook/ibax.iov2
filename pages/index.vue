@@ -2,228 +2,255 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-15 15:45:41
+ * @LastEditTime: 2021-10-04 22:32:19
  * @Description: home
 -->
 <template>
   <div class="home">
     <div class="home-main">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :sm="22" :md="20" :lg="18">
+        <el-col :xs="24" :sm="22" :md="20" :lg="18">
           <div class="home-top">
-            <h1 class="global-h1">{{ $t('home.start') }}</h1>
-            <p class="p-lead">{{ $t('home.performance') }}</p>
-            <div class="home-top-btn">
-              <a
-                href="https://weaver.ibax.io/"
-                target="_blank"
-                class="btn btn-primary"
-                >{{ $t('home.using') }}</a
-              >
-              <a
-                href="https://github.com/orgs/IBAX-io/people"
-                target="_blank"
-                class="btn btn-default"
-                >{{ $t('home.join') }}</a
-              >
-            </div>
+            <h1 class="title-h1 animated fadeInUp">{{ $t('home.start') }}</h1>
+            <p class="p-lead animated fadeInUp">{{ $t('home.performance') }}</p>
           </div>
-          <div class="home-picture">
+          <div class="home-picture animated fadeInUp hidden-sm-and-up">
             <img src="../assets/image/picture.png" alt="picture" />
           </div>
-          <div class="home-team" style="display: none">
-            <el-row type="flex" justify="center">
-              <el-col :xs="23" :sm="22" :md="20" :lg="18">
-                <h5 class="bass-h5">{{ $t('home.partners') }}</h5>
-                <ul class="customers-list">
-                  <li>
-                    <img
-                      src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/11/logo-docusign-1.svg"
-                      class="attachment-medium"
-                      alt="logo-docusign-1"
-                      width="134"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/logo-uber.svg"
-                      class="attachment-medium"
-                      alt="logo-uber"
-                      width="80"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/logo-rakuten-viber-white.svg"
-                      class="attachment-medium"
-                      alt="logo-rakuten-viber-white"
-                      width="171"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/logo-twitter.svg"
-                      class="attachment-medium"
-                      alt="logo-twitter"
-                      width="46"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/07/sweetgreen-2.svg"
-                      class="attachment-medium"
-                      alt="sweetgreen"
-                      width="160"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/logo-lemonade.svg"
-                      class="attachment-medium"
-                      alt="logo-lemonade"
-                      width="142"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/expedia.svg"
-                      class="attachment-medium"
-                      alt="expedia"
-                      width="124"
-                    />
-                  </li>
-                  <li>
-                    <img
-                      src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/ziprecruiter-logo-small.svg"
-                      class="attachment-medium"
-                      alt="ziprecruiter-logo-small"
-                      width="151"
-                    />
-                  </li>
-                </ul>
-                <!--  <a
-                      href="https://github.com/IBAX-io/go-ibax/issues"
-                      target="_blank"
-                      class="home-new-bottom link"
-                    >
-                      <span>了解我们的合作伙伴</span>
-                      <i class="el-icon-right"></i>
-                    </a> -->
-              </el-col>
-            </el-row>
+          <div class="home-top-btn animated fadeInUp">
+            <a
+              href="https://weaver.ibax.io/"
+              target="_blank"
+              class="btn btn-primary"
+              >{{ $t('home.using') }}</a
+            >
+            <a
+              href="https://github.com/orgs/IBAX-io/people"
+              target="_blank"
+              class="btn btn-default"
+              >{{ $t('home.join') }}</a
+            >
+          </div>
+          <div class="home-picture animated fadeInUp hidden-sm-and-down">
+            <img src="../assets/image/picture.png" alt="picture" />
           </div>
           <div class="home-new">
-            <p class="subtitle wow fadeInUp">{{ $t('home.innovate') }}</p>
-            <el-row type="flex" justify="space-between">
-              <el-col :xs="23" :lg="12">
-                <div class="wow fadeInUp">
-                  <h2 class="bass-h2">{{ $t('home.framework') }}</h2>
-                  <p>{{ $t('home.bottom') }}</p>
-                  <nuxt-link
-                    to="/feature/architecture"
-                    class="home-new-bottom link"
-                  >
-                    <span>{{ $t('home.learn') }}</span>
-                    <i class="el-icon-right"></i>
-                  </nuxt-link>
-                </div>
-              </el-col>
-              <el-col :xs="23" :lg="6">
-                <div class="home-new-img">
-                  <img src="../assets/image/earth.svg" mode="powerful" />
-                  <!-- <img src="@/assets/image/ball_1.svg" mode="powerful" /> -->
-                </div>
-              </el-col>
-            </el-row>
-          </div>
-          <div class="home-new">
-            <p class="home-new-title">
-              <i class="el-iconfont iconfont el-a-038"></i>
-              <span class="home-new-title-text">
-                {{ $t('home.virtual') }}
-              </span>
-            </p>
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="8">
-                <div class="wow fadeInUp">
-                  <h2 class="bass-h2">{{ $t('home.machine') }}</h2>
-                  <p>{{ $t('home.can') }}</p>
-                </div>
-              </el-col>
-              <el-col :xs="23" :lg="14">
+            <el-row type="flex" justify="space-between" class="el-row-wrap">
+              <el-col :xs="24" :lg="6" class="hidden-sm-and-up">
                 <div class="home-new-img">
                   <img
-                    src="../assets/image/img-insights-report2.png"
+                    src="@/assets/images/innovate.jpg"
                     mode="powerful"
+                    class="home-new-img-earth"
                   />
                 </div>
               </el-col>
-            </el-row>
-          </div>
-          <div class="home-new">
-            <p class="home-new-title">
-              <i class="el-iconfont iconfont el-a-028"></i>
-              <span class="home-new-title-text">
-                {{ $t('home.consensus') }}
-              </span>
-            </p>
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="8">
-                <div class="wow fadeInUp">
-                  <h2 class="bass-h2">{{ $t('home.dpoa') }}</h2>
-                  <p>{{ $t('home.good') }}</p>
-                </div>
+              <el-col :xs="24" :lg="16">
+                <p class="subtitle wow fadeInUp">{{ $t('home.innovate') }}</p>
+                <h2 class="title-h2 wow fadeInUp">
+                  {{ $t('home.framework') }}
+                </h2>
+                <p class="wow fadeInUp">{{ $t('home.bottom') }}</p>
+                <nuxt-link
+                  to="/feature/architecture"
+                  class="home-new-bottom link wow fadeInUp"
+                >
+                  <span>{{ $t('home.learn') }}</span>
+                  <i class="el-icon-right"></i>
+                </nuxt-link>
               </el-col>
-              <el-col :xs="23" :lg="14">
+              <el-col :xs="24" :lg="6" class="hidden-sm-and-down">
                 <div class="home-new-img">
                   <img
-                    src="../assets/image/img-funnels-report-2.png"
-                    mode="img-funnels-report-2"
+                    src="@/assets/images/innovate.jpg"
+                    alt="innovate"
+                    class="home-new-img-earth"
                   />
                 </div>
               </el-col>
             </el-row>
           </div>
-          <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="8">
-                <p class="home-new-title wow fadeInUp">
-                  <i class="el-iconfont iconfont el-a-036"></i>
-                  <span class="home-new-title-text">
-                    {{ $t('home.bifurcation') }}
-                  </span>
-                </p>
-                <div class="wow fadeInUp">
-                  <h2 class="bass-h2">{{ $t('home.honor') }}</h2>
-                  <p>{{ $t('home.unified') }}</p>
-                  <p>{{ $t('home.unif') }}</p>
-                  <nuxt-link
-                    class="home-new-bottom link"
-                    to="/feature/ecolib-governance"
-                  >
-                    <span>{{ $t('home.features') }}</span>
-                    <i class="el-icon-right"></i>
-                  </nuxt-link>
-                </div>
-              </el-col>
-              <el-col :xs="23" :lg="14">
-                <div class="home-new-img">
-                  <img
-                    src="../assets/image/img-retention-report-2.png"
-                    mode="img-retention-report-2"
-                  />
-                </div>
-              </el-col>
-            </el-row>
+          <!-- computer -->
+          <div class="hidden-sm-and-down">
+            <div id="middleBox" class="home-new">
+              <el-row type="flex" justify="space-between">
+                <el-col :xs="23" :lg="8">
+                  <div id="virtual" class="home-new-box">
+                    <p class="home-new-title wow fadeInUp">
+                      <i class="el-iconfont iconfont el-a-038"></i>
+                      <span class="home-new-title-text">
+                        {{ $t('home.virtual') }}
+                      </span>
+                    </p>
+                    <div class="wow fadeInUp">
+                      <h2 class="bass-h2">{{ $t('home.machine') }}</h2>
+                      <p>{{ $t('home.can') }}</p>
+                    </div>
+                  </div>
+                  <div id="consensus" class="home-new-box">
+                    <p class="home-new-title wow fadeInUp">
+                      <i class="el-iconfont iconfont el-a-028"></i>
+                      <span class="home-new-title-text">
+                        {{ $t('home.consensus') }}
+                      </span>
+                    </p>
+                    <div class="wow fadeInUp">
+                      <h2 class="bass-h2">{{ $t('home.dpoa') }}</h2>
+                      <p>{{ $t('home.good') }}</p>
+                      <!-- <p>{{ $t('home.determine') }}</p> -->
+                    </div>
+                  </div>
+                  <div id="bifurcation" class="home-new-box">
+                    <p class="home-new-title wow fadeInUp">
+                      <i class="el-iconfont iconfont el-a-036"></i>
+                      <span class="home-new-title-text">
+                        {{ $t('home.bifurcation') }}
+                      </span>
+                    </p>
+                    <div class="wow fadeInUp">
+                      <h2 class="bass-h2">{{ $t('home.honor') }}</h2>
+                      <p>{{ $t('home.unified') }}</p>
+                      <p>{{ $t('home.unif') }}</p>
+                      <nuxt-link
+                        class="home-new-bottom link"
+                        to="/feature/ecolib-governance"
+                      >
+                        <span>{{ $t('home.features') }}</span>
+                        <i class="el-icon-right"></i>
+                      </nuxt-link>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col ref="powerful" :xs="23" :lg="14">
+                  <div class="home-new-right">
+                    <div class="home-new-right-box" :style="haxStyle">
+                      <div
+                        id="powerful"
+                        class="home-new-right-box-img"
+                        :class="{ 'home-new-right-box-show': isOne }"
+                      >
+                        <img src="@/assets/images/virtual.jpg" alt="virtual" />
+                      </div>
+                      <div
+                        class="home-new-right-box-img"
+                        :class="{ 'home-new-right-box-show': isTwo }"
+                      >
+                        <img
+                          src="@/assets/images/consensus.jpg"
+                          alt="consensus"
+                        />
+                      </div>
+                      <div
+                        class="home-new-right-box-img"
+                        :class="{ 'home-new-right-box-show': isThree }"
+                      >
+                        <img src="@/assets/images/gas.jpg" alt="gas" />
+                      </div>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+            </div>
           </div>
+          <!--  moblie -->
+          <div class="hidden-sm-and-up">
+            <div class="home-new">
+              <el-row
+                type="flex"
+                justify="space-between"
+                align="middle"
+                class="el-row-wrap"
+              >
+                <el-col :xs="24" :lg="8">
+                  <p class="home-new-title wow fadeInUp">
+                    <i class="el-iconfont iconfont el-a-038"></i>
+                    <span class="home-new-title-text">
+                      {{ $t('home.virtual') }}
+                    </span>
+                  </p>
+                  <div class="wow fadeInUp">
+                    <h3 class="title-h3">{{ $t('home.machine') }}</h3>
+                    <p>{{ $t('home.can') }}</p>
+                  </div>
+                </el-col>
+                <el-col :xs="24" :lg="14">
+                  <div class="home-new-img">
+                    <img src="@/assets/images/virtual.jpg" alt="virtual" />
+                  </div>
+                </el-col>
+              </el-row>
+            </div>
+            <div class="home-new">
+              <el-row
+                type="flex"
+                justify="space-between"
+                align="middle"
+                class="el-row-wrap"
+              >
+                <el-col :xs="24" :lg="8">
+                  <p class="home-new-title wow fadeInUp">
+                    <i class="el-iconfont iconfont el-a-028"></i>
+                    <span class="home-new-title-text">
+                      {{ $t('home.consensus') }}
+                    </span>
+                  </p>
+                  <div class="wow fadeInUp">
+                    <h3 class="title-h3">{{ $t('home.dpoa') }}</h3>
+                    <p>{{ $t('home.good') }}</p>
+                    <p>{{ $t('home.determine') }}</p>
+                  </div>
+                </el-col>
+                <el-col :xs="24" :lg="14">
+                  <div class="home-new-img">
+                    <img src="@/assets/images/consensus.jpg" alt="consensus" />
+                  </div>
+                </el-col>
+              </el-row>
+            </div>
+            <div class="home-new">
+              <el-row
+                type="flex"
+                justify="space-between"
+                align="middle"
+                class="el-row-wrap"
+              >
+                <el-col :xs="24" :lg="8">
+                  <p class="home-new-title wow fadeInUp">
+                    <i class="el-iconfont iconfont el-a-036"></i>
+                    <span class="home-new-title-text">
+                      {{ $t('home.bifurcation') }}
+                    </span>
+                  </p>
+                  <div class="wow fadeInUp">
+                    <h3 class="title-h3">{{ $t('home.honor') }}</h3>
+                    <p>{{ $t('home.unified') }}</p>
+                    <p>{{ $t('home.unif') }}</p>
+                    <nuxt-link
+                      class="home-new-bottom link"
+                      to="/feature/ecolib-governance"
+                    >
+                      <span>{{ $t('home.features') }}</span>
+                      <i class="el-icon-right"></i>
+                    </nuxt-link>
+                  </div>
+                </el-col>
+                <el-col :xs="24" :lg="14">
+                  <div class="home-new-img">
+                    <img src="@/assets/images/gas.jpg" alt="gas" />
+                  </div>
+                </el-col>
+              </el-row>
+            </div>
+          </div>
+          <!-- economics  -->
           <div class="home-new">
-            <p class="subtitle">{{ $t('home.economics') }}</p>
-            <el-row type="flex" justify="space-between">
-              <el-col :xs="23" :lg="12">
+            <el-row type="flex" justify="space-between" class="el-row-wrap">
+              <el-col :xs="24" :lg="12">
+                <p class="subtitle">{{ $t('home.economics') }}</p>
                 <div class="wow fadeInUp">
-                  <h2 class="bass-h2">
+                  <h3 class="title-h3">
                     {{ $t('home.benefits') }}
-                  </h2>
+                  </h3>
                   <p>
                     {{ $t('home.matter') }}
                   </p>
@@ -237,16 +264,25 @@
                   </a>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="6">
+              <el-col :xs="24" :lg="6">
                 <div class="home-new-img">
-                  <img src="../assets/image/cube_pure.svg" mode="powerful" />
+                  <img
+                    src="@/assets//images/economics.jpg"
+                    alt="economics"
+                    class="home-new-img-earth"
+                  />
                 </div>
               </el-col>
             </el-row>
           </div>
           <div class="home-tag">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="12">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="12">
                 <el-tabs v-model="activeName" :tab-position="tabPosition">
                   <el-tab-pane
                     v-for="item in arrTags"
@@ -260,7 +296,8 @@
                   </el-tab-pane>
                 </el-tabs>
               </el-col>
-              <el-col :xs="23" :lg="4">
+              <!-- computer -->
+              <el-col v-if="!isMobile" :xs="23" :lg="4">
                 <template v-for="item in arrText">
                   <div
                     :key="item.name"
@@ -276,13 +313,23 @@
               </el-col>
             </el-row>
           </div>
+          <!-- lead -->
           <div class="home-new">
-            <p class="subtitle">{{ $t('home.lead') }}</p>
-            <el-row type="flex" justify="space-between">
-              <el-col :xs="23" :lg="14">
+            <el-row type="flex" justify="space-between" class="el-row-wrap">
+              <el-col :xs="24" :lg="8" class="hidden-sm-and-up">
+                <div class="home-new-img wow fadeInUp">
+                  <img
+                    src="@/assets/images/lead.jpg"
+                    alt="lead"
+                    class="home-new-img-earth"
+                  />
+                </div>
+              </el-col>
+              <el-col :xs="24" :lg="14">
+                <p class="subtitle">{{ $t('home.lead') }}</p>
                 <div class="wow fadeInUp">
-                  <h2 class="bass-h2">{{ $t('home.driven') }}</h2>
-                  <p class="global-h6">{{ $t('home.chain') }}</p>
+                  <h3 class="title-h2">{{ $t('home.driven') }}</h3>
+                  <p>{{ $t('home.chain') }}</p>
                   <nuxt-link
                     to="/feature/cross-chain"
                     class="home-new-bottom link"
@@ -292,9 +339,9 @@
                   </nuxt-link>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="8">
-                <div class="home-new-img">
-                  <img src="../assets/image/shield_points.svg" mode="connect" />
+              <el-col :xs="24" :lg="8" class="hidden-sm-and-down">
+                <div class="home-new-img wow fadeInUp">
+                  <img src="@/assets/images/lead.jpg" alt="lead" />
                 </div>
               </el-col>
             </el-row>
@@ -303,7 +350,10 @@
       </el-row>
     </div>
     <div class="home-loop">
-      <h6 class="global-h4 wow fadeInUp">{{ $t('home.have') }}</h6>
+      <div class="intro-row">
+        <h6 class="title-h6 wow fadeInUp">{{ $t('home.have') }}</h6>
+        <p>{{ $t('home.built') }}</p>
+      </div>
       <div class="home-loop-content">
         <client-only>
           <vue-seamless-scroll
@@ -323,11 +373,12 @@
       </div>
       <div class="home-p5">
         <client-only>
-          <vue-p5 @setup="setup" @draw="draw"></vue-p5>
+          <vue-p5 v-if="isMobile" @setup="setup" @draw="draw"></vue-p5>
+          <vue-p5 v-else @setup="setup" @draw="draw"></vue-p5>
         </client-only>
       </div>
       <div class="home-appeared wow fadeInUp">
-        <h1>{{ $t('home.your') }}</h1>
+        <h1 class="title-h1">{{ $t('home.your') }}</h1>
         <div class="home-appeared-box">
           <ul class="home-appeared-item">
             <li>
@@ -351,14 +402,14 @@
         </div>
       </div>
     </div>
-    <div ref="empty" class="home-empty"></div>
+    <div ref="empty" class="home-empty hidden-sm-and-down"></div>
     <div ref="story" class="home-story">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :sm="22" :md="20" :lg="18">
-          <el-row type="flex" justify="space-between">
+        <el-col :xs="24" :sm="22" :md="20" :lg="18">
+          <el-row type="flex" justify="space-between" class="el-row-wrap">
             <el-col :xs="23" :lg="8">
               <p class="subtitle">{{ $t('home.partner') }}</p>
-              <h3 class="global-h3">{{ $t('home.ibaa') }}</h3>
+              <h2 class="title-h2-plus">{{ $t('home.ibaa') }}</h2>
               <li class="home-story-text-li">
                 {{ $t('home.official') }}
               </li>
@@ -369,36 +420,36 @@
                 {{ $t('home.manage') }}
               </li>
             </el-col>
-            <el-col :xs="23" :lg="5">
-              <div class="home-new-img">
+            <el-col :xs="24" :lg="5">
+              <div class="home-story-phone">
                 <img src="../assets/image/device-494x1024.png" mode="connect" />
               </div>
             </el-col>
-            <el-col :xs="23" :lg="9">
-              <p class="global-h6 home-story-title">
+            <el-col :xs="24" :lg="9">
+              <h6 class="title-h6 home-story-title">
                 {{ $t('home.wallet') }}
-              </p>
-              <p class="home-story-right">
+              </h6>
+              <!--  <p class="home-story-right">
                 {{ $t('home.very') }}
-              </p>
+              </p> -->
               <p class="home-story-right">
                 {{ $t('home.is') }}
               </p>
               <p class="home-story-right">
                 {{ $t('home.more') }}
               </p>
-              <p class="home-story-right">
+              <!--  <p class="home-story-right">
                 {{ $t('home.there') }}
-              </p>
+              </p> -->
               <div class="global-h6 home-story-text">
                 <div class="home-story-text-img">
                   <img src="../assets/image/avatar.jpg" alt="avatar" />
                 </div>
                 <div class="home-story-text-name">
-                  <div>
+                  <div class="home-story-text-name-strong">
                     {{ $t('home.name') }}
                   </div>
-                  <div>
+                  <div class="home-story-text-name-text">
                     {{ $t('home.product') }}
                   </div>
                 </div>
@@ -408,64 +459,83 @@
         </el-col>
       </el-row>
     </div>
-    <!-- develop -->
+    <!-- bottom -->
     <div class="home-product wow fadeIn">
-      <el-row type="flex" justify="center">
+      <!-- computer -->
+      <el-row v-if="!isMobile" type="flex" justify="center">
         <el-col :xs="23" :lg="18">
-          <h6 class="bass-h2">{{ $t('home.develop') }}</h6>
+          <h2 class="title-h2">{{ $t('home.develop') }}</h2>
           <el-row type="flex" justify="space-between">
-            <el-col :xs="23" :lg="7">
+            <el-col
+              v-for="(item, index) in arrProduct"
+              :key="index"
+              :xs="23"
+              :lg="7"
+            >
               <div class="home-new-img">
-                <img src="@/assets/image/gtpmthumbzhhant.png" alt="" />
+                <img :src="item.img" alt="img" />
               </div>
               <div class="home-story-text">
-                <i class="iconfont el-technology1"></i>
-                <strong>{{ $t('home.technology') }}</strong>
+                <i class="iconfont" :class="item.icon"></i>
+                <strong>{{ $t(item.strong) }}</strong>
               </div>
-              <h4 class="home-story-text-h4">{{ $t('home.technical') }}</h4>
+              <h4 class="home-story-text-h4">{{ $t(item.title) }}</h4>
               <a
-                href="https://github.com/IBAX-io/documentation"
+                v-if="item.href"
+                :href="item.href"
                 target="_blank"
                 class="home-new-bottom link"
               >
-                <span>{{ $t('home.go') }}</span>
+                <span>{{ $t(item.text) }}</span>
                 <i class="el-icon-right"></i>
               </a>
-            </el-col>
-            <el-col :xs="23" :lg="7">
-              <div class="home-new-img">
-                <img src="@/assets/image/gtpmthumbzhhant.png" alt="" />
-              </div>
-              <div class="home-story-text">
-                <i class="iconfont el-video"></i>
-                <strong>{{ $t('home.video') }}</strong>
-              </div>
-              <h4 class="home-story-text-h4">{{ $t('home.about') }}</h4>
               <nuxt-link
-                to="/resource/video-resources"
+                v-if="item.path"
+                :to="item.path"
                 class="home-new-bottom link"
               >
-                <span>{{ $t('home.m') }}</span>
-                <i class="el-icon-right"></i>
-              </nuxt-link>
-            </el-col>
-            <el-col :xs="23" :lg="7">
-              <div class="home-new-img">
-                <img src="@/assets/image/gtpmthumbzhhant.png" alt="" />
-              </div>
-              <div class="home-story-text">
-                <i class="iconfont el-activity"></i>
-                <strong>{{ $t('home.activity') }}</strong>
-              </div>
-              <h4 class="home-story-text-h4">{{ $t('home.exciting') }}</h4>
-              <nuxt-link to="/resource/events" class="home-new-bottom link">
-                <span>{{ $t('home.award') }}</span>
+                <span>{{ $t(item.text) }}</span>
                 <i class="el-icon-right"></i>
               </nuxt-link>
             </el-col>
           </el-row>
         </el-col>
       </el-row>
+      <!-- moblie -->
+      <template v-else>
+        <h2 class="title-h2">{{ $t('home.develop') }}</h2>
+        <el-carousel indicator-position="outside" arrow="never">
+          <el-carousel-item v-for="(item, index) in arrProduct" :key="index">
+            <div>
+              <div class="home-new-img">
+                <img :src="item.img" alt="img" />
+              </div>
+              <div class="home-story-text">
+                <i class="iconfont" :class="item.icon"></i>
+                <strong>{{ $t(item.strong) }}</strong>
+              </div>
+              <h4 class="title-h4">{{ $t(item.title) }}</h4>
+              <a
+                v-if="item.href"
+                :href="item.href"
+                target="_blank"
+                class="home-new-bottom link"
+              >
+                <span>{{ $t(item.text) }}</span>
+                <i class="el-icon-right"></i>
+              </a>
+              <nuxt-link
+                v-if="item.path"
+                :to="item.path"
+                class="home-new-bottom link"
+              >
+                <span>{{ $t(item.text) }}</span>
+                <i class="el-icon-right"></i>
+              </nuxt-link>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </template>
     </div>
   </div>
 </template>
@@ -473,30 +543,45 @@
 const img1 = require('../assets/image/img-retention-report-2.png');
 const img2 = require('../assets/image/img-funnels-report-2.png');
 const img3 = require('../assets/image/img-insights-report2.png');
-const amsLogo = require('../assets/logo/AWS_logo.svg');
-const gineLogo = require('../assets/logo/TDengine_logo.svg');
-const langLogo = require('../assets/logo/Golang_logo.svg');
-const gologo = require('../assets/logo/Go_logo.svg');
-const centrifugoLogo = require('../assets/logo/Centrifugo_logo.svg');
-const cloudLogo = require('../assets/logo/Google_Cloud_logo.svg');
-const algorithmLogo = require('../assets/logo/Encryption_Algorithm_logo.svg');
-const protocolLogo = require('../assets/logo/UDP_protocol_logo.svg');
-const postgreLogo = require('../assets/logo/postgreSQL_logo.svg');
+const technology = require('../assets/images/technology.jpg');
+const videos = require('../assets/images/videos.jpg');
 export default {
   data() {
     return {
       tabPosition: 'bottom',
       activeName: 'first',
+      isOne: false,
+      isTwo: false,
+      isThree: false,
       boo: false,
-      xSpacing: 20,
-      waveWidth: 0,
-      theta: 0.0,
-      amplitude: 80,
-      period: 400,
-      xWave: 0,
       arrWave: [],
       helf: 0,
-      color: 'rgba(243,172,52,0.5)',
+      arrProduct: [
+        {
+          href: 'https://github.com/IBAX-io/documentation',
+          img: technology,
+          icon: 'el-technology1',
+          strong: 'home.technology',
+          title: 'home.technical',
+          text: 'home.go'
+        },
+        {
+          path: '/resource/video-resources',
+          img: videos,
+          icon: 'el-video',
+          strong: 'home.video',
+          title: 'home.about',
+          text: 'home.m'
+        },
+        {
+          path: '/resource/events',
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/11/the-guide-to-product-analytics@2x.png',
+          icon: 'el-activity',
+          strong: 'resource.activity',
+          title: 'home.exciting',
+          text: 'home.award'
+        }
+      ],
       arrTags: [
         {
           label: 'home.fixed',
@@ -543,48 +628,49 @@ export default {
       },
       iconList: [
         {
-          icon: 'iconfont el-AWS_logo',
-          img: amsLogo
+          icon: 'iconfont el-AWS_logo'
         },
         {
-          icon: 'iconfont el-TDengine_logo',
-          img: gineLogo
+          icon: 'iconfont el-TDengine_logo'
         },
         {
-          icon: 'iconfont el-Golang_logo',
-          img: langLogo
+          icon: 'iconfont el-Golang_logo'
         },
         {
-          icon: 'iconfont el-Go_logo',
-          img: gologo
+          icon: 'iconfont el-Go_Logo'
         },
         {
-          icon: 'iconfont el-Centrifugo_logo',
-          img: centrifugoLogo
+          icon: 'iconfont el-Centrifugo_logo'
         },
         {
-          icon: 'iconfont el-Google_Cloud_logo',
-          img: cloudLogo
+          icon: 'iconfont el-Google_Cloud_logo'
         },
         {
-          icon: 'iconfont el-Encryption_Algorithm_logo',
-          img: algorithmLogo
+          icon: 'iconfont el-Encryption_Algorithm_logo'
         },
         {
-          icon: 'iconfont el-UDP_protocol_logo',
-          img: protocolLogo
+          icon: 'iconfont el-UDP_protocol_logo'
         },
         {
-          icon: 'iconfont el-postgreSQL_logo',
-          img: postgreLogo
+          icon: 'iconfont el-postgreSQL_logo'
+        },
+        /* {
+          icon: 'iconfont el-pusher_logo'
+        }, */
+        {
+          icon: 'iconfont el-typescript_logo'
         },
         {
-          icon: 'iconfont el-pusher',
-          img: protocolLogo
+          icon: 'iconfont el-oracle_logo'
         },
         {
-          icon: 'iconfont el-TITBIT_logo',
-          img: postgreLogo
+          icon: 'iconfont el-docker_logo'
+        },
+        {
+          icon: 'iconfont el-taosdata_logo'
+        },
+        {
+          icon: 'iconfont el-arm_logo'
         }
       ],
       domGlobal: '',
@@ -594,8 +680,18 @@ export default {
       back: '',
       offsetHeight: '',
       numMain: '',
+      numPowerful: 0,
+      numLeft: 0,
+      numTop: 0,
       colorPrimary: '#f3ac34',
-      colorLine: 'rgba(243,172,52,0.2)'
+      colorLine: 'rgba(243,172,52,0.2)',
+      haxStyle: {},
+      xSpacing: 20,
+      waveWidth: 0,
+      theta: 0.0,
+      amplitude: 80,
+      period: 400,
+      xWave: 0
     };
   },
   head() {
@@ -623,72 +719,166 @@ export default {
   },
   computed: {},
   mounted() {
-    this.$nextTick(() => {
-      this.domEmpty = this.$refs.empty;
-      this.domStory = this.$refs.story;
-      this.offsetHeight = this.domStory.offsetHeight;
-      this.domEmpty.style.height = this.offsetHeight + 'px';
-      this.domGlobal = document.getElementById('global').firstChild;
-      this.numMain = this.domEmpty.getBoundingClientRect().bottom;
-      console.log(this.numMain);
-      if (this.numMain) {
-        this.domGlobal.addEventListener('scroll', this.handleScroll);
-      }
+    this.domEmpty = this.$refs.empty;
+    this.domStory = this.$refs.story;
+    this.offsetHeight = this.domStory.offsetHeight;
+    this.domEmpty.style.height = this.offsetHeight + 'px';
+    if (!this.isMobile) {
+      this.domEmpty.style.position = 'static';
+      this.domStory.style.position = 'fixed';
+    }
+    const obj = { headerColor: '#274235', color: '#fff' };
+    this.$store.commit('handleChangeColor', obj);
+    this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+    this.$store.commit('handleIsTop', true);
+    if (!this.isMobile) {
+      this.numPowerful = this.$refs.powerful.$el.getBoundingClientRect().left;
+      this.numLeft = this.$refs.powerful.$el.offsetWidth;
+      this.numMain =
+        this.domEmpty.getBoundingClientRect().top + this.offsetHeight - 350;
+      // bifurcation
+      this.virtualTop =
+        document.getElementById('virtual').getBoundingClientRect().top - 350;
+      console.log(this.virtualTop);
+      this.consensusTop =
+        document.getElementById('consensus').getBoundingClientRect().top - 350;
+      this.bifurcationTop =
+        document.getElementById('bifurcation').getBoundingClientRect().top -
+        350;
+      console.log(this.bifurcationTop);
+      this.bifurcationBottom =
+        document.getElementById('bifurcation').getBoundingClientRect().bottom -
+        350;
+      this.middleBox = document
+        .getElementById('middleBox')
+        .getBoundingClientRect().top;
+    }
+    this.domGlobal.addEventListener('scroll', () => {
+      this.handleThrottle(this.handleScroll, 100);
     });
   },
   methods: {
     handleScroll() {
       const scrollTop = this.domGlobal.scrollTop;
-      if (scrollTop >= this.numMain) {
-        this.domEmpty.style.position = 'fixed';
-        this.domStory.style.position = 'static';
-      } else {
-        this.domEmpty.style.position = 'static';
-        this.domStory.style.position = 'fixed';
+      console.log(scrollTop);
+      const topHeight = document.getElementById('headerTop').offsetTop;
+      const isFixed = scrollTop > topHeight;
+      this.$store.commit('handleIsFixed', isFixed);
+      if (!this.isMobile) {
+        if (scrollTop >= this.virtualTop && scrollTop < this.consensusTop) {
+          this.haxStyle = {
+            width: `${this.numPowerful}px`,
+            position: 'fixed',
+            transform: `translate3d(${this.numLeft}px, 219px, 0px)`
+          };
+          this.isOne = true;
+          this.isTwo = false;
+          this.isThree = false;
+        } else if (
+          scrollTop >= this.consensusTop &&
+          scrollTop < this.bifurcationTop
+        ) {
+          this.haxStyle = {
+            width: `${this.numPowerful}px`,
+            position: 'fixed',
+            transform: `translate3d(${this.numLeft}px, 219px, 0px)`
+          };
+          this.isOne = false;
+          this.isTwo = true;
+          this.isThree = false;
+        } else if (
+          scrollTop >= this.bifurcationTop &&
+          scrollTop < this.bifurcationTop + 100
+        ) {
+          this.haxStyle = {
+            width: `${this.numPowerful}px`,
+            position: 'fixed',
+            transform: `translate3d(${this.numLeft}px, 219px, 0px)`
+          };
+          this.isOne = false;
+          this.isTwo = false;
+          this.isThree = true;
+        } else if (scrollTop >= this.bifurcationTop + 100) {
+          this.haxStyle = {
+            width: `${this.numPowerful}px`,
+            position: 'absolute',
+            transform: `translate3d(0px, ${this.middleBox}px, 0px)`
+          };
+          this.isOne = false;
+          this.isTwo = false;
+          this.isThree = true;
+        } else {
+          this.haxStyle = {};
+          this.isOne = true;
+          this.isTwo = false;
+          this.isThree = false;
+        }
+        if (scrollTop >= this.numMain) {
+          this.domEmpty.style.position = 'fixed';
+          this.domStory.style.position = 'static';
+          const obj = { headerColor: '#fff', color: '#37383c' };
+          this.$store.commit('handleChangeColor', obj);
+          this.$store.commit('handleChangeClass', 'news--horizontal');
+          this.$store.commit('handleIsTop', false);
+        } else {
+          this.domEmpty.style.position = 'static';
+          this.domStory.style.position = 'fixed';
+          const obj = { headerColor: '#274235', color: '#fff' };
+          this.$store.commit('handleChangeColor', obj);
+          this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+          this.$store.commit('handleIsTop', true);
+        }
       }
     },
     setup(sketch) {
       const width =
         document.documentElement.clientWidth || document.body.clientWidth;
       this.helf = width / 2;
-      sketch.createCanvas(width, 500);
+      let num = 500;
+      let high = 393;
+      this.period = 400;
+      this.xSpacing = 20;
+      this.amplitude = 80;
+      if (this.isMobile) {
+        num = 200;
+        high = 100;
+        this.period = 80;
+        this.xSpacing = 5;
+        this.amplitude = 20;
+      }
+      sketch.createCanvas(width, num);
       this.waveWidth = sketch.width + 20;
       this.xWave = (sketch.TWO_PI / this.period) * this.xSpacing;
       this.arrWave = new Array(sketch.floor(this.waveWidth / this.xSpacing));
       const icon = sketch.createElement('i');
       icon.style('color', this.colorPrimary);
       // position the element
-      icon.position(this.helf - 35, 393);
+      icon.position(this.helf - 35, high);
       icon.addClass('iconfont el-circle');
       console.log(icon);
     },
     draw(sk) {
       sk.background('#274235');
       this.calcWave(sk);
-      this.renderWave(sk);
+      let circle = 6;
+      if (this.isMobile) {
+        circle = 3;
+      }
+      this.renderWave(sk, circle);
     },
-    renderWave(sk) {
+    renderWave(sk, circle) {
       sk.noStroke();
       sk.fill(this.colorPrimary);
-      // 在波上的每个位置画椭圆
       for (let x = 0; x < this.arrWave.length; x++) {
         // eslint-disable-next-line prefer-const
         let arrWave = sk.height / 6 + this.arrWave[x];
-        sk.ellipse(x * this.xSpacing, arrWave, 6, 6);
+        sk.ellipse(x * this.xSpacing, arrWave, circle, circle);
         sk.stroke(this.colorLine);
         sk.line(x * this.xSpacing, arrWave, this.helf, sk.height - 80);
       }
-      /*  sk.fill('red');
-      sk.circle(this.helf, sk.height - 45, 70, 70);
-      sk.fill(0);
-      sk.circle(this.helf - 20, sk.height - 45, 13, 13);
-      sk.circle(this.helf, sk.height - 45, 10, 10);
-      sk.circle(this.helf + 15, sk.height - 45, 5, 5); */
     },
     calcWave(sk) {
-      // theta 增量（尝试赋予 ‘角速度’ 不同的数值）
       this.theta += 0.01;
-      // 对于每一个 x 值，使用正弦函数计算 y 值
       let x = this.theta;
       for (let i = 0; i < this.arrWave.length; i++) {
         this.arrWave[i] = sk.sin(x) * this.amplitude;

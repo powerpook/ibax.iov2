@@ -2,29 +2,37 @@
  * @Author: abc
  * @Date: 2021-08-19 12:24:26
  * @LastEditors: abc
- * @LastEditTime: 2021-09-10 12:01:40
+ * @LastEditTime: 2021-09-28 16:06:25
  * @Description: 
 -->
 <template>
   <div class="bass">
-    <div style="background: #274235">
+    <div id="anyone" style="background: #274235">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :sm="22" :md="20" :lg="18">
           <div class="bass-top">
-            {{ $t('bass.anyone') }}
-            <h1 class="bass-h1">{{ $t('bass.create') }}</h1>
+            <div class="bass-top-text animated fadeInUp">
+              {{ $t('bass.anyone') }}
+            </div>
+            <h1 class="bass-h1 animated fadeInUp">{{ $t('bass.create') }}</h1>
           </div>
           <div class="bass-top-warp">
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="7">
                 <div class="bass-top-box">
-                  <div class="bass-top-box-title">{{ $t('bass.quickly') }}</div>
+                  <div class="bass-top-box-title">
+                    <span class="animated fadeInUp">{{
+                      $t('bass.quickly')
+                    }}</span>
+                  </div>
                   <div class="bass-top-box-content">
-                    <h2 class="bass-h2">{{ $t('bass.ecology') }}</h2>
-                    <p class="bass-top-box-content-text">
+                    <h2 class="bass-h2 animated fadeInUp">
+                      {{ $t('bass.ecology') }}
+                    </h2>
+                    <p class="bass-top-box-content-text animated fadeInUp">
                       {{ $t('bass.without') }}
                     </p>
-                    <div class="bass-top-box-content-btn">
+                    <div class="bass-top-box-content-btn animated fadeInUp">
                       <a
                         href="https://weaver.ibax.io/"
                         target="_blank"
@@ -33,18 +41,23 @@
                       >
                     </div>
                     <div class="bass-top-box-content-blod">
-                      {{ $t('bass.creator') }}
+                      <div
+                        class="bass-top-box-content-blod-box animated fadeInUp"
+                      >
+                        <span>{{ $t('bass.creator') }}</span>
+                        <strong>{{ $t('bass.identity') }}</strong>
+                      </div>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span> {{ $t('bass.obtain') }} </span>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span>{{ $t('bass.define') }}</span>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span>{{ $t('bass.set') }}</span>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span>{{ $t('bass.give') }}</span>
                     </div>
                   </div>
@@ -53,14 +66,18 @@
               <el-col :xs="23" :lg="7">
                 <div class="bass-top-box">
                   <div class="bass-top-box-title">
-                    {{ $t('bass.circulation') }}
+                    <span class="animated fadeInUp">{{
+                      $t('bass.circulation')
+                    }}</span>
                   </div>
                   <div class="bass-top-box-content">
-                    <h2 class="bass-h2">{{ $t('bass.issue') }}</h2>
-                    <p class="bass-top-box-content-text">
+                    <h2 class="bass-h2 animated fadeInUp">
+                      {{ $t('bass.issue') }}
+                    </h2>
+                    <p class="bass-top-box-content-text animated fadeInUp">
                       {{ $t('bass.customize') }}
                     </p>
-                    <div class="bass-top-box-content-btn">
+                    <div class="bass-top-box-content-btn animated fadeInUp">
                       <a
                         href="https://weaver.ibax.io/"
                         target="_blank"
@@ -70,18 +87,23 @@
                       </a>
                     </div>
                     <div class="bass-top-box-content-blod">
-                      {{ $t('bass.can') }}
+                      <div
+                        class="bass-top-box-content-blod-box animated fadeInUp"
+                      >
+                        <span>{{ $t('bass.can') }}</span>
+                        <strong>{{ $t('bass.collect') }}</strong>
+                      </div>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span> {{ $t('bass.naming') }} </span>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span>{{ $t('bass.logo') }}</span>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span>{{ $t('bass.number') }}</span>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span>{{ $t('bass.incentives') }}</span>
                     </div>
                   </div>
@@ -89,13 +111,17 @@
               </el-col>
               <el-col :xs="23" :lg="7">
                 <div class="bass-top-box">
-                  <div class="bass-top-box-title">{{ $t('bass.smart') }}</div>
+                  <div class="bass-top-box-title">
+                    <span>{{ $t('bass.smart') }}</span>
+                  </div>
                   <div class="bass-top-box-content">
-                    <h2 class="bass-h2">{{ $t('bass.contract') }}</h2>
-                    <p class="bass-top-box-content-text">
+                    <h2 class="bass-h2 animated fadeInUp">
+                      {{ $t('bass.contract') }}
+                    </h2>
+                    <p class="bass-top-box-content-text animated fadeInUp">
                       {{ $t('bass.use') }}
                     </p>
-                    <div class="bass-top-box-content-btn">
+                    <div class="bass-top-box-content-btn animated fadeInUp">
                       <a
                         href="https://weaver.ibax.io/"
                         target="_blank"
@@ -105,18 +131,23 @@
                       </a>
                     </div>
                     <div class="bass-top-box-content-blod">
-                      {{ $t('bass.one') }}
+                      <div
+                        class="bass-top-box-content-blod-box animated fadeInUp"
+                      >
+                        <span>{{ $t('bass.one') }}</span>
+                        <strong>{{ $t('bass.contracts') }}</strong>
+                      </div>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span> {{ $t('bass.reference') }} </span>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span>{{ $t('bass.write') }}</span>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span>{{ $t('bass.eco') }}</span>
                     </div>
-                    <div class="bass-top-box-content-line">
+                    <div class="bass-top-box-content-line animated fadeInUp">
                       <span>{{ $t('bass.manage') }}</span>
                     </div>
                   </div>
@@ -126,15 +157,17 @@
             <div class="bass-top-warp-box">
               <el-row type="flex" justify="space-between" align="middle">
                 <el-col :xs="23" :lg="17">
-                  <h4 class="bass-h4">{{ $t('bass.incentive') }}</h4>
-                  <div>
+                  <h4 class="bass-h4 wow fadeInUp">
+                    {{ $t('bass.incentive') }}
+                  </h4>
+                  <div class="wow fadeInUp">
                     {{ $t('bass.encourages') }}
                   </div>
                 </el-col>
                 <el-col :xs="23" :lg="4">
                   <nuxt-link
                     to="/bass-markeplace/ecolibs"
-                    class="btn btn-primary"
+                    class="btn btn-primary wow fadeInUp"
                     >{{ $t('bass.learn') }}</nuxt-link
                   >
                 </el-col>
@@ -144,26 +177,28 @@
         </el-col>
       </el-row>
     </div>
-    <div class="bass-white">
+    <div id="what" class="bass-white">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
           <div class="bass-white-content">
-            <strong class="block-title lg">{{ $t('bass.what') }}</strong>
-            <h2 class="bass-h2">{{ $t('bass.how') }}</h2>
-            <p>{{ $t('bass.materials') }}</p>
+            <strong class="block-title lg wow fadeInUp">{{
+              $t('bass.what')
+            }}</strong>
+            <h2 class="bass-h2 wow fadeInUp">{{ $t('bass.how') }}</h2>
+            <p class="wow fadeInUp">{{ $t('bass.materials') }}</p>
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="11">
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
-                    <h4 class="bass-h4">
+                    <h4 class="bass-white-title wow fadeInUp">
                       <i
                         class="bass-white-icon iconfont el-a-customerservice"
                       ></i>
                       {{ $t('bass.manual') }}
                     </h4>
-                    <p>{{ $t('market.help') }}</p>
+                    <p class="wow fadeInUp">{{ $t('market.help') }}</p>
                   </div>
-                  <div class="bass-white-bottom">
+                  <div class="bass-white-bottom wow fadeInUp">
                     <span>{{ $t('market.view') }}</span>
                     <i class="el-icon-right"></i>
                   </div>
@@ -172,13 +207,13 @@
               <el-col :xs="23" :lg="11">
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
-                    <h4 class="bass-h4">
+                    <h4 class="bass-white-title wow fadeInUp">
                       <i class="bass-white-icon iconfont el-video"> </i>
                       {{ $t('market.video') }}
                     </h4>
-                    <p>{{ $t('market.watch') }}</p>
+                    <p class="wow fadeInUp">{{ $t('market.watch') }}</p>
                   </div>
-                  <div class="bass-white-bottom">
+                  <div class="bass-white-bottom wow fadeInUp">
                     <span>{{ $t('market.view') }}</span>
                     <i class="el-icon-right"></i>
                   </div>
@@ -186,11 +221,11 @@
               </el-col>
             </el-row>
           </div>
-          <div class="bass-white-apply">
-            <h2 class="bass-h2">{{ $t('market.application') }}</h2>
+          <div id="application" class="bass-white-apply">
+            <h2 class="bass-h2 wow fadeInUp">{{ $t('market.application') }}</h2>
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="7">
-                <div class="bass-white-three">
+                <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.token') }}</h5>
                   <p>
@@ -199,7 +234,7 @@
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
-                <div class="bass-white-three">
+                <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.point') }}</h5>
                   <p>
@@ -208,7 +243,7 @@
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
-                <div class="bass-white-three">
+                <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.vote') }}</h5>
                   <p>
@@ -219,7 +254,7 @@
             </el-row>
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="7">
-                <div class="bass-white-three">
+                <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.supply') }}</h5>
                   <p>
@@ -228,7 +263,7 @@
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
-                <div class="bass-white-three">
+                <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.defi') }}</h5>
                   <p>
@@ -237,7 +272,7 @@
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
-                <div class="bass-white-three">
+                <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.member') }}</h5>
                   <p>
@@ -248,7 +283,7 @@
             </el-row>
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="7">
-                <div class="bass-white-three">
+                <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.network') }}</h5>
                   <p>
@@ -257,7 +292,7 @@
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
-                <div class="bass-white-three">
+                <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.cyber') }}</h5>
                   <p>
@@ -266,7 +301,7 @@
                 </div>
               </el-col>
               <el-col :xs="23" :lg="7">
-                <div class="bass-white-three">
+                <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.decentralized') }}</h5>
                   <p>
@@ -279,11 +314,11 @@
         </el-col>
       </el-row>
     </div>
-    <div class="bass-answer">
+    <div id="asked" class="bass-answer">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
-          <h2 class="bass-h2">{{ $t('market.asked') }}</h2>
-          <h6 class="home-new-bottom">
+          <h2 class="bass-h2 wow fadeInUp">{{ $t('market.asked') }}</h2>
+          <h6 class="home-new-bottom wow fadeInUp">
             <span>{{ $t('market.more') }}</span>
             <i class="el-icon-right"></i>
           </h6>
@@ -293,15 +328,16 @@
               :key="index"
               :xs="23"
               :lg="11"
+              class="bass-col"
             >
-              <h4 class="bass-h4">{{ $t(item.title) }}</h4>
-              <p>
+              <h4 class="bass-col-h4 wow fadeInUp">{{ $t(item.title) }}</h4>
+              <p class="wow fadeInUp">
                 {{ $t(item.contentOne) }}
               </p>
-              <p v-if="item.contentTwo">
+              <p v-if="item.contentTwo" class="wow fadeInUp">
                 {{ $t(item.contentTwo) }}
               </p>
-              <p v-if="item.contentThree">
+              <p v-if="item.contentThree" class="wow fadeInUp">
                 {{ $t(item.contentThree) }}
               </p>
             </el-col>
@@ -339,23 +375,23 @@ export default {
     return {
       arrAsked: [
         {
+          title: 'market.built',
+          contentOne: 'market.one',
+          contentTwo: 'market.two',
+          contentThree: 'market.three'
+        },
+        {
           title: 'market.real',
           contentOne: 'market.exist',
           contentTwo: 'market.public'
-        },
-        {
-          title: 'market.low',
-          contentOne: 'market.has'
         },
         {
           title: 'market.ia',
           contentOne: 'market.integrate'
         },
         {
-          title: 'market.built',
-          contentOne: 'market.one',
-          contentTwo: 'market.two',
-          contentThree: 'market.three'
+          title: 'market.low',
+          contentOne: 'market.has'
         }
       ],
       obj: {
@@ -366,10 +402,79 @@ export default {
       }
     };
   },
+  head() {
+    return {
+      title: `${this.$t('nav.bass')}-IBAX`,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA,BlockChain,BaaS,DAO,Token,contract,LowCode,Reward'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.$t('nav.bass')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `${this.$t('nav.bass')}`
+        }
+      ]
+    };
+  },
   computed: {},
   watch: {},
   created() {},
-  mounted() {},
-  methods: {}
+  mounted() {
+    this.$nextTick(() => {
+      this.numArchite =
+        document.getElementById('anyone').getBoundingClientRect().bottom - 105;
+      this.numWhat =
+        document.getElementById('what').getBoundingClientRect().bottom - 105;
+      console.log(this.numArchite);
+      this.numArchiteBottom =
+        document.getElementById('asked').getBoundingClientRect().bottom - 105;
+      if (this.numArchite) {
+        this.domGlobal.addEventListener('scroll', () => {
+          this.handleThrottle(this.handleAlwaysScroll, 100);
+        });
+      }
+    });
+  },
+  methods: {
+    handleAlwaysScroll() {
+      const scrollTop = this.domGlobal.scrollTop;
+      const topHeight = document.getElementById('headerTop').offsetTop;
+      const isFixed = scrollTop > topHeight;
+      this.$store.commit('handleIsFixed', isFixed);
+      if (scrollTop >= this.numArchite && scrollTop < this.numWhat) {
+        const obj = { headerColor: '#fff', color: '#37383c' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'news--horizontal');
+        this.$store.commit('handleIsTop', false);
+      } else if (
+        scrollTop >= this.numWhat &&
+        scrollTop < this.numArchiteBottom
+      ) {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      } else if (scrollTop >= this.numArchiteBottom) {
+        const obj = { headerColor: '#fff', color: '#37383c' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'news--horizontal');
+        this.$store.commit('handleIsTop', false);
+      } else {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      }
+    }
+  }
 };
 </script>

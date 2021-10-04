@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-09-15 18:22:47
+ * @LastEditTime: 2021-09-27 10:04:48
  * @Description: 
 -->
 <template>
@@ -10,43 +10,52 @@
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <h6 class="global-h6">{{ $t('develope.tool') }}</h6>
           <el-row type="flex" justify="space-between">
             <el-col :xs="23" :lg="10">
-              <h2 class="bass-h2">{{ $t('develope.functions') }}</h2>
-              <p>
+              <h6 class="global-h6 animated fadeInUp">
+                {{ $t('develope.tool') }}
+              </h6>
+              <h2 class="bass-h2 animated fadeInUp">
+                {{ $t('develope.functions') }}
+              </h2>
+              <p class="animated fadeInUp">
                 {{ $t('develope.ecoLib') }}
               </p>
+              <div
+                class="bass-top-box-content-btn animated fadeInUp"
+                style="margin-top: 50px"
+              >
+                <button class="btn btn-primary" @click="handleVideoOpen">
+                  {{ $t('develope.operation') }}
+                </button>
+              </div>
             </el-col>
             <el-col :xs="23" :lg="12">
-              <el-tabs v-model="activeName" :tab-position="tabPosition">
-                <el-tab-pane
-                  v-for="item in arrTags"
-                  :key="item.name"
-                  :label="$t(item.label)"
-                  :name="item.name"
-                >
-                  <div class="home-tag-img">
-                    <img :src="item.img" :alt="item.label" />
-                  </div>
-                </el-tab-pane>
-              </el-tabs>
+              <div class="home-tag animated fadeInUp">
+                <el-tabs v-model="activeName" :tab-position="tabPosition">
+                  <el-tab-pane
+                    v-for="item in arrTags"
+                    :key="item.name"
+                    :label="$t(item.label)"
+                    :name="item.name"
+                  >
+                    <div class="home-tag-img">
+                      <img :src="item.img" :alt="item.label" />
+                    </div>
+                  </el-tab-pane>
+                </el-tabs>
+              </div>
             </el-col>
           </el-row>
-          <div class="bass-top-box-content-btn">
-            <button class="btn btn-primary" @click="handleVideo">
-              {{ $t('develope.operation') }}
-            </button>
-          </div>
         </div>
       </el-col>
     </el-row>
-    <div class="other other-center" style="padding-bottom: 100px">
-      <h2 class="bass-h2">{{ $t('develope.weaver') }}</h2>
-      <div class="global-h6">
+    <div id="weaver" class="other other-center" style="padding-bottom: 100px">
+      <h2 class="develop-h2 wow fadeInUp">{{ $t('develope.weaver') }}</h2>
+      <p class="develop-text wow fadeInUp">
         {{ $t('develope.bass') }}
-      </div>
-      <div class="home-top-btn">
+      </p>
+      <div class="home-top-btn wow fadeInUp">
         <a
           href="https://weaver.ibax.io/"
           target="_blank"
@@ -59,25 +68,25 @@
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
           <div class="bass-white-content">
-            <h2 class="bass-h2">{{ $t('develope.encounter') }}</h2>
-            <p>
+            <h2 class="bass-h2 wow fadeInUp">{{ $t('develope.encounter') }}</h2>
+            <p class="wow fadeInUp">
               {{ $t('develope.technology') }}
             </p>
             <el-row type="flex" justify="space-between">
               <el-col :xs="23" :lg="11">
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
-                    <h4 class="bass-h4">
+                    <h4 class="bass-white-title wow fadeInUp">
                       <i class="bass-white-icon iconfont el-developer"></i>
                       {{ $t('develope.document') }}
                     </h4>
-                    <p>{{ $t('develope.use') }}</p>
-                    <p>{{ $t('develope.doc') }}</p>
+                    <p class="wow fadeInUp">{{ $t('develope.use') }}</p>
+                    <p class="wow fadeInUp">{{ $t('develope.doc') }}</p>
                   </div>
                   <a
                     href="https://github.com/IBAX-io/documentation"
                     target="_blank"
-                    class="bass-white-bottom"
+                    class="bass-white-bottom wow fadeInUp"
                   >
                     <span>{{ $t('home.go') }}</span>
                     <i class="el-icon-right"></i>
@@ -87,18 +96,18 @@
               <el-col :xs="23" :lg="11">
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
-                    <h4 class="bass-h4">
+                    <h4 class="bass-white-title wow fadeInUp">
                       <i class="bass-white-icon iconfont el-forum"></i
                       >{{ $t('develope.engineer') }}
                     </h4>
-                    <p>
+                    <p class="wow fadeInUp">
                       {{ $t('develope.can') }}
                     </p>
                   </div>
                   <a
                     href="https://github.com/IBAX-io/go-ibax/issues"
                     target="_blank"
-                    class="bass-white-bottom"
+                    class="bass-white-bottom wow fadeInUp"
                   >
                     <span>{{ $t('develope.enter') }}</span>
                     <i class="el-icon-right"></i>
@@ -113,8 +122,8 @@
     <div class="develop-center">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="16">
-          <h2 class="bass-h2">{{ $t('develope.open') }}</h2>
-          <p>{{ $t('develope.has') }}</p>
+          <h2 class="bass-h2 wow fadeInUp">{{ $t('develope.open') }}</h2>
+          <p class="wow fadeInUp">{{ $t('develope.has') }}</p>
         </el-col>
       </el-row>
     </div>
@@ -124,7 +133,7 @@
           <div class="home-new">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="14">
-                <div class="home-new-img">
+                <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
                     mode="powerful"
@@ -132,23 +141,20 @@
                 </div>
               </el-col>
               <el-col :xs="23" :lg="8">
-                <h4 class="bass-h4 home-new-title">
-                  <img
-                    src="../../assets/image/ico-insights.svg"
-                    alt="ico-insights"
-                  />
+                <h4 class="develop-title wow fadeInUp">
+                  <i class="iconfont el-payment develop-title-icon"></i>
                   <span>{{ $t('develope.paid') }}</span>
                 </h4>
-                <p>
+                <p class="wow fadeInUp">
                   {{ $t('develope.there') }}
                 </p>
-                <p>
+                <p class="wow fadeInUp">
                   {{ $t('develope.fees') }}
                 </p>
-                <p>
+                <p class="wow fadeInUp">
                   {{ $t('develope.deducted') }}
                 </p>
-                <p>
+                <p class="wow fadeInUp">
                   {{ $t('develope.deduction') }}
                 </p>
               </el-col>
@@ -163,19 +169,16 @@
           <div class="home-new">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="8">
-                <h4 class="bass-h4 home-new-title">
-                  <img
-                    src="../../assets/image/ico-insights.svg"
-                    alt="ico-insights"
-                  />
+                <h4 class="develop-title wow fadeInUp">
+                  <i class="iconfont el-code develop-title-icon"></i>
                   <span>{{ $t('develope.audit') }}</span>
                 </h4>
-                <p>
+                <p class="wow fadeInUp">
                   {{ $t('develope.review') }}
                 </p>
               </el-col>
               <el-col :xs="23" :lg="14">
-                <div class="home-new-img">
+                <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
                     mode="powerful"
@@ -187,9 +190,9 @@
         </el-col>
       </el-row>
     </div>
-    <div class="develop-center" style="padding-top: 50px">
-      <h2 class="bass-h2">Low Code</h2>
-      <p>
+    <div class="develop-center" style="padding-top: 100px">
+      <h2 class="bass-h2 wow fadeInUp">Low Code</h2>
+      <p class="wow fadeInUp">
         {{ $t('develope.code') }}
       </p>
     </div>
@@ -199,25 +202,22 @@
           <div class="home-new">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="14">
-                <div class="home-new-img">
+                <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
+                    src="@/assets/image/funnel-report-1.png"
                     mode="powerful"
                   />
                 </div>
               </el-col>
               <el-col :xs="23" :lg="8">
-                <h4 class="bass-h4 home-new-title">
-                  <img
-                    src="../../assets/image/ico-insights.svg"
-                    alt="ico-insights"
-                  />
+                <h4 class="develop-title wow fadeInUp">
+                  <i class="iconfont el-ecological develop-title-icon"></i>
                   <span>{{ $t('develope.ecological') }}</span>
                 </h4>
-                <p>
+                <p class="wow fadeInUp">
                   {{ $t('develope.quickly') }}
                 </p>
-                <p>
+                <p class="wow fadeInUp">
                   {{ $t('develope.also') }}
                 </p>
               </el-col>
@@ -232,24 +232,20 @@
           <div class="home-new">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="8">
-                <h4 class="bass-h4 home-new-title">
-                  <img
-                    src="../../assets/image/ico-insights.svg"
-                    alt="ico-insights"
-                  />
+                <h4 class="develop-title wow fadeInUp">
+                  <i class="iconfont el-contract develop-title-icon"></i>
                   <span>{{ $t('develope.online') }}</span>
                 </h4>
-                <p>
+                <p class="wow fadeInUp">
                   {{ $t('develope.frameworks') }}
                 </p>
-                <p>
+                <p class="wow fadeInUp">
                   {{ $t('develope.means') }}
                 </p>
-                <p>{{ $t('develope.drag') }}</p>
-                <p></p>
+                <p class="wow fadeInUp">{{ $t('develope.drag') }}</p>
               </el-col>
               <el-col :xs="23" :lg="14">
-                <div class="home-new-img">
+                <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
                     mode="powerful"
@@ -267,7 +263,7 @@
           <div class="home-new">
             <el-row type="flex" justify="space-between" align="middle">
               <el-col :xs="23" :lg="14">
-                <div class="home-new-img">
+                <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
                     mode="powerful"
@@ -275,14 +271,11 @@
                 </div>
               </el-col>
               <el-col :xs="23" :lg="8">
-                <h4 class="bass-h4 home-new-title">
-                  <img
-                    src="../../assets/image/ico-insights.svg"
-                    alt="ico-insights"
-                  />
+                <h4 class="bass-h4 home-new-title wow fadeInUp">
+                  <i class="iconfont el-templates develop-title-icon"></i>
                   <span>{{ $t('develope.template') }}</span>
                 </h4>
-                <p>
+                <p class="wow fadeInUp">
                   {{ $t('develope.number') }}
                 </p>
               </el-col>
@@ -294,12 +287,12 @@
     <!-- bottom -->
     <!--  <page-bottom class="lime" :obj="obj"></page-bottom> -->
     <!-- Story wall -->
-    <div class="about-five">
+    <div id="empower" class="about-five">
       <el-row type="flex" justify="center">
         <el-col :md="16" :xs="23">
           <h2 class="about-five-title">{{ $t('develope.roadmap') }}</h2>
           <div class="about-five-content">
-            <div class="about-five-content-item">
+            <div class="about-five-content-item wow fadeInUp">
               <div class="about-five-content-item-img">
                 <img src="@/assets/image/five-1.png" alt="five-1" />
               </div>
@@ -327,7 +320,7 @@
                 </div>
               </div>
             </div>
-            <div class="about-five-content-item">
+            <div class="about-five-content-item wow fadeInUp">
               <div class="about-five-content-item-img">
                 <img src="@/assets/image/five-2.png" alt="five-1" />
               </div>
@@ -353,7 +346,7 @@
                 </div>
               </div>
             </div>
-            <div class="about-five-content-item">
+            <div class="about-five-content-item wow fadeInUp">
               <div class="about-five-content-item-img">
                 <img src="@/assets/image/five-3.png" alt="five-1" />
               </div>
@@ -371,59 +364,12 @@
         </el-col>
       </el-row>
     </div>
+    <dialog-video
+      :dialog-boo="dialogVideo"
+      @videoclose="handleVideoClose"
+    ></dialog-video>
     <!-- bottom -->
-    <page-bottom class="gray" :obj="obj"></page-bottom>
-    <el-dialog
-      :visible.sync="dialogVideo"
-      :before-close="handleClose"
-      custom-class="dialog"
-    >
-      <div class="modal-box info-modal-box">
-        <a href="#" class="close icon-cross"></a>
-        <div class="left-col">
-          <div class="frame">
-            <div class="avatar-wrap">
-              <img
-                src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/09/JPG01-2.jpg"
-                class="attachment-full"
-                alt="JPG01-2"
-              />
-            </div>
-            <strong class="name">Vlado Hruda</strong>
-            <span class="post">Sr. Product Manager @ Mixpanel</span>
-            <div class="social-networks">
-              <a
-                href="https://www.linkedin.com/in/vlado-hruda-1939502/"
-                class="iconfont el-linkedin"
-                target="_blank"
-              ></a>
-            </div>
-          </div>
-        </div>
-        <div class="right-col">
-          <div class="frame">
-            <div ref="videoBox" class="video">
-              <video
-                id="video"
-                ref="video"
-                src="/video/video.mp4"
-                webkit-playsinline="true"
-                x5-playsinline="true"
-                controls
-                playsinline="true"
-                poster="/video/poster.jpg"
-                class="video-content"
-              >
-                Your browser does not support video tags.
-              </video>
-              <div ref="play" class="video-poster" @click="handleOpenVideo">
-                <img src="/video/612.png" alt="612" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </el-dialog>
+    <page-bottom class="lime" :obj="obj"></page-bottom>
   </div>
 </template>
 <script>
@@ -440,7 +386,6 @@ export default {
         label: 'footer.compete',
         title: 'footer.creative'
       },
-      dialogVideo: false,
       activeName: 'first',
       tabPosition: 'bottom',
       arrTags: [
@@ -472,31 +417,68 @@ export default {
       ]
     };
   },
+  head() {
+    return {
+      title: `${this.$t('nav.development')}-IBAX`,
+      meta: [
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'IBAX, CryptoCurrency, Bitcoin, Cross-Chain, Crypto, DeFi, Dapps,Blockchaintechnology, Corelayertechnology, Decentralizedapplication,Distributedledger, IBAXAMA,BlockChain,BaaS,Developer,Weaver,LowCode'
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${this.$t('nav.development')}`
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: `${this.$t('nav.development')}`
+        }
+      ]
+    };
+  },
   computed: {},
   watch: {},
   created() {},
-  mounted() {},
+  mounted() {
+    this.$nextTick(() => {
+      this.numArchite =
+        document.getElementById('weaver').getBoundingClientRect().bottom - 105;
+      console.log(this.numArchite);
+      this.numArchiteBottom =
+        document.getElementById('empower').getBoundingClientRect().bottom - 105;
+      if (this.numArchite) {
+        this.domGlobal.addEventListener('scroll', () => {
+          this.handleThrottle(this.handleArchiteScroll, 100);
+        });
+      }
+    });
+  },
   methods: {
-    handleVideo() {
-      this.dialogVideo = true;
-      this.$nextTick(() => {
-        if (this.$refs.videoBox && this.dialogVideo) {
-          const videoBox = this.$refs.videoBox.clientWidth;
-          console.log(this.$refs.videoBox);
-          console.log(videoBox);
-          this.$refs.videoBox.style.height = (videoBox * 9) / 16 + 'px';
-        }
-      });
-    },
-    handleOpenVideo() {
-      this.$refs.play.style.display = 'none';
-      this.$refs.video.play();
-    },
-    handleClose(done) {
-      done();
-      this.$refs.play.style.display = 'block';
-      this.$refs.video.currentTime = 0;
-      this.$refs.video.pause();
+    handleArchiteScroll() {
+      const scrollTop = this.domGlobal.scrollTop;
+      const topHeight = document.getElementById('headerTop').offsetTop;
+      const isFixed = scrollTop > topHeight;
+      this.$store.commit('handleIsFixed', isFixed);
+      if (scrollTop >= this.numArchite && scrollTop < this.numArchiteBottom) {
+        const obj = { headerColor: '#fff', color: '#37383c' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'news--horizontal');
+        this.$store.commit('handleIsTop', false);
+      } else if (scrollTop >= this.numArchiteBottom) {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      } else {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      }
     }
   }
 };
