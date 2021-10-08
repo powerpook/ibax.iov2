@@ -1,6 +1,30 @@
 .events {
   width: 100%;
   background-color: $primary-color;
+  &-new {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    display: block;
+  }
+  &-text {
+    margin-bottom: 10px;
+    .iconfont {
+      color: #f3ac34;
+      margin-right: 5px;
+    }
+  }
+  .block-title {
+    display: inline-block;
+    color: #1f1f24;
+    background-color: #fff;
+    padding: 9px 10px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font: 700 13px/1.615 "Apercu Mono", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    margin-bottom: 18px;
+  }
   &-test {
     &-title {
       display: block;
@@ -14,6 +38,10 @@
       line-height: 1.333;
       color: #1f1f24;
       margin-bottom: 12px;
+      font-family: "Apercu Pro", "Helvetica Neue", Helvetica, sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.05em;
+      display: block;
     }
     p {
       margin-bottom: 10px;
@@ -53,6 +81,59 @@
     &-top {
       margin-bottom: 74px;
       text-align: center;
+    }
+  }
+  &-more {
+    padding: 82px 0 110px;
+    line-height: 1.625;
+    color: #626266;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+    }
+    .title-h3 {
+      color: #1f1f24;
+    }
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      &-item {
+        padding: 28px 15px;
+        width: 33%;
+        .od-card-img {
+          display: block;
+          position: relative;
+          border-radius: 18px;
+          margin-bottom: 22px;
+          overflow: hidden;
+        }
+        .duration {
+          padding: 15px 16px;
+          color: #1f1f24;
+          border-radius: 6px;
+          background: rgba(255, 255, 255, 0.9);
+          font-size: 16px;
+          line-height: 1;
+          position: absolute;
+          right: 12px;
+          top: 12px;
+          z-index: 2;
+        }
+        .text-wrap {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          color: #626266;
+        }
+        .link {
+          font-size: 16px;
+          margin-top: 16px;
+        }
+      }
     }
   }
   .event-row {
@@ -149,8 +230,6 @@
       }
       .time {
         padding-left: 10px;
-        margin-left: 13px;
-        border-left: 1px solid #1f1f24;
       }
     }
   }
@@ -172,5 +251,26 @@
     -webkit-border-radius: 8px;
     border-radius: 8px;
     position: relative;
+  }
+  &-details {
+    background: #fcfcfc;
+    color: #1f1f24;
+    padding: 100px 0;
+  }
+  &-articles {
+    margin-bottom: 100px;
+  }
+  &-email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    .title-h4 {
+      margin-bottom: 0;
+    }
+    .news-select-box {
+      margin: 0 10px;
+      width: 30%;
+    }
   }
 }

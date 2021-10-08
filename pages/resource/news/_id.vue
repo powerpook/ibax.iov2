@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-26 14:35:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-24 14:11:16
+ * @LastEditTime: 2021-10-08 18:34:50
  * @Description: news  news
 -->
 <template>
@@ -66,6 +66,20 @@
             </div>
           </template>
         </div>
+        <div class="events-email">
+          <h4 class="title-h4">{{ $t('events.follow') }}</h4>
+          <div class="news-select-box">
+            <el-input
+              v-model="email"
+              type="email"
+              clearable
+              :placeholder="$t('events.address')"
+              @keyup.enter.native="handleKeywords"
+            >
+            </el-input>
+          </div>
+          <div class="btn btn-primary">{{ $t('events.now') }}</div>
+        </div>
       </div>
     </el-col>
   </el-row>
@@ -98,6 +112,7 @@ export default {
 
   data() {
     return {
+      email: '',
       objNews: '',
       arrNew: []
     };

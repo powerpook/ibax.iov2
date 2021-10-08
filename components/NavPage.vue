@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 10:59:52
  * @LastEditors: abc
- * @LastEditTime: 2021-09-28 15:53:21
+ * @LastEditTime: 2021-10-08 12:12:39
  * @Description: nav
 -->
 <template>
@@ -390,6 +390,8 @@ export default {
         const { name } = this.$route;
         if (name === 'resource-news-id') {
           this.activeIndex = '/resource/news';
+        } else if (name === 'resource-events-id') {
+          this.activeIndex = '/resource/events';
         } else {
           this.activeIndex = this.$route.path;
         }

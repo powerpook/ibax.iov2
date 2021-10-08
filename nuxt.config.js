@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-04 23:10:41
+ * @LastEditTime: 2021-10-08 15:38:01
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -85,6 +85,7 @@ export default {
     '@/plugins/mixin.js',
     '@/plugins/http.js',
     '@/plugins/vueSlickCarousel.js',
+    '@/plugins/day.js',
     { src: '@/plugins/vueSroll.js', ssr: false },
     { src: '@/plugins/vueP5.js', ssr: false }
   ],

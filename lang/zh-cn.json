@@ -641,5 +641,13 @@
   "events.next": "接下来的活动",
   "events.airdrop": "空投活动",
   "events.more": "更多的",
-  "events.marvellous": "精彩活动"
+  "events.marvellous": "精彩活动",
+  "events.future": "未来活动",
+  "events.home": "主页活动",
+  "events.content": "相关活动",
+  "events.much": "更多活动",
+  "events.act": "活动内容",
+  "events.follow": "关注IBAX了解最新动态",
+  "events.address": "录入你的邮箱地址",
+  "events.now": "开始订阅"
 }

@@ -640,5 +640,13 @@
   "events.next": "Next event",
   "events.airdrop": "Airdrop Event",
   "events.more": "More",
-  "events.marvellous": "Events"
+  "events.marvellous": "Awesome events",
+  "events.future": "Upcoming Events",
+  "events.home": "Home-page events",
+  "events.content": "Related Events",
+  "events.much": "More Events",
+  "events.act": "Events Content",
+  "events.follow": "Follow IBAX for the latest news",
+  "events.address": "Enter your email address",
+  "events.now": "Subscribe now"
 }

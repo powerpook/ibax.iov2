@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-28 18:45:29
+ * @LastEditTime: 2021-10-08 16:20:11
  * @Description: ecolibs
 -->
 <template>
@@ -37,78 +37,91 @@
     <div class="media-a">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
-          <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="14">
-                <div class="home-new-img wow fadeInUp">
-                  <img
-                    src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/Inside-MP-3.png"
-                    mode="powerful"
-                  />
-                </div>
-              </el-col>
-              <el-col :xs="23" :lg="8">
-                <div class="events-test">
-                  <strong class="events-test-title wow fadeInUp">{{
-                    $t('events.online')
-                  }}</strong>
-                  <h4 class="title-h4 wow fadeInUp">
-                    {{ $t('events.invited') }}
-                  </h4>
-                  <p>{{ $t('events.tasks') }}</p>
-                  <p class="wow fadeInUp">
-                    {{ $t('market.ideas') }}
-                  </p>
-                  <p class="wow fadeInUp">{{ $t('events.them') }}</p>
-                  <p class="wow fadeInUp">{{ $t('events.manual') }}</p>
-                  <ul class="events-list">
-                    <li class="wow fadeInUp">
-                      <div class="events-list-address">
-                        <i class="iconfont el-dizhi"></i>
-                        <strong>{{ $t('events.discord') }}</strong>
-                      </div>
-                      <a
-                        href="https://discord.gg/zRX6Mwafya"
-                        target="_blank"
-                        class="link"
-                      >
-                        <span>{{ $t('events.join') }} </span>
-                        <i class="el-icon-right"></i>
-                      </a>
-                    </li>
-                    <li class="wow fadeInUp">
-                      <div class="events-list-address">
-                        <i class="iconfont el-dizhi"></i>
-                        <strong>{{ $t('events.telegram') }}</strong>
-                      </div>
-                      <a
-                        href="https://t.me/IBAXNetwork"
-                        target="_blank"
-                        class="link"
-                      >
-                        <span>{{ $t('events.join') }} </span>
-                        <i class="el-icon-right"></i
-                      ></a>
-                    </li>
-                    <li class="wow fadeInUp">
-                      <div class="events-list-address">
-                        <i class="iconfont el-dizhi"></i>
-                        <strong>{{ $t('events.subscribe') }}</strong>
-                      </div>
-                      <a
-                        href="https://www.youtube.com/channel/UC-oneUwzz01xaCkFTTyR0QQ/featured"
-                        target="_blank"
-                        class="link"
-                      >
-                        <span>{{ $t('events.join') }} </span>
-                        <i class="el-icon-right"></i
-                      ></a>
-                    </li>
-                  </ul>
-                </div>
-              </el-col>
-            </el-row>
+          <div v-if="arrPageEvents.length === 0" class="news-no">
+            {{ $t('resourse.no') }}
           </div>
+          <template v-else>
+            <div
+              v-for="item in arrPageEvents"
+              :key="item.id"
+              class="events-new"
+            >
+              <el-row type="flex" justify="space-between" align="middle">
+                <el-col :xs="23" :lg="14">
+                  <div class="home-new-img wow fadeInUp">
+                    <img :src="item.icon" alt="events" />
+                  </div>
+                </el-col>
+                <el-col :xs="23" :lg="8">
+                  <div class="events-test">
+                    <strong class="events-test-title wow fadeInUp">{{
+                      item.sub_title
+                    }}</strong>
+                    <nuxt-link
+                      :to="{
+                        name: 'resource-events-id',
+                        params: { id: item.id }
+                      }"
+                      class="title-h4 wow fadeInUp"
+                    >
+                      {{ item.name }}
+                    </nuxt-link>
+                    <!--  <p>{{ $t('events.tasks') }}</p>
+                    <p class="wow fadeInUp">
+                      {{ $t('market.ideas') }}
+                    </p>
+                    <p class="wow fadeInUp">{{ $t('events.them') }}</p>
+                    <p class="wow fadeInUp">{{ $t('events.manual') }}</p> -->
+                    <p>{{ item.introduction }}</p>
+                    <ul class="events-list">
+                      <li class="wow fadeInUp">
+                        <div class="events-list-address">
+                          <i class="iconfont el-dizhi"></i>
+                          <strong>{{ $t('events.discord') }}</strong>
+                        </div>
+                        <a
+                          :href="item.join_discord"
+                          target="_blank"
+                          class="link"
+                        >
+                          <span>{{ $t('events.join') }} </span>
+                          <i class="el-icon-right"></i>
+                        </a>
+                      </li>
+                      <li class="wow fadeInUp">
+                        <div class="events-list-address">
+                          <i class="iconfont el-dizhi"></i>
+                          <strong>{{ $t('events.telegram') }}</strong>
+                        </div>
+                        <a
+                          :href="item.join_telegram"
+                          target="_blank"
+                          class="link"
+                        >
+                          <span>{{ $t('events.join') }} </span>
+                          <i class="el-icon-right"></i
+                        ></a>
+                      </li>
+                      <li class="wow fadeInUp">
+                        <div class="events-list-address">
+                          <i class="iconfont el-dizhi"></i>
+                          <strong>{{ $t('events.subscribe') }}</strong>
+                        </div>
+                        <a
+                          :href="item.join_youtube"
+                          target="_blank"
+                          class="link"
+                        >
+                          <span>{{ $t('events.join') }} </span>
+                          <i class="el-icon-right"></i
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </el-col>
+              </el-row>
+            </div>
+          </template>
         </el-col>
       </el-row>
     </div>
@@ -124,37 +137,122 @@
                 {{ $t('events.next') }}
               </h2>
             </div>
-            <div class="event-row" style="order: 0">
-              <a
-                href="https://mixpanel.com/webinars/grow/explore-the-dos-and-donts-of-rapid-scaling/"
+            <div v-if="arrFutureEvents.length === 0" class="news-no">
+              {{ $t('resourse.no') }}
+            </div>
+            <template v-else>
+              <div
+                v-for="item in arrFutureEvents"
+                :key="item.id"
+                class="event-row"
               >
-                <div class="col-l">
-                  <span class="tag">Webinar</span>
-                  <h5>
-                    Going international: the do’s and don’ts of rapid scaling
-                  </h5>
-                  <div class="meta">
-                    <div
-                      class="time-col"
-                      data-time-zone="Europe/London"
-                      data-time-convert="2021-09-28T13:00:00"
-                    >
-                      <span class="date"
-                        ><i class="iconfont el-xingzhuang"></i>
-                        Sep 28, 2021
-                      </span>
-                      <span class="time">8:00 pm CST</span>
-                    </div>
-                    <div class="duration">
-                      <i class="iconfont el-shizhongclock77"></i>
-                      1 Hour
+                <nuxt-link
+                  :to="{
+                    name: 'resource-events-id',
+                    params: { id: item.url }
+                  }"
+                >
+                  <div class="col-l">
+                    <span class="tag">{{ item.sub_title }}</span>
+                    <h5>
+                      {{ item.name }}
+                    </h5>
+                    <div class="meta">
+                      <div
+                        class="time-col"
+                        data-time-zone="Europe/London"
+                        data-time-convert="2021-09-28T13:00:00"
+                      >
+                        <span class="date"
+                          ><i class="iconfont el-xingzhuang"></i>
+                          {{ dayjs(item.start_time).format('LLL') }}
+                        </span>
+                        <span class="time">CST</span>
+                      </div>
+                      <div class="duration">
+                        <i class="iconfont el-shizhongclock77"></i>
+                        {{ dayjs(item.stop_time).diff(new Date(), 'hour') }}
+                        Hour
+                      </div>
                     </div>
                   </div>
+                  <div class="col-r">
+                    <span class="btn btn-primary_bordered"
+                      >{{ $t('market.learn') }}
+                    </span>
+                  </div>
+                </nuxt-link>
+              </div>
+            </template>
+          </div>
+        </el-col>
+      </el-row>
+    </div>
+    <div class="media-a">
+      <el-row type="flex" justify="center">
+        <el-col :xs="23" :lg="18">
+          <div class="events-more">
+            <strong class="events-test-title wow fadeInUp">{{
+              $t('events.more')
+            }}</strong>
+            <div class="events-more-top">
+              <h2 class="title-h3 wow fadeInUp">
+                {{ $t('events.marvellous') }}
+              </h2>
+              <div class="news-select-box wow fadeInUp">
+                <el-input
+                  v-model="keywords"
+                  type="text"
+                  clearable
+                  :placeholder="$t('resourse.search')"
+                  @keyup.enter.native="handleKeywords"
+                >
+                  <template #prefix>
+                    <i class="el-icon-search"></i>
+                  </template>
+                </el-input>
+              </div>
+            </div>
+            <div class="events-more-content">
+              <div
+                v-if="arrWonderEvents.length === 0"
+                class="news-no wow fadeInUp"
+              >
+                {{ $t('resourse.no') }}
+              </div>
+              <template v-else>
+                <div
+                  v-for="item in arrWonderEvents"
+                  :key="item.id"
+                  class="events-more-content-item"
+                >
+                  <nuxt-link
+                    :to="{
+                      name: 'resource-events-id',
+                      params: { id: item.id }
+                    }"
+                    class="od-card"
+                  >
+                    <div class="od-card-img wow fadeInUp">
+                      <!--  <span class="duration">60mins</span> -->
+                      <img
+                        :src="item.icon"
+                        class="attachment-full"
+                        alt="Inside MP"
+                      />
+                    </div>
+                    <div class="text-wrap">
+                      <p class="wow fadeInUp">
+                        {{ item.introduction }}
+                      </p>
+                    </div>
+                    <div class="home-new-bottom link wow fadeInUp">
+                      <span>Watch Now</span>
+                      <i class="el-icon-right"></i>
+                    </div>
+                  </nuxt-link>
                 </div>
-                <div class="col-r">
-                  <span class="btn btn-primary_bordered">Register</span>
-                </div>
-              </a>
+              </template>
             </div>
           </div>
         </el-col>
@@ -200,33 +298,28 @@ export default {
           content: 'market.foundation'
         }
       ],
-      arrCase: [
-        {
-          url: 'https://github.com/orgs/IBAX-io/repositories',
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/02/Preview-Image-1-2-1024x613.png',
-          title: 'market.eco',
-          content: 'market.based',
-          small: 'market.download'
-        },
-        {
-          url: 'https://weaver.ibax.io/',
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/02/Preview-Image-1-2-1024x613.png',
-          title: 'market.management',
-          content: 'market.Weaver',
-          small: 'home.using'
-        },
-        {
-          url: 'https://weaver.ibax.io/',
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/02/Preview-Image-1-2-1024x613.png',
-          title: 'market.information',
-          content: 'market.tool',
-          small: 'market.learn'
-        }
-      ],
+      keywords: '',
+      arrPageEvents: [],
+      arrWonderEvents: [],
+      arrFutureEvents: [],
+      firstParam: {
+        where: {},
+        limit: 1,
+        type: 1,
+        page: 1
+      },
       secondParam: {
         where: {},
-        limit: 10,
+        limit: 5,
         type: 2,
+        page: 1
+      },
+      thirdParam: {
+        where: {
+          keyword: ''
+        },
+        limit: 9,
+        type: 3,
         page: 1
       }
     };
@@ -257,8 +350,12 @@ export default {
   computed: {},
   watch: {},
   created() {
+    const firstParam = this.firstParam;
+    this.handleEventsfind(firstParam);
     const secondParam = this.secondParam;
     this.handleEventsfind(secondParam);
+    const thirdParam = this.thirdParam;
+    this.handleEventsfind(thirdParam);
   },
   mounted() {
     this.$nextTick(() => {
@@ -292,8 +389,22 @@ export default {
     },
     async handleEventsfind(params) {
       console.log(params);
-      const arrSecondEvents = await this.$axios.$post('/eventsfind', params);
-      console.log(JSON.string(arrSecondEvents));
+      const res = await this.$axios.$post('/eventsfind', params);
+      // console.log(JSON.stringify(res));
+      if (params.type === 1) {
+        this.arrPageEvents = res.data.rets;
+      } else if (params.type === 2) {
+        this.arrFutureEvents = res.data.rets;
+        const obj = this.arrFutureEvents[0];
+        console.log(this.dayjs(obj.start_time).format('LLL'));
+        console.log(this.dayjs());
+        console.log(this.dayjs(obj.stop_time).diff(new Date(), 'hour'));
+        //  console.log(new Date(`${obj.start_time} CST`).getTime());
+        // console.log(JSON.stringify(this.arrFutureEvents));
+      } else if (params.type === 3) {
+        this.arrWonderEvents = res.data.rets;
+        // console.log(JSON.stringify(this.arrWonderEvents));
+      }
     }
   }
 };

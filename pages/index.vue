@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-04 22:32:19
+ * @LastEditTime: 2021-10-08 14:06:56
  * @Description: home
 -->
 <template>
@@ -575,7 +575,7 @@ export default {
         },
         {
           path: '/resource/events',
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/11/the-guide-to-product-analytics@2x.png',
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/Inside-MP-3.png',
           icon: 'el-activity',
           strong: 'resource.activity',
           title: 'home.exciting',

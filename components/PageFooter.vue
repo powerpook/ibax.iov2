@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 14:44:39
  * @LastEditors: abc
- * @LastEditTime: 2021-09-28 15:53:01
+ * @LastEditTime: 2021-10-08 11:59:08
  * @Description: footer
 -->
 <template>
@@ -165,7 +165,7 @@ export default {
         },
         {
           title: 'resource.white',
-          path: '/resource/white-paper',
+          // path: '/resource/white-paper',
           link: 'https://ibax.io/IBAX_Public_Network_Whitepaper_V1.1.pdf',
           key: '2'
         },
