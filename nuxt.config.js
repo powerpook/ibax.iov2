@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-09 10:44:27
+ * @LastEditTime: 2021-10-09 14:20:29
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -69,7 +69,7 @@ export default {
       {
         rel: 'stylesheet',
         type: 'text/css',
-        href: '//at.alicdn.com/t/font_2762091_ysw8pzgie8.css'
+        href: '//at.alicdn.com/t/font_2762091_9hhjnfy608.css'
       }
     ]
     // script: [{ src: '' }]

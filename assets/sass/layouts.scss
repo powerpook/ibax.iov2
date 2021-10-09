@@ -61,6 +61,11 @@
 .home-new {
   margin-top: 100px;
   margin-bottom: 100px;
+  &-text {
+    text-transform: uppercase;
+    font: 700 16px/2 "Apercu Mono", "Helvetica Neue", Helvetica, sans-serif;
+    letter-spacing: 0.1em;
+  }
 }
 .home-new-img-earth {
   width: 100%;
@@ -285,5 +290,28 @@
   }
   .global .global-header {
     height: 70px !important;
+  }
+  .other-middle {
+    .el-col {
+      margin-bottom: 40px;
+    }
+  }
+  .home-new-text {
+    font-size: 14px;
+  }
+  .home-new-title {
+    .el-iconfont {
+      margin-right: 10px;
+    }
+  }
+  .other-center-box {
+    font-size: 24px;
+  }
+  .other-center {
+    padding: 50px 0;
+  }
+  .mdeia {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }

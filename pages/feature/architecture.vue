@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-28 12:17:48
+ * @LastEditTime: 2021-10-09 18:58:45
  * @Description: architecture
 -->
 <template>
@@ -10,12 +10,12 @@
     <el-row type="flex" justify="center">
       <el-col :xs="23" :sm="22" :md="20" :lg="18">
         <div class="home-new" style="margin-top: 30px">
-          <p class="home-new-title-text animated fadeInUp">
-            {{ $t('high.technical') }}
-          </p>
-          <el-row type="flex" justify="space-between">
-            <el-col :xs="23" :lg="18">
-              <h2 class="bass-h2 animated fadeInUp">{{ $t('high.chain') }}</h2>
+          <el-row type="flex" :justify="isMobile ? 'center' : 'space-between'">
+            <el-col :xs="22" :lg="18">
+              <p class="home-new-text animated fadeInUp">
+                {{ $t('high.technical') }}
+              </p>
+              <h2 class="title-h2 animated fadeInUp">{{ $t('high.chain') }}</h2>
               <p class="home-new-p animated fadeInUp">{{ $t('high.low') }}</p>
               <p class="home-new-bottom animated fadeIn">
                 <a
@@ -37,8 +37,13 @@
           </el-row>
         </div>
         <div class="other other-middle">
-          <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="8">
+          <el-row
+            type="flex"
+            justify="space-between"
+            align="middle"
+            class="el-row-wrap"
+          >
+            <el-col :xs="22" :lg="8">
               <div
                 class="other-easeplus wow fadeIn"
                 style="animation-duration: 1s; animation-delay: 1s"
@@ -70,15 +75,20 @@
           </el-row>
         </div>
         <div class="home-new">
-          <el-row type="flex" justify="space-between" align="middle">
+          <el-row
+            type="flex"
+            justify="space-between"
+            align="middle"
+            class="el-row-wrap"
+          >
             <el-col :xs="23" :lg="8">
               <p class="home-new-title wow fadeInUp">
                 <i class="el-iconfont iconfont el-a-011"></i>
-                <span class="home-new-title-text">
+                <span class="home-new-text">
                   {{ $t('high.innovation') }}
                 </span>
               </p>
-              <h2 class="bass-h2 wow fadeInUp">{{ $t('high.database') }}</h2>
+              <h2 class="title-h2 wow fadeInUp">{{ $t('high.database') }}</h2>
               <p class="wow fadeInUp">{{ $t('high.postgreSQL') }}</p>
             </el-col>
             <el-col :xs="23" :lg="12">
@@ -119,31 +129,44 @@
     </div>
     <div class="media-a">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="14">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
-                    mode="powerful"
+                    src="@/assets/image/funnel-report-1.png"
+                    alt="powerful"
                   />
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="8">
+              <el-col :xs="24" :lg="8">
                 <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-019"></i>
-                  <span class="home-new-title-text">
+                  <span class="home-new-text">
                     {{ $t('high.high') }}
                   </span>
                 </p>
-                <h2 class="bass-h2 wow fadeInUp">{{ $t('high.storage') }}</h2>
+                <h2 class="title-h2 wow fadeInUp">{{ $t('high.storage') }}</h2>
                 <p class="wow fadeInUp">
                   {{ $t('feature.high') }}
                 </p>
                 <p class="wow fadeInUp">
                   {{ $t('feature.we') }}
                 </p>
+              </el-col>
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
+                <div class="home-new-img wow fadeInUp">
+                  <img
+                    src="@/assets/image/funnel-report-1.png"
+                    alt="powerful"
+                  />
+                </div>
               </el-col>
             </el-row>
           </div>
@@ -152,17 +175,22 @@
     </div>
     <div class="media-b">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="8">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="8">
                 <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-035"></i>
-                  <span class="home-new-title-text">
+                  <span class="home-new-text">
                     {{ $t('feature.node') }}
                   </span>
                 </p>
-                <h2 class="bass-h2 wow fadeInUp">{{ $t('feature.hor') }}</h2>
+                <h2 class="title-h2 wow fadeInUp">{{ $t('feature.hor') }}</h2>
                 <p class="wow fadeInUp">
                   {{ $t('feature.honor') }}
                 </p>
@@ -170,7 +198,7 @@
                   {{ $t('feature.any') }}
                 </p>
               </el-col>
-              <el-col :xs="23" :lg="14">
+              <el-col :xs="24" :lg="14">
                 <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
@@ -184,14 +212,14 @@
       </el-row>
     </div>
     <div class="mdeia media-a">
-      <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+      <el-row type="flex" justify="center" class="el-row-wrap">
+        <el-col :xs="24" :lg="18">
           <p
             class="home-new-title wow fadeInUp"
             style="justify-content: center"
           >
             <i class="el-iconfont iconfont el-a-035"></i>
-            <span class="home-new-title-text"> {{ $t('feature.node') }} </span>
+            <span class="home-new-text"> {{ $t('feature.node') }} </span>
           </p>
           <h2 class="bass-h2 wow fadeInUp">{{ $t('feature.guard') }}</h2>
           <p class="wow fadeInUp">
@@ -217,7 +245,7 @@
               <el-col :xs="23" :lg="8">
                 <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-035"></i>
-                  <span class="home-new-title-text">
+                  <span class="home-new-text">
                     {{ $t('feature.node') }}
                   </span>
                 </p>
@@ -263,7 +291,7 @@
               <el-col :xs="23" :lg="8">
                 <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-035"></i>
-                  <span class="home-new-title-text">
+                  <span class="home-new-text">
                     {{ $t('feature.node') }}
                   </span>
                 </p>
@@ -284,7 +312,7 @@
               <el-col :xs="23" :lg="8">
                 <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-035"></i>
-                  <span class="home-new-title-text">
+                  <span class="home-new-text">
                     {{ $t('feature.node') }}
                   </span>
                 </p>

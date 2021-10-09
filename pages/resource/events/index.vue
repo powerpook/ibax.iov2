@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-08 16:20:11
+ * @LastEditTime: 2021-10-09 14:20:53
  * @Description: ecolibs
 -->
 <template>
@@ -164,7 +164,7 @@
                         data-time-convert="2021-09-28T13:00:00"
                       >
                         <span class="date"
-                          ><i class="iconfont el-xingzhuang"></i>
+                          ><i class="iconfont el-rili"></i>
                           {{ dayjs(item.start_time).format('LLL') }}
                         </span>
                         <span class="time">CST</span>

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-09 10:34:20
+ * @LastEditTime: 2021-10-09 16:58:53
  * @Description: home
 -->
 <template>
@@ -40,7 +40,6 @@
                 <div class="home-new-img">
                   <img
                     src="@/assets/images/innovate.jpg"
-                    mode="powerful"
                     class="home-new-img-earth"
                   />
                 </div>
@@ -125,7 +124,6 @@
                   <div class="home-new-right">
                     <div class="home-new-right-box" :style="haxStyle">
                       <div
-                        id="powerful"
                         class="home-new-right-box-img"
                         :class="{ 'home-new-right-box-show': isOne }"
                       >
@@ -403,7 +401,7 @@
       </div>
     </div>
     <div ref="empty" class="home-empty hidden-sm-and-down"></div>
-    <div ref="story" class="home-story">
+    <div id="story" ref="story" class="home-story">
       <el-row type="flex" justify="center">
         <el-col :xs="24" :sm="22" :md="20" :lg="18">
           <el-row type="flex" justify="space-between" class="el-row-wrap">
@@ -727,29 +725,16 @@ export default {
     this.$store.commit('handleChangeClass', 'subMenu--horizontal');
     this.$store.commit('handleIsTop', true);
     if (!this.isMobile) {
-      this.numPowerful = this.$refs.powerful.$el.getBoundingClientRect().left;
-      this.numLeft = this.$refs.powerful.$el.offsetWidth;
       this.numMain =
         this.domEmpty.getBoundingClientRect().top + this.offsetHeight - 350;
-      // bifurcation
-      this.virtualTop =
-        document.getElementById('virtual').getBoundingClientRect().top - 350;
-      console.log(this.virtualTop);
-      this.consensusTop =
-        document.getElementById('consensus').getBoundingClientRect().top - 350;
-      this.bifurcationTop =
-        document.getElementById('bifurcation').getBoundingClientRect().top -
-        350;
-      console.log(this.bifurcationTop);
-      this.bifurcationBottom =
-        document.getElementById('bifurcation').getBoundingClientRect().bottom -
-        350;
-      this.middleBox = document
-        .getElementById('middleBox')
-        .getBoundingClientRect().top;
+      this.middleBox =
+        document.getElementById('bifurcation').offsetTop +
+        document.getElementById('bifurcation').offsetWidth / 2;
     }
-    this.mobileTop = this.domStory.getBoundingClientRect().top;
-    console.log(this.mobileTop);
+    this.$nextTick(() => {
+      this.mobileTop = document.getElementById('story').offsetTop;
+      console.log(this.mobileTop);
+    });
     this.domGlobal.addEventListener('scroll', () => {
       this.handleThrottle(this.handleScroll, 100);
     });
@@ -761,42 +746,57 @@ export default {
       const isFixed = scrollTop > topHeight;
       this.$store.commit('handleIsFixed', isFixed);
       if (!this.isMobile) {
-        if (scrollTop >= this.virtualTop && scrollTop < this.consensusTop) {
+        this.widthPowerful = this.$refs.powerful.$el.offsetWidth;
+        this.numPowerful = this.$refs.powerful.$el.getBoundingClientRect().left;
+        const height = (this.widthPowerful * 10) / 17;
+        console.log(height);
+        this.h = parseInt((document.body.clientHeight - height) / 2) + 'px';
+        console.log(this.h);
+        this.virtualTop =
+          document.getElementById('virtual').getBoundingClientRect().top -
+          document.getElementById('virtual').offsetWidth / 2;
+        console.log(this.virtualTop);
+        this.consensusTop =
+          document.getElementById('consensus').getBoundingClientRect().top -
+          document.getElementById('consensus').offsetWidth / 2;
+        this.bifurcationTop =
+          document.getElementById('bifurcation').getBoundingClientRect().top -
+          document.getElementById('bifurcation').offsetWidth / 2;
+        console.log(this.bifurcationTop);
+        this.bifurcationBottom =
+          document.getElementById('bifurcation').getBoundingClientRect()
+            .bottom - document.getElementById('bifurcation').offsetWidth;
+        if (this.virtualTop <= 0 && this.consensusTop > 0) {
           this.haxStyle = {
-            width: `${this.numPowerful}px`,
+            width: `${this.widthPowerful}px`,
             position: 'fixed',
-            transform: `translate3d(${this.numLeft}px, 219px, 0px)`
+            transform: `translate3d(${this.numPowerful}px, ${this.h}, 0px)`
           };
+          console.log(this.haxStyle);
           this.isOne = true;
           this.isTwo = false;
           this.isThree = false;
-        } else if (
-          scrollTop >= this.consensusTop &&
-          scrollTop < this.bifurcationTop
-        ) {
+        } else if (this.consensusTop <= 0 && this.bifurcationTop > 0) {
           this.haxStyle = {
-            width: `${this.numPowerful}px`,
+            width: `${this.widthPowerful}px`,
             position: 'fixed',
-            transform: `translate3d(${this.numLeft}px, 219px, 0px)`
+            transform: `translate3d(${this.numPowerful}px, ${this.h}, 0px)`
           };
           this.isOne = false;
           this.isTwo = true;
           this.isThree = false;
-        } else if (
-          scrollTop >= this.bifurcationTop &&
-          scrollTop < this.bifurcationTop + 100
-        ) {
+        } else if (this.bifurcationTop <= 0 && this.bifurcationBottom > 0) {
           this.haxStyle = {
-            width: `${this.numPowerful}px`,
+            width: `${this.widthPowerful}px`,
             position: 'fixed',
-            transform: `translate3d(${this.numLeft}px, 219px, 0px)`
+            transform: `translate3d(${this.numPowerful}px, ${this.h}, 0px)`
           };
           this.isOne = false;
           this.isTwo = false;
           this.isThree = true;
-        } else if (scrollTop >= this.bifurcationTop + 100) {
+        } else if (this.bifurcationBottom <= 0) {
           this.haxStyle = {
-            width: `${this.numPowerful}px`,
+            width: `${this.widthPowerful}px`,
             position: 'absolute',
             transform: `translate3d(0px, ${this.middleBox}px, 0px)`
           };
@@ -825,11 +825,16 @@ export default {
           this.$store.commit('handleIsTop', true);
         }
       } else if (this.isMobile) {
+        this.mobileTop = document.getElementById('story').offsetTop;
         console.log(this.mobileTop);
-        if (scrollTop > this.mobileTop) {
+        if (scrollTop >= this.mobileTop) {
           const obj = { headerColor: '#fff', color: '#37383c' };
           this.$store.commit('handleChangeColor', obj);
           this.$store.commit('handleIsTop', false);
+        } else {
+          const obj = { headerColor: '#274235', color: '#fff' };
+          this.$store.commit('handleChangeColor', obj);
+          this.$store.commit('handleIsTop', true);
         }
       }
     },

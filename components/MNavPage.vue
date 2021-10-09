@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 11:00:37
  * @LastEditors: abc
- * @LastEditTime: 2021-09-28 15:07:54
+ * @LastEditTime: 2021-10-09 11:32:40
  * @Description: mobile nav
 -->
 <template>
@@ -17,11 +17,13 @@
           'el-gongnenghe': !isAside,
           'el-icon-close': isAside
         }"
+        :style="{ color: color }"
         @click="handleOpenNav"
       ></i>
     </div>
     <aside
       class="m-nav-aside"
+      :style="{ background: headerColor }"
       :class="{
         'm-nav-width': isAside
       }"
@@ -33,7 +35,9 @@
           :name="item.key"
         >
           <template slot="title">
-            <div class="m-nav-aside-title">{{ $t(item.title) }}</div>
+            <div class="m-nav-aside-title" :style="{ color: color }">
+              {{ $t(item.title) }}
+            </div>
           </template>
           <div
             v-for="child in item.children"
@@ -52,12 +56,16 @@
               >
                 <i :class="content.icon"></i>
                 <div class="m-nav-aside-box-other">
-                  <div class="m-nav-aside-box-content-title">
+                  <div
+                    class="m-nav-aside-box-content-title"
+                    :style="{ color: color }"
+                  >
                     {{ $t(content.title) }}
                   </div>
                   <div
                     v-if="content.describe"
                     class="m-nav-aside-box-content-text"
+                    :style="{ color: color }"
                   >
                     {{ $t(content.describe) }}
                   </div>
@@ -72,7 +80,10 @@
               >
                 <i :class="content.icon"></i>
                 <div class="m-nav-aside-box-other">
-                  <div class="m-nav-aside-box-content-title">
+                  <div
+                    class="m-nav-aside-box-content-title"
+                    :style="{ color: color }"
+                  >
                     {{ $t(content.title) }}
                   </div>
                   <div
