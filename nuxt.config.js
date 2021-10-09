@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-08 15:38:01
+ * @LastEditTime: 2021-10-09 10:44:27
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -71,8 +71,8 @@ export default {
         type: 'text/css',
         href: '//at.alicdn.com/t/font_2762091_ysw8pzgie8.css'
       }
-    ],
-    script: [{ src: '' }]
+    ]
+    // script: [{ src: '' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

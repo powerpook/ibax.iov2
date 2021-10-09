@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-08 14:06:56
+ * @LastEditTime: 2021-10-09 10:34:20
  * @Description: home
 -->
 <template>
@@ -429,18 +429,12 @@
               <h6 class="title-h6 home-story-title">
                 {{ $t('home.wallet') }}
               </h6>
-              <!--  <p class="home-story-right">
-                {{ $t('home.very') }}
-              </p> -->
               <p class="home-story-right">
                 {{ $t('home.is') }}
               </p>
               <p class="home-story-right">
                 {{ $t('home.more') }}
               </p>
-              <!--  <p class="home-story-right">
-                {{ $t('home.there') }}
-              </p> -->
               <div class="global-h6 home-story-text">
                 <div class="home-story-text-img">
                   <img src="../assets/image/avatar.jpg" alt="avatar" />
@@ -677,6 +671,7 @@ export default {
       emptyTop: '',
       domEmpty: '',
       domStory: '',
+      mobileTop: '',
       back: '',
       offsetHeight: '',
       numMain: '',
@@ -753,6 +748,8 @@ export default {
         .getElementById('middleBox')
         .getBoundingClientRect().top;
     }
+    this.mobileTop = this.domStory.getBoundingClientRect().top;
+    console.log(this.mobileTop);
     this.domGlobal.addEventListener('scroll', () => {
       this.handleThrottle(this.handleScroll, 100);
     });
@@ -760,7 +757,6 @@ export default {
   methods: {
     handleScroll() {
       const scrollTop = this.domGlobal.scrollTop;
-      console.log(scrollTop);
       const topHeight = document.getElementById('headerTop').offsetTop;
       const isFixed = scrollTop > topHeight;
       this.$store.commit('handleIsFixed', isFixed);
@@ -827,6 +823,13 @@ export default {
           this.$store.commit('handleChangeColor', obj);
           this.$store.commit('handleChangeClass', 'subMenu--horizontal');
           this.$store.commit('handleIsTop', true);
+        }
+      } else if (this.isMobile) {
+        console.log(this.mobileTop);
+        if (scrollTop > this.mobileTop) {
+          const obj = { headerColor: '#fff', color: '#37383c' };
+          this.$store.commit('handleChangeColor', obj);
+          this.$store.commit('handleIsTop', false);
         }
       }
     },
