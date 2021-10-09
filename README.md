@@ -15,6 +15,11 @@ $ yarn start
 
 # generate static project
 $ yarn generate
+
+# run Docker
+$ docker build -t ibax/ibaxiov2 -f Dockerfile .
+$ docker run --name ibaxiov2 -d ibax/ibaxiov2
+
 ```
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
