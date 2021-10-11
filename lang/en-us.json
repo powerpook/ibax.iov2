@@ -274,6 +274,7 @@
   "bass.global": "IBAX is a global-oriented blockchain framework, and because of the network latency caused by regional differences, we have divided the network to improve network efficiency through honor nodes in the current region.",
   "bass.solve": "\"What we want to solve is not only technical problems, but also product concepts. ",
   "bass.thinking": "The only way to truly provide a valuable platform product is to think from the user's perspective.",
+  "bass.actions": "Cross-Sharing Transaction",
   "bass.not": "Cross-Sharding transactions do not affect execution efficiency or performance",
   "bass.whether": "Cross-region transactions, whether network sharding or transaction sharding, are handled by the transaction consensus mechanism and in this way both improve efficiency and do not sacrifice performance.",
   "bass.same": "The same blockchain",

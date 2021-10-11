@@ -2,16 +2,16 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-09 18:58:45
+ * @LastEditTime: 2021-10-11 15:01:50
  * @Description: architecture
 -->
 <template>
   <div class="other">
     <el-row type="flex" justify="center">
-      <el-col :xs="23" :sm="22" :md="20" :lg="18">
+      <el-col :xs="24" :sm="22" :md="20" :lg="18">
         <div class="home-new" style="margin-top: 30px">
           <el-row type="flex" :justify="isMobile ? 'center' : 'space-between'">
-            <el-col :xs="22" :lg="18">
+            <el-col :xs="21" :lg="18">
               <p class="home-new-text animated fadeInUp">
                 {{ $t('high.technical') }}
               </p>
@@ -43,7 +43,7 @@
             align="middle"
             class="el-row-wrap"
           >
-            <el-col :xs="22" :lg="8">
+            <el-col :xs="21" :lg="8">
               <div
                 class="other-easeplus wow fadeIn"
                 style="animation-duration: 1s; animation-delay: 1s"
@@ -81,7 +81,7 @@
             align="middle"
             class="el-row-wrap"
           >
-            <el-col :xs="23" :lg="8">
+            <el-col :xs="24" :lg="8">
               <p class="home-new-title wow fadeInUp">
                 <i class="el-iconfont iconfont el-a-011"></i>
                 <span class="home-new-text">
@@ -91,7 +91,7 @@
               <h2 class="title-h2 wow fadeInUp">{{ $t('high.database') }}</h2>
               <p class="wow fadeInUp">{{ $t('high.postgreSQL') }}</p>
             </el-col>
-            <el-col :xs="23" :lg="12">
+            <el-col :xs="24" :lg="12">
               <div class="home-new-img wow fadeInUp">
                 <img
                   src="../../assets/image/img-insights-report2.png"
@@ -105,7 +105,7 @@
     </el-row>
     <div id="archite" class="other other-center">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="15">
+        <el-col :xs="24" :lg="15">
           <div class="other-center-img wow fadeInUp">
             <i v-if="lang === 'zh'" class="iconfont el-techinsights_cn"></i>
             <i v-if="lang === 'en'" class="iconfont el-techinsights"></i>
@@ -201,7 +201,7 @@
               <el-col :xs="24" :lg="14">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
+                    src="@/assets/image/funnel-report-1.png"
                     mode="powerful"
                   />
                 </div>
@@ -216,12 +216,17 @@
         <el-col :xs="24" :lg="18">
           <p
             class="home-new-title wow fadeInUp"
-            style="justify-content: center"
+            :style="{ 'justify-content': isMobile ? 'flex-start' : 'center' }"
           >
             <i class="el-iconfont iconfont el-a-035"></i>
             <span class="home-new-text"> {{ $t('feature.node') }} </span>
           </p>
-          <h2 class="bass-h2 wow fadeInUp">{{ $t('feature.guard') }}</h2>
+          <h2
+            class="title-h2 wow fadeInUp"
+            :style="{ 'text-align': isMobile ? 'left' : 'center' }"
+          >
+            {{ $t('feature.guard') }}
+          </h2>
           <p class="wow fadeInUp">
             {{ $t('feature.as') }}
           </p>
@@ -239,17 +244,22 @@
     </div>
     <div class="media-b">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="8">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="8">
                 <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-035"></i>
                   <span class="home-new-text">
                     {{ $t('feature.node') }}
                   </span>
                 </p>
-                <h2 class="bass-h2 wow fadeInUp">
+                <h2 class="title-h2 wow fadeInUp">
                   {{ $t('feature.casting') }}
                 </h2>
                 <p class="wow fadeInUp">
@@ -262,7 +272,7 @@
                   {{ $t('high.running') }}
                 </p>
               </el-col>
-              <el-col :xs="23" :lg="14">
+              <el-col :xs="24" :lg="14">
                 <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
@@ -277,27 +287,40 @@
     </div>
     <div class="media-a">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new wow fadeInUp">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="14">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
+                    src="@/assets/image/funnel-report-1.png"
                     mode="powerful"
                   />
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="8">
+              <el-col :xs="24" :lg="8">
                 <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-035"></i>
                   <span class="home-new-text">
                     {{ $t('feature.node') }}
                   </span>
                 </p>
-                <h2 class="bass-h2 wow fadeInUp">{{ $t('high.sub') }}</h2>
+                <h2 class="title-h2 wow fadeInUp">{{ $t('high.sub') }}</h2>
                 <p class="wow fadeInUp">{{ $t('high.node') }}</p>
                 <p class="wow fadeInUp">{{ $t('high.can') }}</p>
+              </el-col>
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
+                <div class="home-new-img wow fadeInUp">
+                  <img
+                    src="@/assets/image/funnel-report-1.png"
+                    alt="powerful"
+                  />
+                </div>
               </el-col>
             </el-row>
           </div>
@@ -306,24 +329,29 @@
     </div>
     <div class="media-b">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="8">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="8">
                 <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-035"></i>
                   <span class="home-new-text">
                     {{ $t('feature.node') }}
                   </span>
                 </p>
-                <h2 class="bass-h2 wow fadeInUp">{{ $t('nav.cross') }}</h2>
+                <h2 class="title-h2 wow fadeInUp">{{ $t('nav.cross') }}</h2>
                 <p class="wow fadeInUp">
                   {{ $t('high.of') }}
                 </p>
                 <p class="wow fadeInUp">{{ $t('high.runs') }}</p>
                 <p class="wow fadeInUp">{{ $t('high.meet') }}</p>
               </el-col>
-              <el-col :xs="23" :lg="14">
+              <el-col :xs="24" :lg="14">
                 <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
@@ -336,58 +364,31 @@
         </el-col>
       </el-row>
     </div>
-    <div id="architeBottom" class="media-a high-bottom">
-      <el-row type="flex" justify="center">
+    <div id="architeBottom" class="media-a high-bottom home-architecture">
+      <!-- computer -->
+      <el-row v-if="!isMobile" type="flex" justify="center">
         <el-col :xs="23" :lg="18">
           <h3 class="global-h4 wow fadeInUp">{{ $t('feature.about') }}</h3>
           <el-row type="flex" justify="space-between">
-            <el-col :xs="23" :lg="7">
+            <el-col
+              v-for="(item, index) in arrMore"
+              :key="index"
+              :xs="23"
+              :lg="7"
+            >
               <div class="high-bottom-box">
                 <div class="high-bottom-img wow fadeInUp">
-                  <i class="el-iconfont iconfont el-a-007"></i>
+                  <i class="el-iconfont iconfont" :class="item.icon"></i>
                 </div>
                 <h4 class="high-bottom-h4 wow fadeInUp">
-                  {{ $t('nav.tran') }}
+                  {{ $t(item.title) }}
                 </h4>
                 <p class="high-bottom-h6 wow fadeInUp">
-                  {{ $t('high.divides') }}
+                  {{ $t(item.text) }}
                 </p>
                 <nuxt-link
                   class="high-bottom-more link wow fadeInUp"
-                  to="/feature/sharding"
-                >
-                  <span>{{ $t('bass.learn') }}</span>
-                  <i class="el-icon-right"></i>
-                </nuxt-link>
-              </div>
-            </el-col>
-            <el-col :xs="23" :lg="7">
-              <div class="high-bottom-box">
-                <div class="high-bottom-img wow fadeInUp">
-                  <i class="el-iconfont iconfont el-a-042"></i>
-                </div>
-                <h4 class="high-bottom-h4 wow fadeInUp">
-                  {{ $t('nav.multi') }}
-                </h4>
-                <p class="high-bottom-h6 wow fadeInUp">{{ $t('nav.dec') }}</p>
-                <nuxt-link class="high-bottom-more link" to="/feature/multisig">
-                  <span>{{ $t('bass.learn') }}</span>
-                  <i class="el-icon-right"></i>
-                </nuxt-link>
-              </div>
-            </el-col>
-            <el-col :xs="23" :lg="7">
-              <div class="high-bottom-box">
-                <div class="high-bottom-img wow fadeInUp">
-                  <i class="el-iconfont iconfont el-a-056"></i>
-                </div>
-                <h4 class="high-bottom-h4 wow fadeInUp">
-                  {{ $t('high.cross-chain') }}
-                </h4>
-                <p class="high-bottom-h6 wow fadeInUp">{{ $t('nav.decen') }}</p>
-                <nuxt-link
-                  class="high-bottom-more link wow fadeInUp"
-                  to="/feature/cross-chain"
+                  :to="item.link"
                 >
                   <span>{{ $t('bass.learn') }}</span>
                   <i class="el-icon-right"></i>
@@ -397,6 +398,32 @@
           </el-row>
         </el-col>
       </el-row>
+      <!-- moblie -->
+      <template v-else>
+        <h4 class="global-h4">{{ $t('feature.about') }}</h4>
+        <el-carousel indicator-position="outside" arrow="never">
+          <el-carousel-item v-for="(item, index) in arrMore" :key="index">
+            <div class="high-bottom-box">
+              <div class="high-bottom-img wow fadeInUp">
+                <i class="el-iconfont iconfont" :class="item.icon"></i>
+              </div>
+              <h4 class="high-bottom-h4 wow fadeInUp">
+                {{ $t(item.title) }}
+              </h4>
+              <p class="high-bottom-h6 wow fadeInUp">
+                {{ $t(item.text) }}
+              </p>
+              <nuxt-link
+                class="high-bottom-more link wow fadeInUp"
+                :to="item.link"
+              >
+                <span>{{ $t('bass.learn') }}</span>
+                <i class="el-icon-right"></i>
+              </nuxt-link>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </template>
     </div>
     <!-- bottom -->
     <page-bottom class="lime"></page-bottom>
@@ -406,7 +433,28 @@
 export default {
   props: {},
   data() {
-    return {};
+    return {
+      arrMore: [
+        {
+          icon: 'el-a-007',
+          title: 'nav.tran',
+          text: 'high.divides',
+          link: '/feature/sharding'
+        },
+        {
+          icon: 'el-a-042',
+          title: 'nav.multi',
+          text: 'nav.dec',
+          link: '/feature/multisig'
+        },
+        {
+          icon: 'el-a-056',
+          title: 'high.cross-chain',
+          text: 'nav.decen',
+          link: '/feature/cross-chain'
+        }
+      ]
+    };
   },
   head() {
     return {
@@ -438,17 +486,15 @@ export default {
   created() {},
   mounted() {
     this.$nextTick(() => {
-      this.numArchite =
+      /*   this.numArchite =
         document.getElementById('archite').getBoundingClientRect().bottom - 105;
       console.log(this.numArchite);
       this.numArchiteBottom =
         document.getElementById('architeBottom').getBoundingClientRect()
-          .bottom - 105;
-      if (this.numArchite) {
-        this.domGlobal.addEventListener('scroll', () => {
-          this.handleThrottle(this.handleArchiteScroll, 250);
-        });
-      }
+          .bottom - 105; */
+      this.domGlobal.addEventListener('scroll', () => {
+        this.handleThrottle(this.handleArchiteScroll, 250);
+      });
     });
   },
   methods: {
@@ -457,12 +503,18 @@ export default {
       const topHeight = document.getElementById('headerTop').offsetTop;
       const isFixed = scrollTop > topHeight;
       this.$store.commit('handleIsFixed', isFixed);
-      if (scrollTop >= this.numArchite && scrollTop < this.numArchiteBottom) {
+      this.numArchite = document
+        .getElementById('archite')
+        .getBoundingClientRect().bottom;
+      this.numArchiteBottom = document
+        .getElementById('architeBottom')
+        .getBoundingClientRect().bottom;
+      if (this.numArchite <= 0 && this.numArchiteBottom > 0) {
         const obj = { headerColor: '#fff', color: '#37383c' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'news--horizontal');
         this.$store.commit('handleIsTop', false);
-      } else if (scrollTop >= this.numArchiteBottom) {
+      } else if (this.numArchiteBottom <= 0) {
         const obj = { headerColor: '#274235', color: '#fff' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'subMenu--horizontal');

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 11:00:37
  * @LastEditors: abc
- * @LastEditTime: 2021-10-09 11:32:40
+ * @LastEditTime: 2021-10-11 16:39:15
  * @Description: mobile nav
 -->
 <template>
@@ -11,6 +11,22 @@
       <i class="iconfont el-logo1" :style="{ color: color }"></i>
     </nuxt-link>
     <div class="m-nav-icon">
+      <div class="nav-right-dropdown">
+        <el-dropdown @command="handleCommand">
+          <span class="el-dropdown-link">
+            <i class="iconfont el-translate" :style="{ color: color }"></i>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item
+              v-for="item in arrLang"
+              :key="item.lang"
+              :command="item.lang"
+            >
+              {{ item.label }}
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </div>
       <i
         class="iconfont"
         :class="{

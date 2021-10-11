@@ -2,20 +2,24 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-28 12:21:03
+ * @LastEditTime: 2021-10-11 16:20:29
  * @Description: 
 -->
 <template>
   <div class="other">
     <el-row type="flex" justify="center">
-      <el-col :xs="23" :sm="22" :md="20" :lg="18">
+      <el-col :xs="24" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="18">
-              <h6 class="global-h6 animated fadeInUp">
+          <el-row
+            type="flex"
+            :justify="isMobile ? 'center' : 'space-between'"
+            align="middle"
+          >
+            <el-col :xs="21" :lg="18">
+              <p class="home-new-text animated fadeInUp">
                 {{ $t('nav.private') }}
-              </h6>
-              <h2 class="bass-h2 animated fadeInUp">
+              </p>
+              <h2 class="title-h2 animated fadeInUp">
                 {{ $t('bass.anonymous') }}
               </h2>
               <p class="home-new-p animated fadeInUp">
@@ -37,9 +41,14 @@
             </el-col> -->
           </el-row>
         </div>
-        <div class="other">
-          <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="6">
+        <div class="other other-middle">
+          <el-row
+            type="flex"
+            justify="space-between"
+            align="middle"
+            class="el-row-wrap"
+          >
+            <el-col :xs="24" :lg="6">
               <div
                 class="other-ease wow fadeIn"
                 style="animation-duration: 1s; animation-delay: 1s"
@@ -47,7 +56,7 @@
                 {{ $t('bass.protection') }}
               </div>
             </el-col>
-            <el-col :xs="23" :lg="6">
+            <el-col :xs="24" :lg="6">
               <div
                 class="other-ease wow fadeIn"
                 style="animation-duration: 1s; animation-delay: 1.5s"
@@ -55,7 +64,7 @@
                 {{ $t('bass.process') }}
               </div>
             </el-col>
-            <el-col :xs="23" :lg="6">
+            <el-col :xs="24" :lg="6">
               <div
                 class="other-ease wow fadeIn"
                 style="animation-duration: 1s; animation-delay: 2s"
@@ -66,20 +75,25 @@
           </el-row>
         </div>
         <div class="home-new">
-          <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="8">
+          <el-row
+            type="flex"
+            justify="space-between"
+            align="middle"
+            class="el-row-wrap"
+          >
+            <el-col :xs="24" :lg="8">
               <p class="home-new-title wow fadeInUp">
                 <i class="el-iconfont iconfont el-a-051"></i>
-                <span class="home-new-title-text">
+                <span class="home-new-text">
                   {{ $t('bass.technical') }}
                 </span>
               </p>
-              <h2 class="bass-h2 wow fadeInUp">{{ $t('bass.black') }}</h2>
+              <h2 class="title-h2 wow fadeInUp">{{ $t('bass.black') }}</h2>
               <p class="wow fadeInUp">
                 {{ $t('bass.homomorphic') }}
               </p>
             </el-col>
-            <el-col :xs="23" :lg="14">
+            <el-col :xs="24" :lg="14">
               <div class="home-new-img wow fadeInUp">
                 <img
                   src="../../assets/image/img-insights-report2.png"
@@ -93,7 +107,7 @@
     </el-row>
     <div id="frequenc" class="other other-center">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="15">
+        <el-col :xs="24" :lg="15">
           <div class="other-center-img wow fadeInUp">
             <i v-if="lang === 'zh'" class="iconfont el-efficiency_cn"></i>
             <i v-if="lang === 'en'" class="iconfont el-efficiency"></i>
@@ -112,28 +126,41 @@
     </div>
     <div class="media-a">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="14">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
+                    src="@/assets/image/funnel-report-1.png"
                     mode="powerful"
                   />
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="8">
+              <el-col :xs="24" :lg="8">
                 <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-003"></i>
-                  <span class="home-new-title-text">
+                  <span class="home-new-text">
                     {{ $t('bass.transac') }}
                   </span>
                 </p>
-                <h2 class="bass-h2 wow fadeInUp">{{ $t('bass.system') }}</h2>
+                <h2 class="title-h2 wow fadeInUp">{{ $t('bass.system') }}</h2>
                 <p class="wow fadeInUp">
                   {{ $t('bass.financial') }}
                 </p>
+              </el-col>
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
+                <div class="home-new-img wow fadeInUp">
+                  <img
+                    src="@/assets/image/funnel-report-1.png"
+                    mode="powerful"
+                  />
+                </div>
               </el-col>
             </el-row>
           </div>
@@ -144,15 +171,20 @@
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
               <el-col :xs="23" :lg="8">
                 <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-003"></i>
-                  <span class="home-new-title-text">
+                  <span class="home-new-text">
                     {{ $t('bass.secure') }}
                   </span>
                 </p>
-                <h2 class="bass-h2 wow fadeInUp">{{ $t('bass.make') }}</h2>
+                <h2 class="title-h2 wow fadeInUp">{{ $t('bass.make') }}</h2>
                 <p class="wow fadeInUp">
                   {{ $t('bass.information') }}
                 </p>
@@ -179,59 +211,31 @@
         </el-col>
       </el-row>
     </div>
-    <div id="security" class="media-a high-bottom">
-      <el-row type="flex" justify="center">
+    <div id="security" class="media-a high-bottom home-architecture">
+      <!-- computer -->
+      <el-row v-if="!isMobile" type="flex" justify="center">
         <el-col :xs="23" :lg="18">
-          <h3 class="global-h4 wow fadeInUp">{{ $t('feature.about') }}</h3>
+          <h3 class="global-h4">{{ $t('feature.about') }}</h3>
           <el-row type="flex" justify="space-between">
-            <el-col :xs="23" :lg="7">
+            <el-col
+              v-for="(item, index) in arrMore"
+              :key="index"
+              :xs="23"
+              :lg="7"
+            >
               <div class="high-bottom-box">
                 <div class="high-bottom-img wow fadeInUp">
-                  <i class="el-iconfont iconfont el-a-056"></i>
+                  <i class="el-iconfont iconfont" :class="item.icon"></i>
                 </div>
                 <h4 class="high-bottom-h4 wow fadeInUp">
-                  {{ $t('high.cross-chain') }}
+                  {{ $t(item.title) }}
                 </h4>
-                <p class="high-bottom-h6 wow fadeInUp">{{ $t('nav.decen') }}</p>
+                <p class="high-bottom-h6 wow fadeInUp">
+                  {{ $t(item.text) }}
+                </p>
                 <nuxt-link
                   class="high-bottom-more link wow fadeInUp"
-                  to="/feature/cross-chain"
-                >
-                  <span>{{ $t('bass.learn') }}</span>
-                  <i class="el-icon-right"></i>
-                </nuxt-link>
-              </div>
-            </el-col>
-            <el-col :xs="23" :lg="7">
-              <div class="high-bottom-box">
-                <div class="high-bottom-img wow fadeInUp">
-                  <i class="el-iconfont iconfont el-a-010"></i>
-                </div>
-                <h4 class="high-bottom-h4 wow fadeInUp">
-                  {{ $t('nav.security') }}
-                </h4>
-                <p class="high-bottom-h6 wow fadeInUp">{{ $t('nav.fouds') }}</p>
-                <nuxt-link
-                  class="high-bottom-more link wow fadeInUp"
-                  to="/feature/security-privacy"
-                >
-                  <span>{{ $t('bass.learn') }}</span>
-                  <i class="el-icon-right"></i>
-                </nuxt-link>
-              </div>
-            </el-col>
-            <el-col :xs="23" :lg="7">
-              <div class="high-bottom-box">
-                <div class="high-bottom-img wow fadeInUp">
-                  <i class="el-iconfont iconfont el-a-052"></i>
-                </div>
-                <h4 class="high-bottom-h4 wow fadeInUp">
-                  {{ $t('high.lead') }}
-                </h4>
-                <p class="high-bottom-h6 wow fadeInUp">{{ $t('nav.each') }}</p>
-                <nuxt-link
-                  class="high-bottom-more link wow fadeInUp"
-                  to="/feature/architecture"
+                  :to="item.link"
                 >
                   <span>{{ $t('bass.learn') }}</span>
                   <i class="el-icon-right"></i>
@@ -241,6 +245,32 @@
           </el-row>
         </el-col>
       </el-row>
+      <!-- moblie -->
+      <template v-else>
+        <h4 class="global-h4">{{ $t('feature.about') }}</h4>
+        <el-carousel indicator-position="outside" arrow="never">
+          <el-carousel-item v-for="(item, index) in arrMore" :key="index">
+            <div class="high-bottom-box">
+              <div class="high-bottom-img wow fadeInUp">
+                <i class="el-iconfont iconfont" :class="item.icon"></i>
+              </div>
+              <h4 class="high-bottom-h4 wow fadeInUp">
+                {{ $t(item.title) }}
+              </h4>
+              <p class="high-bottom-h6 wow fadeInUp">
+                {{ $t(item.text) }}
+              </p>
+              <nuxt-link
+                class="high-bottom-more link wow fadeInUp"
+                :to="item.link"
+              >
+                <span>{{ $t('bass.learn') }}</span>
+                <i class="el-icon-right"></i>
+              </nuxt-link>
+            </div>
+          </el-carousel-item>
+        </el-carousel>
+      </template>
     </div>
     <!-- bottom -->
     <page-bottom class="lime"></page-bottom>
@@ -265,6 +295,26 @@ export default {
           label: 'bass.sec',
           name: 'second',
           img: img2
+        }
+      ],
+      arrMore: [
+        {
+          icon: 'el-a-056',
+          title: 'nav.clb',
+          text: 'nav.basis',
+          link: '/feature/clb'
+        },
+        {
+          icon: 'el-a-010',
+          title: 'nav.security',
+          text: 'feature.encryption',
+          link: '/feature/security-privacy'
+        },
+        {
+          icon: 'el-a-052',
+          title: 'high.lead',
+          text: 'nav.each',
+          link: '/feature/architecture'
         }
       ]
     };

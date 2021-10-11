@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-09 16:58:53
+ * @LastEditTime: 2021-10-11 11:18:25
  * @Description: home
 -->
 <template>
@@ -495,7 +495,7 @@
       </el-row>
       <!-- moblie -->
       <template v-else>
-        <h2 class="title-h2">{{ $t('home.develop') }}</h2>
+        <h2 class="title-h4">{{ $t('home.develop') }}</h2>
         <el-carousel indicator-position="outside" arrow="never">
           <el-carousel-item v-for="(item, index) in arrProduct" :key="index">
             <div>

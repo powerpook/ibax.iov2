@@ -297,7 +297,7 @@
     }
   }
   .home-new-text {
-    font-size: 14px;
+    font-size: 12px;
   }
   .home-new-title {
     .el-iconfont {
@@ -308,10 +308,46 @@
     font-size: 24px;
   }
   .other-center {
-    padding: 50px 0;
+    padding: 50px 30px;
   }
   .mdeia {
     padding-top: 60px;
     padding-bottom: 60px;
+  }
+  .home-architecture {
+    padding: 50px 30px;
+    .el-carousel .el-carousel__container {
+      height: 455px;
+    }
+    .high-bottom-img {
+      margin-bottom: 0px;
+    }
+    .global-h4 {
+      font-size: 18px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .high-bottom-h4 {
+      min-height: auto;
+      text-align: left;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+  .cta {
+    min-height: 400px;
+    font-size: 18px;
+    .container {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .btns-list a.btn {
+      margin-bottom: 20px;
+    }
+  }
+  .cta h1 {
+    font-size: 32px;
+    line-height: 1.0625;
+    margin-bottom: 9px;
   }
 }

@@ -369,6 +369,12 @@ a.nav-active-link {
   &-icon {
     height: 75px;
     line-height: 75px;
+    display: flex;
+    align-items: center;
+    .nav-right-dropdown {
+      margin-right: 20px;
+      margin-top: 0;
+    }
   }
   .el-logo1 {
     font-size: 25px;
