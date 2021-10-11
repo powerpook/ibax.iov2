@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 15:01:26
  * @LastEditors: abc
- * @LastEditTime: 2021-09-28 15:05:00
+ * @LastEditTime: 2021-10-11 17:49:01
  * @Description:
 -->
 <template>
@@ -18,7 +18,6 @@
             <el-row type="flex" justify="center">
               <!-- PC nav -->
               <el-col
-                v-if="!isMobile"
                 :sm="23"
                 :lg="18"
                 :md="23"
@@ -38,7 +37,6 @@
               </el-col>
               <!-- mobile nav-->
               <el-col
-                v-else
                 :xs="24"
                 class="hidden-sm-and-up"
                 :class="{

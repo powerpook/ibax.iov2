@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-09-26 18:07:39
+ * @LastEditTime: 2021-10-11 17:29:41
  * @Description: team
 -->
 <template>
@@ -14,9 +14,9 @@
         data-menu-theme="dark"
       >
         <el-row type="flex" justify="center">
-          <el-col :xs="23" :sm="22" :md="20" :lg="18">
+          <el-col :xs="24" :sm="22" :md="20" :lg="18">
             <!-- <strong class="block-title lg">Our mission</strong> -->
-            <h1 class="wow fadeInUp">
+            <h1 class="title-h2 wow fadeInUp">
               {{ $t('resource.technical') }}
             </h1>
             <ul class="customers-list">
@@ -37,8 +37,12 @@
         </el-row>
       </section>
     </div>
-    <div ref="parallax" class="team-middle"></div>
-    <div ref="fixed" class="team-fixed">
+    <div v-show="!isMobile" ref="parallax" class="team-middle"></div>
+    <div
+      ref="fixed"
+      class="team-fixed"
+      :style="{ position: isMobile ? 'static' : 'fixed' }"
+    >
       <el-row type="flex" justify="center">
         <el-col :xs="23" :sm="22" :md="20" :lg="18">
           <div class="header wow fadeInUp">
@@ -431,14 +435,16 @@ export default {
       const topHeight = document.getElementById('headerTop').offsetTop;
       const isFixed = scrollTop > topHeight;
       this.$store.commit('handleIsFixed', isFixed);
-      if (scrollTop >= this.container) {
-        this.parallax.style.position = 'fixed';
-        this.parallax.style.height = '0px';
-        this.fixed.style.position = 'static';
-      } else {
-        this.parallax.style.position = 'static';
-        this.parallax.style.height = this.wScroll + 'px';
-        this.fixed.style.position = 'fixed';
+      if (!this.isMobile) {
+        if (scrollTop >= this.container) {
+          this.parallax.style.position = 'fixed';
+          this.parallax.style.height = '0px';
+          this.fixed.style.position = 'static';
+        } else {
+          this.parallax.style.position = 'static';
+          this.parallax.style.height = this.wScroll + 'px';
+          this.fixed.style.position = 'fixed';
+        }
       }
       if (scrollTop >= this.container && scrollTop < this.numIntroduce) {
         const obj = { headerColor: '#fff', color: '#37383c' };

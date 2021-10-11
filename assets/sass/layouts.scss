@@ -350,4 +350,11 @@
     line-height: 1.0625;
     margin-bottom: 9px;
   }
+  .team .parallax-container--over {
+    background-color: #274235;
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    padding: 50px 30px 130px 30px;
+  }
 }
