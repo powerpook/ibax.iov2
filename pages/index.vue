@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-11 11:18:25
+ * @LastEditTime: 2021-10-11 17:55:35
  * @Description: home
 -->
 <template>
@@ -716,6 +716,7 @@ export default {
     this.domStory = this.$refs.story;
     this.offsetHeight = this.domStory.offsetHeight;
     this.domEmpty.style.height = this.offsetHeight + 'px';
+    console.log(this.isMobile);
     if (!this.isMobile) {
       this.domEmpty.style.position = 'static';
       this.domStory.style.position = 'fixed';

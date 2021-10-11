@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-09-27 10:04:48
+ * @LastEditTime: 2021-10-11 19:34:55
  * @Description: 
 -->
 <template>
@@ -191,7 +191,7 @@
       </el-row>
     </div>
     <div class="develop-center" style="padding-top: 100px">
-      <h2 class="bass-h2 wow fadeInUp">Low Code</h2>
+      <h2 class="bass-h2 wow fadeInUp">{{ $t('develope.lowCode') }}</h2>
       <p class="wow fadeInUp">
         {{ $t('develope.code') }}
       </p>

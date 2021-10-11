@@ -598,6 +598,7 @@
   "develope.audit": "代码安全审计",
   "develope.review": "IBAX代码审查团队将会对所有提交到BaaS市场的智能合约做安全审查，保障每个使用者的安全和开发者的收益。",
   "develope.code": "Low Code对于所有的开发者都是极为友好的，为此IBAX团队提供了一个Low Code开发平台，我们称她为“Weaver”。",
+  "develope.lowCode": "低代码开发",
   "develope.ecological": "生态管理",
   "develope.quickly": "在Weaver中你可以通过可视化页面快速创建一个生态，采用选择配置的方式初始化生态规则，加入生态的成员将必须遵守你的生态规则。",
   "develope.also": "Weaver还支持可视化操作的一键导入其他链的合约，如果是一个成熟的生态开发者，你可以使用这个功能无缝引用你在其他链的生态。",

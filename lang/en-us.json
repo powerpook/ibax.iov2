@@ -598,6 +598,7 @@
   "develope.audit": "Code Security Auditing",
   "develope.review": "The IBAX code review team will do a security review of all smart contracts submitted to the BaaS marketplace to protect every user's safety and the developer's profit.",
   "develope.code": "Low Code is extremely user-friendly for all developers and for this reason the IBAX team offers a Low Code development platform, which we call \"Weaver\".",
+  "develope.lowCode": "Low Code",
   "develope.ecological": "Ecological management",
   "develope.quickly": "In Weaver you can rapidly create an ecosystem via a visualisation page, using a choice of configurations to initialise the ecosystem rules, and members who join the ecosystem will have to abide by your ecosystem rules.",
   "develope.also": "Weaver also supports visual interoperation of one-click importing of contracts from other blockchains. If you are an experienced eco-developer, you can use this feature to seamlessly reference your ecosystem in other blockchains.",

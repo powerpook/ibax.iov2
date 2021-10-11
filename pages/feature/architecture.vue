@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-11 15:01:50
+ * @LastEditTime: 2021-10-11 18:33:27
  * @Description: architecture
 -->
 <template>
@@ -81,7 +81,7 @@
             align="middle"
             class="el-row-wrap"
           >
-            <el-col :xs="24" :lg="8">
+            <el-col :xs="24" :lg="10">
               <p class="home-new-title wow fadeInUp">
                 <i class="el-iconfont iconfont el-a-011"></i>
                 <span class="home-new-text">
@@ -91,7 +91,7 @@
               <h2 class="title-h2 wow fadeInUp">{{ $t('high.database') }}</h2>
               <p class="wow fadeInUp">{{ $t('high.postgreSQL') }}</p>
             </el-col>
-            <el-col :xs="24" :lg="12">
+            <el-col :xs="24" :lg="10">
               <div class="home-new-img wow fadeInUp">
                 <img
                   src="../../assets/image/img-insights-report2.png"
@@ -137,7 +137,7 @@
               align="middle"
               class="el-row-wrap"
             >
-              <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
+              <el-col :xs="24" :lg="10" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
                     src="@/assets/image/funnel-report-1.png"
@@ -145,7 +145,7 @@
                   />
                 </div>
               </el-col>
-              <el-col :xs="24" :lg="8">
+              <el-col :xs="24" :lg="10">
                 <p class="home-new-title wow fadeInUp">
                   <i class="el-iconfont iconfont el-a-019"></i>
                   <span class="home-new-text">
@@ -160,7 +160,7 @@
                   {{ $t('feature.we') }}
                 </p>
               </el-col>
-              <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
+              <el-col :xs="24" :lg="10" class="hidden-sm-and-up">
                 <div class="home-new-img wow fadeInUp">
                   <img
                     src="@/assets/image/funnel-report-1.png"
