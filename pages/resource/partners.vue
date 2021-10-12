@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:43:39
  * @LastEditors: abc
- * @LastEditTime: 2021-09-22 11:33:10
+ * @LastEditTime: 2021-10-12 10:25:00
  * @Description: video resources
 -->
 <template>
@@ -251,7 +251,7 @@
               </el-col>
             </el-row>
             <div id="accolades" class="container">
-              <h5 class="bass-h5 wow fadeInUp">Awards and accolades</h5>
+              <h5 class="bass-h5 wow fadeInUp">{{ $t('feature.awards') }}</h5>
               <ul class="list">
                 <li>
                   <div class="card-award wow fadeInUp">

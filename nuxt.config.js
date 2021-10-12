@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-09 14:20:29
+ * @LastEditTime: 2021-10-12 10:52:02
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -66,11 +66,7 @@ export default {
       { rel: 'apple-touch-icon', href: '/favicon.ico' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', type: 'text/css', href: '/animate/animate.min.css' },
-      {
-        rel: 'stylesheet',
-        type: 'text/css',
-        href: '//at.alicdn.com/t/font_2762091_9hhjnfy608.css'
-      }
+      { rel: 'stylesheet', type: 'text/css', href: '/icon/iconfont.css' }
     ]
     // script: [{ src: '' }]
   },
