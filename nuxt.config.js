@@ -2,12 +2,12 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-12 11:33:38
+ * @LastEditTime: 2021-10-12 12:00:02
  * @Description:nuxt setting
  */
 // const path = require('path')
-import path from 'path';
-import fs from 'fs';
+// import path from 'path';
+// import fs from 'fs';
 
 let pattern = false;
 const plugins = [
@@ -90,12 +90,12 @@ export default {
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
-  server: {
+  /*  server: {
     https: {
       key: fs.readFileSync(path.resolve(__dirname, 'data/cert/privkey.pem')),
-      cert: fs.readFileSync(path.resolve(__dirname, 'data/cert/fullchain.pem'))
+      cert: fs.readFileSync(path.resolve(__dirname, 'data/cert/fullchain.pe'))
     }
-  },
+  }, */
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
