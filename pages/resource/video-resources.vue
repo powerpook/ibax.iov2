@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:43:39
  * @LastEditors: abc
- * @LastEditTime: 2021-09-27 18:21:04
+ * @LastEditTime: 2021-10-12 14:07:57
  * @Description: video resources
 -->
 <template>
@@ -73,9 +73,13 @@
                 <div class="resource-bottom">
                   <p class="wow fadeInUp">{{ $t('resourse.sourceview') }}</p>
                   <div class="wow fadeInUp">
-                    <button class="btn btn-primary" @click="handleVideoOpen">
+                    <a
+                      class="btn btn-primary"
+                      href="https://www.youtube.com/watch?v=jzfvZMb_jus"
+                      target="_blank"
+                    >
                       {{ $t('resourse.start') }}
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -113,9 +117,13 @@
                 <div class="resource-top-bottom">
                   <p class="wow fadeInUp">{{ $t('resourse.sourceview') }}</p>
                   <div class="wow fadeInUp">
-                    <button class="btn btn-primary" @click="handleVideoOpen">
+                    <a
+                      class="btn btn-primary"
+                      href="https://www.youtube.com/watch?v=v6djILrPGbw"
+                      target="_blank"
+                    >
                       {{ $t('resourse.start') }}
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -145,14 +153,13 @@
                 <img src="../../assets/image/sddefault.webp" mode="powerful" />
               </div>
               <p class="resource-middle-text wow fadeInUp">
-                Today I would like to give you a brief introduction and some of
-                the history and reasons why I believe, developers and companies
-                like yours should be excited about The IBAX Network.
+                IBAX is a fast and reliable whole new blockchain network. 3
+                minutes to know more about IBAX.
               </p>
-              <div class="home-new-bottom link wow fadeInUp">
+              <a class="home-new-bottom link wow fadeInUp">
                 <span>Watch Now</span>
                 <i class="el-icon-right"></i>
-              </div>
+              </a>
             </el-col>
             <el-col :xs="23" :lg="7">
               <div class="resource-img wow fadeInUp">

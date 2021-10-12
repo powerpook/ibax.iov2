@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-12 12:00:02
+ * @LastEditTime: 2021-10-12 18:11:50
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -26,6 +26,7 @@ if (process.env.NODE_ENV !== 'production') {
   pattern = false;
 }
 export default {
+  mode: 'universal',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'Home-IBAX',
@@ -159,6 +160,20 @@ export default {
   content: {},
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    extractCSS: false,
+    /*  extractCSS: pattern,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(css|vue)$/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
+      }
+    }, */
     transpile: [/^element-ui/],
     cssSourceMap: pattern,
     cache: pattern,

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-11 18:33:27
+ * @LastEditTime: 2021-10-12 17:51:44
  * @Description: architecture
 -->
 <template>
@@ -401,28 +401,30 @@
       <!-- moblie -->
       <template v-else>
         <h4 class="global-h4">{{ $t('feature.about') }}</h4>
-        <el-carousel indicator-position="outside" arrow="never">
-          <el-carousel-item v-for="(item, index) in arrMore" :key="index">
-            <div class="high-bottom-box">
-              <div class="high-bottom-img wow fadeInUp">
-                <i class="el-iconfont iconfont" :class="item.icon"></i>
+        <client-only>
+          <el-carousel indicator-position="outside" arrow="never">
+            <el-carousel-item v-for="(item, index) in arrMore" :key="index">
+              <div class="high-bottom-box">
+                <div class="high-bottom-img wow fadeInUp">
+                  <i class="el-iconfont iconfont" :class="item.icon"></i>
+                </div>
+                <h4 class="high-bottom-h4 wow fadeInUp">
+                  {{ $t(item.title) }}
+                </h4>
+                <p class="high-bottom-h6 wow fadeInUp">
+                  {{ $t(item.text) }}
+                </p>
+                <nuxt-link
+                  class="high-bottom-more link wow fadeInUp"
+                  :to="item.link"
+                >
+                  <span>{{ $t('bass.learn') }}</span>
+                  <i class="el-icon-right"></i>
+                </nuxt-link>
               </div>
-              <h4 class="high-bottom-h4 wow fadeInUp">
-                {{ $t(item.title) }}
-              </h4>
-              <p class="high-bottom-h6 wow fadeInUp">
-                {{ $t(item.text) }}
-              </p>
-              <nuxt-link
-                class="high-bottom-more link wow fadeInUp"
-                :to="item.link"
-              >
-                <span>{{ $t('bass.learn') }}</span>
-                <i class="el-icon-right"></i>
-              </nuxt-link>
-            </div>
-          </el-carousel-item>
-        </el-carousel>
+            </el-carousel-item>
+          </el-carousel>
+        </client-only>
       </template>
     </div>
     <!-- bottom -->

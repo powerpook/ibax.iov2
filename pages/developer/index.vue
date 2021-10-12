@@ -2,20 +2,25 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-10-11 19:34:55
+ * @LastEditTime: 2021-10-12 15:34:43
  * @Description: 
 -->
 <template>
   <div class="develop">
     <el-row type="flex" justify="center">
-      <el-col :xs="23" :sm="22" :md="20" :lg="18">
+      <el-col :xs="24" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <el-row type="flex" justify="space-between">
-            <el-col :xs="23" :lg="10">
-              <h6 class="global-h6 animated fadeInUp">
+          <el-row
+            type="flex"
+            justify="space-between"
+            align="middle"
+            class="el-row-wrap"
+          >
+            <el-col :xs="24" :lg="10">
+              <h6 class="home-new-text animated fadeInUp">
                 {{ $t('develope.tool') }}
               </h6>
-              <h2 class="bass-h2 animated fadeInUp">
+              <h2 class="title-h2 animated fadeInUp">
                 {{ $t('develope.functions') }}
               </h2>
               <p class="animated fadeInUp">
@@ -64,16 +69,18 @@
         >
       </div>
     </div>
-    <div class="bass-white" style="padding-top: 100px; padding-bottom: 0">
+    <div class="bass-white bass-white-top">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
-          <div class="bass-white-content">
-            <h2 class="bass-h2 wow fadeInUp">{{ $t('develope.encounter') }}</h2>
+        <el-col :xs="24" :lg="18">
+          <div class="bass-white-content el-row-wrap">
+            <h2 class="title-h2 wow fadeInUp">
+              {{ $t('develope.encounter') }}
+            </h2>
             <p class="wow fadeInUp">
               {{ $t('develope.technology') }}
             </p>
-            <el-row type="flex" justify="space-between">
-              <el-col :xs="23" :lg="11">
+            <el-row type="flex" justify="space-between" style="flex-wrap: wrap">
+              <el-col :xs="24" :lg="11" class="bass-white-fade">
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
                     <h4 class="bass-white-title wow fadeInUp">
@@ -93,7 +100,7 @@
                   </a>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="11">
+              <el-col :xs="24" :lg="11" class="bass-white-fade">
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
                     <h4 class="bass-white-title wow fadeInUp">
@@ -122,25 +129,30 @@
     <div class="develop-center">
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="16">
-          <h2 class="bass-h2 wow fadeInUp">{{ $t('develope.open') }}</h2>
+          <h2 class="title-h2 wow fadeInUp">{{ $t('develope.open') }}</h2>
           <p class="wow fadeInUp">{{ $t('develope.has') }}</p>
         </el-col>
       </el-row>
     </div>
     <div class="media-a">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="14">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
-                    mode="powerful"
+                    src="@/assets/images/develop-more.jpg"
+                    alt="develop-more"
                   />
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="8">
+              <el-col :xs="24" :lg="8">
                 <h4 class="develop-title wow fadeInUp">
                   <i class="iconfont el-payment develop-title-icon"></i>
                   <span>{{ $t('develope.paid') }}</span>
@@ -158,6 +170,14 @@
                   {{ $t('develope.deduction') }}
                 </p>
               </el-col>
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
+                <div class="home-new-img wow fadeInUp">
+                  <img
+                    src="@/assets/images/develop-more.jpg"
+                    alt="develop-more"
+                  />
+                </div>
+              </el-col>
             </el-row>
           </div>
         </el-col>
@@ -165,10 +185,15 @@
     </div>
     <div class="media-b">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="8">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="8">
                 <h4 class="develop-title wow fadeInUp">
                   <i class="iconfont el-code develop-title-icon"></i>
                   <span>{{ $t('develope.audit') }}</span>
@@ -177,11 +202,11 @@
                   {{ $t('develope.review') }}
                 </p>
               </el-col>
-              <el-col :xs="23" :lg="14">
+              <el-col :xs="24" :lg="14">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
-                    mode="powerful"
+                    src="@/assets/images/develop-code.jpg"
+                    alt="develop-code"
                   />
                 </div>
               </el-col>
@@ -190,26 +215,34 @@
         </el-col>
       </el-row>
     </div>
-    <div class="develop-center" style="padding-top: 100px">
-      <h2 class="bass-h2 wow fadeInUp">{{ $t('develope.lowCode') }}</h2>
+    <div
+      class="develop-center"
+      :style="{ 'padding-top': isMobile ? '50px' : '100px' }"
+    >
+      <h2 class="title-h2 wow fadeInUp">{{ $t('develope.lowCode') }}</h2>
       <p class="wow fadeInUp">
         {{ $t('develope.code') }}
       </p>
     </div>
     <div class="media-a">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="14">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="@/assets/image/funnel-report-1.png"
-                    mode="powerful"
+                    src="@/assets/images/develop-more.jpg"
+                    alt="develop-more"
                   />
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="8">
+              <el-col :xs="24" :lg="8">
                 <h4 class="develop-title wow fadeInUp">
                   <i class="iconfont el-ecological develop-title-icon"></i>
                   <span>{{ $t('develope.ecological') }}</span>
@@ -220,6 +253,14 @@
                 <p class="wow fadeInUp">
                   {{ $t('develope.also') }}
                 </p>
+              </el-col>
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
+                <div class="home-new-img wow fadeInUp">
+                  <img
+                    src="@/assets/images/develop-more.jpg"
+                    alt="develop-more"
+                  />
+                </div>
               </el-col>
             </el-row>
           </div>
@@ -373,9 +414,11 @@
   </div>
 </template>
 <script>
-const img1 = require('@/assets/image/img-retention-report-2.png');
-const img2 = require('@/assets/image/img-funnels-report-2.png');
-const img3 = require('@/assets/image/img-insights-report2.png');
+const img1 = require('@/assets/images/develop-create.jpg');
+const img2 = require('@/assets/images/develop-ecolib.jpg');
+const img3 = require('@/assets/images/develop-role.jpg');
+const img4 = require('@/assets/images/develop-contract.jpg');
+const img5 = require('@/assets/images/develop-voting.jpg');
 export default {
   props: {},
   data() {
@@ -407,12 +450,12 @@ export default {
         {
           label: 'Contract',
           name: 'fonth',
-          img: img1
+          img: img4
         },
         {
           label: 'Voting',
           name: 'firth',
-          img: img2
+          img: img5
         }
       ]
     };

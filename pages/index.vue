@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-12 11:15:08
+ * @LastEditTime: 2021-10-12 14:16:57
  * @Description: home
 -->
 <template>
@@ -420,7 +420,7 @@
             </el-col>
             <el-col :xs="24" :lg="5">
               <div class="home-story-phone">
-                <img src="../assets/image/device-494x1024.png" mode="connect" />
+                <img src="@/assets/images/home-mobile.jpg" mode="home-mobile" />
               </div>
             </el-col>
             <el-col :xs="24" :lg="9">

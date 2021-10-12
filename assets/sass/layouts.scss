@@ -106,6 +106,10 @@
   color: $primary-color;
   font-size: 35px;
 }
+.bass-white-top {
+  padding-top: 100px;
+  padding-bottom: 0;
+}
 @media (max-width: 1023px) {
   .title-h1 {
     font-size: 64px;
@@ -356,5 +360,26 @@
     z-index: 100;
     text-align: center;
     padding: 50px 30px 130px 30px;
+  }
+  .bass-white-top {
+    padding-top: 50px;
+    padding-bottom: 0;
+  }
+  .bass-white-fade {
+    margin-bottom: 30px;
+  }
+  .bass-white-content {
+    padding-bottom: 50px;
+  }
+  .develop-center {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .develop-title {
+    font-size: 24px;
+  }
+  .develop-title-icon {
+    font-size: 24px;
+    margin-top: 0;
   }
 }
