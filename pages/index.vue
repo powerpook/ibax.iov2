@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-12 11:02:58
+ * @LastEditTime: 2021-10-12 11:15:08
  * @Description: home
 -->
 <template>
@@ -712,6 +712,7 @@ export default {
   },
   computed: {},
   mounted() {
+    console.log(`mobile:${this.isMobile}`);
     this.domEmpty = this.$refs.empty;
     this.domStory = this.$refs.story;
     this.offsetHeight = this.domStory.offsetHeight;
