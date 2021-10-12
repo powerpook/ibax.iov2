@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-11 17:55:35
+ * @LastEditTime: 2021-10-12 11:02:58
  * @Description: home
 -->
 <template>
@@ -567,7 +567,7 @@ export default {
         },
         {
           path: '/resource/events',
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/Inside-MP-3.png',
+          img: videos,
           icon: 'el-activity',
           strong: 'resource.activity',
           title: 'home.exciting',
