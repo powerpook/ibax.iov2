@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-10-12 15:34:43
+ * @LastEditTime: 2021-10-12 19:26:37
  * @Description: 
 -->
 <template>
@@ -269,10 +269,15 @@
     </div>
     <div class="media-b">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="8">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="8">
                 <h4 class="develop-title wow fadeInUp">
                   <i class="iconfont el-contract develop-title-icon"></i>
                   <span>{{ $t('develope.online') }}</span>
@@ -285,7 +290,7 @@
                 </p>
                 <p class="wow fadeInUp">{{ $t('develope.drag') }}</p>
               </el-col>
-              <el-col :xs="23" :lg="14">
+              <el-col :xs="24" :lg="14">
                 <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
@@ -300,10 +305,15 @@
     </div>
     <div class="media-a">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="14">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/image/funnel-report-1.png"
@@ -311,7 +321,7 @@
                   />
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="8">
+              <el-col :xs="24" :lg="8">
                 <h4 class="bass-h4 home-new-title wow fadeInUp">
                   <i class="iconfont el-templates develop-title-icon"></i>
                   <span>{{ $t('develope.template') }}</span>
@@ -319,6 +329,14 @@
                 <p class="wow fadeInUp">
                   {{ $t('develope.number') }}
                 </p>
+              </el-col>
+              <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
+                <div class="home-new-img wow fadeInUp">
+                  <img
+                    src="../../assets/image/funnel-report-1.png"
+                    mode="powerful"
+                  />
+                </div>
               </el-col>
             </el-row>
           </div>
@@ -330,9 +348,9 @@
     <!-- Story wall -->
     <div id="empower" class="about-five">
       <el-row type="flex" justify="center">
-        <el-col :md="16" :xs="23">
+        <el-col :md="16" :xs="24">
           <h2 class="about-five-title">{{ $t('develope.roadmap') }}</h2>
-          <div class="about-five-content">
+          <div class="about-five-content el-row-wrap">
             <div class="about-five-content-item wow fadeInUp">
               <div class="about-five-content-item-img">
                 <img src="@/assets/image/five-1.png" alt="five-1" />

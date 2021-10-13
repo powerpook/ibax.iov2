@@ -463,18 +463,20 @@ a.nav-active-link {
         display: flex;
         white-space: normal;
         align-items: center;
+        margin-bottom: 15px;
         &-title {
           letter-spacing: -0.03em;
           color: #fcfcfc;
           font-weight: 700;
           display: block;
           line-height: 2em;
+          margin-bottom: 5px;
         }
         &-text {
           font: 400 12px/2 "Untitled Sans", "Helvetica Neue", Helvetica, sans-serif;
           margin-top: -5px;
           color: #9e9e9e;
-          line-height: 1.5em;
+          line-height: 1.2em;
         }
       }
       &-other {

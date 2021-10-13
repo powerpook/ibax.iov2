@@ -144,7 +144,7 @@
                     {{ $t('bass.built') }}
                   </span>
                 </p>
-                <h2 class="bass-h2 wow fadeInUp">{{ $t('bass.your') }}</h2>
+                <h2 class="title-h2 wow fadeInUp">{{ $t('bass.your') }}</h2>
                 <p class="wow fadeInUp">
                   {{ $t('bass.symmetric') }}
                 </p>

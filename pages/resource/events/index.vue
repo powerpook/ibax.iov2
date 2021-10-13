@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-09 14:20:53
+ * @LastEditTime: 2021-10-13 18:58:11
  * @Description: ecolibs
 -->
 <template>
@@ -306,13 +306,15 @@ export default {
         where: {},
         limit: 1,
         type: 1,
-        page: 1
+        page: 1,
+        language: 1
       },
       secondParam: {
         where: {},
         limit: 5,
         type: 2,
-        page: 1
+        page: 1,
+        language: 1
       },
       thirdParam: {
         where: {
@@ -320,7 +322,8 @@ export default {
         },
         limit: 9,
         type: 3,
-        page: 1
+        page: 1,
+        language: 1
       }
     };
   },
@@ -348,8 +351,28 @@ export default {
     };
   },
   computed: {},
-  watch: {},
+  watch: {
+    lang() {
+      console.log(this.lang);
+      const langType = this.handleGetLanguage(this.lang);
+      this.langType = langType;
+      this.firstParam.language = langType;
+      this.secondParam.language = langType;
+      this.thirdParam.language = langType;
+      const firstParam = this.firstParam;
+      this.handleEventsfind(firstParam);
+      const secondParam = this.secondParam;
+      this.handleEventsfind(secondParam);
+      const thirdParam = this.thirdParam;
+      this.handleEventsfind(thirdParam);
+    }
+  },
   created() {
+    const langType = this.handleGetLanguage(this.lang);
+    this.langType = langType;
+    this.firstParam.language = langType;
+    this.secondParam.language = langType;
+    this.thirdParam.language = langType;
     const firstParam = this.firstParam;
     this.handleEventsfind(firstParam);
     const secondParam = this.secondParam;
@@ -394,13 +417,17 @@ export default {
       if (params.type === 1) {
         this.arrPageEvents = res.data.rets;
       } else if (params.type === 2) {
-        this.arrFutureEvents = res.data.rets;
-        const obj = this.arrFutureEvents[0];
-        console.log(this.dayjs(obj.start_time).format('LLL'));
-        console.log(this.dayjs());
-        console.log(this.dayjs(obj.stop_time).diff(new Date(), 'hour'));
-        //  console.log(new Date(`${obj.start_time} CST`).getTime());
-        // console.log(JSON.stringify(this.arrFutureEvents));
+        if (res.data.rets.length === 0) {
+          this.arrFutureEvents = [];
+        } else {
+          this.arrFutureEvents = res.data.rets;
+          const obj = this.arrFutureEvents[0];
+          console.log(this.dayjs(obj.start_time).format('LLL'));
+          console.log(this.dayjs());
+          console.log(this.dayjs(obj.stop_time).diff(new Date(), 'hour'));
+          //  console.log(new Date(`${obj.start_time} CST`).getTime());
+          // console.log(JSON.stringify(this.arrFutureEvents));
+        }
       } else if (params.type === 3) {
         this.arrWonderEvents = res.data.rets;
         // console.log(JSON.stringify(this.arrWonderEvents));

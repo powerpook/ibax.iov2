@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 15:01:26
  * @LastEditors: abc
- * @LastEditTime: 2021-09-24 10:27:25
+ * @LastEditTime: 2021-10-13 17:19:17
  * @Description:
 -->
 <template>
@@ -33,8 +33,21 @@
               </div>
             </el-col>
             <!-- mobile nav-->
-            <el-col :xs="23" class="hidden-sm-and-up">
-              <m-nav-page></m-nav-page>
+            <el-col
+              :xs="24"
+              class="hidden-sm-and-up"
+              :class="{
+                'global-fixed': isFixed
+              }"
+            >
+              <div
+                :class="{
+                  'moblie-fiexd-limes': isTop,
+                  'mobile-fixed-white': !isTop
+                }"
+              >
+                <m-nav-page></m-nav-page>
+              </div>
             </el-col>
           </el-row>
         </el-header>

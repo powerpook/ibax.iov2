@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-09-28 16:09:11
  * @LastEditors: abc
- * @LastEditTime: 2021-10-08 18:35:40
+ * @LastEditTime: 2021-10-13 18:41:59
  * @Description: 
 -->
 <template>
@@ -96,22 +96,23 @@
               </div>
             </template>
           </div>
-          <div class="events-email">
-            <h4 class="title-h4">{{ $t('events.follow') }}</h4>
-            <div class="news-select-box">
-              <el-input
-                v-model="email"
-                type="email"
-                clearable
-                :placeholder="$t('events.address')"
-                @keyup.enter.native="handleKeywords"
-              >
-              </el-input>
-            </div>
-            <div class="btn btn-primary">{{ $t('events.now') }}</div>
-          </div>
         </el-col>
       </el-row>
+    </div>
+    <div class="events-email">
+      <h4 class="title-h4">{{ $t('events.follow') }}</h4>
+      <div class="news-select-box">
+        <el-input
+          v-model="obj.email"
+          type="email"
+          clearable
+          :placeholder="$t('events.address')"
+        >
+        </el-input>
+      </div>
+      <div class="btn btn-primary" @click="handleSendEmail">
+        {{ $t('events.now') }}
+      </div>
     </div>
   </div>
 </template>
@@ -134,7 +135,9 @@ export default {
   },
   data() {
     return {
-      email: '',
+      obj: {
+        email: ''
+      },
       arrEvents: []
     };
   },
@@ -168,6 +171,23 @@ export default {
   mounted() {},
   methods: {
     handleKeywords() {},
+    async handleSendEmail() {
+      const params = this.obj;
+      const res = await this.$axios.$post(`/get_email`, params);
+      if (res.code === 0) {
+        this.$message({
+          showClose: true,
+          message: res.message,
+          type: 'success'
+        });
+      } else {
+        this.$message({
+          showClose: true,
+          message: res.message,
+          type: 'warning'
+        });
+      }
+    },
     async handleArrEvents() {
       const res = await this.$axios.$get('/eventsrandow');
       const { data } = res;

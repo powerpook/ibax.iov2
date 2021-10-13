@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 11:00:37
  * @LastEditors: abc
- * @LastEditTime: 2021-10-11 16:39:15
+ * @LastEditTime: 2021-10-13 11:19:23
  * @Description: mobile nav
 -->
 <template>
@@ -117,6 +117,7 @@
           v-for="item in arrSingle"
           :key="item.key"
           :to="item.path"
+          :style="{ color: color }"
           class="m-nav-aside-title-single"
           >{{ $t(item.title) }}</nuxt-link
         >

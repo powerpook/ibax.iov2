@@ -2,14 +2,14 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-09-26 12:19:21
+ * @LastEditTime: 2021-10-13 16:55:01
  * @Description: news
 -->
 <template>
   <div class="news">
     <el-row type="flex" justify="center">
-      <el-col :xs="23" :sm="22" :md="20" :lg="16">
-        <div class="news-header">
+      <el-col :xs="24" :sm="22" :md="20" :lg="16">
+        <div class="news-top">
           <h2 class="news-h2">{{ $t('resourse.news') }}</h2>
           <p>{{ $t('resourse.follow') }}</p>
         </div>
@@ -163,13 +163,16 @@ export default {
           keywords: ''
         },
         page: 1,
-        limit: 9
+        limit: 9,
+        language: 1
       },
       pageParams: {
         total: 0,
         page: 1,
-        limit: 10
+        limit: 10,
+        language: 1
       },
+      langType: 1,
       topParams: {
         where: {
           source: '',
@@ -178,19 +181,35 @@ export default {
         },
         istop: true,
         start_limit: 0,
-        end_limit: 1
+        end_limit: 1,
+        language: 1
       },
       arrNews: [],
       objTop: []
     };
   },
   computed: {},
-  watch: {},
+  watch: {
+    lang() {
+      console.log(this.lang);
+      const langType = this.handleGetLanguage(this.lang);
+      this.langType = langType;
+      this.params.language = langType;
+      this.handleNewsList(this.params);
+      this.topParams.language = langType;
+      this.handleNewsIstop(this.topParams);
+      this.handleNewsource(this.langType);
+    }
+  },
   created() {
-    console.log(this.uploads);
+    console.log(this.lang);
+    const langType = this.handleGetLanguage(this.lang);
+    this.langType = langType;
+    this.params.language = langType;
     this.handleNewsList(this.params);
+    this.topParams.language = langType;
     this.handleNewsIstop(this.topParams);
-    this.handleNewsource();
+    this.handleNewsource(this.langType);
   },
   deactivated() {
     this.domGlobal.removeEventListener('scroll', this.handleScroll);
@@ -225,12 +244,12 @@ export default {
         console.log(JSON.stringify(this.objTop));
       }
     },
-    async handleNewsource() {
-      const res = await this.$axios.$get('/newsource');
+    async handleNewsource(params) {
+      const res = await this.$axios.$get(`/newsource/${params}`);
       const { data } = res;
       if (res.code === 0) {
         this.arrTopics = data.rets;
-        console.log(JSON.stringify(this.arrTopics));
+        // console.log(JSON.stringify(this.arrTopics));
       }
     },
     handleCurrentChange(page) {

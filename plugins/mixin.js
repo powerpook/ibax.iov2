@@ -3,7 +3,7 @@
  * @LastEditors: abc
  * @Description: Vu
  * @Date: 2019-04-12 14:08:12
- * @LastEditTime: 2021-09-26 11:57:04
+ * @LastEditTime: 2021-10-13 16:24:38
  */
 
 import Vue from 'vue';
@@ -79,6 +79,25 @@ Vue.mixin({
     });
   },
   methods: {
+    handleGetLanguage(lang) {
+      // const lang = handleGetLang();
+      let type = 1;
+      switch (lang) {
+        case 'en':
+          type = 1;
+          break;
+        case 'zh':
+          type = 2;
+          break;
+        case 'tw':
+          type = 4;
+          break;
+        default:
+          type = 1;
+          break;
+      }
+      return type;
+    },
     initIsMobile(that) {
       if (process.client) {
         const width = document.body.offsetWidth;

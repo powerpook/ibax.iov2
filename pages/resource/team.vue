@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-10-11 17:29:41
+ * @LastEditTime: 2021-10-13 15:09:40
  * @Description: team
 -->
 <template>
@@ -44,7 +44,7 @@
       :style="{ position: isMobile ? 'static' : 'fixed' }"
     >
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :sm="22" :md="20" :lg="18">
+        <el-col :xs="24" :sm="22" :md="20" :lg="18" class="el-row-wrap">
           <div class="header wow fadeInUp">
             <h3>Who we are</h3>
           </div>
@@ -105,7 +105,7 @@
     </div>
     <div class="team-rate">
       <div class="team-rate-icon wow fadeInUp">
-        <i class="iconfont el-twitter"></i>
+        <i class="iconfont el-GitHub"></i>
       </div>
       <h3 class="wow fadeInUp">{{ $t('resourse.still') }}</h3>
       <div class="team-loop">
@@ -261,17 +261,6 @@ export default {
   props: {},
   data() {
     return {
-      settings: {
-        dots: false,
-        infinite: false,
-        adaptiveHeight: true,
-        initialSlide: 0,
-        speed: 500,
-        arrows: true,
-        slidesToShow: 3,
-        slidesToScroll: 1
-        // swipeToSlide: true
-      },
       arrTeam: [
         {
           img: member1,
@@ -401,7 +390,56 @@ export default {
         singleWidth: 0,
         waitTime: 10
       },
-      iconList: []
+      iconList: [],
+      settings: {
+        variableWidth: true,
+        dots: false,
+        infinite: true,
+        centerMode: true,
+        adaptiveHeight: true,
+        initialSlide: 0,
+        speed: 500,
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        swipe: true,
+        centerPadding: '20px'
+        // swipeToSlide: true
+      },
+      obj: {
+        dots: true,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      }
     };
   },
   computed: {},
@@ -410,6 +448,11 @@ export default {
     this.handleGethubIssues();
   },
   mounted() {
+    if (this.isMobile) {
+      this.settings.slidesToShow = 1;
+    } else {
+      this.settings.slidesToShow = 3;
+    }
     this.$nextTick(() => {
       this.fixed = this.$refs.fixed;
       console.log(this.fixed);
