@@ -4,7 +4,7 @@
     font-size: 84px;
   }
   &-h2 {
-    font-size: 50px;
+    font-size: 48px;
     line-height: 1.127;
   }
   &-h3 {
@@ -166,9 +166,13 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 28px;
+      &-text {
+        width: calc(100% - 55px);
+      }
       &-img {
-        width: 73px;
-        margin-right: 24px;
+        margin-top: 10px;
+        width: 35px;
+        margin-right: 20px;
         text-align: center;
       }
     }

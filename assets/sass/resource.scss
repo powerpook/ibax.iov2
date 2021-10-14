@@ -224,7 +224,9 @@
         align-items: center;
         justify-content: center;
         height: 70px;
+        margin: 0 auto;
         margin-bottom: 12px;
+        width: 135px;
         img {
           max-height: 100%;
           max-width: 100%;
@@ -236,7 +238,7 @@
         flex-wrap: wrap;
         margin: 0 -12px -24px;
       }
-      .card-award li {
+      .card-award-text {
         max-width: 180px;
         margin: 0 auto;
         letter-spacing: -0.03em;

@@ -191,8 +191,8 @@
     }
   }
   .home-new {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   .home-new-img {
     &-earth {
@@ -667,5 +667,122 @@
   }
   .resource-middle-warp {
     padding: 0 30px;
+  }
+  .resource-partners {
+    padding: 50px 30px;
+  }
+  .resource-partners-center {
+    padding-bottom: 50px;
+  }
+  .resource-partners-box-wrap {
+    flex-wrap: wrap;
+    .resource-partners-box-content {
+      flex-wrap: wrap;
+    }
+    .resource-partners-box-left {
+      width: 100%;
+    }
+    .resource-partners-box-left-text {
+      font-size: 16px;
+      border-right: none;
+      padding-right: 0;
+      margin-right: 0;
+    }
+  }
+  .section-impact .impact .data .no {
+    font: 700 55px/1.127 "Apercu Pro", "Helvetica Neue", Helvetica, sans-serif;
+  }
+  .partners-carousel {
+    .el-carousel .el-carousel__container {
+      height: 200px;
+    }
+  }
+  .bass-top {
+    margin-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .bass-top-warp {
+    .el-col {
+      margin-bottom: 30px;
+    }
+  }
+  .bass-top-warp-box {
+    width: calc(100% - 60px);
+    padding: 30px 0 0 0;
+    margin: 30px;
+    bottom: -380px;
+  }
+  .bass-white {
+    padding-top: 200px;
+    padding-bottom: 50px;
+    .el-row-wrap-content {
+      margin-bottom: 30px;
+    }
+    .el-row-wrap-flex {
+      flex-wrap: wrap;
+    }
+    .bass-white-content {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  .bass-white-apply {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .bass-h2 {
+    font-size: 32px;
+  }
+  .bass-h5 {
+    font-size: 18px;
+  }
+  .bass-answer {
+    padding: 50px 30px;
+  }
+  .bass-col-h4 {
+    font-size: 24px;
+  }
+  .bass-center-box {
+    margin-bottom: 18px;
+  }
+  .bass-center-text {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .bass-center-box-img {
+    width: 30px;
+    margin-right: 15px;
+    margin-top: 5px;
+  }
+  .bass-center-box-text {
+    width: calc(100% - 45px);
+  }
+  .bass-center-text {
+    padding-bottom: 30px;
+  }
+  .bass-appeared {
+    padding: 87px 30px 20px;
+  }
+  .bass-list {
+    column-gap: 24px;
+    row-gap: 42px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .bass-case {
+    padding: 64px 0 44px;
+  }
+  .bass-case-box-item {
+    flex: auto;
+    width: 100%;
+  }
+  .bass-case-box {
+    flex-wrap: wrap;
+  }
+  .bass-case-box-item:not(.bass-case-box-item:last-child) {
+    margin-right: 0;
+  }
+  .bass-case-box-item .link {
+    bottom: 0;
   }
 }

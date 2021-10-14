@@ -2,20 +2,25 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-09-24 17:15:46
+ * @LastEditTime: 2021-10-14 16:51:25
  * @Description: ecolibs
 -->
 <template>
   <div class="other">
     <el-row type="flex" justify="center">
-      <el-col :xs="23" :sm="22" :md="20" :lg="18">
+      <el-col :xs="24" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="18">
+          <el-row
+            type="flex"
+            justify="space-between"
+            align="middle"
+            class="el-row-wrap"
+          >
+            <el-col :xs="24" :lg="18">
               <h6 class="global-h6 animated fadeInUp">
                 {{ $t('market.reward') }}
               </h6>
-              <h3 class="global-h3 animated fadeInUp">
+              <h3 class="title-h3 animated fadeInUp">
                 {{ $t('market.colorful') }}
               </h3>
               <p class="home-new-p animated fadeInUp">
@@ -36,14 +41,14 @@
         </div>
       </el-col>
     </el-row>
-    <div clsss="bass-center">
+    <div class="bass-center">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :sm="22" :md="20" :lg="18">
+        <el-col :xs="24" :sm="22" :md="20" :lg="18" class="el-row-wrap">
           <el-row type="flex" justify="space-between" style="flex-wrap: wrap">
             <el-col
               v-for="(item, index) in arrHeading"
               :key="index"
-              :xs="23"
+              :xs="24"
               :lg="10"
             >
               <div class="bass-center-box">
@@ -70,7 +75,7 @@
     </div>
     <div class="bass-appeared">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :sm="22" :md="20" :lg="18">
+        <el-col :xs="24" :sm="22" :md="20" :lg="18">
           <ul class="bass-list">
             <li v-for="(item, index) in arrImg" :key="index">
               <img
@@ -85,22 +90,27 @@
     </div>
     <div class="media-b" style="background: #fcfcfc">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="8">
-                <h3 class="global-h3 wow fadeInUp">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="8">
+                <h3 class="title-h3 wow fadeInUp">
                   {{ $t('market.creative') }}
                 </h3>
                 <p class="wow fadeInUp">
                   {{ $t('market.ideas') }}
                 </p>
               </el-col>
-              <el-col :xs="23" :lg="10">
+              <el-col :xs="24" :lg="10">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/illustration.svg"
-                    mode="powerful"
+                    src="@/assets/images/ecolibs-application.jpg"
+                    mode="ecolibs-application"
                   />
                 </div>
               </el-col>
@@ -113,16 +123,21 @@
       <el-row type="flex" justify="center">
         <el-col :xs="23" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="12">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="12" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/boost-funnel-performance.png"
-                    mode="powerful"
+                    src="@/assets/images/ecolibs-furtrue.jpg"
+                    alt="ecolibs-furtrue"
                   />
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="8">
+              <el-col :xs="24" :lg="8">
                 <h2 class="bass-h2 wow fadeInUp">
                   {{ $t('market.ecological') }}
                 </h2>
@@ -130,14 +145,28 @@
                   {{ $t('market.development') }}
                 </p>
               </el-col>
+              <el-col :xs="24" :lg="12" class="hidden-sm-and-up">
+                <div class="home-new-img wow fadeInUp">
+                  <img
+                    src="@/assets/images/ecolibs-furtrue.jpg"
+                    alt="ecolibs-furtrue"
+                  />
+                </div>
+              </el-col>
             </el-row>
           </div>
         </el-col>
       </el-row>
     </div>
     <div class="mdeia media-a">
-      <el-row type="flex" justify="center" style="padding-bottom: 100px">
-        <el-col :xs="23" :lg="12">
+      <el-row
+        type="flex"
+        justify="center"
+        :style="{
+          'padding-bottom': isMobile ? '0' : '100px'
+        }"
+      >
+        <el-col :xs="24" :lg="12" class="el-row-wrap">
           <h2 class="bass-h2 wow fadeInUp">
             <a
               href="https://weaver.ibax.io"
@@ -167,22 +196,27 @@
     </div>
     <div class="media-b" style="background: #fcfcfc">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="8">
-                <h3 class="global-h3 wow fadeInUp">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="8">
+                <h3 class="title-h3 wow fadeInUp">
                   {{ $t('market.rewards') }}
                 </h3>
                 <p class="wow fadeInUp">
                   {{ $t('market.order') }}
                 </p>
               </el-col>
-              <el-col :xs="23" :lg="10">
+              <el-col :xs="24" :lg="10">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/ship-features-that-move-the-needle.png"
-                    mode="powerful"
+                    src="@/assets/images/ecolibs-corn.jpg"
+                    alt="ecolibs-corn"
                   />
                 </div>
               </el-col>
@@ -193,48 +227,63 @@
     </div>
     <div class="media-b">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="home-new">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="12">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="12" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/scale-illustration.svg"
-                    mode="powerful"
+                    src="@/assets/images/ecolibs-tearm.jpg"
+                    alt="ecolibs-tearm"
                   />
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="8">
+              <el-col :xs="24" :lg="8">
                 <h2 class="bass-h2 wow fadeInUp">{{ $t('market.team') }}</h2>
                 <p class="wow fadeInUp">
                   {{ $t('market.have') }}
                 </p>
+              </el-col>
+              <el-col :xs="24" :lg="12" class="hidden-sm-and-up">
+                <div class="home-new-img wow fadeInUp">
+                  <img
+                    src="@/assets/images/ecolibs-tearm.jpg"
+                    alt="ecolibs-tearm"
+                  />
+                </div>
               </el-col>
             </el-row>
           </div>
         </el-col>
       </el-row>
     </div>
-    <div class="mdeia media-a" style="padding-bottom: 100px">
-      <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="14">
+    <div
+      class="mdeia media-a"
+      :style="{
+        'padding-bottom': isMobile ? '0' : '100px'
+      }"
+    >
+      <el-row type="flex" justify="center" class="el-row-wrap">
+        <el-col :xs="24" :lg="14">
           <h2 class="bass-h2 wow fadeInUp">{{ $t('market.excellent') }}</h2>
           <p class="wow fadeInUp">
             {{ $t('market.exploring') }}
           </p>
           <div class="media-a-img wow fadeInUp">
-            <img
-              src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/find-and-fix-drivers-of-churn.png"
-              alt="retention-report-1"
-            />
+            <img src="@/assets/images/ecolibs-nice.jpg" alt="ecolibs-nice" />
           </div>
         </el-col>
       </el-row>
     </div>
     <div id="much" class="bass-case">
-      <el-row type="flex" justify="center" align="middle">
-        <el-col :xs="23" :lg="18">
-          <h3 class="global-h3 wow fadeInUp">{{ $t('market.much') }}</h3>
+      <el-row type="flex" justify="center" align="middle" class="el-row-wrap">
+        <el-col :xs="24" :lg="18">
+          <h3 class="title-h3 wow fadeInUp">{{ $t('market.much') }}</h3>
           <div class="bass-case-box">
             <div
               v-for="(item, index) in arrCase"
@@ -281,6 +330,9 @@
   </div>
 </template>
 <script>
+const img1 = require('../../assets/images/ecolibs-case.jpg');
+const img2 = require('../../assets/images/ecolibs-weaver.jpg');
+const img3 = require('../../assets/images/ecolibs-chat.jpg');
 export default {
   props: {},
   data() {
@@ -342,21 +394,21 @@ export default {
       arrCase: [
         {
           url: 'https://github.com/orgs/IBAX-io/repositories',
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/02/Preview-Image-1-2-1024x613.png',
+          img: img1,
           title: 'market.eco',
           content: 'market.based',
           small: 'market.download'
         },
         {
           url: 'https://weaver.ibax.io/',
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/02/Preview-Image-1-2-1024x613.png',
+          img: img2,
           title: 'market.management',
           content: 'market.Weaver',
           small: 'home.using'
         },
         {
           url: 'https://weaver.ibax.io/',
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/02/Preview-Image-1-2-1024x613.png',
+          img: img3,
           title: 'market.information',
           content: 'market.tool',
           small: 'market.learn'

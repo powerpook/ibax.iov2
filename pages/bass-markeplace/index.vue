@@ -2,23 +2,23 @@
  * @Author: abc
  * @Date: 2021-08-19 12:24:26
  * @LastEditors: abc
- * @LastEditTime: 2021-09-28 16:06:25
+ * @LastEditTime: 2021-10-14 15:14:08
  * @Description: 
 -->
 <template>
   <div class="bass">
     <div id="anyone" style="background: #274235">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :sm="22" :md="20" :lg="18">
+        <el-col :xs="24" :sm="22" :md="20" :lg="18">
           <div class="bass-top">
             <div class="bass-top-text animated fadeInUp">
               {{ $t('bass.anyone') }}
             </div>
-            <h1 class="bass-h1 animated fadeInUp">{{ $t('bass.create') }}</h1>
+            <h1 class="title-h1 animated fadeInUp">{{ $t('bass.create') }}</h1>
           </div>
           <div class="bass-top-warp">
-            <el-row type="flex" justify="space-between">
-              <el-col :xs="23" :lg="7">
+            <el-row type="flex" justify="space-between" class="el-row-wrap">
+              <el-col :xs="24" :lg="7">
                 <div class="bass-top-box">
                   <div class="bass-top-box-title">
                     <span class="animated fadeInUp">{{
@@ -63,7 +63,7 @@
                   </div>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="7">
+              <el-col :xs="24" :lg="7">
                 <div class="bass-top-box">
                   <div class="bass-top-box-title">
                     <span class="animated fadeInUp">{{
@@ -109,7 +109,7 @@
                   </div>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="7">
+              <el-col :xs="24" :lg="7">
                 <div class="bass-top-box">
                   <div class="bass-top-box-title">
                     <span>{{ $t('bass.smart') }}</span>
@@ -155,9 +155,14 @@
               </el-col>
             </el-row>
             <div class="bass-top-warp-box">
-              <el-row type="flex" justify="space-between" align="middle">
+              <el-row
+                type="flex"
+                justify="space-between"
+                align="middle"
+                class="el-row-wrap"
+              >
                 <el-col :xs="23" :lg="17">
-                  <h4 class="bass-h4 wow fadeInUp">
+                  <h4 class="title-h4 wow fadeInUp">
                     {{ $t('bass.incentive') }}
                   </h4>
                   <div class="wow fadeInUp">
@@ -179,15 +184,19 @@
     </div>
     <div id="what" class="bass-white">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="bass-white-content">
             <strong class="block-title lg wow fadeInUp">{{
               $t('bass.what')
             }}</strong>
-            <h2 class="bass-h2 wow fadeInUp">{{ $t('bass.how') }}</h2>
+            <h2 class="title-h2 wow fadeInUp">{{ $t('bass.how') }}</h2>
             <p class="wow fadeInUp">{{ $t('bass.materials') }}</p>
-            <el-row type="flex" justify="space-between">
-              <el-col :xs="23" :lg="11">
+            <el-row
+              type="flex"
+              justify="space-between"
+              class="el-row-wrap-flex"
+            >
+              <el-col :xs="24" :lg="11" class="el-row-wrap-content">
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
                     <h4 class="bass-white-title wow fadeInUp">
@@ -204,7 +213,7 @@
                   </div>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="11">
+              <el-col :xs="24" :lg="11" class="el-row-wrap-content">
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
                     <h4 class="bass-white-title wow fadeInUp">
@@ -222,9 +231,15 @@
             </el-row>
           </div>
           <div id="application" class="bass-white-apply">
-            <h2 class="bass-h2 wow fadeInUp">{{ $t('market.application') }}</h2>
-            <el-row type="flex" justify="space-between">
-              <el-col :xs="23" :lg="7">
+            <h2 class="title-h2 wow fadeInUp">
+              {{ $t('market.application') }}
+            </h2>
+            <el-row
+              type="flex"
+              justify="space-between"
+              class="el-row-wrap-flex"
+            >
+              <el-col :xs="24" :lg="7">
                 <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.token') }}</h5>
@@ -233,7 +248,7 @@
                   </p>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="7">
+              <el-col :xs="24" :lg="7">
                 <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.point') }}</h5>
@@ -242,7 +257,7 @@
                   </p>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="7">
+              <el-col :xs="24" :lg="7">
                 <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.vote') }}</h5>
@@ -252,8 +267,12 @@
                 </div>
               </el-col>
             </el-row>
-            <el-row type="flex" justify="space-between">
-              <el-col :xs="23" :lg="7">
+            <el-row
+              type="flex"
+              justify="space-between"
+              class="el-row-wrap-flex"
+            >
+              <el-col :xs="24" :lg="7">
                 <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.supply') }}</h5>
@@ -262,7 +281,7 @@
                   </p>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="7">
+              <el-col :xs="24" :lg="7">
                 <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.defi') }}</h5>
@@ -271,7 +290,7 @@
                   </p>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="7">
+              <el-col :xs="24" :lg="7">
                 <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.member') }}</h5>
@@ -281,8 +300,12 @@
                 </div>
               </el-col>
             </el-row>
-            <el-row type="flex" justify="space-between">
-              <el-col :xs="23" :lg="7">
+            <el-row
+              type="flex"
+              justify="space-between"
+              class="el-row-wrap-flex"
+            >
+              <el-col :xs="24" :lg="7">
                 <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.network') }}</h5>
@@ -291,7 +314,7 @@
                   </p>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="7">
+              <el-col :xs="24" :lg="7">
                 <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.cyber') }}</h5>
@@ -300,7 +323,7 @@
                   </p>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="7">
+              <el-col :xs="24" :lg="7">
                 <div class="bass-white-three wow fadeInUp">
                   <div class="bass-white-three-icon"></div>
                   <h5 class="bass-h5">{{ $t('market.decentralized') }}</h5>
@@ -316,8 +339,8 @@
     </div>
     <div id="asked" class="bass-answer">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
-          <h2 class="bass-h2 wow fadeInUp">{{ $t('market.asked') }}</h2>
+        <el-col :xs="24" :lg="18">
+          <h2 class="title-h2 wow fadeInUp">{{ $t('market.asked') }}</h2>
           <h6 class="home-new-bottom wow fadeInUp">
             <span>{{ $t('market.more') }}</span>
             <i class="el-icon-right"></i>
@@ -326,7 +349,7 @@
             <el-col
               v-for="(item, index) in arrAsked"
               :key="index"
-              :xs="23"
+              :xs="24"
               :lg="11"
               class="bass-col"
             >

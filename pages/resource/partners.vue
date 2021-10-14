@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:43:39
  * @LastEditors: abc
- * @LastEditTime: 2021-10-14 11:36:17
+ * @LastEditTime: 2021-10-14 12:26:13
  * @Description: video resources
 -->
 <template>
@@ -189,9 +189,9 @@
       </el-row>
     </div>
     <div class="resource-partners">
-      <div class="resource-partners-center">
+      <div class="resource-partners-center" style="display: none">
         <el-row type="flex" justify="center">
-          <el-col :xs="23" :sm="22" :md="12" :lg="10">
+          <el-col :xs="24" :sm="22" :md="12" :lg="10">
             <div class="resource-top">
               <h4 class="bass-h4 wow fadeInUp">{{ $t('resourse.name') }}</h4>
               <p class="wow fadeInUp">
@@ -219,7 +219,7 @@
       </div>
       <div class="resource-partners-center">
         <el-row type="flex" justify="center">
-          <el-col :xs="23" :sm="22" :md="12" :lg="10">
+          <el-col :xs="24" :sm="22" :md="12" :lg="10">
             <div class="resource-top">
               <div class="intro-head wow fadeInUp">
                 <div class="home-new-title">
@@ -227,7 +227,7 @@
                   <span>{{ $t('resourse.advantage') }}</span>
                 </div>
               </div>
-              <h3 class="bass-h3 wow fadeInUp">{{ $t('resourse.gain') }}</h3>
+              <h3 class="title-h3 wow fadeInUp">{{ $t('resourse.gain') }}</h3>
               <p class="wow fadeInUp">
                 {{ $t('resourse.problems') }}
               </p>
@@ -237,12 +237,17 @@
       </div>
       <div class="resource-partners-box">
         <el-row type="flex" justify="center">
-          <el-col :xs="23" :sm="22" :md="20" :lg="18">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="11">
+          <el-col :xs="24" :sm="22" :md="20" :lg="18">
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="resource-partners-box-wrap"
+            >
+              <el-col :xs="24" :lg="11">
                 <div class="resource-partners-box-content">
                   <div class="resource-partners-box-left">
-                    <h4 class="bass-h4 wow fadeInUp">
+                    <h4 class="title-h4 wow fadeInUp">
                       {{ $t('resourse.threshold') }}
                     </h4>
                     <p class="resource-partners-box-left-text wow fadeInUp">
@@ -263,10 +268,10 @@
                   </div>
                 </div>
               </el-col>
-              <el-col :xs="23" :lg="11">
+              <el-col :xs="24" :lg="11">
                 <div class="resource-partners-box-content">
                   <div class="resource-partners-box-left">
-                    <h4 class="bass-h4 wow fadeInUp">
+                    <h4 class="title-h4 wow fadeInUp">
                       {{ $t('resourse.cost') }}
                     </h4>
                     <p class="resource-partners-box-left-text wow fadeInUp">
@@ -288,80 +293,44 @@
                 </div>
               </el-col>
             </el-row>
-            <div id="accolades" class="container">
+            <div v-if="!isMobile" id="accolades" class="container">
               <h5 class="bass-h5 wow fadeInUp">{{ $t('feature.awards') }}</h5>
               <ul class="list">
-                <li>
+                <li v-for="(item, index) in arrAward" :key="index">
                   <div class="card-award wow fadeInUp">
                     <div class="logo">
-                      <img
-                        src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/02/logo-combinator-2.png"
-                        class=""
-                        width="134"
-                        alt=""
-                      />
+                      <img :src="item.img" width="134" alt="partners" />
                     </div>
-                    <ul>
-                      <li class="wow fadeInUp">Top Companies List, 2021</li>
-                    </ul>
-                  </div>
-                </li>
-                <li
-                  data-transition-delay="0.15s"
-                  style="transition-delay: 0.15s"
-                >
-                  <div class="card-award wow fadeInUp">
-                    <div class="logo">
-                      <img
-                        src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/g2-crowd@2x.png"
-                        class=""
-                        width="118"
-                        alt=""
-                      />
+                    <div class="card-award-text wow fadeInUp">
+                      {{ item.text }}
                     </div>
-                    <ul>
-                      <li class="wow fadeInUp">
-                        Top Rated Analytics Solution, 2021
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li data-transition-delay="0.3s" style="transition-delay: 0.3s">
-                  <div class="card-award wow fadeInUp">
-                    <div class="logo">
-                      <img
-                        src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/SASCS19_Gold_Winner-1.svg"
-                        class=""
-                        width="118"
-                        alt=""
-                      />
-                    </div>
-                    <ul>
-                      <li class="wow fadeInUp">
-                        Customer Service Department of the Year
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div class="card-award wow fadeInUp">
-                    <div class="logo">
-                      <img
-                        src="https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/trust-radius-logo@2x.png"
-                        class=""
-                        width="54"
-                        alt=""
-                      />
-                    </div>
-                    <ul>
-                      <li class="wow fadeInUp">
-                        Top Rated Web Analytics Tools for 2019
-                      </li>
-                    </ul>
                   </div>
                 </li>
               </ul>
             </div>
+            <!-- moblie -->
+            <template v-else>
+              <div id="accolades" class="partners-carousel">
+                <h4 class="global-h4">{{ $t('feature.about') }}</h4>
+                <client-only>
+                  <el-carousel indicator-position="outside" arrow="never">
+                    <el-carousel-item
+                      v-for="(item, index) in arrAward"
+                      :key="index"
+                    >
+                      <div class="card-award wow fadeInUp">
+                        <div class="logo">
+                          <img :src="item.img" width="134" alt="partners" />
+                        </div>
+                        <div class="card-award-text wow fadeInUp">
+                          {{ item.text }}
+                        </div>
+                      </div>
+                    </el-carousel-item>
+                  </el-carousel>
+                </client-only>
+              </div>
+            </template>
           </el-col>
         </el-row>
       </div>
@@ -381,7 +350,25 @@ export default {
         text: 'nav.about',
         label: 'footer.compete',
         title: 'footer.creative'
-      }
+      },
+      arrAward: [
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/g2-crowd@2x.png',
+          text: ' Top Rated Analytics Solution, 2021'
+        },
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/g2-crowd@2x.png',
+          text: ' Top Rated Analytics Solution, 2021'
+        },
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/g2-crowd@2x.png',
+          text: ' Top Rated Analytics Solution, 2021'
+        },
+        {
+          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/g2-crowd@2x.png',
+          text: ' Top Rated Analytics Solution, 2021'
+        }
+      ]
     };
   },
   computed: {},

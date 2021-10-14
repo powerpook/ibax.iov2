@@ -3,6 +3,7 @@
   color: #626262;
   min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   &-left {
     width: 50%;
     background-color: #fcfcfc;
@@ -57,9 +58,9 @@
       }
       .award-list .logo-hold {
         margin-right: 11px;
-        img {
-          display: block;
-          width: 30px;
+        .iconfont {
+          color: #1f1f24;
+          font-size: 30px;
         }
       }
       .award-list .caption {
@@ -83,10 +84,9 @@
       .logo-row .logo-list a {
         padding: 0 15px;
         margin-bottom: 30px;
-        img {
-          border: 0;
-          width: 30px;
-          height: auto;
+        .iconfont {
+          color: #1f1f24;
+          font-size: 30px;
         }
       }
     }

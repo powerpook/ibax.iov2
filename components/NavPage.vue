@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 10:59:52
  * @LastEditors: abc
- * @LastEditTime: 2021-10-08 12:12:39
+ * @LastEditTime: 2021-10-14 15:20:11
  * @Description: nav
 -->
 <template>
@@ -392,6 +392,8 @@ export default {
           this.activeIndex = '/resource/news';
         } else if (name === 'resource-events-id') {
           this.activeIndex = '/resource/events';
+        } else if (name === 'bass-markeplace-ecolibs') {
+          this.activeIndex = '/bass-markeplace';
         } else {
           this.activeIndex = this.$route.path;
         }

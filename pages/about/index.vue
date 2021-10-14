@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 17:50:10
  * @LastEditors: abc
- * @LastEditTime: 2021-09-28 12:05:16
+ * @LastEditTime: 2021-10-14 19:02:51
  * @Description: conact us
 -->
 <template>
@@ -43,13 +43,13 @@
         <ul class="award-list">
           <a href="https://www.facebook.com/IBAXNetwork" target="_blank">
             <div class="logo-hold">
-              <img src="@/assets/logo/facebook.svg" width="30" alt="facebook" />
+              <i class="iconfont el-facebook"></i>
             </div>
             <span class="caption">{{ $t('about.our') }}</span>
           </a>
           <a href="https://twitter.com/IbaxNetwork" target="_blank">
             <div class="logo-hold">
-              <img src="@/assets/logo/twitter.svg" width="30" alt="twitter" />
+              <i class="iconfont el-twitter"></i>
             </div>
             <span class="caption">{{ $t('about.events') }}</span>
           </a>
@@ -58,19 +58,28 @@
             target="_blank"
           >
             <div class="logo-hold">
-              <img src="@/assets/logo/youtube.svg" width="30" alt="youtube" />
+              <i class="iconfont el-youtube"></i>
             </div>
             <span class="caption">{{ $t('about.an') }}</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/68016504/admin/"
+            target="_blank"
+          >
+            <div class="logo-hold">
+              <i class="iconfont el-linkedin"></i>
+            </div>
+            <span class="caption">{{ $t('about.follow') }}</span>
           </a>
         </ul>
         <div class="logo-row">
           <span class="title">{{ $t('about.you') }}</span>
           <ul class="logo-list">
             <a href="https://t.me/IBAXNetwork" target="_blank">
-              <img src="@/assets/logo/telegram.svg" width="40" alt="telegram" />
+              <i class="iconfont el-telegram"></i>
             </a>
             <a href="https://discord.gg/zRX6Mwafya" target="_blank">
-              <img src="@/assets/logo/discord.svg" width="40" alt="discord" />
+              <i class="iconfont el-discord"></i>
             </a>
           </ul>
         </div>
