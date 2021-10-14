@@ -2,22 +2,27 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-13 18:58:11
+ * @LastEditTime: 2021-10-14 10:30:23
  * @Description: ecolibs
 -->
 <template>
   <div class="events">
     <el-row type="flex" justify="center">
-      <el-col :xs="23" :sm="22" :md="20" :lg="18">
+      <el-col :xs="24" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="18">
-              <h6 class="global-h6 animated fadeInUp">
+          <el-row
+            type="flex"
+            justify="space-between"
+            align="middle"
+            class="el-row-wrap"
+          >
+            <el-col :xs="24" :lg="18">
+              <p class="home-new-text animated fadeInUp">
                 {{ $t('events.urge') }}
-              </h6>
-              <h3 class="global-h3 animated fadeInUp">
+              </p>
+              <h2 class="title-h2 animated fadeInUp">
                 {{ $t('events.center') }}
-              </h3>
+              </h2>
               <p class="home-new-p animated fadeInUp">
                 {{ $t('events.new') }}
               </p>
@@ -36,7 +41,7 @@
     </div>
     <div class="media-a">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div v-if="arrPageEvents.length === 0" class="news-no">
             {{ $t('resourse.no') }}
           </div>
@@ -46,8 +51,13 @@
               :key="item.id"
               class="events-new"
             >
-              <el-row type="flex" justify="space-between" align="middle">
-                <el-col :xs="23" :lg="14">
+              <el-row
+                type="flex"
+                justify="space-between"
+                align="middle"
+                class="el-row-wrap"
+              >
+                <el-col :xs="24" :lg="14">
                   <div class="home-new-img wow fadeInUp">
                     <img :src="item.icon" alt="events" />
                   </div>
@@ -127,7 +137,7 @@
     </div>
     <div class="media-b">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="events-data">
             <div class="events-data-top">
               <strong class="events-test-title wow fadeInUp">{{
@@ -177,8 +187,11 @@
                     </div>
                   </div>
                   <div class="col-r">
-                    <span class="btn btn-primary_bordered"
-                      >{{ $t('market.learn') }}
+                    <span v-if="isMobile" class="col-r-learn">
+                      {{ $t('market.learn') }} <i class="el-icon-right"></i>
+                    </span>
+                    <span v-else class="btn btn-primary_bordered">
+                      {{ $t('market.learn') }}
                     </span>
                   </div>
                 </nuxt-link>
@@ -190,7 +203,7 @@
     </div>
     <div class="media-a">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :lg="18">
+        <el-col :xs="24" :lg="18">
           <div class="events-more">
             <strong class="events-test-title wow fadeInUp">{{
               $t('events.more')

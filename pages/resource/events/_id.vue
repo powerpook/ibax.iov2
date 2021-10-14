@@ -2,16 +2,21 @@
  * @Author: abc
  * @Date: 2021-09-28 16:09:11
  * @LastEditors: abc
- * @LastEditTime: 2021-10-13 18:41:59
+ * @LastEditTime: 2021-10-14 10:59:19
  * @Description: 
 -->
 <template>
-  <div class="events">
+  <div id="marvellous" class="events">
     <el-row type="flex" justify="center">
-      <el-col :xs="23" :sm="22" :md="20" :lg="18">
+      <el-col :xs="24" :sm="22" :md="20" :lg="18">
         <div class="home-new">
-          <el-row type="flex" justify="space-between" align="middle">
-            <el-col :xs="23" :lg="10">
+          <el-row
+            type="flex"
+            justify="space-between"
+            align="middle"
+            class="el-row-wrap"
+          >
+            <el-col :xs="24" :lg="10">
               <strong class="block-title animated fadeInUp">
                 {{
                   objEvents.type === 1
@@ -39,7 +44,7 @@
                 {{ objEvents.introduction }}
               </p>
             </el-col>
-            <el-col :xs="23" :lg="10">
+            <el-col :xs="24" :lg="10">
               <div class="home-new-img">
                 <img :src="objEvents.icon" mode="powerful" />
               </div>
@@ -57,7 +62,6 @@
           </div>
           <strong class="events-test-title">{{ $t('events.much') }}</strong>
           <h2 class="news-articles-h2">{{ $t('events.content') }}</h2>
-
           <div class="events-more-content">
             <div v-if="arrEvents.length === 0" class="news-no wow fadeInUp">
               {{ $t('resourse.no') }}
@@ -138,7 +142,8 @@ export default {
       obj: {
         email: ''
       },
-      arrEvents: []
+      arrEvents: [],
+      langType: 1
     };
   },
   head() {
@@ -166,11 +171,42 @@ export default {
   computed: {},
   watch: {},
   created() {
-    this.handleArrEvents();
+    const langType = this.handleGetLanguage(this.lang);
+    this.langType = langType;
+    this.handleArrEvents(this.langType);
   },
-  mounted() {},
+  mounted() {
+    this.$nextTick(() => {
+      this.numArchite =
+        document.getElementById('marvellous').getBoundingClientRect().bottom -
+        105;
+      console.log(this.numArchite);
+      if (this.numArchite) {
+        this.domGlobal.addEventListener('scroll', () => {
+          this.handleThrottle(this.handleAlwaysScroll, 100);
+        });
+      }
+    });
+  },
   methods: {
     handleKeywords() {},
+    handleAlwaysScroll() {
+      const scrollTop = this.domGlobal.scrollTop;
+      const topHeight = document.getElementById('headerTop').offsetTop;
+      const isFixed = scrollTop > topHeight;
+      this.$store.commit('handleIsFixed', isFixed);
+      if (scrollTop >= this.numArchite) {
+        const obj = { headerColor: '#fff', color: '#37383c' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'news--horizontal');
+        this.$store.commit('handleIsTop', false);
+      } else {
+        const obj = { headerColor: '#274235', color: '#fff' };
+        this.$store.commit('handleChangeColor', obj);
+        this.$store.commit('handleChangeClass', 'subMenu--horizontal');
+        this.$store.commit('handleIsTop', true);
+      }
+    },
     async handleSendEmail() {
       const params = this.obj;
       const res = await this.$axios.$post(`/get_email`, params);
@@ -188,8 +224,8 @@ export default {
         });
       }
     },
-    async handleArrEvents() {
-      const res = await this.$axios.$get('/eventsrandow');
+    async handleArrEvents(params) {
+      const res = await this.$axios.$get(`/eventsrandow/${params}`);
       const { data } = res;
       if (res.code === 0) {
         this.arrEvents = data.rets;

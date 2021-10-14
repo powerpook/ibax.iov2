@@ -2,21 +2,27 @@
  * @Author: abc
  * @Date: 2021-08-24 16:43:39
  * @LastEditors: abc
- * @LastEditTime: 2021-10-12 10:25:00
+ * @LastEditTime: 2021-10-14 11:36:17
  * @Description: video resources
 -->
 <template>
   <div class="resource">
     <el-row type="flex" justify="center">
-      <el-col :xs="23" :sm="22" :md="20" :lg="18">
+      <el-col :xs="24" :sm="22" :md="20" :lg="18">
         <div class="resource-video">
-          <el-row type="flex" justify="space-between">
-            <el-col :xs="23" :lg="8">
+          <el-row
+            type="flex"
+            justify="space-between"
+            class="hidden-sm-and-down"
+          >
+            <el-col :xs="24" :lg="8">
               <div class="resource-top">
                 <strong class="resource-box-btn wow fadeInUp">{{
                   $t('resourse.case')
                 }}</strong>
-                <h2 class="bass-h2 wow fadeInUp">{{ $t('resourse.gains') }}</h2>
+                <h2 class="title-h2 wow fadeInUp">
+                  {{ $t('resourse.gains') }}
+                </h2>
                 <p class="wow fadeInUp">
                   {{ $t('resourse.used') }}
                 </p>
@@ -37,8 +43,33 @@
               </div>
             </el-col>
           </el-row>
+          <div class="resource-video-mobile hidden-sm-and-up">
+            <div class="resource-top">
+              <strong class="resource-box-btn wow fadeInUp">{{
+                $t('resourse.case')
+              }}</strong>
+              <h2 class="title-h2 wow fadeInUp">
+                {{ $t('resourse.gains') }}
+              </h2>
+              <div class="resource-img wow fadeInUp">
+                <img
+                  class="resource-img-right"
+                  src="../../assets/image/Screen-Shot-2020-02-14-at-1.37.04-PM.png"
+                  mode="powerful"
+                />
+              </div>
+              <p class="wow fadeInUp">
+                {{ $t('resourse.used') }}
+              </p>
+              <div class="resource-top-bottom wow fadeInUp">
+                <button class="btn btn-primary">
+                  {{ $t('resourse.story') }}
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        <div id="excellent" class="resource-video">
+        <div id="excellent" class="resource-video el-row-wrap">
           <div class="resource-partners-title wow fadeInUp">
             {{ $t('resourse.excellent') }}
           </div>
@@ -101,13 +132,20 @@
     </el-row>
     <div class="resource-page">
       <el-row type="flex" justify="center">
-        <el-col :xs="23" :sm="22" :md="20" :lg="18">
+        <el-col :xs="24" :sm="22" :md="20" :lg="18">
           <div class="resource-middle-top">
-            <el-row type="flex" justify="space-between" align="middle">
-              <el-col :xs="23" :lg="10">
-                <h2 class="bass-h3 wow fadeInUp">{{ $t('resourse.learn') }}</h2>
+            <el-row
+              type="flex"
+              justify="space-between"
+              align="middle"
+              class="el-row-wrap"
+            >
+              <el-col :xs="24" :lg="10">
+                <h2 class="title-h3 wow fadeInUp">
+                  {{ $t('resourse.learn') }}
+                </h2>
               </el-col>
-              <el-col :xs="23" :lg="12">
+              <el-col :xs="24" :lg="12">
                 <span class="wow fadeInUp">{{
                   $t('resourse.compatible')
                 }}</span>
@@ -120,7 +158,7 @@
             align="top"
             class="resource-middle-warp"
           >
-            <el-col v-for="i in 9" :key="i" :xs="23" :lg="7">
+            <el-col v-for="i in 9" :key="i" :xs="24" :lg="7">
               <div class="resource-middle-body">
                 <div class="resource-img wow fadeInUp">
                   <img
