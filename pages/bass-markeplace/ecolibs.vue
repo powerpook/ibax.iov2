@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-14 16:51:25
+ * @LastEditTime: 2021-10-15 11:28:03
  * @Description: ecolibs
 -->
 <template>
@@ -444,16 +444,9 @@ export default {
   created() {},
   mounted() {
     this.$nextTick(() => {
-      this.numArchite =
-        document.getElementById('img').getBoundingClientRect().bottom - 105;
-      console.log(this.numArchite);
-      this.numArchiteBottom =
-        document.getElementById('much').getBoundingClientRect().bottom - 105;
-      if (this.numArchite) {
-        this.domGlobal.addEventListener('scroll', () => {
-          this.handleThrottle(this.handleAlwaysScroll, 100);
-        });
-      }
+      this.domGlobal.addEventListener('scroll', () => {
+        this.handleThrottle(this.handleAlwaysScroll, 100);
+      });
     });
   },
   methods: {
@@ -462,12 +455,19 @@ export default {
       const topHeight = document.getElementById('headerTop').offsetTop;
       const isFixed = scrollTop > topHeight;
       this.$store.commit('handleIsFixed', isFixed);
-      if (scrollTop >= this.numArchite && scrollTop < this.numArchiteBottom) {
+      this.numArchite = document
+        .getElementById('img')
+        .getBoundingClientRect().bottom;
+      console.log(this.numArchite);
+      this.numArchiteBottom = document
+        .getElementById('much')
+        .getBoundingClientRect().bottom;
+      if (this.numArchite <= 0 && this.numArchiteBottom > 0) {
         const obj = { headerColor: '#fff', color: '#37383c' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'news--horizontal');
         this.$store.commit('handleIsTop', false);
-      } else if (scrollTop >= this.numArchiteBottom) {
+      } else if (this.numArchiteBottom <= 0) {
         const obj = { headerColor: '#274235', color: '#fff' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'subMenu--horizontal');

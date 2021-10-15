@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-10-13 15:09:40
+ * @LastEditTime: 2021-10-15 10:03:11
  * @Description: team
 -->
 <template>
@@ -264,32 +264,32 @@ export default {
       arrTeam: [
         {
           img: member1,
-          name: 'Scotland',
+          name: 'UK',
           label: 'Clifford G.Gordon',
           des: 'resourse.developer'
         },
         {
           img: member2,
           name: 'Singapore',
-          label: 'Leslie J. Otero',
+          label: 'RenRan Chen',
           des: 'resourse.designer'
         },
         {
           img: member3,
           name: 'Australia',
-          label: 'Leslie J. Otero',
+          label: 'Jane Oakley',
           des: 'resourse.soon'
         },
         {
           img: member4,
-          name: 'Chen Ren',
-          label: 'Singapore',
+          name: 'Singapore',
+          label: 'Chen Ren',
           des: 'resourse.joined'
         },
         {
           img: member5,
           name: 'US',
-          label: 'Harold R. Johansson',
+          label: 'Harold Aziz',
           des: 'resourse.responsible'
         },
         {
@@ -307,7 +307,7 @@ export default {
         {
           img: member8,
           name: 'US',
-          label: 'Rebecca J. Bourquin',
+          label: 'Rebecca Bourquin',
           des: 'resourse.administrative'
         }
       ],
@@ -315,7 +315,7 @@ export default {
         {
           img: adviser1,
           alt: 'adviser-1',
-          name: 'Scotland',
+          name: 'David Scotland',
           introduce: 'Professor(Institut polytechnique de Paris)'
         },
         {

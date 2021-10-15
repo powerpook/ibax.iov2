@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-10-13 16:55:01
+ * @LastEditTime: 2021-10-15 11:34:56
  * @Description: news
 -->
 <template>
@@ -77,7 +77,7 @@
                 <h3>{{ objTop.title }}</h3>
                 <p>{{ objTop.introduction }}</p>
                 <nuxt-link
-                  :to="{ name: 'resource-news-id', params: { id: objTop.id } }"
+                  :to="{ name: 'resource-news-id', params: { id: objTop.url } }"
                   class="home-new-bottom link"
                 >
                   <span>{{ $t('news.read') }} </span
@@ -98,7 +98,7 @@
               class="news-content-item"
             >
               <nuxt-link
-                :to="{ name: 'resource-news-id', params: { id: item.id } }"
+                :to="{ name: 'resource-news-id', params: { id: item.url } }"
                 class="news-content-item-card"
               >
                 <div class="news-content-img">

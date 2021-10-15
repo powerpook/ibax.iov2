@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:43:39
  * @LastEditors: abc
- * @LastEditTime: 2021-10-13 11:13:35
+ * @LastEditTime: 2021-10-15 09:45:37
  * @Description: video resources
 -->
 <template>
@@ -110,7 +110,7 @@
               </div>
               <p class="resource-middle-text wow fadeInUp">
                 IBAX Network CEO Stuart Nichols gave a brief introduction and
-                shared his vision of IBAX.
+                shares his vision of IBAX.
               </p>
               <a
                 class="home-new-bottom link wow fadeInUp"

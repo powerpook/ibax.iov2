@@ -785,4 +785,35 @@
   .bass-case-box-item .link {
     bottom: 0;
   }
+  .about {
+    align-items: flex-start;
+  }
+  .about-left,
+  .about-right {
+    width: 100%;
+    padding: 30px;
+  }
+  .about-right {
+    min-height: auto;
+  }
+  .about-left-box .logo-row .title {
+    margin-bottom: 20px;
+  }
+  .about-left-box-icon {
+    margin-bottom: 30px;
+  }
+  .about-right-box {
+    flex-wrap: wrap;
+  }
+  .about-right-box .about-right-textarea {
+    width: 100%;
+  }
+  .about-right-btn {
+    margin-left: 0px;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .btn {
+    width: 100%;
+  }
 }

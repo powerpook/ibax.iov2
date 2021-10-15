@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 14:44:39
  * @LastEditors: abc
- * @LastEditTime: 2021-10-08 11:59:08
+ * @LastEditTime: 2021-10-15 11:55:19
  * @Description: footer
 -->
 <template>
@@ -231,14 +231,29 @@ export default {
         {
           title: 'footer.developer',
           path: '/developer',
-          key: '5'
+          key: '1'
         }
       ],
       arrAbout: [
         {
           title: 'nav.about',
           path: '/about',
-          key: '5'
+          key: '1'
+        },
+        {
+          title: 'server.privacy',
+          path: '/server/privacy-policy',
+          key: '2'
+        },
+        {
+          title: 'server.term',
+          path: '/server/terms-service',
+          key: '3'
+        },
+        {
+          title: 'Cookie',
+          path: '/server/cookie',
+          key: '4'
         }
       ]
     };

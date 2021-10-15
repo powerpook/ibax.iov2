@@ -298,7 +298,7 @@
   "bass.light": "轻便快捷",
   "bass.rapid": "快速部署跨账本通信节点(CLB)",
   "bass.there": "跨账本通信节点(CLB)跟其他节点的部署没有差别，你可以自行部署到计算机设备中，满足跨账本通信节点(CLB)共识的前提下，可以通过智能合约获取链外数据。",
-  "bass.en": "Hybrid Smart Contracts",
+  "bass.en": "混合智能合约",
   "bass.with": "创建混合智能合约",
   "bass.when": "使用CLB节点创建混合智能合约，你可以将她应用到Defi，NFT，游戏，智能借贷等任何需要和链外做数据交互的Dapp中。",
   "bass.oper": "CLB 运行",
@@ -652,5 +652,7 @@
   "events.act": "活动内容",
   "events.follow": "关注IBAX了解最新动态",
   "events.address": "录入你的邮箱地址",
-  "events.now": "开始订阅"
+  "events.now": "开始订阅",
+  "server.privacy": "隐私政策",
+  "server.term": "服务条款"
 }

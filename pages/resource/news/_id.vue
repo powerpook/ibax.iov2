@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-26 14:35:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-13 18:16:32
+ * @LastEditTime: 2021-10-15 11:34:15
  * @Description: news  news
 -->
 <template>
@@ -30,7 +30,7 @@
               >
                 <div class="news-content-item-card">
                   <nuxt-link
-                    :to="{ name: 'resource-news-id', params: { id: item.id } }"
+                    :to="{ name: 'resource-news-id', params: { id: item.url } }"
                   >
                     <div class="news-content-item-card-img">
                       <img
@@ -90,10 +90,10 @@
 <script>
 export default {
   layout: 'newsLayouts',
-  validate({ params }) {
+  /*  validate({ params }) {
     // must number
     return /^\d+$/.test(params.id);
-  },
+  }, */
   async asyncData({ app, params, router }) {
     // console.log(params);
     const newsData = await app.$axios.$get(`news/${params.id}`);

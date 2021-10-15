@@ -2,14 +2,14 @@
  * @Author: abc
  * @Date: 2021-09-28 16:09:11
  * @LastEditors: abc
- * @LastEditTime: 2021-10-14 10:59:19
+ * @LastEditTime: 2021-10-15 11:39:21
  * @Description: 
 -->
 <template>
-  <div id="marvellous" class="events">
+  <div class="events">
     <el-row type="flex" justify="center">
       <el-col :xs="24" :sm="22" :md="20" :lg="18">
-        <div class="home-new">
+        <div id="marvellous" class="home-new">
           <el-row
             type="flex"
             justify="space-between"
@@ -75,7 +75,7 @@
                 <nuxt-link
                   :to="{
                     name: 'resource-events-id',
-                    params: { id: item.id }
+                    params: { id: item.url }
                   }"
                   class="od-card"
                 >
@@ -177,15 +177,9 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      this.numArchite =
-        document.getElementById('marvellous').getBoundingClientRect().bottom -
-        105;
-      console.log(this.numArchite);
-      if (this.numArchite) {
-        this.domGlobal.addEventListener('scroll', () => {
-          this.handleThrottle(this.handleAlwaysScroll, 100);
-        });
-      }
+      this.domGlobal.addEventListener('scroll', () => {
+        this.handleThrottle(this.handleAlwaysScroll, 100);
+      });
     });
   },
   methods: {
@@ -195,7 +189,10 @@ export default {
       const topHeight = document.getElementById('headerTop').offsetTop;
       const isFixed = scrollTop > topHeight;
       this.$store.commit('handleIsFixed', isFixed);
-      if (scrollTop >= this.numArchite) {
+      this.numArchite = document
+        .getElementById('marvellous')
+        .getBoundingClientRect().bottom;
+      if (this.numArchite <= 0) {
         const obj = { headerColor: '#fff', color: '#37383c' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'news--horizontal');

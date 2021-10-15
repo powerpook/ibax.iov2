@@ -652,5 +652,7 @@
   "events.act": "Events Content",
   "events.follow": "Follow IBAX for the latest news",
   "events.address": "Enter your email address",
-  "events.now": "Subscribe now"
+  "events.now": "Subscribe now",
+  "server.privacy ": "Privacy policy",
+  "server.term": "Terms of service"
 }

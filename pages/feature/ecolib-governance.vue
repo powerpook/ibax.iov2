@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-11 16:32:13
+ * @LastEditTime: 2021-10-15 10:59:28
  * @Description:
 -->
 <template>
@@ -105,8 +105,8 @@
             <el-col :xs="23" :lg="14">
               <div class="home-new-img wow fadeInUp">
                 <img
-                  src="../../assets/image/img-insights-report2.png"
-                  mode="powerful"
+                  src="@/assets/images/governance-1.jpg"
+                  alt="governance-1"
                 />
               </div>
             </el-col>
@@ -148,8 +148,8 @@
               <el-col :xs="23" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
-                    mode="powerful"
+                    src="@/assets/images/governance-2.jpg"
+                    alt="governance-2"
                   />
                 </div>
               </el-col>
@@ -168,8 +168,8 @@
               <el-col :xs="23" :lg="14" class="hidden-sm-and-up">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
-                    mode="powerful"
+                    src="@/assets/images/governance-2.jpg"
+                    alt="governance-2"
                   />
                 </div>
               </el-col>
@@ -287,8 +287,8 @@
   </div>
 </template>
 <script>
-const img1 = require('../../assets/image/img-retention-report-2.png');
-const img2 = require('../../assets/image/img-funnels-report-2.png');
+const img1 = require('../../assets/images/governance-3-1.jpg');
+const img2 = require('../../assets/images/governance-3-2.jpg');
 export default {
   props: {},
   data() {
@@ -363,18 +363,9 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      this.numArchite =
-        document.getElementById('implement').getBoundingClientRect().bottom -
-        105;
-      console.log(this.numArchite);
-      this.numArchiteBottom =
-        document.getElementById('refBottom').getBoundingClientRect().bottom -
-        105;
-      if (this.numArchite) {
-        this.domGlobal.addEventListener('scroll', () => {
-          this.handleThrottle(this.handleAlwaysScroll, 250);
-        });
-      }
+      this.domGlobal.addEventListener('scroll', () => {
+        this.handleThrottle(this.handleAlwaysScroll, 250);
+      });
     });
   },
   methods: {
@@ -383,12 +374,19 @@ export default {
       const topHeight = document.getElementById('headerTop').offsetTop;
       const isFixed = scrollTop > topHeight;
       this.$store.commit('handleIsFixed', isFixed);
-      if (scrollTop >= this.numArchite && scrollTop < this.numArchiteBottom) {
+      this.numArchite = document
+        .getElementById('implement')
+        .getBoundingClientRect().bottom;
+      console.log(this.numArchite);
+      this.numArchiteBottom = document
+        .getElementById('refBottom')
+        .getBoundingClientRect().bottom;
+      if (this.numArchite <= 0 && this.numArchiteBottom > 0) {
         const obj = { headerColor: '#fff', color: '#37383c' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'news--horizontal');
         this.$store.commit('handleIsTop', false);
-      } else if (scrollTop >= this.numArchiteBottom) {
+      } else if (this.numArchiteBottom <= 0) {
         const obj = { headerColor: '#274235', color: '#fff' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'subMenu--horizontal');

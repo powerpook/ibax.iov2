@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:24:26
  * @LastEditors: abc
- * @LastEditTime: 2021-10-14 15:14:08
+ * @LastEditTime: 2021-10-15 11:31:32
  * @Description: 
 -->
 <template>
@@ -453,18 +453,9 @@ export default {
   created() {},
   mounted() {
     this.$nextTick(() => {
-      this.numArchite =
-        document.getElementById('anyone').getBoundingClientRect().bottom - 105;
-      this.numWhat =
-        document.getElementById('what').getBoundingClientRect().bottom - 105;
-      console.log(this.numArchite);
-      this.numArchiteBottom =
-        document.getElementById('asked').getBoundingClientRect().bottom - 105;
-      if (this.numArchite) {
-        this.domGlobal.addEventListener('scroll', () => {
-          this.handleThrottle(this.handleAlwaysScroll, 100);
-        });
-      }
+      this.domGlobal.addEventListener('scroll', () => {
+        this.handleThrottle(this.handleAlwaysScroll, 100);
+      });
     });
   },
   methods: {
@@ -473,20 +464,26 @@ export default {
       const topHeight = document.getElementById('headerTop').offsetTop;
       const isFixed = scrollTop > topHeight;
       this.$store.commit('handleIsFixed', isFixed);
-      if (scrollTop >= this.numArchite && scrollTop < this.numWhat) {
+      this.numArchite = document
+        .getElementById('anyone')
+        .getBoundingClientRect().bottom;
+      this.numWhat = document
+        .getElementById('what')
+        .getBoundingClientRect().bottom;
+      this.numArchiteBottom = document
+        .getElementById('asked')
+        .getBoundingClientRect().bottom;
+      if (this.numArchite <= 0 && this.numWhat > 0) {
         const obj = { headerColor: '#fff', color: '#37383c' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'news--horizontal');
         this.$store.commit('handleIsTop', false);
-      } else if (
-        scrollTop >= this.numWhat &&
-        scrollTop < this.numArchiteBottom
-      ) {
+      } else if (this.numWhat <= 0 && this.numArchiteBottom > 0) {
         const obj = { headerColor: '#274235', color: '#fff' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'subMenu--horizontal');
         this.$store.commit('handleIsTop', true);
-      } else if (scrollTop >= this.numArchiteBottom) {
+      } else if (this.numArchiteBottom <= 0) {
         const obj = { headerColor: '#fff', color: '#37383c' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'news--horizontal');

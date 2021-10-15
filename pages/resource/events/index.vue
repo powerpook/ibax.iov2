@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-14 10:30:23
+ * @LastEditTime: 2021-10-15 11:42:11
  * @Description: ecolibs
 -->
 <template>
@@ -70,7 +70,7 @@
                     <nuxt-link
                       :to="{
                         name: 'resource-events-id',
-                        params: { id: item.id }
+                        params: { id: item.url }
                       }"
                       class="title-h4 wow fadeInUp"
                     >
@@ -242,7 +242,7 @@
                   <nuxt-link
                     :to="{
                       name: 'resource-events-id',
-                      params: { id: item.id }
+                      params: { id: item.url }
                     }"
                     class="od-card"
                   >

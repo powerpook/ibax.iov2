@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-11 15:48:03
+ * @LastEditTime: 2021-10-15 10:44:45
  * @Description: 
 -->
 <template>
@@ -277,8 +277,8 @@
   </div>
 </template>
 <script>
-const img1 = require('../../assets/image/img-retention-report-2.png');
-const img2 = require('../../assets/image/img-funnels-report-2.png');
+const img1 = require('../../assets/images/clb-1.jpg');
+const img2 = require('../../assets/images/clb-2.jpg');
 export default {
   props: {},
   data() {
@@ -347,17 +347,9 @@ export default {
   created() {},
   mounted() {
     this.$nextTick(() => {
-      this.numArchite =
-        document.getElementById('blockchain').getBoundingClientRect().bottom -
-        105;
-      console.log(this.numArchite);
-      this.numArchiteBottom =
-        document.getElementById('decen').getBoundingClientRect().bottom - 105;
-      if (this.numArchite) {
-        this.domGlobal.addEventListener('scroll', () => {
-          this.handleThrottle(this.handleAlwaysScroll, 250);
-        });
-      }
+      this.domGlobal.addEventListener('scroll', () => {
+        this.handleThrottle(this.handleAlwaysScroll, 250);
+      });
     });
   },
   methods: {
@@ -366,12 +358,19 @@ export default {
       const topHeight = document.getElementById('headerTop').offsetTop;
       const isFixed = scrollTop > topHeight;
       this.$store.commit('handleIsFixed', isFixed);
-      if (scrollTop >= this.numArchite && scrollTop < this.numArchiteBottom) {
+      this.numArchite = document
+        .getElementById('blockchain')
+        .getBoundingClientRect().bottom;
+      console.log(this.numArchite);
+      this.numArchiteBottom = document
+        .getElementById('decen')
+        .getBoundingClientRect().bottom;
+      if (this.numArchite <= 0 && this.numArchiteBottom > 0) {
         const obj = { headerColor: '#fff', color: '#37383c' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'news--horizontal');
         this.$store.commit('handleIsTop', false);
-      } else if (scrollTop >= this.numArchiteBottom) {
+      } else if (this.numArchiteBottom <= 0) {
         const obj = { headerColor: '#274235', color: '#fff' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'subMenu--horizontal');
