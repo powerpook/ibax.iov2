@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 11:28:03
+ * @LastEditTime: 2021-10-15 17:51:30
  * @Description: ecolibs
 -->
 <template>
@@ -42,7 +42,7 @@
       </el-col>
     </el-row>
     <div class="bass-center">
-      <el-row type="flex" justify="center">
+      <el-row type="flex" justify="center" style="display: none">
         <el-col :xs="24" :sm="22" :md="20" :lg="18" class="el-row-wrap">
           <el-row type="flex" justify="space-between" style="flex-wrap: wrap">
             <el-col
@@ -68,7 +68,7 @@
           </el-row>
         </el-col>
       </el-row>
-      <p class="bass-center-text wow fadeInUp">
+      <p class="bass-center-text wow fadeInUp" style="display: none">
         {{ $t('market.want') }}
       </p>
       <div id="img" class="bass-center-img"></div>
@@ -333,6 +333,7 @@
 const img1 = require('../../assets/images/ecolibs-case.jpg');
 const img2 = require('../../assets/images/ecolibs-weaver.jpg');
 const img3 = require('../../assets/images/ecolibs-chat.jpg');
+const jutkeyBlue = require('../../assets/images/jutkey-blue.png');
 export default {
   props: {},
   data() {
@@ -359,36 +360,8 @@ export default {
       ],
       arrImg: [
         {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/clari.svg',
+          img: jutkeyBlue,
           alt: 'clari'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/vivino.svg',
-          alt: 'vivino'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/blind.svg',
-          alt: 'blind'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/mmhmm.svg',
-          alt: 'mmhmm'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/talkspace.svg',
-          alt: 'talkspace'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/branch.svg',
-          alt: 'branch'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/noom.svg',
-          alt: 'noom'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/bentobox.svg',
-          alt: 'mmhmm'
         }
       ],
       arrCase: [

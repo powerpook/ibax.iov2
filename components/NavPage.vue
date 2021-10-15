@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 10:59:52
  * @LastEditors: abc
- * @LastEditTime: 2021-10-14 15:20:11
+ * @LastEditTime: 2021-10-15 16:11:31
  * @Description: nav
 -->
 <template>
@@ -318,14 +318,14 @@ export default {
                   icon: 'iconfont el-activity1',
                   path: '/resource/events',
                   key: '3-3-1'
-                },
-                {
+                }
+                /*  {
                   title: 'resource.partner',
                   icon: 'iconfont el-partner',
                   path: '/resource/partners',
                   alt: 'resource.partner',
                   key: '3-3-2'
-                }
+                } */
               ]
             }
           ]

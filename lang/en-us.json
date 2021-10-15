@@ -595,7 +595,7 @@
   "develope.there": "The solution you submit allows you to set three payment methods:",
   "develope.fees": "1. Deductions on installation and use, which is a one-time deduction mechanism that deducts the user's installation and use fees.",
   "develope.deducted": "2. On-use deduction, where a deduction occurs when the solution is used within the application, this is an ongoing deduction that occurs on an ongoing basis.",
-  "develope.deduction": "33. Combined deduction, where a certain amount is deducted at installation and a certain amount is still deducted each time the solution is used.",
+  "develope.deduction": "3. Combined deduction, where a certain amount is deducted at installation and a certain amount is still deducted each time the solution is used.",
   "develope.audit": "Code Security Auditing",
   "develope.review": "The IBAX code review team will do a security review of all smart contracts submitted to the BaaS marketplace to protect every user's safety and the developer's profit.",
   "develope.code": "Low Code is extremely user-friendly for all developers and for this reason the IBAX team offers a Low Code development platform, which we call \"Weaver\".",
@@ -653,6 +653,6 @@
   "events.follow": "Follow IBAX for the latest news",
   "events.address": "Enter your email address",
   "events.now": "Subscribe now",
-  "server.privacy ": "Privacy policy",
+  "server.privacy": "Privacy policy",
   "server.term": "Terms of service"
 }

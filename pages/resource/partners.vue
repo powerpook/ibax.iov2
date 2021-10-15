@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:43:39
  * @LastEditors: abc
- * @LastEditTime: 2021-10-14 12:26:13
+ * @LastEditTime: 2021-10-15 16:17:18
  * @Description: video resources
 -->
 <template>
@@ -341,6 +341,14 @@
 </template>
 <script>
 export default {
+  beforeRouteEnter(to, from, next) {
+    console.log(to);
+    if (to.name === 'resource-partners')
+      next({
+        path: '/'
+      });
+    else next();
+  },
   props: {},
   data() {
     return {

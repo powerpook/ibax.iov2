@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 14:44:39
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 11:55:19
+ * @LastEditTime: 2021-10-15 16:12:38
  * @Description: footer
 -->
 <template>
@@ -202,13 +202,13 @@ export default {
           title: 'resource.activity',
           path: '/resource/events',
           key: '8'
-        },
-        {
+        }
+        /* {
           title: 'resource.partner',
           path: '/resource/partners',
           alt: 'resource.partner',
           key: '9'
-        }
+        } */
       ],
       arrSolution: [
         {

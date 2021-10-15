@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-14 18:06:01
+ * @LastEditTime: 2021-10-15 19:04:23
  * @Description: architecture
 -->
 <template>
@@ -34,6 +34,7 @@
                   >{{ $t('solutions.watch') }}</a
                 >
                 <a
+                  style="display: none"
                   href="https://weaver.ibax.io/"
                   target="_blank"
                   class="btn btn-default"

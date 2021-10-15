@@ -372,4 +372,8 @@
       }
     }
   }
+  .slick-initialized .slick-slide {
+    display: block;
+    width: 30%;
+  }
 }

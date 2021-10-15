@@ -31,7 +31,7 @@
       text-transform: uppercase;
       font: 700 13px/1.615 "Apercu Mono", "Helvetica Neue", Helvetica, sans-serif;
       letter-spacing: 0.1em;
-      margin-bottom: 6px;
+      margin-bottom: 30px;
       color: #f3ac34;
     }
     .title-h4 {
@@ -123,11 +123,11 @@
           z-index: 2;
         }
         .text-wrap {
-          display: -webkit-box;
+          color: #626266;
+          /*  display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
-          overflow: hidden;
-          color: #626266;
+          overflow: hidden; */
         }
         .link {
           font-size: 16px;

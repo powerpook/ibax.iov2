@@ -430,7 +430,10 @@
   }
   .team .about-us-hero .customers-list li {
     width: 50%;
-    padding: 16px;
+    padding: 0;
+  }
+  .team .about-us-hero .customers-list li .iconfont {
+    font-size: 20px;
   }
   .team-fixed {
     padding: 63px 0;
@@ -493,7 +496,7 @@
   .team-serving-header h3 {
     font-size: 28px;
   }
-  .slick-slide {
+  .team .slick-initialized .slick-slide {
     width: 80vw;
   }
   .news-top {

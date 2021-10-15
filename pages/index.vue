@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-12 14:16:57
+ * @LastEditTime: 2021-10-15 14:36:21
  * @Description: home
 -->
 <template>
@@ -737,9 +737,10 @@ export default {
       this.mobileTop = document.getElementById('story').offsetTop;
       console.log(this.mobileTop);
     });
-    this.domGlobal.addEventListener('scroll', () => {
+    /* this.domGlobal.addEventListener('scroll', () => {
       this.handleThrottle(this.handleScroll, 100);
-    });
+    }); */
+    this.domGlobal.addEventListener('scroll', this.handleScroll);
   },
   methods: {
     handleScroll() {

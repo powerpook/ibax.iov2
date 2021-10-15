@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-09-28 16:09:11
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 11:39:21
+ * @LastEditTime: 2021-10-15 20:01:25
  * @Description: 
 -->
 <template>
@@ -169,9 +169,17 @@ export default {
     };
   },
   computed: {},
-  watch: {},
+  watch: {
+    lang() {
+      const langType = this.handleGetLanguage(this.lang);
+      console.log(langType);
+      this.langType = langType;
+      this.handleArrEvents(this.langType);
+    }
+  },
   created() {
     const langType = this.handleGetLanguage(this.lang);
+    console.log(langType);
     this.langType = langType;
     this.handleArrEvents(this.langType);
   },

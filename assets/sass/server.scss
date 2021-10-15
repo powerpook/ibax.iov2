@@ -1,0 +1,105 @@
+.server {
+  &-top {
+    padding: 50px 0 80px 0;
+    text-align: center;
+    background-color: $primary-color;
+    img {
+      -webkit-box-shadow: 0 2px 5px rgba(23, 28, 33, 0.25);
+      box-shadow: 0 2px 5px rgba(23, 28, 33, 0.25);
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-bottom: 28px;
+      width: 57px;
+    }
+  }
+  &-content {
+    color: #8b9bb0;
+    background: #fbfbfb;
+    &-top {
+      background-color: #fff;
+    }
+    &-tab {
+      display: flex;
+      justify-content: center;
+      background-color: #fff;
+      li {
+        border-left: 1px solid #e8eef3;
+        a {
+          color: #8b9bb0;
+          width: 185px;
+          padding: 20px 10px 23px;
+          text-align: center;
+          display: block;
+          position: relative;
+          i {
+            position: relative;
+            z-index: 2;
+            font-style: normal;
+            color: #8b9bb0;
+          }
+          &:before {
+            z-index: 0;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: #fff;
+            opacity: 0;
+            transition: all 0.25s ease;
+          }
+        }
+        &.active a i {
+          color: #47495a;
+        }
+        &.active a:before {
+          opacity: 1;
+          top: -4px;
+          box-shadow: 0 0 6px 1px rgb(0 0 0 / 10%);
+        }
+      }
+    }
+    &-bottom {
+      padding: 99px 0;
+    }
+    &-box {
+      padding: 73px 92px;
+      border-radius: 6px;
+      box-shadow: 0 12px 18px rgb(161 166 181 / 20%);
+      background-color: #fff;
+      color: #4c596a;
+      font-size: 16px;
+      .article {
+        a {
+          color: #4c596a;
+          display: inline-block;
+        }
+        p {
+          text-indent: 2em;
+        }
+        ul {
+          margin: 10px 0 10px 40px;
+          li {
+            position: relative;
+            text-indent: 2em;
+            &::after {
+              position: absolute;
+              content: "";
+              width: 5px;
+              height: 5px;
+              border-radius: 50%;
+              background: #4c596a;
+              left: 10px;
+              top: 15px;
+            }
+          }
+        }
+        .title-h6 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

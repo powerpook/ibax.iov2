@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 10:03:11
+ * @LastEditTime: 2021-10-15 18:03:22
  * @Description: team
 -->
 <template>
@@ -73,7 +73,7 @@
               <el-col :xs="23" :lg="7">
                 <div class="inner wow fadeInUp">
                   <strong>3000</strong>
-                  <div>TPS/S</div>
+                  <div>TPS</div>
                 </div>
               </el-col>
             </el-row>
@@ -103,7 +103,7 @@
         </el-col>
       </el-row>
     </div>
-    <div class="team-rate">
+    <div class="team-rate" style="display: none">
       <div class="team-rate-icon wow fadeInUp">
         <i class="iconfont el-GitHub"></i>
       </div>
@@ -243,20 +243,21 @@
   </div>
 </template>
 <script>
-const ceo1 = require('../../assets/image/ceo-1.png');
-const ceo2 = require('../../assets/image/ceo-2.png');
-const ceo3 = require('../../assets/image/ceo-3.png');
-const adviser1 = require('../../assets/image/avatars/adviser-1.png');
-const adviser2 = require('../../assets/image/avatars/adviser-2.png');
-const adviser3 = require('../../assets/image/avatars/adviser-3.png');
-const member1 = require('../../assets/image/avatars/member-1.png');
-const member2 = require('../../assets/image/avatars/member-2.png');
-const member3 = require('../../assets/image/avatars/member-3.png');
-const member4 = require('../../assets/image/avatars/member-4.png');
-const member5 = require('../../assets/image/avatars/member-5.png');
-const member6 = require('../../assets/image/avatars/member-6.png');
-const member7 = require('../../assets/image/avatars/member-7.png');
-const member8 = require('../../assets/image/avatars/member-8.png');
+const ceo1 = require('../../assets/images/avatars/ceo-1.png');
+const ceo2 = require('../../assets/images/avatars/ceo-2.png');
+const ceo3 = require('../../assets/images/avatars/ceo-3.png');
+const adviser1 = require('../../assets/images/avatars/adviser-1.png');
+const adviser2 = require('../../assets/images/avatars/adviser-2.png');
+const adviser3 = require('../../assets/images/avatars/adviser-3.png');
+const member1 = require('../../assets/images/avatars/member-1.png');
+const member2 = require('../../assets/images/avatars/member-2.png');
+const member3 = require('../../assets/images/avatars/member-3.png');
+const member4 = require('../../assets/images/avatars/member-4.png');
+const member5 = require('../../assets/images/avatars/member-5.png');
+const member6 = require('../../assets/images/avatars/member-6.png');
+const member7 = require('../../assets/images/avatars/member-7.png');
+const member8 = require('../../assets/images/avatars/member-8.png');
+const jutkeyWhite = require('../../assets/images/jutkey-white.png');
 export default {
   props: {},
   data() {
@@ -336,25 +337,7 @@ export default {
           icon: 'iconfont el-pusher_logo'
         },
         {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/logo-uber.svg'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/05/logo-rakuten-viber-white.svg'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/01/logo-twitter.svg'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/07/sweetgreen-2.svg'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/expedia.svg'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/ziprecruiter-logo-small.svg'
-        },
-        {
-          img: 'https://px6vg4ekvl21gtxs836x5jyx-wpengine.netdna-ssl.com/wp-content/uploads/2021/06/ziprecruiter-logo-small.svg'
+          img: jutkeyWhite
         }
       ],
       arrPeople: [
@@ -396,7 +379,6 @@ export default {
         dots: false,
         infinite: true,
         centerMode: true,
-        adaptiveHeight: true,
         initialSlide: 0,
         speed: 500,
         arrows: false,
