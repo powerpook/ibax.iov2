@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-10-12 19:26:37
+ * @LastEditTime: 2021-10-18 12:18:16
  * @Description: 
 -->
 <template>
@@ -237,7 +237,7 @@
               <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="@/assets/images/develop-more.jpg"
+                    src="@/assets/images/gif/develop-manage.gif"
                     alt="develop-more"
                   />
                 </div>
@@ -257,7 +257,7 @@
               <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="@/assets/images/develop-more.jpg"
+                    src="@/assets/images/gif/develop-manage.gif"
                     alt="develop-more"
                   />
                 </div>
@@ -293,7 +293,7 @@
               <el-col :xs="24" :lg="14">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
+                    src="../../assets/images/gif/develop-online.gif"
                     mode="powerful"
                   />
                 </div>

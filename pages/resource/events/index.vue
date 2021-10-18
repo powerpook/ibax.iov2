@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 11:42:11
+ * @LastEditTime: 2021-10-18 10:19:27
  * @Description: ecolibs
 -->
 <template>
@@ -287,6 +287,7 @@
   </div>
 </template>
 <script>
+import { handleGetLang } from '../../../assets/js/public.js';
 export default {
   props: {},
   data() {
@@ -381,7 +382,8 @@ export default {
     }
   },
   created() {
-    const langType = this.handleGetLanguage(this.lang);
+    const lang = handleGetLang();
+    const langType = this.handleGetLanguage(lang);
     this.langType = langType;
     this.firstParam.language = langType;
     this.secondParam.language = langType;

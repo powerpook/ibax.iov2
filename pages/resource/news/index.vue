@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 11:34:56
+ * @LastEditTime: 2021-10-18 09:58:27
  * @Description: news
 -->
 <template>
@@ -130,6 +130,7 @@
   </div>
 </template>
 <script>
+import { handleGetLang } from '../../../assets/js/public.js';
 export default {
   props: {},
   data() {
@@ -191,7 +192,6 @@ export default {
   computed: {},
   watch: {
     lang() {
-      console.log(this.lang);
       const langType = this.handleGetLanguage(this.lang);
       this.langType = langType;
       this.params.language = langType;
@@ -202,8 +202,8 @@ export default {
     }
   },
   created() {
-    console.log(this.lang);
-    const langType = this.handleGetLanguage(this.lang);
+    const lang = handleGetLang();
+    const langType = this.handleGetLanguage(lang);
     this.langType = langType;
     this.params.language = langType;
     this.handleNewsList(this.params);

@@ -2,134 +2,836 @@
  * @Author: abc
  * @Date: 2021-10-15 11:46:31
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 18:42:09
+ * @LastEditTime: 2021-10-18 19:18:04
  * @Description: Privacy policy
 -->
 <template>
   <article class="article">
-    <h2 class="title-h4">网站隐私政策</h2>
+    <h2 class="title-h4">PRIVACY NOTICE</h2>
+    <p>Last updated September 30, 2021</p>
     <p>
-      本隐私政策适用于 IBAX
-      的网站。保护您的隐私对我们很重要。我们是您个人信息的控制者，本政策解释了我们如何在组织内管理个人信息。
+      Thank you for choosing to be part of our community at
+      <strong>IBAX NETWORK</strong>
+      ("Company," "we," "us," or "our"). We are committed to protecting your
+      personal information and your right to privacy. If you have any questions
+      or concerns about this privacy notice or our practices with regard to your
+      personal information, please contact us at <strong>info@ibax.io</strong>.
     </p>
-    <h6 class="title-h6">我们收集的个人信息种类</h6>
-    <p>我们收集和持有的有关您的个人信息类型可能包括：</p>
-    <ul>
-      <li>联系信息，例如您的电子邮件地址</li>
-      <li>
-        社交媒体（包括 Telegram）处理您向我们或公众提供的其他社交媒体资料信息
-      </li>
-      <li>我们与您的通信记录，包括您发送给我们的任何消息或电子邮件</li>
-      <li>您在业务过程中向我们提供的其他信息</li>
-      <li>能够识别您身份的其他信息</li>
-    </ul>
     <p>
-      如果您没有这些信息，我们可能无法为您提供我们的产品或服务（或我们的产品或服务提供的所有特性和功能）或响应您提交给我们的查询或请求。
-    </p>
-    <h6 class="title-h6">我们如何收集个人信息</h6>
-    <p>我们通过以下方式收集有关您的个人信息：</p>
-    <ul>
-      <li>当您通过电子邮件或社交媒体（例如 Telegram）与我们联系时</li>
-      <li>当您向我们提交查询或请求时</li>
-      <li>
-        当您回答我们开展的一项调查、参与任何促销活动或填写我们网站上的表格时
-      </li>
-      <li>
-        通过分析提供商（例如根据自己的隐私政策处理个人信息的谷歌：
-        <a href="https://policies.google.com/privacy/partners" target="_blank"
-          >https://policies.google.com/privacy/partners）</a
-        >
-      </li>
-      <li>
-        来自公共来源（包括社交媒体平台，这些平台有自己单独的隐私政策来管理这些来源持有的个人信息的访问和使用）
-      </li>
-      <li>来自有权向我们披露该信息的第三方</li>
-      <li>当您向我们申请工作时</li>
-      <p>
-        在某些情况下，法律可能要求我们收集有关您的某些类型的个人信息。当我们从您那里收集个人信息时，我们通常会直接自己收集。但是，在某些情况下，我们可能会从第三方收集个人信息，例如通过您的代表、向我们提供服务的承包商或将您推荐给我们的第三方，因为他们认为您可能对我们的产品或服务感兴趣。
-      </p>
-    </ul>
-    <h6 class="title-h6">我们使用个人信息的目的</h6>
-    <p>我们将收集的有关您的个人信息用于以下目的：</p>
-    <ul>
-      <li>
-        使我们能够提供我们的产品和服务（包括在公共以太坊区块链上提供服务）
-      </li>
-      <li>回答您的疑问和要求</li>
-      <li>遵守我们的法律和监管义务，或法律另有要求或授权</li>
-      <li>进行市场分析和研究，包括通过使用数据分析来改进我们的产品和服务</li>
-      <li>管理和解决任何法律或商业投诉或问题</li>
-      <li>执行计划和预测活动以及其他内部业务流程</li>
-      <li>
-        让您随时了解我们的活动，包括发送有关我们代币的通讯以及未来 IBAX
-        Network） 平台的发展
-      </li>
-    </ul>
-    <p>
-      我们可能会不时使用您的个人信息，以便向您发送我们认为您可能感兴趣的产品或服务（包括在某些情况下由第三方提供的产品和服务）的营销材料。您可以通过使用下面的联系方式或点击通讯中的“取消订阅”链接与我们联系，选择不接收我们的营销通讯。我们也可能会根据您的授权或根据您的要求或指示，出于其他目的使用和披露您的信息。
-    </p>
-    <h6 class="title-h6">我们向其披露个人信息的人</h6>
-    <p>我们可能会与以下人员共享您的个人信息：</p>
-    <ul>
-      <li>您的代表、顾问和您授权代表您与我们互动的其他人</li>
-      <li>我们需要信息以履行职责的员工</li>
-      <li>
-        我们公司集团内的附属公司和相关实体，包括位于您所在国家/地区以外的实体
-      </li>
-      <li>我们的业务合作伙伴、代理和服务提供商（包括托管和云提供商）</li>
-      <li>我们全部或部分业务或我们公司或相关实体股份的潜在购买者</li>
-      <li>我们聘请为我们的业务提供建议的专业顾问</li>
-      <li>要求我们披露该信息的政府当局，或根据法律要求披露给其他人</li>
-    </ul>
-    <h6 class="title-h6">向国际接收者披露</h6>
-    <p>
-      在某些情况下，我们会向可能位于您所在国家/地区以外的接收者（包括承包商和第三方服务提供商）披露您的个人信息。我们可能会在必要时向我们的附属公司和相关实体以及海外员工披露您的个人信息，以向您提供我们的商品和服务。我们的关联实体、关联公司和服务提供商不时位于亚太地区的各个国家和其他国家/地区，并且可能会向这些实体披露个人信息。我们采取商业上合理的步骤来确保任何海外接收者都有适当的保护措施，确保对您的个人信息提供足够的保护。
-    </p>
-    <h6 class="title-h6">Cookies</h6>
-    <p>
-      “Cookies”是由您的互联网浏览器软件在您的硬盘驱动器上创建并存储的小型文本文件，以保存有关您当前正在查看的网页的相关信息。Cookies
-      被用于监控和观察您对我们网站的使用，汇编有关该使用的汇总数据，并为您提供更有效的服务（其中可能包括根据您的偏好和过去在这些网站上的活动定制我们网站的部分内容）。某些第三方（例如数据分析服务提供商）也可能使用我们无法控制的
-      cookie。大多数互联网浏览器都有允许您禁用全部或部分 cookie
-      的功能——请参阅浏览器的帮助菜单以了解如何执行此操作。虽然您仍然可以在互联网浏览器上禁用
-      cookie
-      的情况下浏览我们的网站，某些网站功能可能无法使用或无法正常运行。我们采取合理措施确保我们持有的您的任何个人信息准确、完整和最新。这些步骤包括在我们被告知信息已更改时及时更新个人信息、检查我们的联系人列表的准确性，以及为个人提供一种简单的方法来更新他们的个人信息我们会根据需要存储个人信息为其收集或根据法律要求。在此期限届满后的合理时间内，我们将采取合理措施对我们拥有或控制的个人信息进行去标识化或销毁。我们通常将收集到的个人信息存储在电子数据库中，其中一些可能由第三方数据存储提供商代表我们持有。有时，我们还会在物理存储设施中保留此类个人信息的硬拷贝记录。我们使用一系列物理和技术安全流程和程序来保护我们持有的信息的机密性和安全性，我们会不时更新这些流程和程序以应对新出现的安全威胁。这些措施包括：
+      This privacy notice describes how we might use your information if you:
     </p>
     <ul>
       <li>
-        限制访问我们的物理和电子数据库，以及物理安全，例如访问我们营业场所的安全程序；和
+        Visit our website at
+        <a href="https://ibax.io" target="_blank">https://ibax.io</a>
       </li>
       <li>
-        技术安全程序，包括密码保护、网络防火墙、加密、入侵检测和站点监控（在可行的情况下）。
+        Engage with us in other related ways ― including any sales, marketing,
+        or events In this privacy notice, if we refer to:
+      </li>
+      <li>
+        <strong>"Website"</strong>, we are referring to any website of ours that
+        references or links to this policy
+      </li>
+      <li>
+        <strong>"Services"</strong>,we are referring to our Website, and other
+        related services, including any sales, marketing, or events
       </li>
     </ul>
-    <h6 class="title-h6">您关于您的个人信息的合法权利</h6>
-    <p>您有权：</p>
+    <p>
+      The purpose of this privacy notice is to explain to you in the clearest
+      way possible what information we collect, how we use it, and what rights
+      you have in relation to it. If there are any terms in this privacy notice
+      that you do not agree with, please discontinue use of our Services
+      immediately.
+    </p>
+    <p>
+      <strong
+        >Please read this privacy notice carefully, as it will help you
+        understand what we do with the information that we collect.</strong
+      >
+    </p>
+    <h6 class="title-h6">1. WHAT INFORMATION DO WE COLLECT?</h6>
+    <p class="title-weight">Personal information you disclose to us</p>
+    <p class="title-italic">
+      <strong>In Short:</strong> We collect personal information that you
+      provide to us.
+    </p>
+    <p>
+      We collect personal information that you voluntarily provide to us when
+      you express an interest in obtaining information about us or our products
+      and Services, when you participate in activities on the Website or
+      otherwise when you contact us.
+    </p>
+    <p>
+      The personal information that we collect depends on the context of your
+      interactions with us and the Website, the choices you make and the
+      products and features you use. The personal information we collect may
+      include the following:
+    </p>
+    <p>
+      <strong> Personal Information Provided by You.</strong> We collect names;
+      phone numbers; email addresses;mailing addresses; contact preferences; and
+      other similar information.
+    </p>
+    <p>
+      All personal information that you provide to us must be true, complete and
+      accurate, and you must notify us of any changes to such personal
+      information.
+    </p>
+    <h6 class="title-h6">Information automatically collected</h6>
+    <p>
+      In Short: Some information — such as your Internet Protocol (IP) address
+      and/or browser and device characteristics — is collected automatically
+      when you visit our Website.
+    </p>
+    <p>
+      We automatically collect certain information when you visit, use or
+      navigate the Website. This information does not reveal your specific
+      identity (like your name or contact information) but may include device
+      and usage information, such as your IP address, browser and device
+      characteristics, operating system, language preferences, referring URLs,
+      device name, country, location, information about how and when you use our
+      Website and other technical information. This information is primarily
+      needed to maintain the security and operation of our Website, and for our
+      internal analytics and reporting purposes.
+    </p>
+    <p>
+      Like many businesses, we also collect information through cookies and
+      similar technologies.
+    </p>
+    <p>The information we collect includes:</p>
     <ul>
-      <li>访问并索取您的个人信息的副本，以检查我们如何使用您的个人信息</li>
-      <li>更正或纠正任何过时、不正确、不完整或具有误导性的个人信息</li>
-      <li>撤回您之前对处理您的个人信息给予的任何同意</li>
-      <li>反对处理您的个人信息</li>
-      <li>要求我们限制或暂停使用您的个人信息</li>
+      <li>
+        Log and Usage Data. Log and usage data is service-related, diagnostic,
+        usage and performance information our servers automatically collect when
+        you access or use our Website and which we record in log files.
+        Depending on how you interact with us, this log data may include your IP
+        address, device information, browser type and settings and information
+        about your activity in the Website (such as the date/time stamps
+        associated with your usage, pages and files viewed, searches and other
+        actions you take such as which features you use), device event
+        information (such as system activity, error reports (sometimes called
+        'crash dumps') and hardware settings).
+      </li>
+      <li>
+        Device Data. We collect device data such as information about your
+        computer, phone, tablet or other device you use to access the Website.
+        Depending on the device used, this device data may include information
+        such as your IP address (or proxy server), device and application
+        identification numbers, location, browser type, hardware model Internet
+        service provider and/or mobile carrier, operating system and system
+        configuration information.
+      </li>
+      <li>
+        Location Data. We collect location data such as information about your
+        device's location, which can be either precise or imprecise. How much
+        information we collect depends on the type and settings of the device
+        you use to access the Website. For example, we may use GPS and other
+        technologies to collect geolocation data that tells us your current
+        location (based on your IP address). You can opt out of allowing us to
+        collect this information either by refusing access to the information or
+        by disabling your Location setting on your device. Note however, if you
+        choose to opt out, you may not be able to use certain aspects of the
+        Services.
+      </li>
+    </ul>
+    <h6 class="title-h6">2. HOW DO WE USE YOUR INFORMATION?</h6>
+    <p class="title-italic">
+      <strong>In Short:</strong>We process your information for purposes based
+      on legitimate business interests, the fulfillment of our contract with
+      you, compliance with our legal obligations, and/or your consent.
+    </p>
+    <p>
+      We use personal information collected via our Website for a variety of
+      business purposes described below. We process your personal information
+      for these purposes in reliance on our legitimate business interests, in
+      order to enter into or perform a contract with you, with your consent,
+      and/or for compliance with our legal obligations. We indicate the specific
+      processing grounds we rely on next to each purpose listed below.
+    </p>
+    <p>We use the information we collect or receive:</p>
+    <ul>
+      <li>
+        <strong>To send administrative information to you.</strong>We may use
+        your personal information to send you product, service and new feature
+        information and/or information about changes to our terms, conditions,
+        and policies.
+      </li>
+      <li>
+        <strong>To protect our Services.</strong> may use your information as
+        part of our efforts to keep our Website safe and secure (for example,
+        for fraud monitoring and prevention).
+      </li>
+      <li>
+        <strong>To respond to legal requests and prevent harm.</strong>If we
+        receive a subpoena or other legal request, we may need to inspect the
+        data we hold to determine how to respond.
+      </li>
+      <li>
+        <strong>Fulfill and manage your orders.</strong>We may use your
+        information to fulfill and manage your orders, payments, returns, and
+        exchanges made through the Website.
+      </li>
+      <li>
+        <strong>Administer prize draws and competitions.</strong>We may use your
+        information to administer prize draws and competitions when you elect to
+        participate in our competitions.
+      </li>
+      <li>
+        <strong>
+          To deliver and facilitate delivery of services to the user.
+        </strong>
+        We may use your information to provide you with the requested service.
+      </li>
+      <li>
+        <strong>To respond to user inquiries/offer support to users.</strong>We
+        may use your information to respond to your inquiries and solve any
+        potential issues you might have with the use of our Services.
+      </li>
+      <li>
+        <strong>To send you marketing and promotional communications.</strong>
+        We and/or our third-party marketing partners may use the personal
+        information you send to us for our marketing purposes, if this is in
+        accordance with your marketing preferences. For example, when expressing
+        an interest in obtaining information about us or our Website,
+        subscribing to marketing or otherwise contacting us, we will collect
+        personal information from you. You can opt-out of our marketing emails
+        at any time (see the "WHAT ARE YOUR PRIVACY RIGHTS?" below).
+      </li>
+      <li>
+        <strong>Deliver targeted advertising to you.</strong>We may use your
+        information to develop and display personalized content and advertising
+        (and work with third parties who do so) tailored to your interests
+        and/or location and to measure its effectiveness.
+      </li>
+      <li>Responding to Job Applications</li>
+    </ul>
+    <h6 class="title-h6">3. WILL YOUR INFORMATION BE SHARED WITH ANYONE ?</h6>
+    <p class="title-italic">
+      <strong>In Short:</strong> We only share information with your consent, to
+      comply with laws, to provide you with services, to protect your rights, or
+      to fulfill business obligations.
+    </p>
+    <p>
+      We may process or share your data that we hold based on the following
+      legal basis:
+    </p>
+    <ul>
+      <li>
+        <strong>Consent:</strong> may process your data if you have given us
+        specific consent to use your personal information for a specific
+        purpose.
+      </li>
+      <li>
+        <strong>Legitimate Interests:</strong> may process your data when it is
+        reasonably necessary to achieve our legitimate business interests.
+      </li>
+      <li>
+        <strong>Performance of a Contract:</strong> we have entered into a
+        contract with you, we may process your personal information to fulfill
+        the terms of our contract.
+      </li>
+      <li>
+        <strong>Legal Obligations:</strong> may disclose your information where
+        we are legally required to do so in order to comply with applicable law,
+        governmental requests, a judicial proceeding, court order, or legal
+        process, such as in response to a court order or a subpoena (including
+        in response to public authorities to meet national security or law
+        enforcement requirements).
+      </li>
+      <li>
+        <strong>Vital Interests:</strong> may disclose your information where we
+        believe it is necessary to investigate, prevent, or take action
+        regarding potential violations of our policies, suspected fraud,
+        situations involving potential threats to the safety of any person and
+        illegal activities, or as evidence in litigation in which we are
+        involved.
+      </li>
     </ul>
     <p>
-      这些请求应使用以下联系方式以书面形式提交给我们。我们将在合理的时间范围内处理您的请求，并免费提供一份您的个人信息。如果您的要求是额外的副本，或者您的要求明显没有根据、过度或重复，我们可能会拒绝您的要求或收取合理的费用。如果我们拒绝请求或收取合理费用，我们将在合理的时间范围内告知您我们拒绝的原因或任何费用。您有权以结构化、常用和机器可读的格式索取您提供给我们的个人信息的副本，并有权在某些情况下将该信息传输或移植到另一个实体。在某些情况下，我们可能无法提供您要求的信息，例如，它会干扰他人的隐私、权利或自由，或导致违反保密或适用法律。在这些情况下，我们会告知您为什么我们无法满足您的要求。
+      More specifically, we may need to process your data or share your personal
+      information in the following situations:
     </p>
-    <h6 class="title-h6">如何删除您的个人信息</h6>
-    <p>
-      您有权要求删除或销毁您的个人信息（“被遗忘权”），当您的个人信息不再用于最初收集的目的时，它没有被用于收集的目的被收集，或者您希望撤回您对某些处理的同意。您也有权要求我们删除或移除您的个人数据，如果您已成功行使反对处理的权利，我们非法处理了您的个人信息，或者我们需要删除您的个人信息以符合当地法律。在某些情况下，我们可能无法满足您的要求，例如我们需要继续处理您的个人信息以遵守适用法律。
+    <ul>
+      <li>
+        <strong>Business Transfers.</strong>We may share or transfer your
+        information in connection with, or during negotiations of, any merger,
+        sale of company assets, financing, or acquisition of all or a portion of
+        our business to another company.
+      </li>
+      <li>
+        <strong
+          >Vendors, Consultants and Other Third-Party Service Providers.</strong
+        >We may share your data with third-party vendors, service providers,
+        contractors or agents who perform services for us or on our behalf and
+        require access to such information to do that work. Examples include:
+        payment processing, data analysis, email delivery, hosting services,
+        customer service and marketing efforts. We may allow selected third
+        parties to use tracking technology on the Website, which will enable
+        them to collect data on our behalf about how you interact with our
+        Website over time. This information may be used to, among other things,
+        analyze and track data, determine the popularity of certain content,
+        pages or features, and better understand online activity. Unless
+        described in this notice, we do not share, sell, rent or trade any of
+        your information with third parties for their promotional purposes.
+      </li>
+      <li>
+        <strong>Affiliates.</strong>We may share your information with our
+        affiliates, in which case we will require those affiliates to honor this
+        privacy notice. Affiliates include our parent company and any
+        subsidiaries, joint venture partners or other companies that we control
+        or that are under common control with us.
+      </li>
+      <li>
+        <strong>Business Partners.</strong> may share your information with our
+        business partners to offer you certain products, services or promotions.
+      </li>
+    </ul>
+    <h6 class="title-h6">4. WHO WILL YOUR INFORMATION BE SHARED WITH ?</h6>
+    <p class="title-italic">
+      <strong>In Short:</strong> We only share information with the following
+      categories of third parties.
     </p>
-    <h6 class="title-h6">投诉</h6>
     <p>
-      我们努力达到最高标准以保护您的隐私。但是，如果您担心我们管理您的个人信息的方式，或者认为我们可能违反了适用的隐私或数据保护立法规定的义务或任何其他相关义务，请使用下面列出的联系方式与我们联系。
-      投诉必须以书面形式提出。在投诉中，请包括您的联系方式（例如电子邮件地址、姓名、地址和电话号码）并清楚地描述投诉。我们将在合理的时间内处理此事，并将让您了解我们的调查进展。如果我们没有在合理的时间内回复您，或者如果您认为您的投诉没有得到满意的解决，您可以联系我们讨论您的疑虑。
+      We only share and disclose your information with the following categories
+      of third parties. If we have processed your data based on your consent and
+      you wish to revoke your consent, please contact us using the contact
+      details provided in the section below titled "HOW CAN YOU CONTACT US ABOUT
+      THIS NOTICE?".
     </p>
-    <h6 class="title-h6">本政策的变更</h6>
-    <p>
-      我们可能会不时更改本政策，以考虑我们标准做法和程序的变化，或在必要时遵守新的法律和法规。本政策的最新版本将始终在我们的网站上提供。
+    <ul>
+      <li>Data Analytics Services</li>
+      <li>Data Storage Service Providers</li>
+      <li>Cloud Computing Services</li>
+      <li>Communication & Collaboration Tools</li>
+      <li>Performance Monitoring Tools</li>
+      <li>Product Engineering & Design Tools</li>
+      <li>Social Networks</li>
+      <li>Sales & Marketing Tools</li>
+      <li>Testing Tools</li>
+      <li>Website Hosting Service Providers</li>
+    </ul>
+    <h6 class="title-h6">
+      5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
+    </h6>
+    <p class="title-italic">
+      <strong>In Short:</strong>We may use cookies and other tracking
+      technologies to collect and store your information.
     </p>
-    <h6 class="title-h6">联系方式</h6>
     <p>
-      如果您需要联系我们或希望我们提供有关隐私问题的更多信息，请通过<span>info@ibax.io</span>与我们联系。
+      We may use cookies and similar tracking technologies (like web beacons and
+      pixels) to access or store information. Specific information about how we
+      use such technologies and how you can refuse certain cookies is set out in
+      our Cookie Notice.
+    </p>
+    <h6 class="title-h6">
+      6. IS YOUR INFORMATION TRANSFERRED INTERNATIONALLY ?
+    </h6>
+    <p class="title-italic">
+      <strong>In Short:</strong>
+      We may transfer, store, and process your information in countries other
+      than your own.
+    </p>
+    <p>
+      Our servers are located in sydney. If you are accessing our Website from
+      outside sydney, please be aware that your information may be transferred
+      to, stored, and processed by us in our facilities and by those third
+      parties with whom we may share your personal information (see "WILL YOUR
+      INFORMATION BE SHARED WITH ANYONE?" above), in Australia, India, United
+      States, United Kingdom, and other countries.
+    </p>
+    <p>
+      If you are a resident in the European Economic Area (EEA) or United
+      Kingdom (UK), then these countries may not necessarily have data
+      protection laws or other similar laws as comprehensive as those in your
+      country. We will however take all necessary measures to protect your
+      personal information in accordance with this privacy notice and applicable
+      law.
+    </p>
+    <p>European Commission's Standard Contractual Clauses:</p>
+    <p>
+      We have implemented measures to protect your personal information,
+      including by using the European Commission's Standard Contractual Clauses
+      for transfers of personal information between our group companies and
+      between us and our third-party providers. These clauses require all
+      recipients to protect all personal information that they process
+      originating from the EEA or UK in accordance with European data protection
+      laws and regulations. Our Standard Contractual Clauses can be provided
+      upon request. We have implemented similar appropriate safeguards with our
+      third-party service providers and partners and further details can be
+      provided upon request.
+    </p>
+    <h6 class="title-h6">7. HOW LONG DO WE KEEP YOUR INFORMATION?</h6>
+    <p>
+      <strong>In Short:</strong>We keep your information for as long as
+      necessary to fulfill the purposes outlined in this privacy notice unless
+      otherwise required by law.
+    </p>
+    <p>
+      We will only keep your personal information for as long as it is necessary
+      for the purposes set out in this privacy notice, unless a longer retention
+      period is required or permitted by law (such as tax, accounting or other
+      legal requirements). No purpose in this notice will require us keeping
+      your personal information for longer than 2 years.
+    </p>
+    <p>
+      When we have no ongoing legitimate business need to process your personal
+      information, we will either delete or anonymize such information, or, if
+      this is not possible (for example, because your personal information has
+      been stored in backup archives), then we will securely store your personal
+      information and isolate it from any further processing until deletion is
+      possible.
+    </p>
+    <p>
+      <strong>In Short:</strong>We aim to protect your personal information
+      through a system of organizational and technical security measures.
+    </p>
+    <p>
+      We have implemented appropriate technical and organizational security
+      measures designed to protect the security of any personal information we
+      process. However, despite our safeguards and efforts to secure your
+      information, no electronic transmission over the Internet or information
+      storage technology can be guaranteed to be 100% secure, so we cannot
+      promise or guarantee that hackers, cybercriminals, or other unauthorized
+      third parties will not be able to defeat our security, and improperly
+      collect, access, steal, or modify your information. Although we will do
+      our best to protect your personal information, transmission of personal
+      information to and from our Website is at your own risk. You should only
+      access the Website within a secure environment.
+    </p>
+    <h6 class="title-h6">9. WHAT ARE YOUR PRIVACY RIGHTS?</h6>
+    <p>
+      <strong>In Short:</strong>In some regions, such as the European Economic
+      Area (EEA) and United Kingdom (UK), you have rights that allow you greater
+      access to and control over your personal information. You may review,
+      change, or terminate your account at any time.
+    </p>
+    <p>
+      In some regions (like the EEA and UK), you have certain rights under
+      applicable data protection laws. These may include the right (i) to
+      request access and obtain a copy of your personal information, (ii) to
+      request rectification or erasure; (iii) to restrict the processing of your
+      personal information; and (iv) if applicable, to data portability. In
+      certain circumstances, you may also have the right to object to the
+      processing of your personal information. To make such a request, please
+      use the contact details provided below. We will consider and act upon any
+      request in accordance with applicable data protection laws.
+    </p>
+    <p>
+      If we are relying on your consent to process your personal information,
+      you have the right to withdraw your consent at any time. Please note
+      however that this will not affect the lawfulness of the processing before
+      its withdrawal, nor will it affect the processing of your personal
+      information conducted in reliance on lawful processing grounds other than
+      consent.
+    </p>
+    <p>
+      If you are a resident in the EEA or UK and you believe we are unlawfully
+      processing your personal information, you also have the right to complain
+      to your local data protection supervisory authority. You can find their
+      contact details here:<a
+        href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm"
+        target="_blank"
+      >
+        https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm.</a
+      >
+    </p>
+    <p>
+      If you are a resident in Switzerland, the contact details for the data
+      protection authorities are available here:<a
+        href=" https://www.edoeb.admin.ch/edoeb/en/home.html"
+        target="_blank"
+      >
+        https://www.edoeb.admin.ch/edoeb/en/home.html.</a
+      >
+    </p>
+    <p>
+      <strong>Cookies and similar technologies:</strong> Most Web browsers are
+      set to accept cookies by default. If you prefer, you can usually choose to
+      set your browser to remove cookies and to reject cookies. If you choose to
+      remove cookies or reject cookies, this could affect certain features or
+      services of our Website. To opt-out of interest-based advertising by
+      advertisers on our Website visit
+      <a href="http://www.aboutads.info/choices/" target="_blank">
+        http://www.aboutads.info/choices/.</a
+      >.
+    </p>
+    <h6 class="title-h6">10. CONTROLS FOR DO-NOT-TRACK FEATURES</h6>
+    <p>
+      Most web browsers and some mobile operating systems and mobile
+      applications include a Do-Not-Track ("DNT") feature or setting you can
+      activate to signal your privacy preference not to have data about your
+      online browsing activities monitored and collected. At this stage no
+      uniform technology standard for recognizing and implementing DNT signals
+      has been finalized. As such, we do not currently respond to DNT browser
+      signals or any other mechanism that automatically communicates your choice
+      not to be tracked online. If a standard for online tracking is adopted
+      that we must follow in the future, we will inform you about that practice
+      in a revised version of this privacy notice.
+    </p>
+    <h6 class="title-h6">
+      11. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
+    </h6>
+    <p class="title-italic">
+      <strong>In Short:</strong>
+      Yes, if you are a resident of California, you are granted specific rights
+      regarding access to your personal information.
+    </p>
+    <p>
+      California Civil Code Section 1798.83, also known as the "Shine The Light"
+      law, permits our users who are California residents to request and obtain
+      from us, once a year and free of charge, information about categories of
+      personal information (if any) we disclosed to third parties for direct
+      marketing purposes and the names and addresses of all third parties with
+      which we shared personal information in the immediately preceding calendar
+      year. If you are a California resident and would like to make such a
+      request, please submit your request in writing to us using the contact
+      information provided below.
+    </p>
+    <p>
+      If you are under 18 years of age, reside in California, and have a
+      registered account with the Website, you have the right to request removal
+      of unwanted data that you publicly post on the Website. To request removal
+      of such data, please contact us using the contact information provided
+      below, and include the email address associated with your account and a
+      statement that you reside in California. We will make sure the data is not
+      publicly displayed on the Website, but please be aware that the data may
+      not be completely or comprehensively removed from all our systems (e.g.
+      backups, etc.).
+    </p>
+    <h6 class="title-h6">CCPA Privacy Notice</h6>
+    <p>
+      (1) every individual who is in the State of California for other than a
+      temporary or transitory purpose and
+    </p>
+    <p>
+      (2) every individual who is domiciled in the State of California who is
+      outside the State of California for a temporary or transitory purpose
+    </p>
+    <p>All other individuals are defined as "non-residents."</p>
+    <p>
+      If this definition of "resident" applies to you, we must adhere to certain
+      rights and obligations regarding your personal information.
+    </p>
+    <p class="title-weight">
+      What categories of personal information do we collect?
+    </p>
+    <p>
+      We have collected the following categories of personal information in the
+      past twelve (12) months:
+    </p>
+    <table class="article-table">
+      <thead>
+        <tr>
+          <td>Category</td>
+          <td>Examples</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>A. Identifiers</td>
+          <td>
+            Contact details, such as real name, alias, postal address, telephone
+            or mobile contact number, unique personal identifier, online
+            identifier, Internet Protocol address, email address and account
+            name
+          </td>
+        </tr>
+        <tr>
+          <td>
+            B. Personal information categories listed in the California Customer
+            Records statute
+          </td>
+          <td>
+            Name, contact information, education, employment, employment history
+            and financial information
+          </td>
+        </tr>
+        <tr>
+          <td>
+            C. Protected classification characteristics under California or
+            federal law
+          </td>
+          <td>Gender and date of birth</td>
+        </tr>
+        <tr>
+          <td>D. Commercial information</td>
+          <td>
+            Transaction information, purchase history, financial details and
+            payment information
+          </td>
+        </tr>
+        <tr>
+          <td>E. Biometric information</td>
+          <td>Fingerprints and voiceprints</td>
+        </tr>
+        <tr>
+          <td>F. Internet or other similar network activity</td>
+          <td>
+            Browsing history, search history, online behavior, interest data,
+            and interactions with our and other websites, applications, systems
+            and advertisements
+          </td>
+        </tr>
+        <tr>
+          <td>G. Geolocation data</td>
+          <td>Device location</td>
+        </tr>
+        <tr>
+          <td>
+            H. Audio, electronic, visual, thermal, olfactory, or similar
+            information
+          </td>
+          <td>
+            Images and audio, video or call recordings created in connection
+            with our business activities
+          </td>
+        </tr>
+        <tr>
+          <td>I. Professional or employment-related information</td>
+          <td>
+            Business contact details in order to provide you our services at a
+            business level, job title as well as work history and professional
+            qualifications if you apply for a job with us
+          </td>
+        </tr>
+        <tr>
+          <td>J. Education Information</td>
+          <td>Student records and directory information</td>
+        </tr>
+        <tr>
+          <td>K. Inferences drawn from other personal information</td>
+          <td>
+            Inferences drawn from any of the collected personal information
+            listed above to create a profile or summary about, for example, an
+            individual’s preferences and characteristics
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      We may also collect other personal information outside of these categories
+      instances where you interact with us in-person, online, or by phone or
+      mail in the context of:
+    </p>
+    <ul>
+      <li>Receiving help through our customer support channels;</li>
+      <li>Participation in customer surveys or contests; and</li>
+      <li>
+        Facilitation in the delivery of our Services and to respond to your
+        inquiries.
+      </li>
+    </ul>
+    <p class="title-weigth">
+      How do we use and share your personal information ?
+    </p>
+    <p>
+      <strong> IBAX NETWORK </strong>collects and shares your personal
+      information through:
+    </p>
+    <ul>
+      <li>Targeting cookies/Marketing cookies</li>
+    </ul>
+    <p>
+      More information about our data collection and sharing practices can be
+      found in this privacy notice.
+    </p>
+    <p>
+      You may contact us by email at <strong>info@ibax.io</strong>, or by
+      referring to the contact details at the bottom of this document.
+    </p>
+    <p>
+      If you are using an authorized agent to exercise your right to opt-out we
+      may deny a request if the authorized agent does not submit proof that they
+      have been validly authorized to act on your behalf.
+    </p>
+    <p class="title-weight">
+      Will your information be shared with anyone else ?
+    </p>
+    <p>
+      We may disclose your personal information with our service providers
+      pursuant to a written contract between us and each service provider. Each
+      service provider is a for-profit entity that processes the information on
+      our behalf.
+    </p>
+    <p>
+      We may use your personal information for our own business purposes, such
+      as for undertaking internal research for technological development and
+      demonstration. This is not considered to be "selling" of your personal
+      data.
+    </p>
+    <p>
+      <strong>IBAX NETWORK</strong>has disclosed the following categories of
+      personal information to third parties for a business or commercial purpose
+      in the preceding twelve (12) months:
+    </p>
+    <ul>
+      <li>
+        Category A. Identifiers, such as contact details, like your real name,
+        alias, postal address, telephone or mobile contact number, unique
+        personal identifier, online identifier, Internet Protocol address, email
+        address and account name.
+      </li>
+      <li>
+        Category B. Personal information, as defined in the California Customer
+        Records law, such as your name, contact information, education,
+        employment, employment history and financial information.
+      </li>
+      <li>
+        Category C. Characteristics of protected classifications under
+        California or federal law, such as gender or date of birth.
+      </li>
+      <li>
+        Category D. Internet or other electronic network activity information,
+        such as browsing history, search history, online behavior, interest
+        data, and interactions with our and other websites, applications,
+        systems and advertisements.
+      </li>
+      <li>Category E. Geolocation data, such as device location.</li>
+      <li>
+        Category F. Professional or employment-related information, such as
+        business contact details in order to provide you our services at a
+        business level, job title as well as work history and professional
+        qualifications if you apply for a job with us.
+      </li>
+      <li>
+        Category G. Education information, such as student records and directory
+        information.
+      </li>
+    </ul>
+    <p>
+      The categories of third parties to whom we disclosed personal information
+      for a business or commercial purpose can be found under "WHO WILL YOUR
+      INFORMATION BE SHARED WITH?".
+    </p>
+    <p>
+      <strong>IBAX NETWORK</strong> has not sold any personal information to
+      third parties for a business or commercial purpose in the preceding twelve
+      (12) months. <strong>IBAX NETWORK</strong> will not sell personal
+      information in the future belonging to website visitors, users and other
+      consumers.
+    </p>
+    <p>Your rights with respect to your personal data</p>
+    <p>Right to request deletion of the data - Request to delete</p>
+    <p>
+      You can ask for the deletion of your personal information. If you ask us
+      to delete your personal information, we will respect your request and
+      delete your personal information, subject to certain exceptions provided
+      by law, such as (but not limited to) the exercise by another consumer of
+      his or her right to free speech, our compliance requirements resulting
+      from a legal obligation or any processing that may be required to protect
+      against illegal activities.
+    </p>
+    <p class="title-weight">Your rights with respect to your personal data</p>
+    <p>
+      You can ask for the deletion of your personal information. If you ask us
+      to delete your personal information, we will respect your request and
+      delete your personal information, subject to certain exceptions provided
+      by law, such as (but not limited to) the exercise by another consumer of
+      his or her right to free speech, our compliance requirements resulting
+      from a legal obligation or any processing that may be required to protect
+      against illegal activities.
+    </p>
+    <p>Right to be informed - Request to know</p>
+    <p>Depending on the circumstances, you have a right to know:</p>
+    <ul>
+      <li>Whether we collect and use your personal information;</li>
+      <li>The categories of personal information that we collect;</li>
+      <li>whether we sell your personal information to third parties;</li>
+      <li>
+        The categories of personal information that we sold or disclosed for a
+        business purpose;
+      </li>
+      <li>
+        The categories of third parties to whom the personal information was
+        sold or disclosed for a business purpose; and
+      </li>
+      <li>
+        The business or commercial purpose for collecting or selling personal
+        information.
+      </li>
+    </ul>
+    <p>
+      In accordance with applicable law, we are not obligated to provide or
+      delete consumer information that is de-identified in response to a
+      consumer request or to re-identify individual data to verify a consumer
+      request.
+    </p>
+    <p>
+      Right to Non-Discrimination for the Exercise of a Consumer’s Privacy
+      Rights
+    </p>
+    <p>
+      We will not discriminate against you if you exercise your privacy rights.
+    </p>
+    <p>Verification process</p>
+    <p>
+      Upon receiving your request, we will need to verify your identity to
+      determine you are the same person about whom we have the information in
+      our system. These verification efforts require us to ask you to provide
+      information so that we can match it with information you have previously
+      provided us. For instance, depending on the type of request you submit, we
+      may ask you to provide certain information so that we can match the
+      information you provide with the information we already have on file, or
+      we may contact you through a communication method (e.g. phone or email)
+      that you have previously provided to us. We may also use other
+      verification methods as the circumstances dictate.
+    </p>
+    <p>
+      We will only use personal information provided in your request to verify
+      your identity or authority to make the request. To the extent possible, we
+      will avoid requesting additional information from you for the purposes of
+      verification. If, however, we cannot verify your identity from the
+      information already maintained by us, we may request that you provide
+      additional information for the purposes of verifying your identity, and
+      for security or fraud-prevention purposes. We will delete such
+      additionally provided information as soon as we finish verifying you.
+    </p>
+    <p>Other privacy rights</p>
+    <ul>
+      <li>you may object to the processing of your personal data</li>
+      <li>
+        you may request correction of your personal data if it is incorrect or
+        no longer relevant, or ask to restrict the processing of the data
+      </li>
+      <li>
+        you can designate an authorized agent to make a request under the CCPA
+        on your behalf. We may deny a request from an authorized agent that does
+        not submit proof that they have been validly authorized to act on your
+        behalf in accordance with the CCPA.
+      </li>
+      <li>
+        you may request to opt-out from future selling of your personal
+        information to third parties. Upon receiving a request to opt-out, we
+        will act upon the request as soon as feasibly possible, but no later
+        than 15 days from the date of the request submission.
+      </li>
+    </ul>
+    <p>
+      To exercise these rights, you can contact us by email at
+      <strong>info@ibax.io</strong>, or by referring to the contact details at
+      the bottom of this document. If you have a complaint about how we handle
+      your data, we would like to hear from you.
+    </p>
+    <h6 class="title-h6">12. DO WE MAKE UPDATES TO THIS NOTICE ?</h6>
+    <p>
+      <strong>In Short:</strong>Yes, we will update this notice as necessary to
+      stay compliant with relevant laws.
+    </p>
+    <p>
+      We may update this privacy notice from time to time. The updated version
+      will be indicated by an updated "Revised" date and the updated version
+      will be effective as soon as it is accessible. If we make material changes
+      to this privacy notice, we may notify you either by prominently posting a
+      notice of such changes or by directly sending you a notification. We
+      encourage you to review this privacy notice frequently to be informed of
+      how we are protecting your information.
+    </p>
+    <h6 class="title-h6">13. HOW CAN YOU CONTACT US ABOUT THIS NOTICE ?</h6>
+    <p>
+      If you have questions or comments about this notice, you may email us at
+      <strong>info@ibax.io</strong>
     </p>
   </article>
 </template>

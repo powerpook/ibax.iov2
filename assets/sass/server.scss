@@ -73,8 +73,10 @@
       font-size: 16px;
       .article {
         a {
-          color: #4c596a;
+          color: cornflowerblue;
           display: inline-block;
+          text-indent: 0;
+          font-weight: bolder;
         }
         p {
           text-indent: 2em;
@@ -92,12 +94,43 @@
               border-radius: 50%;
               background: #4c596a;
               left: 10px;
-              top: 15px;
+              top: 13px;
             }
           }
         }
         .title-h6 {
           font-size: 20px;
+        }
+        .title-weight {
+          font-weight: bolder;
+        }
+        .title-italic {
+          font-style: italic;
+        }
+        strong {
+          font-weight: bolder;
+        }
+        &-table {
+          width: 100%;
+          thead {
+            tr td {
+              text-align: center;
+              font-weight: 700;
+              height: 60px;
+            }
+          }
+          tbody {
+            tr td {
+              height: 30px;
+              padding-left: 10px;
+            }
+          }
+          tr {
+            border: 1px solid #47495a;
+            td {
+              border: 1px solid #47495a;
+            }
+          }
         }
       }
     }

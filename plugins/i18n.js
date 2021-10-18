@@ -2,7 +2,7 @@
  * @Author: renlei
  * @Date: 2019-11-08 15:06:37
  * @LastEditors: abc
- * @LastEditTime: 2021-09-20 17:12:53
+ * @LastEditTime: 2021-10-18 15:02:28
  * @Description
  */
 import Vue from 'vue';
@@ -15,9 +15,12 @@ import { handleGetLang } from '../assets/js/public.js';
 const en = require('@/lang/en-us.json');
 const zh = require('@/lang/zh-cn.json');
 const tw = require('@/lang/zh-tw.json');
-const mergeZH = Object.assign({}, zhCN, zh);
-const mergeEN = Object.assign({}, zhBG, en);
-const mergeTW = Object.assign({}, zhTW, tw);
+const serverEn = require('@/lang/server-us.json');
+const serverZh = require('@/lang/server-cn.json');
+const serverTw = require('@/lang/server-tw.json');
+const mergeZH = Object.assign({}, zhCN, zh, serverZh);
+const mergeEN = Object.assign({}, zhBG, en, serverEn);
+const mergeTW = Object.assign({}, zhTW, tw, serverTw);
 Vue.use(VueI18n);
 export default ({ app, store }) => {
   let strLang = handleGetLang();

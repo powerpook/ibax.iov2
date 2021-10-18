@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 17:51:30
+ * @LastEditTime: 2021-10-18 12:06:24
  * @Description: ecolibs
 -->
 <template>
@@ -331,7 +331,7 @@
 </template>
 <script>
 const img1 = require('../../assets/images/ecolibs-case.jpg');
-const img2 = require('../../assets/images/ecolibs-weaver.jpg');
+const img2 = require('../../assets/images/gif/ecolibs-weaver.gif');
 const img3 = require('../../assets/images/ecolibs-chat.jpg');
 const jutkeyBlue = require('../../assets/images/jutkey-blue.png');
 export default {

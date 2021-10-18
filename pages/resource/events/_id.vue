@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-09-28 16:09:11
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 20:01:25
+ * @LastEditTime: 2021-10-18 10:20:53
  * @Description: 
 -->
 <template>
@@ -121,6 +121,7 @@
   </div>
 </template>
 <script>
+import { handleGetLang } from '../../../assets/js/public.js';
 export default {
   props: {},
   async asyncData({ app, params, router }) {
@@ -178,7 +179,8 @@ export default {
     }
   },
   created() {
-    const langType = this.handleGetLanguage(this.lang);
+    const lang = handleGetLang();
+    const langType = this.handleGetLanguage(lang);
     console.log(langType);
     this.langType = langType;
     this.handleArrEvents(this.langType);

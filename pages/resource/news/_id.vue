@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-26 14:35:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 11:34:15
+ * @LastEditTime: 2021-10-18 10:22:02
  * @Description: news  news
 -->
 <template>
@@ -88,6 +88,7 @@
   </div>
 </template>
 <script>
+import { handleGetLang } from '../../../assets/js/public.js';
 export default {
   layout: 'newsLayouts',
   /*  validate({ params }) {
@@ -148,7 +149,8 @@ export default {
   computed: {},
   watch: {},
   created() {
-    const langType = this.handleGetLanguage(this.lang);
+    const lang = handleGetLang();
+    const langType = this.handleGetLanguage(lang);
     this.langType = langType;
     this.handleNewsrandow(this.langType);
   },
