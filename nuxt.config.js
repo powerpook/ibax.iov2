@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-13 18:58:52
+ * @LastEditTime: 2021-10-18 19:35:40
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -22,7 +22,7 @@ const plugins = [
 if (process.env.NODE_ENV !== 'production') {
   pattern = true;
 } else {
-  //  plugins.push('transform-remove-console');
+  plugins.push('transform-remove-console');
   pattern = false;
 }
 export default {

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-10-18 12:18:16
+ * @LastEditTime: 2021-10-19 15:42:43
  * @Description: 
 -->
 <template>
@@ -30,9 +30,13 @@
                 class="bass-top-box-content-btn animated fadeInUp"
                 style="margin-top: 50px"
               >
-                <button class="btn btn-primary" @click="handleVideoOpen">
+                <a
+                  class="btn btn-primary"
+                  href="https://www.youtube.com/watch?v=v6djILrPGbw"
+                  target="_blank"
+                >
                   {{ $t('develope.operation') }}
-                </button>
+                </a>
               </div>
             </el-col>
             <el-col :xs="23" :lg="12">
@@ -147,7 +151,7 @@
               <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="@/assets/images/develop-more.jpg"
+                    src="@/assets/images/gif/develop-more.gif"
                     alt="develop-more"
                   />
                 </div>
@@ -173,7 +177,7 @@
               <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="@/assets/images/develop-more.jpg"
+                    src="@/assets/images/gif/develop-more.gif"
                     alt="develop-more"
                   />
                 </div>
@@ -257,8 +261,8 @@
               <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="@/assets/images/gif/develop-manage.gif"
-                    alt="develop-more"
+                    src="../../assets/images/gif/develop-manage.gif"
+                    alt="develop-manage"
                   />
                 </div>
               </el-col>
@@ -294,7 +298,7 @@
                 <div class="home-new-img wow fadeInUp">
                   <img
                     src="../../assets/images/gif/develop-online.gif"
-                    mode="powerful"
+                    alt="develop-online"
                   />
                 </div>
               </el-col>
@@ -316,8 +320,8 @@
               <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
-                    mode="powerful"
+                    src="@/assets/images/gif/develop-template.gif"
+                    alt="develop-template"
                   />
                 </div>
               </el-col>
@@ -333,8 +337,8 @@
               <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
-                    mode="powerful"
+                    src="@/assets/images/gif/develop-template.gif"
+                    alt="develop-template"
                   />
                 </div>
               </el-col>

@@ -112,6 +112,14 @@
         }
         &-table {
           width: 100%;
+          margin-bottom: 20px;
+          &-cookie {
+            tbody {
+              tr td:first-child {
+                width: 100px;
+              }
+            }
+          }
           thead {
             tr td {
               text-align: center;
@@ -122,7 +130,7 @@
           tbody {
             tr td {
               height: 30px;
-              padding-left: 10px;
+              padding: 5px 10px;
             }
           }
           tr {
@@ -134,5 +142,108 @@
         }
       }
     }
+    &-mobile {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      text-align: center;
+      background-color: #fff;
+      position: relative;
+      &-left {
+        flex: 1;
+        padding: 10px 0;
+        color: #8b9bb0;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      &-right {
+        padding: 5px 8px;
+        font-size: 25px;
+        font-weight: bolder;
+        background-color: #e8eef3;
+      }
+      &-box {
+        position: absolute;
+        top: 100%;
+        left: -300px;
+        width: 300px;
+        background: #fff;
+        z-index: 20;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s ease;
+        border: 1px solid #e8eef3;
+        li a {
+          display: block;
+          color: #8b9bb0 !important;
+          padding: 10px 30px;
+          position: relative;
+          font-weight: 700;
+        }
+        li.active {
+          background: #e2ecf1;
+          a {
+            color: #47495a !important;
+            font-weight: 700;
+          }
+        }
+      }
+      &-show {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+.dialog-box {
+  width: 100%;
+  color: #47495a;
+  .el-logo1 {
+    color: $primary-color;
+    font-size: 40px;
+  }
+  &-content {
+    width: 100%;
+    &-title {
+      font-size: 18px;
+      font-weight: bolder;
+      text-align: center;
+      margin-bottom: 10px;
+      &-small {
+        font-size: 16px;
+        font-weight: bolder;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+    }
+    &-text {
+      color: #777;
+      font-size: 12px;
+      font-style: italic;
+    }
+    ul {
+      margin: 10px 0 10px 40px;
+      li {
+        position: relative;
+        text-indent: 2em;
+        &::after {
+          position: absolute;
+          content: "";
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: #4c596a;
+          left: 10px;
+          top: 13px;
+        }
+      }
+    }
+  }
+  .btn-lime {
+    background-color: $primary-color;
+    padding: 15px 50px;
+    min-width: 200px;
   }
 }

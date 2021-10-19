@@ -2,140 +2,291 @@
  * @Author: abc
  * @Date: 2021-10-15 11:47:53
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 18:48:33
+ * @LastEditTime: 2021-10-19 14:29:22
  * @Description: cookie
 -->
 <template>
   <article class="article">
-    <h2 class="title-h4">Cookie政策</h2>
-    <p>
-      本 Cookie 政策解释了 IBAX NETWORK
-      Ltd（“公司”、“我们”、“我们”和“我们的”）如何在您访问我们的网站https://ibax.io时使用
-      cookie
-      和类似技术来识别您，（“网站”）。它解释了这些技术是什么以及我们为什么使用它们，以及您控制我们使用它们的权利。
+    <h2 class="title-h4">COOKIE POLICY</h2>
+    <p class="title-weight" style="text-indent: 0">
+      Last updated September 30, 2021
     </p>
     <p>
-      在某些情况下，我们可能会使用 cookie
-      来收集个人信息，或者如果我们将其与其他信息相结合，这些信息就会成为个人信息。
+      This Cookie Policy explains how
+      <strong>IBAX NETWORK Ltd</strong>
+      "Company", "we", "us", and "our") uses cookies and similar technologies to
+      recognize you when you visit our websites at<a
+        href="https://ibax.io"
+        target="_blank"
+        >https://ibax.io</a
+      >,("Websites"). It explains what these technologies are and why we use
+      them, as well as your rights to control our use of them.
     </p>
-    <h6 class="title-h6">什么是Cookie？</h6>
-    <p>我们收集和持有的有关您的个人信息类型可能包括：</p>
-    <ul>
-      <li>联系信息，例如您的电子邮件地址</li>
-      <li>
-        社交媒体（包括 Telegram）处理您向我们或公众提供的其他社交媒体资料信息
-      </li>
-      <li>我们与您的通信记录，包括您发送给我们的任何消息或电子邮件</li>
-      <li>您在业务过程中向我们提供的其他信息</li>
-      <li>能够识别您身份的其他信息</li>
-    </ul>
     <p>
-      如果您没有这些信息，我们可能无法为您提供我们的产品或服务（或我们的产品或服务提供的所有特性和功能）或响应您提交给我们的查询或请求。
+      In some cases, we may use cookies to collect personal information, or that
+      becomes personal information if we combine it with other information.
     </p>
-    <h6 class="title-h6">我们如何收集个人信息</h6>
-    <p>我们通过以下方式收集有关您的个人信息：</p>
-    <ul>
-      <li>当您通过电子邮件或社交媒体（例如 Telegram）与我们联系时</li>
-      <li>当您向我们提交查询或请求时</li>
-      <li>
-        当您回答我们开展的一项调查、参与任何促销活动或填写我们网站上的表格时
-      </li>
-      <li>
-        通过分析提供商（例如根据自己的隐私政策处理个人信息的谷歌：
-        <a href="https://policies.google.com/privacy/partners" target="_blank"
-          >https://policies.google.com/privacy/partners）</a
-        >
-      </li>
-      <li>
-        来自公共来源（包括社交媒体平台，这些平台有自己单独的隐私政策来管理这些来源持有的个人信息的访问和使用）
-      </li>
-      <li>来自有权向我们披露该信息的第三方</li>
-      <li>当您向我们申请工作时</li>
-      <p>
-        在某些情况下，法律可能要求我们收集有关您的某些类型的个人信息。当我们从您那里收集个人信息时，我们通常会直接自己收集。但是，在某些情况下，我们可能会从第三方收集个人信息，例如通过您的代表、向我们提供服务的承包商或将您推荐给我们的第三方，因为他们认为您可能对我们的产品或服务感兴趣。
-      </p>
-    </ul>
-    <h6 class="title-h6">我们使用个人信息的目的</h6>
-    <p>我们将收集的有关您的个人信息用于以下目的：</p>
-    <ul>
-      <li>
-        使我们能够提供我们的产品和服务（包括在公共以太坊区块链上提供服务）
-      </li>
-      <li>回答您的疑问和要求</li>
-      <li>遵守我们的法律和监管义务，或法律另有要求或授权</li>
-      <li>进行市场分析和研究，包括通过使用数据分析来改进我们的产品和服务</li>
-      <li>管理和解决任何法律或商业投诉或问题</li>
-      <li>执行计划和预测活动以及其他内部业务流程</li>
-      <li>
-        让您随时了解我们的活动，包括发送有关我们代币的通讯以及未来 IBAX
-        Network） 平台的发展
-      </li>
-    </ul>
+    <h6 class="title-h6">What are cookies ?</h6>
     <p>
-      我们可能会不时使用您的个人信息，以便向您发送我们认为您可能感兴趣的产品或服务（包括在某些情况下由第三方提供的产品和服务）的营销材料。您可以通过使用下面的联系方式或点击通讯中的“取消订阅”链接与我们联系，选择不接收我们的营销通讯。我们也可能会根据您的授权或根据您的要求或指示，出于其他目的使用和披露您的信息。
+      Cookies are small data files that are placed on your computer or mobile
+      device when you visit a website. Cookies are widely used by website owners
+      in order to make their websites work, or to work more efficiently, as well
+      as to provide reporting information.
     </p>
-    <h6 class="title-h6">我们向其披露个人信息的人</h6>
-    <p>我们可能会与以下人员共享您的个人信息：</p>
-    <ul>
-      <li>您的代表、顾问和您授权代表您与我们互动的其他人</li>
-      <li>我们需要信息以履行职责的员工</li>
-      <li>
-        我们公司集团内的附属公司和相关实体，包括位于您所在国家/地区以外的实体
-      </li>
-      <li>我们的业务合作伙伴、代理和服务提供商（包括托管和云提供商）</li>
-      <li>我们全部或部分业务或我们公司或相关实体股份的潜在购买者</li>
-      <li>我们聘请为我们的业务提供建议的专业顾问</li>
-      <li>要求我们披露该信息的政府当局，或根据法律要求披露给其他人</li>
-    </ul>
-    <h6 class="title-h6">向国际接收者披露</h6>
     <p>
-      在某些情况下，我们会向可能位于您所在国家/地区以外的接收者（包括承包商和第三方服务提供商）披露您的个人信息。我们可能会在必要时向我们的附属公司和相关实体以及海外员工披露您的个人信息，以向您提供我们的商品和服务。我们的关联实体、关联公司和服务提供商不时位于亚太地区的各个国家和其他国家/地区，并且可能会向这些实体披露个人信息。我们采取商业上合理的步骤来确保任何海外接收者都有适当的保护措施，确保对您的个人信息提供足够的保护。
+      Cookies set by the website owner (in this case,<strong
+        >IBAX NETWORK Ltd </strong
+      >) are called "first party cookies". Cookies set by parties other than the
+      website owner are called "third party cookies". Third party cookies enable
+      third party features or functionality to be provided on or through the
+      website (e.g. like advertising, interactive content and analytics). The
+      parties that set these third-party cookies can recognize your computer
+      both when it visits the website in question and also when it visits
+      certain other websites.
     </p>
-    <h6 class="title-h6">Cookies</h6>
+    <h6 class="title-h6">Why do we use cookies ?</h6>
     <p>
-      “Cookies”是由您的互联网浏览器软件在您的硬盘驱动器上创建并存储的小型文本文件，以保存有关您当前正在查看的网页的相关信息。Cookies
-      被用于监控和观察您对我们网站的使用，汇编有关该使用的汇总数据，并为您提供更有效的服务（其中可能包括根据您的偏好和过去在这些网站上的活动定制我们网站的部分内容）。某些第三方（例如数据分析服务提供商）也可能使用我们无法控制的
-      cookie。大多数互联网浏览器都有允许您禁用全部或部分 cookie
-      的功能——请参阅浏览器的帮助菜单以了解如何执行此操作。虽然您仍然可以在互联网浏览器上禁用
-      cookie
-      的情况下浏览我们的网站，某些网站功能可能无法使用或无法正常运行。我们采取合理措施确保我们持有的您的任何个人信息准确、完整和最新。这些步骤包括在我们被告知信息已更改时及时更新个人信息、检查我们的联系人列表的准确性，以及为个人提供一种简单的方法来更新他们的个人信息我们会根据需要存储个人信息为其收集或根据法律要求。在此期限届满后的合理时间内，我们将采取合理措施对我们拥有或控制的个人信息进行去标识化或销毁。我们通常将收集到的个人信息存储在电子数据库中，其中一些可能由第三方数据存储提供商代表我们持有。有时，我们还会在物理存储设施中保留此类个人信息的硬拷贝记录。我们使用一系列物理和技术安全流程和程序来保护我们持有的信息的机密性和安全性，我们会不时更新这些流程和程序以应对新出现的安全威胁。这些措施包括：
+      We use first- and third-party cookies for several reasons. Some cookies
+      are required for technical reasons in order for our Websites to operate,
+      and we refer to these as "essential" or "strictly necessary" cookies.
+      Other cookies also enable us to track and target the interests of our
+      users to enhance the experience on our Online Properties.Third parties
+      serve cookies through our Websites for advertising, analytics and other
+      purposes.This is described in more detail below.
     </p>
-    <ul>
-      <li>
-        限制访问我们的物理和电子数据库，以及物理安全，例如访问我们营业场所的安全程序；和
-      </li>
-      <li>
-        技术安全程序，包括密码保护、网络防火墙、加密、入侵检测和站点监控（在可行的情况下）。
-      </li>
-    </ul>
-    <h6 class="title-h6">您关于您的个人信息的合法权利</h6>
-    <p>您有权：</p>
-    <ul>
-      <li>访问并索取您的个人信息的副本，以检查我们如何使用您的个人信息</li>
-      <li>更正或纠正任何过时、不正确、不完整或具有误导性的个人信息</li>
-      <li>撤回您之前对处理您的个人信息给予的任何同意</li>
-      <li>反对处理您的个人信息</li>
-      <li>要求我们限制或暂停使用您的个人信息</li>
-    </ul>
     <p>
-      这些请求应使用以下联系方式以书面形式提交给我们。我们将在合理的时间范围内处理您的请求，并免费提供一份您的个人信息。如果您的要求是额外的副本，或者您的要求明显没有根据、过度或重复，我们可能会拒绝您的要求或收取合理的费用。如果我们拒绝请求或收取合理费用，我们将在合理的时间范围内告知您我们拒绝的原因或任何费用。您有权以结构化、常用和机器可读的格式索取您提供给我们的个人信息的副本，并有权在某些情况下将该信息传输或移植到另一个实体。在某些情况下，我们可能无法提供您要求的信息，例如，它会干扰他人的隐私、权利或自由，或导致违反保密或适用法律。在这些情况下，我们会告知您为什么我们无法满足您的要求。
+      The specific types of first and third party cookies served through our
+      Websites and the purposes they perform are described below (please note
+      that the specific cookies served may vary depending on the specific Online
+      Properties you visit):
     </p>
-    <h6 class="title-h6">如何删除您的个人信息</h6>
+    <h6 class="title-h6">How can I control cookies ?</h6>
     <p>
-      您有权要求删除或销毁您的个人信息（“被遗忘权”），当您的个人信息不再用于最初收集的目的时，它没有被用于收集的目的被收集，或者您希望撤回您对某些处理的同意。您也有权要求我们删除或移除您的个人数据，如果您已成功行使反对处理的权利，我们非法处理了您的个人信息，或者我们需要删除您的个人信息以符合当地法律。在某些情况下，我们可能无法满足您的要求，例如我们需要继续处理您的个人信息以遵守适用法律。
+      You have the right to decide whether to accept or reject cookies. You can
+      exercise your cookie rights by setting your preferences in the Cookie
+      Consent Manager. The Cookie Consent Manager allows you to select which
+      categories of cookies you accept or reject. Essential cookies cannot be
+      rejected as they are strictly necessary to provide you with services.
     </p>
-    <h6 class="title-h6">投诉</h6>
     <p>
-      我们努力达到最高标准以保护您的隐私。但是，如果您担心我们管理您的个人信息的方式，或者认为我们可能违反了适用的隐私或数据保护立法规定的义务或任何其他相关义务，请使用下面列出的联系方式与我们联系。
-      投诉必须以书面形式提出。在投诉中，请包括您的联系方式（例如电子邮件地址、姓名、地址和电话号码）并清楚地描述投诉。我们将在合理的时间内处理此事，并将让您了解我们的调查进展。如果我们没有在合理的时间内回复您，或者如果您认为您的投诉没有得到满意的解决，您可以联系我们讨论您的疑虑。
+      The Cookie Consent Manager can be found in the notification banner and on
+      our website. If you choose to reject cookies, you may still use our
+      website though your access to some functionality and areas of our website
+      may be restricted. You may also set or amend your web browser controls to
+      accept or refuse cookies. As the means by which you can refuse cookies
+      through your web browser controls vary from browser-to-browser, you should
+      visit your browser's help menu for more information.
     </p>
-    <h6 class="title-h6">本政策的变更</h6>
     <p>
-      我们可能会不时更改本政策，以考虑我们标准做法和程序的变化，或在必要时遵守新的法律和法规。本政策的最新版本将始终在我们的网站上提供。
+      In addition, most advertising networks offer you a way to opt out of
+      targeted advertising. If you would like to find out more information,
+      please visit
+      <a href="http://www.aboutads.info/choices" target="_blank"
+        >http://www.aboutads.info/choices</a
+      >or
+      <a href="http://www.youronlinechoices.com" target="_blank"
+        >http://www.youronlinechoices.com</a
+      >
+      .
     </p>
-    <h6 class="title-h6">联系方式</h6>
     <p>
-      如果您需要联系我们或希望我们提供有关隐私问题的更多信息，请通过<span>info@ibax.io</span>与我们联系。
+      The specific types of first- and third-party cookies served through our
+      Websites and the purposes they perform are described in the table below
+      (please note that the specific cookies served may vary depending on the
+      specific Online Properties you visit):
+    </p>
+    <h6 class="title-h6">Essential website cookies:</h6>
+    <p>
+      These cookies are strictly necessary to provide you with services
+      available through our Websites and to use some of its features, such as
+      access to secure areas.
+    </p>
+    <table class="article-table article-table-cookie">
+      <tbody>
+        <tr>
+          <td><strong>Name:</strong></td>
+          <td>__cfduid</td>
+        </tr>
+        <tr>
+          <td><strong>Purpose:</strong></td>
+          <td>
+            Used by Cloudflare to identify individual clients behind a shared IP
+            address, and apply security settings on a per-client basis. This is
+            a HTTP type cookie that expires after 1 year.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Provider:</strong></td>
+          <td>
+            Used by Cloudflare to identify individual clients behind a shared IP
+            address, and apply security settings on a per-client basis. This is
+            a HTTP type cookie that expires after 1 year.
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Provider:</strong></td>
+          <td>IBAX NETWORK</td>
+        </tr>
+        <tr>
+          <td><strong>Service:</strong></td>
+          <td>CloudFlare View Service Privacy Policy</td>
+        </tr>
+        <tr>
+          <td><strong>Country:</strong></td>
+          <td>United States</td>
+        </tr>
+        <tr>
+          <td><strong>Type:</strong></td>
+          <td>server_cookie</td>
+        </tr>
+        <tr>
+          <td><strong>Expires in:</strong></td>
+          <td>30 days</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="article-table article-table-cookie">
+      <tbody>
+        <tr>
+          <td><strong>Name:</strong></td>
+          <td>__tlbcpv</td>
+        </tr>
+        <tr>
+          <td><strong>Purpose:</strong></td>
+          <td>Used to record unique visitor views of the consent banner.</td>
+        </tr>
+        <tr>
+          <td><strong>Provider:</strong></td>
+          <td>.termly.io</td>
+        </tr>
+        <tr>
+          <td><strong>Service:</strong></td>
+          <td>Termly View Service Privacy Policy</td>
+        </tr>
+        <tr>
+          <td><strong>Country:</strong></td>
+          <td>United States</td>
+        </tr>
+        <tr>
+          <td><strong>Type:</strong></td>
+          <td>http_cookie</td>
+        </tr>
+        <tr>
+          <td><strong>Expires in:</strong></td>
+          <td>1 year</td>
+        </tr>
+      </tbody>
+    </table>
+    <h6 class="title-h6">Unclassified cookies:</h6>
+    <p>
+      These are cookies that have not yet been categorized. We are in the
+      process of classifying these cookies with the help of their providers.
+    </p>
+    <table class="article-table article-table-cookie">
+      <tbody>
+        <tr>
+          <td><strong>Name:</strong></td>
+          <td>gatsby-intl-language</td>
+        </tr>
+        <tr>
+          <td><strong>Purpose:</strong></td>
+          <td>__________</td>
+        </tr>
+        <tr>
+          <td><strong>Provider:</strong></td>
+          <td>IBAX NETWORK</td>
+        </tr>
+        <tr>
+          <td><strong>Service:</strong></td>
+          <td>__________</td>
+        </tr>
+        <tr>
+          <td><strong>Country:</strong></td>
+          <td>United States</td>
+        </tr>
+        <tr>
+          <td><strong>Type:</strong></td>
+          <td>html_local_storage</td>
+        </tr>
+        <tr>
+          <td><strong>Expires in:</strong></td>
+          <td>persistent</td>
+        </tr>
+      </tbody>
+    </table>
+    <h6 class="title-h6">
+      What about other tracking technologies, like web beacons ?
+    </h6>
+    <p>
+      Cookies are not the only way to recognize or track visitors to a website.
+      We may use other, similar technologies from time to time, like web beacons
+      (sometimes called "tracking pixels" or "clear gifs"). These are tiny
+      graphics files that contain a unique identifier that enable us to
+      recognize when someone has visited our Websites or opened an e-mail
+      including them. This allows us, for example, to monitor the traffic
+      patterns of users from one page within a website to another, to deliver or
+      communicate with cookies, to understand whether you have come to the
+      website from an online advertisement displayed on a third-party website,
+      to improve site performance, and to measure the success of e-mail
+      marketing campaigns. In many instances, these technologies are reliant on
+      cookies to function properly, and so declining cookies will impair their
+      functioning.
+    </p>
+    <h6 class="title-h6">Do you use Flash cookies or Local Shared Objects?</h6>
+    <p>
+      Websites may also use so-called "Flash Cookies" (also known as Local
+      Shared Objects or "LSOs") to, among other things, collect and store
+      information about your use of our services, fraud prevention and for other
+      site operations.
+    </p>
+    <p>
+      If you do not want Flash Cookies stored on your computer, you can adjust
+      the settings of your Flash player to block Flash Cookies storage using the
+      tools contained in the Website Storage Settings Panel. You can also
+      control Flash Cookies by going to the Global Storage Settings Panel and
+      following the instructions (which may include instructions that explain,
+      for example, how to delete existing Flash Cookies (referred to
+      "information" on the Macromedia site), how to prevent Flash LSOs from
+      being placed on your computer without your being asked, and (for Flash
+      Player 8 and later) how to block Flash Cookies that are not being
+      delivered by the operator of the page you are on at the time).
+    </p>
+    <p>
+      Please note that setting the Flash Player to restrict or limit acceptance
+      of Flash Cookies may reduce or impede the functionality of some Flash
+      applications, including, potentially, Flash applications used in
+      connection with our services or online content.
+    </p>
+    <h6 class="title-h6">Do you serve targeted advertising ?</h6>
+    <p>
+      Third parties may serve cookies on your computer or mobile device to serve
+      advertising through our Websites. These companies may use information
+      about your visits to this and other websites in order to provide relevant
+      advertisements about goods and services that you may be interested in.
+      They may also employ technology that is used to measure the effectiveness
+      of advertisements. This can be accomplished by them using cookies or web
+      beacons to collect information about your visits to this and other sites
+      in order to provide relevant advertisements about goods and services of
+      potential interest to you. The information collected through this process
+      does not enable us or them to identify your name, contact details or other
+      details that directly identify you unless you choose to provide these.
+    </p>
+    <h6 class="title-h6">How often will you update this Cookie Policy ?</h6>
+    <p>
+      We may update this Cookie Policy from time to time in order to reflect,
+      for example, changes to the cookies we use or for other operational, legal
+      or regulatory reasons. Please therefore re-visit this Cookie Policy
+      regularly to stay informed about our use of cookies and related
+      technologies.
+    </p>
+    <p>
+      The date at the top of this Cookie Policy indicates when it was last
+      updated.
+    </p>
+    <h6 class="title-h6">Where can I get further information ?</h6>
+    <p>
+      If you have any questions about our use of cookies or other technologies,
+      please email us at <strong>info@ibax.io</strong>.
     </p>
   </article>
 </template>

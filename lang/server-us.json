@@ -3,5 +3,13 @@
   "server.term": "Terms of service",
   "server.policy": "Website privacy policy",
   "server.applies": "This privacy policy applies to IBAX's website. Protecting your privacy is important to us. We are the controller of your personal information and this policy explains how we manage personal information within the organization.",
-  "server.collect": "Types of personal information we collect"
+  "server.collect": "Types of personal information we collect",
+  "server.personal": "Your personal data, your choices and our responsibilities",
+  "server.our": "We and our partners use cookies or similar technologies to browse and store non-sensitive information, such as your IP address.",
+  "server.processing": "The processing of relevant data allows us to improve the user experience, measure the audience rate of the website and social network features or cooperate with personalized advertising.",
+  "server.clicking": "By clicking \"Agree\", you accept the use of cookies by IBAX and its partners.",
+  "server.business": "Our business partner",
+  "server.change": "Together with our partners, after obtaining your consent, we will process the following data based on your opinions: storing or/and browsing information on the terminal, advertising and personalized content, evaluation of the effectiveness of advertising and content, audience data and product development",
+  "server.agree": "Agree",
+  "server.disagree": "Disagree"
 }

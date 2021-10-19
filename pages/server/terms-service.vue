@@ -2,179 +2,444 @@
  * @Author: abc
  * @Date: 2021-10-15 11:47:26
  * @LastEditors: abc
- * @LastEditTime: 2021-10-18 15:40:56
+ * @LastEditTime: 2021-10-19 11:51:37
  * @Description: Terms of service
 -->
 <template>
   <article class="article">
-    <h2 class="title-h4">条款和条件</h2>
-    <h6 class="title-h6">1. 同意条款</h6>
+    <h2 class="title-h4">TERMS AND CONDITIONS</h2>
+    <p class="title-weight">Last updated September 30, 2021</p>
+    <h6 class="title-h6">1. Agreement to Terms</h6>
     <p>
-      1.1这些条款和条件构成您之间进行的，具有法律约束力的协议是否亲自或代表一个实体（你），和
+      1.1 These Terms and Conditions constitute a legally binding agreement made
+      between you, whether personally or on behalf of an entity (you), and
       <strong>IBAX NETWORK </strong>
-      ，关于您访问和使用<strong>IBAX NETWORK </strong>(<a
-        href=""
+      concerning your access to and use of the <strong>IBAX NETWORK </strong>(<a
+        href="https://ibax.io"
         target="_blank"
         >https://ibax.io</a
-      >)网站以及任何相关应用程序（网站）。 本网站提供以下服务：
-      <strong>分布式账本技术（服务）</strong
-      >。您同意通过访问本网站和/或服务，您已阅读、理解并同意受所有这些条款和条件的约束。
-      <strong>
-        如果您不同意所有这些条款和条件，则禁止您使用本网站和服务，您必须立即停止使用。我们建议您打印这些条款和条件的副本以备将来参考。</strong
+      >)website as well as any related applications (the Site).
+    </p>
+    <p>
+      The Site provides the following services: Website that describes the
+      ecosystem, technologies, and the Foundation. (Services). You agree that by
+      accessing the Site and/or Services, you have read, understood, and agree
+      to be bound by all of these Terms and Conditions.
+    </p>
+    <p>
+      If you do not agree with all of these Terms and Conditions, then you are
+      prohibited from using the Site and Services and you must discontinue use
+      immediately. We recommend that you print a copy of these Terms and
+      Conditions for future reference.
+    </p>
+    <p>
+      1.2 The supplemental policies set out in Section 1.7 below, as well as any
+      supplemental terms and condition or documents that may be posted on the
+      Site from time to time, are expressly incorporated by reference.
+    </p>
+    <p>
+      1.3 We may make changes to these Terms and Conditions at any time. The
+      updated version of these Terms and Conditions will be indicated by an
+      updated "Revised" date and the updated version will be effective as soon
+      as it is accessible. You are responsible for reviewing these Terms and
+      Conditions to stay informed of updates. Your continued use of the Site
+      represents that you have accepted such changes.
+    </p>
+    <p>
+      1.4 We may update or change the Site from time to time to reflect changes
+      to our products, our users' needs and/or our business priorities.
+    </p>
+    <p>
+      1.5 The Site is intended for users who are at least 18 years old. If you
+      are under the age of 18, you are not permitted to register for the Site or
+      use the Services without parental permission.
+    </p>
+    <h6 class="title-h6">2. Acceptable Use</h6>
+    <p>
+      2.1 You may not access or use the Site for any purpose other than that for
+      which we make the site and our services available. The Site may not be
+      used in connection with any commercial endeavors except those that are
+      specifically endorsed or approved by us.
+    </p>
+    <p>2.2 As a user of this Site, you agree not to:</p>
+    <ul>
+      <li>
+        Make any unauthorized use of the Site, including collecting usernames
+        and/or email addresses of users to send unsolicited email or creating
+        user accounts under false pretenses
+      </li>
+      <li>
+        Systematically retrieve data or other content from the Site to a compile
+        database or directory without written permission from us
+      </li>
+      <li>
+        Circumvent, disable, or otherwise interfere with security-related
+        features of the Site, including features that prevent or restrict the
+        use or copying of any content or enforce limitations on the use
+      </li>
+      <li>
+        Use any information obtained from the Site in order to harass, abuse, or
+        harm another person
+      </li>
+      <li>
+        Use the Site or our content as part of any effort to compete with us or
+        to create a revenue-generating endeavor or commercial enterprise
+      </li>
+      <li>
+        Harass, annoy, intimidate, or threaten any of our employees, agents, or
+        other users
+      </li>
+      <li>
+        Delete the copyright or other proprietary rights notice from any of the
+        content
+      </li>
+      <li>
+        Decipher, decompile, disassemble, or reverse engineer any of the
+        software comprising or in any way making up a part of the Site
+      </li>
+      <li>
+        Upload or transmit (or attempt to upload or to transmit) viruses, Trojan
+        horses, or other material that interferes with any party’s uninterrupted
+        use and enjoyment of the Site, or any material that acts as a passive or
+        active information collection or transmission mechanism
+      </li>
+      <li>
+        Use, launch, or engage in any automated use of the system, such as using
+        scripts to send comments or messages, robots, scrapers, offline readers,
+        or similar data gathering and extraction tools
+      </li>
+      <li>
+        Disparage, tarnish, or otherwise harm, in our opinion, us and/or the
+        Site
+      </li>
+      <li>
+        Use the Site in a manner inconsistent with any applicable laws or
+        regulations
+      </li>
+      <li>Advertise products or services not intended by us</li>
+      <li>
+        Trick, defraud, or mislead us and other users, especially in any attempt
+        to learn sensitive account information such as user passwords
+      </li>
+      <li>
+        Make improper use of our support services, or submit false reports of
+        abuse or misconduct
+      </li>
+      <li>
+        Engage in any automated use of the system, such as using scripts to send
+        comments or messages, or using any data mining, robots, or similar data
+        gathering and extraction tools
+      </li>
+      <li>
+        Interfere with, disrupt, or create an undue burden on the Site or the
+        networks and services connected to the Site
+      </li>
+      <li>
+        Attempt to impersonate another user or person, or use the username of
+        another user
+      </li>
+      <li>Use the Site to advertise or sell goods and services</li>
+      <li>
+        Attempt to access any portions of the Site that you are restricted from
+        accessing
+      </li>
+      <li>Misrepresent experience, skills, or information about a User</li>
+      <li>
+        Falsely imply a relationship with us or another company with whom you do
+        not have a relationship
+      </li>
+    </ul>
+    <h6 class="title-h6">3. Our content</h6>
+    <p>
+      3.1 Unless otherwise indicated, the Site and Services including source
+      code, databases, functionality, software, website designs, audio, video,
+      text, photographs, and graphics on the Site (Our Content) are owned or
+      licensed to us, and are protected by copyright and trade mark laws.
+    </p>
+    <p>
+      3.2 Except as expressly provided in these Terms and Conditions, no part of
+      the Site, Services or Our Content may be copied, reproduced, aggregated,
+      republished, uploaded, posted, publicly displayed, encoded, translated,
+      transmitted, distributed, sold, licensed, or otherwise exploited for any
+      commercial purpose whatsoever, without our express prior written
+      permission.
+    </p>
+    <p>
+      3.3 Provided that you are eligible to use the Site, you are granted a
+      limited licence to access and use the Site and Our Content and to download
+      or print a copy of any portion of the Content to which you have properly
+      gained access solely for your personal, non-commercial use.
+    </p>
+    <p>
+      3.4 You shall not (a) try to gain unauthorised access to the Site or any
+      networks, servers or computer systems connected to the Site; and/or (b)
+      make for any purpose including error correction, any modifications,
+      adaptions, additions or enhancements to the Site or Our Content, including
+      the modification of the paper or digital copies you may have downloaded.
+    </p>
+    <p>
+      3.5 We shall (a) prepare the Site and Our Content with reasonable skill
+      and care; and (b) use industry standard virus detection software to try to
+      block the uploading of content to the Site that contains viruses.
+    </p>
+    <p>
+      3.6 The content on the Site is provided for general information only. It
+      is not intended to amount to advice on which you should rely. You must
+      obtain professional or specialist advice before taking, or refraining from
+      taking, any action on the basis of the content on the Site.
+    </p>
+    <p>
+      3.7 Although we make reasonable efforts to update the information on our
+      site, we make no representations, warranties or guarantees, whether
+      express or implied, that Our Content on the Site is accurate, complete or
+      up to date.
+    </p>
+    <h6 class="title-h6">4. Site Management</h6>
+    <p>
+      4.1 We reserve the right at our sole discretion, to (1) monitor the Site
+      for breaches of these Terms and Conditions; (2) take appropriate legal
+      action against anyone in breach of applicable laws or these Terms and
+      Conditions; (3) remove from the Site or otherwise disable all files and
+      content that are excessive in size or are in any way a burden to our
+      systems; and (4) otherwise manage the Site in a manner designed to protect
+      our rights and property and to facilitate the proper functioning of the
+      Site and Services.
+    </p>
+    <p>
+      4.2 We do not guarantee that the Site will be secure or free from bugs or
+      viruses.
+    </p>
+    <p>
+      4.3 You are responsible for configuring your information technology,
+      computer programs and platform to access the Site and you should use your
+      own virus protection software.
+    </p>
+    <h6 class="title-h6">5. Modifications to and availability of the Site</h6>
+    <p>
+      5.1 We reserve the right to change, modify, or remove the contents of the
+      Site at any time or for any reason at our sole discretion without notice.
+      We also reserve the right to modify or discontinue all or part of the
+      Services without notice at any time.
+    </p>
+    <p>
+      5.2 We cannot guarantee the Site and Services will be available at all
+      times. We may experience hardware, software, or other problems or need to
+      perform maintenance related to the Site, resulting in interruptions,
+      delays, or errors. You agree that we have no liability whatsoever for any
+      loss, damage, or inconvenience caused by your inability to access or use
+      the Site or Services during any downtime or discontinuance of the Site or
+      Services. We are not obliged to maintain and support the Site or Services
+      or to supply any corrections, updates, or releases.
+    </p>
+    <p>
+      5.3 There may be information on the Site that contains typographical
+      errors, inaccuracies, or omissions that may relate to the Services,
+      including descriptions, pricing, availability, and various other
+      information. We reserve the right to correct any errors, inaccuracies, or
+      omissions and to change or update the information at any time, without
+      prior notice.
+    </p>
+    <h6 class="title-h6">6. Disclaimer/Limitation of Liability</h6>
+    <p>
+      6.1 The Site and Services are provided on an as-is and as-available basis.
+      You agree that your use of the Site and/or Services will be at your sole
+      risk except as expressly set out in these Terms and Conditions. All
+      warranties, terms, conditions and undertakings, express or implied
+      (including by statute, custom or usage, a course of dealing, or common
+      law) in connection with the Site and Services and your use thereof
+      including, without limitation, the implied warranties of satisfactory
+      quality, fitness for a particular purpose and non-infringement are
+      excluded to the fullest extent permitted by applicable law.
+    </p>
+    <p>
+      We make no warranties or representations about the accuracy or
+      completeness of the Site’s content and are not liable for any (1) errors
+      or omissions in content; (2) any unauthorized access to or use of our
+      servers and/or any and all personal information and/or financial
+      information stored on our server; (3) any interruption or cessation of
+      transmission to or from the site or services; and/or (4) any bugs,
+      viruses, trojan horses, or the like which may be transmitted to or through
+      the site by any third party. We will not be responsible for any delay or
+      failure to comply with our obligations under these Terms and Conditions if
+      such delay or failure is caused by an event beyond our reasonable control.
+    </p>
+    <p>6.2 Our responsibility for loss or damage suffered by you:</p>
+    <p class="title-weight">Whether you are a consumer or a business user:</p>
+    <ul>
+      <li>
+        We do not exclude or limit in any way our liability to you where it
+        would be unlawful to do so. This includes liability for death or
+        personal injury caused by our negligence or the negligence of our
+        employees, agents or subcontractors and for fraud or fraudulent
+        misrepresentation.
+      </li>
+      <li>
+        If we fail to comply with these Terms and Conditions, we will be
+        responsible for loss or damage you suffer that is a foreseeable result
+        of our breach of these Terms and Conditions, but we would not be
+        responsible for any loss or damage that were not foreseeable at the time
+        you started using the Site/Services.
+      </li>
+    </ul>
+    <p>
+      Notwithstanding anything to the contrary contained in the
+      Disclaimer/Limitation of Liability section, our liability to you for any
+      cause whatsoever and regardless of the form of the action, will at all
+      times be limited to a total aggregate amount equal to the greater of (a)
+      the sum of £10000 or (b) the amount paid, if any, by you to us for the
+      Services/Site during the six (6) month period prior to any cause of action
+      arising.
+    </p>
+    <h6 class="title-h6">If you are a business user:</h6>
+    <p>
+      We will not be liable to you for any loss or damage, whether in contract,
+      tort (including negligence), breach of statutory duty, or otherwise, even
+      if foreseeable, arising under or in connection with:
+    </p>
+    <ul>
+      <li>use of, or inability to use, our Site/Services; or</li>
+      <li>use of or reliance on any content displayed on our Site.</li>
+    </ul>
+    <p>In particular, we will not be liable for:</p>
+    <ul>
+      <li>loss of profits, sales, business, or revenue;</li>
+      <li>business interruption;</li>
+      <li>loss of anticipated savings;</li>
+      <li>loss of business opportunity, goodwill or reputation; or</li>
+      <li>any indirect or consequential loss or damage.</li>
+    </ul>
+    <ul>
+      <li>
+        Please note that we only provide our Site for domestic and private use.
+        You agree not to use our Site for any commercial or business purposes,
+        and we have no liability to you for any loss of profit, loss of
+        business, business interruption, or loss of business opportunity.
+      </li>
+      <li>
+        If defective digital content that we have supplied, damages a device or
+        digital content belonging to you and this is caused by our failure to
+        use reasonable care and skill, we will either repair the damage or pay
+        you compensation.
+      </li>
+      <li>
+        You have legal rights in relation to goods that are faulty or not as
+        described. Advice about your legal rights is available from your local
+        Citizens' Advice Bureau or Trading Standards office. Nothing in these
+        Terms and Conditions will affect these legal rights.
+      </li>
+    </ul>
+    <h6 class="title-h6">7. Term and Termination</h6>
+    <p>
+      7.1 These Terms and Conditions shall remain in full force and effect while
+      you use the Site or Services or are otherwise a user of the Site, as
+      applicable. You may terminate your use or participation at any time, for
+      any reason, by following the instructions for terminating user accounts in
+      your account settings, if available, or by contacting us at info@ibax.io.
+    </p>
+    <p>
+      7.2 Without limiting any other provision of these Terms and Conditions, we
+      reserve the right to, in our sole discretion and without notice or
+      liability, deny access to and use of the Site and the Services (including
+      blocking certain IP addresses), to any person for any reason including
+      without limitation for breach of any representation, warranty or covenant
+      contained in these Terms and Conditions or of any applicable law or
+      regulation.
+    </p>
+    <p>
+      If we determine, in our sole discretion, that your use of the
+      Site/Services is in breach of these Terms and Conditions or of any
+      applicable law or regulation, we may terminate your use or participation
+      in the Site and the Services or delete any content or information that you
+      posted at any time, without warning, in our sole discretion.
+    </p>
+    <p>
+      7.3 If we terminate or suspend your account for any reason set out in this
+      Section 9, you are prohibited from registering and creating a new account
+      under your name, a fake or borrowed name, or the name of any third party,
+      even if you may be acting on behalf of the third party. In addition to
+      terminating or suspending your account, we reserve the right to take
+      appropriate legal action, including without limitation pursuing civil,
+      criminal, and injunctive redress.
+    </p>
+    <h6 class="title-h6">8. General</h6>
+    <p>
+      8.1 Visiting the Site, sending us emails, and completing online forms
+      constitute electronic communications. You consent to receive electronic
+      communications and you agree that all agreements, notices, disclosures,
+      and other communications we provide to you electronically, via email and
+      on the Site, satisfy any legal requirement that such communication be in
+      writing.
+    </p>
+    <p>
+      <strong
+        >You hereby agree to the use of electronic signatures, contracts, orders
+        and other records and to electronic delivery of notices, policies and
+        records of transactions initiated or completed by us or via the
+        Site.</strong
       >
+      You hereby waive any rights or requirements under any statutes,
+      regulations, rules, ordinances or other laws in any jurisdiction which
+      require an original signature or delivery or retention of non-electronic
+      records, or to payments or the granting of credits by other than
+      electronic means.
     </p>
     <p>
-      1.2 以下第 1.7
-      节中规定的补充政策，以及可能不时发布在网站上的任何补充条款和条件或文件，均通过引用明确并入。
+      8.2 These Terms and Conditions and any policies or operating rules posted
+      by us on the Site or in respect to the Services constitute the entire
+      agreement and understanding between you and us.
     </p>
     <p>
-      1.3
-      我们可以随时更改这些条款和条件。这些条款和条件的更新版本将以更新的“修订”日期表示，更新版本将在可访问时立即生效。您有责任查看这些条款和条件以随时了解更新。您继续使用本网站即表示您已接受此类更改。
+      8.3 Our failure to exercise or enforce any right or provision of these
+      Terms and Conditions shall not operate as a waiver of such right or
+      provision.
     </p>
     <p>
-      1.4
-      我们可能会不时更新或更改本网站，以反映我们产品、用户需求和/或业务优先级的变化。
+      8.4 We may assign any or all of our rights and obligations to others at
+      any time.
     </p>
     <p>
-      1.5
-      我们的网站面向居住在开曼群岛的人们。本网站上提供的信息无意分发给任何司法管辖区或国家的任何个人或实体或供其使用，如果此类分发或使用将违反法律或法规，或将使我们遵守该司法管辖区或国家/地区的任何注册要求.
+      8.5 We shall not be responsible or liable for any loss, damage, delay or
+      failure to act caused by any cause beyond our reasonable control.
     </p>
     <p>
-      1.6 本网站面向年满 18 岁的用户。如果您未满 18
-      岁，未经父母许可，您不得注册本网站或使用服务。
-    </p>
-    <p>1.7 同样适用于您使用本网站的其他政策包括：</p>
-    <ul>
-      <li>
-        我们的隐私声明<a href="" target="_blank">https://ibax.io</a
-        >，其中规定了我们处理从您那里收集的或您提供给我们的任何个人数据的条款。使用本网站即表示您同意此类处理，并保证您提供的所有数据都是准确的。
-      </li>
-      <li>
-        我们的 Cookie 政策<a href="" target="_blank">https://ibax.io</a
-        >，其中列出了有关网站 cookie 的信息。
-      </li>
-    </ul>
-    <h6 class="title-h6">2. 可接受的使用</h6>
-    <p>
-      2.1
-      除了我们提供网站和服务的目的之外，您不得出于任何目的访问或使用本网站。本网站不得用于任何商业活动，除非我们特别认可或批准。
-    </p>
-    <p>2.2 作为本网站的用户，您同意不会：</p>
-    <ul>
-      <li>
-        未经授权使用本网站，包括收集用户的用户名和/或电子邮件地址以发送未经请求的电子邮件或以虚假借口创建用户帐户
-      </li>
-      <li>
-        未经我们书面许可，系统地将数据或其他内容从网站检索到编译数据库或目录
-      </li>
-      <li>
-        规避、禁用或以其他方式干扰网站的安全相关功能，包括阻止或限制使用或复制任何内容或强制限制使用的功能
-      </li>
-      <li>使用从本网站获得的任何信息来骚扰、虐待或伤害他人</li>
-      <li>
-        使用本网站或我们的内容作为与我们竞争或创建创收努力或商业企业的任何努力的一部分
-      </li>
-      <li>骚扰、骚扰、恐吓或威胁我们的任何员工、代理或其他用户</li>
-      <li>
-        解密、反编译、反汇编或逆向工程构成或以任何方式构成本网站一部分的任何软件
-      </li>
-      <li>
-        上传或传输（或尝试上传或传输）病毒、特洛伊木马或其他干扰任何一方不间断使用和享受本网站的材料，或任何充当被动或主动信息收集或传输机制的材料
-      </li>
-      <li>
-        使用、启动或参与系统的任何自动化使用，例如使用脚本发送评论或消息、机器人、抓取工具、离线阅读器或类似的数据收集和提取工具
-      </li>
-      <li>在我们看来，贬低、玷污或以其他方式伤害我们和/或网站</li>
-      <li>以不符合任何适用法律或法规的方式使用本网站</li>
-      <li>为非我们设计的产品或服务做广告</li>
-      <li>
-        欺骗、欺诈或误导我们和其他用户，尤其是任何试图了解敏感帐户信息（例如用户密码）的行为
-      </li>
-      <li>不当使用我们的支持服务，或提交虚假的滥用或不当行为报告</li>
-      <li>
-        参与系统的任何自动化使用，例如使用脚本发送评论或消息，或使用任何数据挖掘、机器人或类似的数据收集和提取工具
-      </li>
-      <li>干扰、破坏或对本网站或与本网站相连的网络和服务造成不应有的负担</li>
-      <li>试图冒充其他用户或个人，或使用其他用户的用户名</li>
-      <li>使用本网站宣传或销售商品和服务</li>
-      <li>错误地暗示与我们或与您没有关系的其他公司有关系</li>
-    </ul>
-    <h6 class="title-h6">3. 您提供给我们的信息</h6>
-    <p>
-      3.1 您声明并保证： (a)
-      您提交的所有注册信息都是真实、准确、最新和完整的，并且与您而非第三方有关；(b)
-      您将保持此类信息的准确性并在必要时及时更新此类信息；(c)
-      您将对您的密码保密，并对您的密码和帐户的所有使用负责；(d)
-      您具有法律行为能力并且您同意遵守这些条款和条件；(e)
-      在您居住的司法管辖区，您不是未成年人，或者如果您是未成年人，您已获得使用本网站的父母许可。
-      如果您知道或怀疑除您之外的任何人知道您的用户信息（例如识别码或用户名）和/或密码，您必须立即通过info@ibax.io通知我们。
+      8.6 If any provision or part of a provision of these Terms and Conditions
+      is unlawful, void or unenforceable, that provision or part of the
+      provision is deemed severable from these Terms and Conditions and does not
+      affect the validity and enforceability of any remaining provisions.
     </p>
     <p>
-      3.2
-      如果您提供任何不真实、不准确、非最新或不完整的信息，我们可能会暂停或终止您的账户。如果我们确定此类用户名不合适，我们可能会删除或更改您选择的用户名。
+      8.7 There is no joint venture, partnership, employment or agency
+      relationship created between you and us as a result of these Terms and
+      Conditions or use of the Site or Services.
     </p>
     <p>
-      3.3
-      作为本网站功能的一部分，您可以通过以下任一方式将您的帐户与您可能在第三方服务提供商处拥有的在线帐户（每个此类帐户，一个第三方帐户）相关联：(a)
-      通过以下方式提供您的第三方帐户登录信息网站;或 (b)
-      允许我们访问您的第三方账户，这在管辖您使用每个第三方账户的适用条款和条件下是允许的。
-      您声明您有权向我们披露您的第三方帐户登录信息和/或授予我们访问您的第三方帐户的权限，而您不会违反任何约束您使用适用第三方帐户的条款和条件，并且使我们有义务支付任何费用或使我们受到此类第三方服务提供商施加的任何使用限制。
+      8.8 For consumers only - Please note that these Terms and Conditions,
+      their subject matter and their formation, are governed by English law. You
+      and we both agree that the courts of England and Wales will have exclusive
+      jurisdiction expect that if you are a resident of Northern Ireland you may
+      also bring proceedings in Northern Ireland, and if you are resident of
+      Scotland, you may also bring proceedings in Scotland. If you have any
+      complaint or wish to raise a dispute under these Terms and Conditions or
+      otherwise in relation to the Site please follow this link
+      <a href=" http://ec.europa.eu/odr" target="_blank"
+        >http://ec.europa.eu/odr</a
+      >.
     </p>
     <p>
-      3.4 通过授予我们访问任何第三方帐户的权限，您了解 (a)
-      我们可以访问、提供和存储（如果适用）您提供给并存储在您的第三方帐户中的任何内容（“社交网络内容”）
-      ) 以便通过您的帐户在网站上和通过网站提供，包括但不限于任何朋友列表；(b)
-      在您将账户与第三方账户关联时收到通知的范围内，我们可能会向您的第三方账户提交和接收额外信息。
-      根据您选择的第三方账户并根据您在此类第三方账户中设置的隐私设置，您发布到第三方账户的个人身份信息可能会通过您在网站上的账户获得。请注意，如果第三方帐户或相关服务不可用，或者我们对此类第三方帐户的访问被第三方服务提供商终止，则社交网络内容可能不再在本网站上或通过本网站提供。
-      您可以随时禁用您在本网站上的帐户与您的第三方帐户之间的连接。请注意，您与与您的第三方帐户相关联的第三方服务提供商的关系仅受您与此类第三方服务提供商的协议的约束。我们不会出于任何目的（包括但不限于准确性、合法性或非侵权）审查任何社交网络内容，并且我们不对任何社交网络内容负责。
-      您承认并同意，我们可以访问与第三方帐户相关联的电子邮件地址簿和存储在您的移动设备或平板电脑上的联系人列表，仅用于识别和通知您也已注册使用本网站的联系人。根据您发送电子邮件至info@ibax.io
-      的请求或通过您的帐户设置（如果适用），我们将停用本网站与您的第三方帐户之间的连接，并尝试删除通过此类第三方获取的存储在我们服务器上的任何信息帐户，但与您的帐户相关联的用户名和个人资料图片除外。
+      8.9 For business users only - If you are a business user, these Terms and
+      Conditions, their subject matter and their formation (and any
+      non-contractual disputes or claims) are governed by English Law. We both
+      agree to the exclusive jurisdiction of the courts of England and Wales.
     </p>
-    <h6 class="title-h6">4. 我们的内容</h6>
     <p>
-      “Cookies”是由您的互联网浏览器软件在您的硬盘驱动器上创建并存储的小型文本文件，以保存有关您当前正在查看的网页的相关信息。Cookies
-      被用于监控和观察您对我们网站的使用，汇编有关该使用的汇总数据，并为您提供更有效的服务（其中可能包括根据您的偏好和过去在这些网站上的活动定制我们网站的部分内容）。某些第三方（例如数据分析服务提供商）也可能使用我们无法控制的
-      cookie。大多数互联网浏览器都有允许您禁用全部或部分 cookie
-      的功能——请参阅浏览器的帮助菜单以了解如何执行此操作。虽然您仍然可以在互联网浏览器上禁用
-      cookie
-      的情况下浏览我们的网站，某些网站功能可能无法使用或无法正常运行。我们采取合理措施确保我们持有的您的任何个人信息准确、完整和最新。这些步骤包括在我们被告知信息已更改时及时更新个人信息、检查我们的联系人列表的准确性，以及为个人提供一种简单的方法来更新他们的个人信息我们会根据需要存储个人信息为其收集或根据法律要求。在此期限届满后的合理时间内，我们将采取合理措施对我们拥有或控制的个人信息进行去标识化或销毁。我们通常将收集到的个人信息存储在电子数据库中，其中一些可能由第三方数据存储提供商代表我们持有。有时，我们还会在物理存储设施中保留此类个人信息的硬拷贝记录。我们使用一系列物理和技术安全流程和程序来保护我们持有的信息的机密性和安全性，我们会不时更新这些流程和程序以应对新出现的安全威胁。这些措施包括：
+      8.10 A person who is not a party to these Terms and Conditions shall have
+      no right under the Contracts (Rights of Third Parties) Act 1999 to enforce
+      any term of these Terms and Conditions.
     </p>
-    <ul>
-      <li>
-        限制访问我们的物理和电子数据库，以及物理安全，例如访问我们营业场所的安全程序；和
-      </li>
-      <li>
-        技术安全程序，包括密码保护、网络防火墙、加密、入侵检测和站点监控（在可行的情况下）。
-      </li>
-    </ul>
-    <h6 class="title-h6">您关于您的个人信息的合法权利</h6>
-    <p>您有权：</p>
-    <ul>
-      <li>访问并索取您的个人信息的副本，以检查我们如何使用您的个人信息</li>
-      <li>更正或纠正任何过时、不正确、不完整或具有误导性的个人信息</li>
-      <li>撤回您之前对处理您的个人信息给予的任何同意</li>
-      <li>反对处理您的个人信息</li>
-      <li>要求我们限制或暂停使用您的个人信息</li>
-    </ul>
     <p>
-      这些请求应使用以下联系方式以书面形式提交给我们。我们将在合理的时间范围内处理您的请求，并免费提供一份您的个人信息。如果您的要求是额外的副本，或者您的要求明显没有根据、过度或重复，我们可能会拒绝您的要求或收取合理的费用。如果我们拒绝请求或收取合理费用，我们将在合理的时间范围内告知您我们拒绝的原因或任何费用。您有权以结构化、常用和机器可读的格式索取您提供给我们的个人信息的副本，并有权在某些情况下将该信息传输或移植到另一个实体。在某些情况下，我们可能无法提供您要求的信息，例如，它会干扰他人的隐私、权利或自由，或导致违反保密或适用法律。在这些情况下，我们会告知您为什么我们无法满足您的要求。
-    </p>
-    <h6 class="title-h6">如何删除您的个人信息</h6>
-    <p>
-      您有权要求删除或销毁您的个人信息（“被遗忘权”），当您的个人信息不再用于最初收集的目的时，它没有被用于收集的目的被收集，或者您希望撤回您对某些处理的同意。您也有权要求我们删除或移除您的个人数据，如果您已成功行使反对处理的权利，我们非法处理了您的个人信息，或者我们需要删除您的个人信息以符合当地法律。在某些情况下，我们可能无法满足您的要求，例如我们需要继续处理您的个人信息以遵守适用法律。
-    </p>
-    <h6 class="title-h6">投诉</h6>
-    <p>
-      我们努力达到最高标准以保护您的隐私。但是，如果您担心我们管理您的个人信息的方式，或者认为我们可能违反了适用的隐私或数据保护立法规定的义务或任何其他相关义务，请使用下面列出的联系方式与我们联系。
-      投诉必须以书面形式提出。在投诉中，请包括您的联系方式（例如电子邮件地址、姓名、地址和电话号码）并清楚地描述投诉。我们将在合理的时间内处理此事，并将让您了解我们的调查进展。如果我们没有在合理的时间内回复您，或者如果您认为您的投诉没有得到满意的解决，您可以联系我们讨论您的疑虑。
-    </p>
-    <h6 class="title-h6">本政策的变更</h6>
-    <p>
-      我们可能会不时更改本政策，以考虑我们标准做法和程序的变化，或在必要时遵守新的法律和法规。本政策的最新版本将始终在我们的网站上提供。
-    </p>
-    <h6 class="title-h6">联系方式</h6>
-    <p>
-      如果您需要联系我们或希望我们提供有关隐私问题的更多信息，请通过<span>info@ibax.io</span>与我们联系。
+      8.11 In order to resolve a complaint regarding the Services or to receive
+      further information regarding use of the Services, please contact us by
+      email at<strong>info@ibax.io</strong>
     </p>
   </article>
 </template>

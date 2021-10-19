@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-26 14:35:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-18 10:22:02
+ * @LastEditTime: 2021-10-19 14:54:43
  * @Description: news  news
 -->
 <template>
@@ -117,7 +117,8 @@ export default {
   data() {
     return {
       obj: {
-        email: ''
+        email: '',
+        language_type: 1
       },
       objNews: '',
       arrNew: [],
@@ -147,11 +148,18 @@ export default {
     };
   },
   computed: {},
-  watch: {},
+  watch: {
+    lang() {
+      const langType = this.handleGetLanguage(this.lang);
+      this.langType = langType;
+      this.obj.language_type = langType;
+    }
+  },
   created() {
     const lang = handleGetLang();
     const langType = this.handleGetLanguage(lang);
     this.langType = langType;
+    this.obj.language_type = langType;
     this.handleNewsrandow(this.langType);
   },
   mounted() {},

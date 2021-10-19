@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-10-15 12:27:07
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 17:19:16
+ * @LastEditTime: 2021-10-19 17:29:01
  * @Description: 
 -->
 <template>
@@ -15,7 +15,7 @@
       <h1 class="title-h3">Legal</h1>
     </div>
     <div class="server-content">
-      <div class="server-content-top">
+      <div class="server-content-top hidden-sm-and-down">
         <el-row type="flex" justify="center">
           <el-col :xs="24" :sm="22" :md="20" :lg="12">
             <ul class="server-content-tab">
@@ -31,6 +31,30 @@
             </ul>
           </el-col>
         </el-row>
+      </div>
+      <div class="server-content-mobile hidden-sm-and-up">
+        <div class="server-content-mobile-left">{{ $t(title) }}</div>
+        <div class="server-content-mobile-right" @click="handleClick">
+          <i
+            :class="{
+              'el-icon-arrow-down': !isDown,
+              'el-icon-arrow-up': isDown
+            }"
+          ></i>
+        </div>
+
+        <ul
+          class="server-content-mobile-box"
+          :class="{ 'server-content-mobile-show': isDown }"
+        >
+          <li
+            v-for="item in arrPath"
+            :key="item.key"
+            :class="{ active: item.isActive }"
+          >
+            <nuxt-link :to="item.path">{{ $t(item.title) }}</nuxt-link>
+          </li>
+        </ul>
       </div>
       <div class="server-content-bottom">
         <el-row type="flex" justify="center">
@@ -49,6 +73,8 @@ export default {
   props: {},
   data() {
     return {
+      isDown: false,
+      title: '',
       arrPath: [
         {
           title: 'server.privacy',
@@ -79,6 +105,7 @@ export default {
         const arrPath = this.arrPath.map((item) => {
           if (item.path === path) {
             item.isActive = true;
+            this.title = item.title;
           } else {
             item.isActive = false;
           }
@@ -89,10 +116,7 @@ export default {
       immediate: true
     }
   },
-  created() {
-    const route = this.$route.path;
-    console.log(route);
-  },
+  created() {},
   mounted() {
     this.$nextTick(() => {
       this.domGlobal.addEventListener('scroll', () => {
@@ -120,6 +144,9 @@ export default {
         this.$store.commit('handleChangeClass', 'subMenu--horizontal');
         this.$store.commit('handleIsTop', true);
       }
+    },
+    handleClick() {
+      this.isDown = !this.isDown;
     }
   }
 };

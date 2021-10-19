@@ -2,13 +2,15 @@
  * @Author: abc
  * @Date: 2021-10-15 11:46:31
  * @LastEditors: abc
- * @LastEditTime: 2021-10-18 19:18:04
+ * @LastEditTime: 2021-10-19 11:23:19
  * @Description: Privacy policy
 -->
 <template>
   <article class="article">
     <h2 class="title-h4">PRIVACY NOTICE</h2>
-    <p>Last updated September 30, 2021</p>
+    <p class="title-weight" style="text-indent: 0">
+      Last updated September 30, 2021
+    </p>
     <p>
       Thank you for choosing to be part of our community at
       <strong>IBAX NETWORK</strong>
