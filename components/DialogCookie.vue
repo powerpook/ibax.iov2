@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-10-19 17:37:58
  * @LastEditors: abc
- * @LastEditTime: 2021-10-19 19:09:01
+ * @LastEditTime: 2021-10-19 19:11:32
  * @Description: 
 -->
 <template>
@@ -81,10 +81,10 @@ export default {
         this.timer = null;
       } else if (this.second > 0) {
         this.second--;
+        this.timer = setTimeout(() => {
+          this.handleTime();
+        }, 1000);
       }
-      this.timer = setTimeout(() => {
-        this.handleTime();
-      }, 1000);
     },
     handleDialogVisible() {
       this.dialogVisible = false;
