@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 11:26:28
+ * @LastEditTime: 2021-10-21 17:54:38
  * @Description: virtual macine
 -->
 <template>
@@ -101,7 +101,7 @@
             <el-col :xs="24" :lg="14">
               <div class="home-new-img wow fadeInUp">
                 <img
-                  src="@/assets/image/img-insights-report2.png"
+                  src="@/assets/images/funnel-report-1.png"
                   mode="powerful"
                 />
               </div>
@@ -144,7 +144,7 @@
               <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="@/assets/image/funnel-report-1.png"
+                    src="@/assets/images/funnel-report-1.png"
                     mode="powerful"
                   />
                 </div>
@@ -163,7 +163,7 @@
               </el-col>
               <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
                 <div class="home-new-img wow fadeInUp">
-                  <img src="@/assets/image/funnel-report-1.png" alt="safe" />
+                  <img src="@/assets/images/funnel-report-1.png" alt="safe" />
                 </div>
               </el-col>
             </el-row>
@@ -280,8 +280,8 @@
   </div>
 </template>
 <script>
-const img1 = require('../../assets/image/img-retention-report-2.png');
-const img2 = require('../../assets/image/img-funnels-report-2.png');
+const img1 = require('../../assets/images/funnel-report-1.png');
+const img2 = require('../../assets/images/funnel-report-1.png');
 export default {
   props: {},
   data() {

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-21 11:34:47
+ * @LastEditTime: 2021-10-21 17:57:52
  * @Description: architecture
 -->
 <template>
@@ -94,7 +94,7 @@
             <el-col :xs="24" :lg="10">
               <div class="home-new-img wow fadeInUp">
                 <img
-                  src="../../assets/image/img-insights-report2.png"
+                  src="../../assets/images/funnel-report-1.png"
                   mode="powerful"
                 />
               </div>
@@ -140,7 +140,7 @@
               <el-col :xs="24" :lg="10" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="@/assets/image/funnel-report-1.png"
+                    src="@/assets/images/funnel-report-1.png"
                     alt="powerful"
                   />
                 </div>
@@ -163,7 +163,7 @@
               <el-col :xs="24" :lg="10" class="hidden-sm-and-up">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="@/assets/image/funnel-report-1.png"
+                    src="@/assets/images/funnel-report-1.png"
                     alt="powerful"
                   />
                 </div>
@@ -201,7 +201,7 @@
               <el-col :xs="24" :lg="14">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="@/assets/image/funnel-report-1.png"
+                    src="@/assets/images/funnel-report-1.png"
                     mode="powerful"
                   />
                 </div>
@@ -235,7 +235,7 @@
           </p>
           <div class="media-a-img wow fadeInUp">
             <img
-              src="../../assets/image/retention-report-1.png"
+              src="../../assets/images/funnel-report-1.png"
               alt="retention-report-1"
             />
           </div>
@@ -275,7 +275,7 @@
               <el-col :xs="24" :lg="14">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
+                    src="../../assets/images/funnel-report-1.png"
                     mode="powerful"
                   />
                 </div>
@@ -298,7 +298,7 @@
               <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img">
                   <img
-                    src="@/assets/image/funnel-report-1.png"
+                    src="@/assets/images/funnel-report-1.png"
                     mode="powerful"
                   />
                 </div>
@@ -317,7 +317,7 @@
               <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="@/assets/image/funnel-report-1.png"
+                    src="@/assets/images/funnel-report-1.png"
                     alt="powerful"
                   />
                 </div>
@@ -354,7 +354,7 @@
               <el-col :xs="24" :lg="14">
                 <div class="home-new-img wow fadeInUp">
                   <img
-                    src="../../assets/image/funnel-report-1.png"
+                    src="../../assets/images/funnel-report-1.png"
                     mode="powerful"
                   />
                 </div>

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-19 14:56:33
+ * @LastEditTime: 2021-10-21 17:51:51
  * @Description: ecolibs
 -->
 <template>
@@ -53,7 +53,10 @@
             >
               <div class="bass-center-box">
                 <div class="bass-center-box-img wow fadeInUp">
-                  <img src="@/assets/image/heart-off.svg" alt="heart-off" />
+                  <img
+                    src="../../assets/images/funnel-report-1.png"
+                    alt="heart-off"
+                  />
                 </div>
                 <div class="bass-center-box-text wow fadeInUp">
                   <h5 class="bass-h5">

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-21 15:38:20
+ * @LastEditTime: 2021-10-21 17:56:50
  * @Description: home
 -->
 <template>
@@ -15,7 +15,7 @@
             <p class="p-lead animated fadeInUp">{{ $t('home.performance') }}</p>
           </div>
           <div class="home-picture animated fadeInUp hidden-sm-and-up">
-            <img src="../assets/image/picture.png" alt="picture" />
+            <img src="../assets/images/picture.png" alt="picture" />
           </div>
           <div class="home-top-btn animated fadeInUp">
             <a
@@ -32,7 +32,7 @@
             >
           </div>
           <div class="home-picture animated fadeInUp hidden-sm-and-down">
-            <img src="../assets/image/picture.png" alt="picture" />
+            <img src="../assets/images/picture.png" alt="picture" />
           </div>
           <div class="home-new">
             <el-row type="flex" justify="space-between" class="el-row-wrap">
@@ -435,7 +435,7 @@
               </p>
               <div class="global-h6 home-story-text">
                 <div class="home-story-text-img">
-                  <img src="../assets/image/avatar.jpg" alt="avatar" />
+                  <img src="../assets/images/avatar.jpg" alt="avatar" />
                 </div>
                 <div class="home-story-text-name">
                   <div class="home-story-text-name-strong">
@@ -532,9 +532,9 @@
   </div>
 </template>
 <script>
-const img1 = require('../assets/image/img-retention-report-2.png');
-const img2 = require('../assets/image/img-funnels-report-2.png');
-const img3 = require('../assets/image/img-insights-report2.png');
+const img1 = require('../assets/images/funnel-report-1.png');
+const img2 = require('../assets/images/funnel-report-1.png');
+const img3 = require('../assets/images/funnel-report-1.png');
 const technology = require('../assets/images/technology.jpg');
 const videos = require('../assets/images/videos.jpg');
 export default {

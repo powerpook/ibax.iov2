@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:43:39
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 16:17:18
+ * @LastEditTime: 2021-10-21 17:57:22
  * @Description: video resources
 -->
 <template>
@@ -37,7 +37,7 @@
               <div class="resource-img wow fadeInUp">
                 <img
                   class="resource-img-right"
-                  src="../../assets/image/Screen-Shot-2020-02-14-at-1.37.04-PM.png"
+                  src="../../assets/images/video-stuart.jpg"
                   mode="powerful"
                 />
               </div>
@@ -54,7 +54,7 @@
               <div class="resource-img wow fadeInUp">
                 <img
                   class="resource-img-right"
-                  src="../../assets/image/Screen-Shot-2020-02-14-at-1.37.04-PM.png"
+                  src="../../assets/images/video-stuart.jpg"
                   mode="powerful"
                 />
               </div>
@@ -162,7 +162,7 @@
               <div class="resource-middle-body">
                 <div class="resource-img wow fadeInUp">
                   <img
-                    src="../../assets/image/ziprecruiter-hero@2x-2-1024x539.png"
+                    src="../../assets/images/funnel-report-1.png"
                     mode="powerful"
                   />
                 </div>
