@@ -8,13 +8,15 @@
     width: 50%;
     background-color: #fcfcfc;
     min-height: 100vh;
-    padding: 53px 85px 53px 30px;
+    padding-top: 40px;
+    padding-right: 75px;
+    // padding: 30px 85px 53px 30px;
     &-box {
       max-width: 515px;
       margin-left: auto;
       &-icon {
         display: flex;
-        margin-bottom: 63px;
+        margin-bottom: 30px;
         align-items: center;
         &-right {
           margin-left: auto;
@@ -22,7 +24,7 @@
           cursor: pointer;
         }
         .el-logo1 {
-          font-size: 40px;
+          font-size: 30px;
           color: $primary-color;
         }
       }
@@ -32,7 +34,7 @@
         color: #1f1f24;
         font-size: 13px;
         letter-spacing: 1.3px;
-        margin-bottom: 21px;
+        margin-bottom: 10px;
         span {
           margin-left: 20px;
         }
@@ -50,8 +52,8 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        padding: 14px 0;
         border-top: 1px solid #e0e3ed;
+        // padding: 10px 0;
         &:first-child {
           border-top: none;
         }
@@ -73,7 +75,7 @@
         font-weight: 500;
         color: #7856ff;
         display: block;
-        margin-bottom: 44px;
+        margin-bottom: 20px;
       }
       .logo-row .logo-list {
         display: flex;
@@ -95,7 +97,9 @@
     width: 50%;
     background-color: $primary-color;
     min-height: 100vh;
-    padding: 53px 30px 50px 79px;
+    padding-top: 40px;
+    padding-left: 75px;
+    // padding: 53px 30px 50px 79px;
     &-box {
       width: 100%;
       max-width: 560px;
@@ -125,6 +129,28 @@
     }
   }
   &-five {
+    padding-bottom: 50px;
+    background-color: #fff;
+    color: #1e1e1e;
+    &-title {
+      font-size: 36px;
+      font-weight: 900;
+      text-align: left;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    &-content {
+      white-space: pre-line;
+      font-size: 16px;
+    }
+    .el-timeline-item__timestamp {
+      font: 18px/1.778 "Untitled Sans Light", "Helvetica Neue", Helvetica, sans-serif;
+      font-size: 20px;
+      color: #37383c;
+      font-weight: bolder;
+    }
+  }
+  /* &-five {
     padding-bottom: 50px;
     background-color: #fff;
     color: #1e1e1e;
@@ -201,5 +227,5 @@
         }
       }
     }
-  }
+  } */
 }

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-21 12:18:37
+ * @LastEditTime: 2021-10-21 15:38:20
  * @Description: home
 -->
 <template>
@@ -120,7 +120,7 @@
                     </div>
                   </div>
                 </el-col>
-                <el-col ref="powerful" :xs="23" :lg="14">
+                <el-col ref="powerful" :xs="23" :lg="15">
                   <div class="home-new-right">
                     <div class="home-new-right-box" :style="haxStyle">
                       <div
@@ -785,7 +785,7 @@ export default {
           this.isThree = false;
         } else if (
           this.bifurcationTop <= 0 &&
-          this.bifurcationBottom - 220 > 0
+          this.bifurcationBottom - 120 > 0
         ) {
           this.haxStyle = {
             width: `${this.widthPowerful}px`,
@@ -795,7 +795,7 @@ export default {
           this.isOne = false;
           this.isTwo = false;
           this.isThree = true;
-        } else if (this.bifurcationBottom - 220 <= 0) {
+        } else if (this.bifurcationBottom - 120 <= 0) {
           this.haxStyle = {
             width: `${this.widthPowerful}px`,
             position: 'absolute',

@@ -2,14 +2,14 @@
  * @Author: abc
  * @Date: 2021-08-17 10:59:52
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 16:11:31
+ * @LastEditTime: 2021-10-21 17:08:52
  * @Description: nav
 -->
 <template>
   <div :class="{ nav: isTop, 'nav-white': !isTop }">
     <div class="nav-index">
       <nuxt-link :to="{ name: 'index' }">
-        <i class="iconfont el-logo1" :style="{ color: color }"></i>
+        <i class="iconfont el-logo1" :style="{ color: colorText }"></i>
       </nuxt-link>
     </div>
     <el-menu
@@ -105,7 +105,7 @@
       <div class="nav-right-dropdown">
         <el-dropdown @command="handleCommand">
           <span class="el-dropdown-link">
-            <i class="iconfont el-translate" :style="{ color: color }"></i>
+            <i class="iconfont el-translate" :style="{ color: colorText }"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item
@@ -122,7 +122,7 @@
         :to="{ name: 'login' }"
         class="nav-link nav-link-middle"
         style="display: none"
-        :style="{ color: color }"
+        :style="{ color: colorText }"
         >{{ $t('nav.log') }}</nuxt-link
       >
       <nuxt-link

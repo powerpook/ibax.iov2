@@ -3,7 +3,7 @@
  * @LastEditors: abc
  * @Description: Vu
  * @Date: 2019-04-12 14:08:12
- * @LastEditTime: 2021-10-13 16:24:38
+ * @LastEditTime: 2021-10-21 17:05:37
  */
 
 import Vue from 'vue';
@@ -53,7 +53,7 @@ Vue.mixin({
       // console.log(this.$store.getters.handleHeaderColor);
       return this.$store.getters.handleHeaderColor;
     },
-    color() {
+    colorText() {
       //  console.log(this.$store.getters.handleColor);
       return this.$store.getters.handleColor;
     },

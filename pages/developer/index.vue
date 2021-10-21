@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-10-20 15:15:52
+ * @LastEditTime: 2021-10-21 17:25:40
  * @Description: 
 -->
 <template>
@@ -354,75 +354,19 @@
       <el-row type="flex" justify="center">
         <el-col :md="16" :xs="24">
           <h2 class="about-five-title">{{ $t('develope.roadmap') }}</h2>
-          <div class="about-five-content el-row-wrap">
-            <div class="about-five-content-item wow fadeInUp">
-              <div class="about-five-content-item-img">
-                <img src="@/assets/image/five-1.png" alt="five-1" />
-              </div>
-              <h3 class="about-five-title-small">Empower</h3>
-              <div class="about-five-content-text">
-                <h4>Oct 2020</h4>
-                <div>
-                  IBAX Network WHITEPAPER Version 1.0 IBAX Network GLOABL
-                  FOUNDATION SET UP
-                </div>
-              </div>
-              <div class="about-five-content-text">
-                <h4>Dec 2020WARM-UP PRESS CONFERENCE</h4>
-                <div>
-                  IBAX Network WEBSITE TESTING MAIN-NET Global ECO-SYSTEM NODE
-                  SUMMON
-                </div>
-              </div>
-              <div class="about-five-content-text">
-                <h4>Aug 2021</h4>
-                <div>
-                  MAIN-NET ONLINE ANNOUNCEMENT DAPPS ECO-SYSTEM PUBLISH（SUCH
-                  AS：ECO-SYSTEM BUILDING、ONE CLICK COIN、ECO-SYSTEM VOTING
-                  RIGHT、DECENTRALIZED EXCHANGE ETC.
-                </div>
-              </div>
-            </div>
-            <div class="about-five-content-item wow fadeInUp">
-              <div class="about-five-content-item-img">
-                <img src="@/assets/image/five-2.png" alt="five-1" />
-              </div>
-              <h3 class="about-five-title-small">Forward</h3>
-              <div class="about-five-content-text">
-                <h4>2021 - 2022</h4>
-                <div>
-                  GLOBAL ECO-FOUNDATION GOVERNOR'S ELECTION CONFERENCE AND NODE
-                  VOTING OPENING THE GLOBAL CONFERENCE OF DEVELOPERS RELEASING
-                  V1.01 VERSION OF GFILES DISTRIBUTED STORAGE APPLICATION BASED
-                  ON IBAX Network
-                </div>
-              </div>
-              <div class="about-five-content-text">
-                <h4>Jun 2022</h4>
-                <div>
-                  MAIN CHAIN TECHNOLOGY UPGRADE ITERATION IBAX Network
-                  WHITEPAPER V2.0 REALIZE IPFS DISTRIBUTED NETWORK BASED ON IBAX
-                  Network MAIN CHAIN, OPTIMIZE AND INCREASE THE RICHNESS OF
-                  ECO-COMMERCE, AND INTRODUCE SOCIAL, GAME, INFORMATION, VIDEO
-                  AND OTHER APPLICATIONS. INCORPORATING 1000+ ENTERPRISES,
-                  INSTITUTIONS AND DEVELOPING ECOLOGICAL PARTNERS
-                </div>
-              </div>
-            </div>
-            <div class="about-five-content-item wow fadeInUp">
-              <div class="about-five-content-item-img">
-                <img src="@/assets/image/five-3.png" alt="five-1" />
-              </div>
-              <h3 class="about-five-title-small">Vsion</h3>
-              <div class="about-five-content-text">
-                <h4>2022 — 2025</h4>
-                <div>
-                  CONSTRUCTING AND PERFECTING BLOCK CHAIN INFRASTRUCTURE IN AN
-                  ALL-ROUND WAY FOUNDATION INVESTMENT TO INTRODUCE BUSINESS
-                  COOPERATION AND EXPAND IBAX Network ECOLOGY
-                </div>
-              </div>
-            </div>
+          <div class="about-five-box">
+            <el-timeline>
+              <el-timeline-item
+                v-for="(item, index) in arrMap"
+                :key="index"
+                :timestamp="item.time"
+                placement="top"
+              >
+                <el-card>
+                  <p class="about-five-content">{{ $t(item.content) }}</p>
+                </el-card>
+              </el-timeline-item>
+            </el-timeline>
           </div>
         </el-col>
       </el-row>
@@ -480,6 +424,44 @@ export default {
           img: img5
         }
       ],
+      arrMap: [
+        {
+          time: '2019.Q2',
+          content: 'road.paper'
+        },
+        {
+          time: '2019.Q4',
+          content: 'road.website'
+        },
+        {
+          time: '2020.Q1',
+          content: 'road.built'
+        },
+        {
+          time: '2021.Q2',
+          content: 'road.whitePaper'
+        },
+        {
+          time: '2021.Q3',
+          content: 'road.online'
+        },
+        {
+          time: '2021.Q4',
+          content: 'road.construction'
+        },
+        {
+          time: '2022.Q2',
+          content: 'road.construct'
+        },
+        {
+          time: '2022.Q3-Q4',
+          content: 'road.improve'
+        },
+        {
+          time: '2023.Q1-Q3',
+          content: 'road.upgrade'
+        }
+      ],
       count: 0,
       timer: null
     };
@@ -513,17 +495,8 @@ export default {
     this.handleLoopTime();
   },
   mounted() {
-    this.$nextTick(() => {
-      this.numArchite =
-        document.getElementById('weaver').getBoundingClientRect().bottom - 105;
-      console.log(this.numArchite);
-      this.numArchiteBottom =
-        document.getElementById('empower').getBoundingClientRect().bottom - 105;
-      if (this.numArchite) {
-        this.domGlobal.addEventListener('scroll', () => {
-          this.handleThrottle(this.handleArchiteScroll, 100);
-        });
-      }
+    this.domGlobal.addEventListener('scroll', () => {
+      this.handleThrottle(this.handleArchiteScroll, 100);
     });
   },
   beforeDestroy() {
@@ -536,12 +509,18 @@ export default {
       const topHeight = document.getElementById('headerTop').offsetTop;
       const isFixed = scrollTop > topHeight;
       this.$store.commit('handleIsFixed', isFixed);
-      if (scrollTop >= this.numArchite && scrollTop < this.numArchiteBottom) {
+      this.numArchite = document
+        .getElementById('weaver')
+        .getBoundingClientRect().bottom;
+      this.numArchiteBottom = document
+        .getElementById('empower')
+        .getBoundingClientRect().bottom;
+      if (this.numArchite <= 0 && this.numArchiteBottom > 0) {
         const obj = { headerColor: '#fff', color: '#37383c' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'news--horizontal');
         this.$store.commit('handleIsTop', false);
-      } else if (scrollTop >= this.numArchiteBottom) {
+      } else if (this.numArchiteBottom <= 0) {
         const obj = { headerColor: '#274235', color: '#fff' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'subMenu--horizontal');

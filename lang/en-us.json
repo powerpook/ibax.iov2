@@ -654,5 +654,14 @@
   "events.address": "Enter your email address",
   "events.now": "Subscribe now",
   "server.privacy": "Privacy policy",
-  "server.term": "Terms of service"
+  "server.term": "Terms of service",
+  "road.paper": "IBAX NetworkVision White Paper V1.0 released",
+  "road.website": "IBAX Network 1.0 Official website online \n IBAX public Network infrastructure",
+  "road.built": "Built-in DAPPs such as one-click creation of new ecology and DAO governance voting system are set up on the internal test chain \n Optimize test node parameters and contract logic \n Launch Early developer test network ecosystem ",
+  "road.whitePaper": "IBAX Network whitePaper V2.0 update iteration \n Main chain consensus optimization and upgrade iteration \n Realize a distributed network based on the IBAX Network main chain and the combination of nodes and hardware \n Release the visual development component platform Weaver on IBAX Network \n Optimize on-chain transaction processing \n Optimize incentive management mechanism \n Complete partial payment management",
+  "road.online": "IBAX Network new website online \n Launch of the global Alpha mainnet",
+  "road.construction": "Open construction ecology \n Interface compatibility and perfection of the mainstream chain \n Links to apps compatible with multiple wallets",
+  "road.construct": "Comprehensively construct and improve the blockchain infrastructure \n Support cross-chain asset agreement \n Foundation investment to introduce business ecology",
+  "road.improve": "Improve meta-universe infrastructure \n Open NFT, DEFI ecological market",
+  "road.upgrade": "Upgrade the P2P distributed network service under IBAX Network"
 }

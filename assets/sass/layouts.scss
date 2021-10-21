@@ -382,15 +382,11 @@
     font-size: 24px;
     margin-top: 0;
   }
-  .about-five-content-item:not(:last-child) {
-    border-right: none;
-  }
-  .about-five-content-text {
-    margin: 20px 0px 20px 0px;
-  }
-  .about-five-content-item {
-    width: 100%;
-    flex: auto;
+  .about-five-box {
+    padding: 0 30px;
+    .el-timeline-item__timestamp {
+      font-size: 18px;
+    }
   }
   .about-five-title {
     text-align: center;

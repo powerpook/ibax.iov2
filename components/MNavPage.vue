@@ -2,19 +2,19 @@
  * @Author: abc
  * @Date: 2021-08-17 11:00:37
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 16:12:07
+ * @LastEditTime: 2021-10-21 17:10:57
  * @Description: mobile nav
 -->
 <template>
   <div class="m-nav">
     <nuxt-link :to="{ name: 'index' }" class="m-nav-index">
-      <i class="iconfont el-logo1" :style="{ color: color }"></i>
+      <i class="iconfont el-logo1" :style="{ color: colorText }"></i>
     </nuxt-link>
     <div class="m-nav-icon">
       <div class="nav-right-dropdown">
         <el-dropdown @command="handleCommand">
           <span class="el-dropdown-link">
-            <i class="iconfont el-translate" :style="{ color: color }"></i>
+            <i class="iconfont el-translate" :style="{ color: colorText }"></i>
           </span>
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item
@@ -33,7 +33,7 @@
           'el-gongnenghe': !isAside,
           'el-icon-close': isAside
         }"
-        :style="{ color: color }"
+        :style="{ color: colorText }"
         @click="handleOpenNav"
       ></i>
     </div>
@@ -51,7 +51,7 @@
           :name="item.key"
         >
           <template slot="title">
-            <div class="m-nav-aside-title" :style="{ color: color }">
+            <div class="m-nav-aside-title" :style="{ color: colorText }">
               {{ $t(item.title) }}
             </div>
           </template>
@@ -74,14 +74,14 @@
                 <div class="m-nav-aside-box-other">
                   <div
                     class="m-nav-aside-box-content-title"
-                    :style="{ color: color }"
+                    :style="{ color: colorText }"
                   >
                     {{ $t(content.title) }}
                   </div>
                   <div
                     v-if="content.describe"
                     class="m-nav-aside-box-content-text"
-                    :style="{ color: color }"
+                    :style="{ color: colorText }"
                   >
                     {{ $t(content.describe) }}
                   </div>
@@ -98,7 +98,7 @@
                 <div class="m-nav-aside-box-other">
                   <div
                     class="m-nav-aside-box-content-title"
-                    :style="{ color: color }"
+                    :style="{ color: colorText }"
                   >
                     {{ $t(content.title) }}
                   </div>
@@ -117,7 +117,7 @@
           v-for="item in arrSingle"
           :key="item.key"
           :to="item.path"
-          :style="{ color: color }"
+          :style="{ color: colorText }"
           class="m-nav-aside-title-single"
           >{{ $t(item.title) }}</nuxt-link
         >

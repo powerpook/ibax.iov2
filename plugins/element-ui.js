@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-09-27 11:47:22
+ * @LastEditTime: 2021-10-21 16:21:01
  * @Description:
  */
 import Vue from 'vue';
@@ -10,6 +10,8 @@ import {
   PageHeader,
   Header,
   Footer,
+  Timeline,
+  TimelineItem,
   Main,
   Scrollbar,
   MessageBox,
@@ -41,7 +43,8 @@ import {
   Carousel,
   CarouselItem,
   Collapse,
-  CollapseItem
+  CollapseItem,
+  Card
 } from 'element-ui';
 
 Vue.use(Scrollbar);
@@ -76,6 +79,9 @@ Vue.use(Carousel);
 Vue.use(CarouselItem);
 Vue.use(Collapse);
 Vue.use(CollapseItem);
+Vue.use(Timeline);
+Vue.use(TimelineItem);
+Vue.use(Card);
 Vue.prototype.$loading = Loading.service;
 Vue.prototype.$msgbox = MessageBox;
 Vue.prototype.$alert = MessageBox.alert;

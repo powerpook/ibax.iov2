@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-17 17:50:10
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 10:09:22
+ * @LastEditTime: 2021-10-21 15:01:40
  * @Description: conact us
 -->
 <template>
@@ -38,7 +38,7 @@
           />
           <span>{{ $t('about.contact') }}</span>
         </div>
-        <h1 class="title-h1">{{ $t('about.can') }}</h1>
+        <h1 class="title-h4">{{ $t('about.can') }}</h1>
         <p>{{ $t('about.have') }}</p>
         <ul class="award-list">
           <a href="https://www.facebook.com/IBAXNetwork" target="_blank">
