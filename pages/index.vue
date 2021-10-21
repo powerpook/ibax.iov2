@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-20 15:46:04
+ * @LastEditTime: 2021-10-21 12:18:37
  * @Description: home
 -->
 <template>
@@ -715,11 +715,8 @@ export default {
     console.log(`mobile:${this.isMobile}`);
     this.domEmpty = this.$refs.empty;
     this.domStory = this.$refs.story;
-    this.offsetHeight = this.domStory.offsetHeight;
-    this.domEmpty.style.height = this.offsetHeight + 'px';
-    console.log(this.isMobile);
     if (!this.isMobile) {
-      this.domEmpty.style.position = 'static';
+      this.domEmpty.style.visibility = 'visible';
       this.domStory.style.position = 'fixed';
     }
     const obj = { headerColor: '#274235', color: '#fff' };
@@ -727,8 +724,6 @@ export default {
     this.$store.commit('handleChangeClass', 'subMenu--horizontal');
     this.$store.commit('handleIsTop', true);
     if (!this.isMobile) {
-      this.numMain =
-        this.domEmpty.getBoundingClientRect().top + this.offsetHeight - 350;
       this.middleBox =
         document.getElementById('bifurcation').offsetTop +
         document.getElementById('bifurcation').offsetWidth / 2;
@@ -737,9 +732,6 @@ export default {
       this.mobileTop = document.getElementById('story').offsetTop;
       console.log(this.mobileTop);
     });
-    /* this.domGlobal.addEventListener('scroll', () => {
-      this.handleThrottle(this.handleScroll, 100);
-    }); */
     this.domGlobal.addEventListener('scroll', this.handleScroll, true);
   },
   destroyed() {
@@ -791,7 +783,10 @@ export default {
           this.isOne = false;
           this.isTwo = true;
           this.isThree = false;
-        } else if (this.bifurcationTop <= 0 && this.bifurcationBottom > 0) {
+        } else if (
+          this.bifurcationTop <= 0 &&
+          this.bifurcationBottom - 220 > 0
+        ) {
           this.haxStyle = {
             width: `${this.widthPowerful}px`,
             position: 'fixed',
@@ -800,7 +795,7 @@ export default {
           this.isOne = false;
           this.isTwo = false;
           this.isThree = true;
-        } else if (this.bifurcationBottom <= 0) {
+        } else if (this.bifurcationBottom - 220 <= 0) {
           this.haxStyle = {
             width: `${this.widthPowerful}px`,
             position: 'absolute',
@@ -815,15 +810,20 @@ export default {
           this.isTwo = false;
           this.isThree = false;
         }
-        if (scrollTop >= this.numMain) {
-          this.domEmpty.style.position = 'fixed';
+        this.numMain = this.domEmpty.getBoundingClientRect().top;
+        this.offsetHeight = this.domStory.offsetHeight;
+        this.domEmpty.style.height = this.offsetHeight + 'px';
+        if (this.numMain <= 0) {
+          this.domEmpty.style.visibility = 'hidden';
+          this.domEmpty.style.height = '0';
           this.domStory.style.position = 'static';
           const obj = { headerColor: '#fff', color: '#37383c' };
           this.$store.commit('handleChangeColor', obj);
           this.$store.commit('handleChangeClass', 'news--horizontal');
           this.$store.commit('handleIsTop', false);
         } else {
-          this.domEmpty.style.position = 'static';
+          this.domEmpty.style.visibility = 'visible';
+          this.domEmpty.style.height = this.offsetHeight + 'px';
           this.domStory.style.position = 'fixed';
           const obj = { headerColor: '#274235', color: '#fff' };
           this.$store.commit('handleChangeColor', obj);

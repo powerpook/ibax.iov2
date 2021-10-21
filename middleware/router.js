@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2020-10-16 16:45:00
  * @LastEditors: abc
- * @LastEditTime: 2021-10-20 15:46:10
+ * @LastEditTime: 2021-10-21 11:35:01
  * @Description:
  */
 export default ({ app }) => {
