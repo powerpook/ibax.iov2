@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-10-19 15:42:43
+ * @LastEditTime: 2021-10-20 15:15:52
  * @Description: 
 -->
 <template>
@@ -479,7 +479,9 @@ export default {
           name: 'firth',
           img: img5
         }
-      ]
+      ],
+      count: 0,
+      timer: null
     };
   },
   head() {
@@ -507,7 +509,9 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {},
+  created() {
+    this.handleLoopTime();
+  },
   mounted() {
     this.$nextTick(() => {
       this.numArchite =
@@ -521,6 +525,10 @@ export default {
         });
       }
     });
+  },
+  beforeDestroy() {
+    clearTimeout(this.timer);
+    this.timer = null;
   },
   methods: {
     handleArchiteScroll() {
@@ -544,6 +552,21 @@ export default {
         this.$store.commit('handleChangeClass', 'subMenu--horizontal');
         this.$store.commit('handleIsTop', true);
       }
+    },
+    handleLoopTime() {
+      if (this.count < 5) {
+        this.count++;
+      } else if (this.count >= 5) {
+        this.count = 0;
+      }
+      if (this.arrTags[this.count]) {
+        this.activeName = this.arrTags[this.count].name;
+      } else {
+        this.activeName = 'first';
+      }
+      this.timer = setTimeout(() => {
+        this.handleLoopTime();
+      }, 1000);
     }
   }
 };

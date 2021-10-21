@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:43:39
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 09:45:37
+ * @LastEditTime: 2021-10-20 15:06:39
  * @Description: video resources
 -->
 <template>
@@ -26,24 +26,34 @@
                 <div class="resource-bottom">
                   <p class="wow fadeInUp">{{ $t('resourse.sourceview') }}</p>
                   <div class="resource-top-href wow fadeInUp">
-                    <a
+                    <button
                       class="btn btn-primary"
-                      href="https://www.youtube.com/watch?v=jzfvZMb_jus"
-                      target="_blank"
+                      @click="handlePlayIntroduce"
                     >
                       {{ $t('resourse.start') }}
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
             </el-col>
             <el-col :xs="24" :lg="12">
-              <div class="resource-img">
+              <!-- <div v-if="isIntroduce" class="resource-img">
                 <img
                   class="resource-img-right wow fadeInUp"
                   src="@/assets/images/video-1.jpg"
                   alt="video"
                 />
+              </div> -->
+              <div class="resource-video-box">
+                <youtube
+                  ref="introduce"
+                  :resize="isResize"
+                  :fit-parent="isResize"
+                  :player-vars="playerVars"
+                  video-id="jzfvZMb_jus"
+                  @ended="videoEndedIntroduce"
+                  @error="videoErrorIntroduce"
+                ></youtube>
               </div>
             </el-col>
           </el-row>
@@ -70,24 +80,34 @@
                 <div class="resource-top-bottom">
                   <p class="wow fadeInUp">{{ $t('resourse.sourceview') }}</p>
                   <div class="resource-top-href wow fadeInUp">
-                    <a
+                    <button
                       class="btn btn-primary"
-                      href="https://www.youtube.com/watch?v=v6djILrPGbw"
-                      target="_blank"
+                      @click="handlePlaySourceview"
                     >
                       {{ $t('resourse.start') }}
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
             </el-col>
             <el-col :xs="24" :lg="12">
-              <div class="resource-img wow fadeInUp">
+              <!-- <div class="resource-img wow fadeInUp">
                 <img
                   class="resource-img-right"
                   src="@/assets/images/video-weaver.jpg"
                   alt="video-weaver"
                 />
+              </div> -->
+              <div class="resource-video-box">
+                <youtube
+                  ref="sourceview"
+                  :resize="isSourceview"
+                  :fit-parent="isResize"
+                  :player-vars="playerVars"
+                  video-id="v6djILrPGbw"
+                  @ended="videoEndedSourceview"
+                  @error="videoErrorSourceview"
+                ></youtube>
               </div>
             </el-col>
           </el-row>
@@ -101,57 +121,27 @@
             <h3 class="title-h3 wow fadeInUp">{{ $t('resourse.video') }}</h3>
           </div>
           <el-row type="flex" justify="space-between" class="el-row-wrap">
-            <el-col :xs="24" :lg="7">
+            <el-col
+              v-for="item in arrVideos"
+              :key="item.videoId"
+              :xs="24"
+              :lg="7"
+            >
               <div class="resource-img wow fadeInUp">
-                <img
-                  src="@/assets/images/video-stuart.jpg"
-                  alt="video-stuart"
-                />
+                <youtube
+                  :ref="item.videoId"
+                  :resize="isSourceview"
+                  :fit-parent="isResize"
+                  :player-vars="playerVars"
+                  :video-id="item.videoId"
+                ></youtube>
               </div>
               <p class="resource-middle-text wow fadeInUp">
-                IBAX Network CEO Stuart Nichols gave a brief introduction and
-                shares his vision of IBAX.
+                {{ item.text }}
               </p>
               <a
                 class="home-new-bottom link wow fadeInUp"
-                href="https://www.youtube.com/watch?v=5yFY9vF2eIU"
-                target="_blank"
-              >
-                <span>Watch Now</span>
-                <i class="el-icon-right"></i>
-              </a>
-            </el-col>
-            <el-col :xs="24" :lg="7">
-              <div class="resource-img wow fadeInUp">
-                <img src="@/assets/images/video-an.png" alt="video-an" />
-              </div>
-              <p class="resource-middle-text wow fadeInUp">
-                IBAX Network COO Alan Mclvor gave us a 1 minute brief
-                introduction of IBAX Network.
-              </p>
-              <a
-                class="home-new-bottom link wow fadeInUp"
-                href="https://youtu.be/Iu8UdTljh1g"
-                target="_blank"
-              >
-                <span>Watch Now</span>
-                <i class="el-icon-right"></i>
-              </a>
-            </el-col>
-            <el-col :xs="24" :lg="7">
-              <div class="resource-img wow fadeInUp">
-                <img
-                  src="../../assets/images/video-gianluca.jpg"
-                  alt="video-gianluca"
-                />
-              </div>
-              <p class="resource-middle-text wow fadeInUp">
-                IBAX Network General Marketing Manager Gianluca gave a 1 minute
-                brief introduction of IBAX.
-              </p>
-              <a
-                class="home-new-bottom link wow fadeInUp"
-                href="https://youtu.be/MVNppxG8DLM"
+                :href="item.href"
                 target="_blank"
               >
                 <span>Watch Now</span>
@@ -171,18 +161,53 @@
   </div>
 </template>
 <script>
+const img1 = require('../../assets/images/video-stuart.jpg');
+const img2 = require('../../assets/images/video-gianluca.jpg');
+const img3 = require('../../assets/images/video-an.png');
 export default {
   props: {},
   data() {
     return {
-      isOpen: false
+      isOpen: false,
+      isResize: true,
+      isIntroduce: false,
+      isSourceview: false,
+      playerVars: {},
+      arrVideos: [
+        {
+          videoId: '5yFY9vF2eIU',
+          text: 'IBAX Network CEO Stuart Nichols gave a brief introduction and shares his vision of IBAX.',
+          img: img1,
+          href: 'https://www.youtube.com/watch?v=5yFY9vF2eIU'
+        },
+        {
+          videoId: 'Iu8UdTljh1g',
+          text: 'IBAX Network COO Alan Mclvor gave us a 1 minute brief introduction of IBAX Network.',
+          img: img2,
+          href: 'https://youtu.be/Iu8UdTljh1g'
+        },
+        {
+          videoId: 'MVNppxG8DLM',
+          text: 'IBAX Network General Marketing Manager Gianluca gave a 1 minute brief introduction of IBAX.',
+          img: img3,
+          href: 'https://youtu.be/MVNppxG8DLM'
+        }
+      ]
     };
   },
-  computed: {},
+  computed: {
+    playerIntroduce() {
+      return this.$refs.introduce.player;
+    },
+    playerSourceview() {
+      return this.$refs.sourceview.player;
+    }
+  },
   watch: {},
   created() {},
   mounted() {
     this.$nextTick(() => {
+      this.playerVars.origin = window.location.origin; // or http(S)://your.domain.com
       this.numMiddleTop =
         document.getElementById('resourseMiddle').getBoundingClientRect().top -
         140;
@@ -222,6 +247,24 @@ export default {
         this.$store.commit('handleChangeClass', 'subMenu--horizontal');
         this.$store.commit('handleIsTop', true);
       }
+    },
+    handlePlayIntroduce() {
+      this.playerIntroduce.playVideo();
+    },
+    videoEndedIntroduce() {
+      this.playerIntroduce.playVideo();
+    },
+    videoErrorIntroduce() {
+      this.isIntroduce = false;
+    },
+    handlePlaySourceview() {
+      this.playerSourceview.playVideo();
+    },
+    videoEndedSourceview() {
+      this.playerSourceview.playVideo();
+    },
+    videoErrorSourceview() {
+      this.isSourceview = false;
     }
   }
 };

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-12 17:51:44
+ * @LastEditTime: 2021-10-20 15:45:53
  * @Description: architecture
 -->
 <template>
@@ -487,17 +487,14 @@ export default {
   watch: {},
   created() {},
   mounted() {
-    this.$nextTick(() => {
-      /*   this.numArchite =
-        document.getElementById('archite').getBoundingClientRect().bottom - 105;
-      console.log(this.numArchite);
-      this.numArchiteBottom =
-        document.getElementById('architeBottom').getBoundingClientRect()
-          .bottom - 105; */
-      this.domGlobal.addEventListener('scroll', () => {
-        this.handleThrottle(this.handleArchiteScroll, 250);
-      });
-    });
+    this.domGlobal.addEventListener('scroll', this.handleArchiteScroll, true);
+  },
+  destroyed() {
+    this.domGlobal.removeEventListener(
+      'scroll',
+      this.handleArchiteScroll,
+      true
+    );
   },
   methods: {
     handleArchiteScroll() {

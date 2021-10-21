@@ -2,14 +2,14 @@
  * @Author: abc
  * @Date: 2021-10-19 17:37:58
  * @LastEditors: abc
- * @LastEditTime: 2021-10-19 19:11:32
+ * @LastEditTime: 2021-10-20 09:58:39
  * @Description: 
 -->
 <template>
   <el-dialog
     :visible.sync="dialogVisible"
     :close-on-click-modal="false"
-    width="40%"
+    :width="width"
     :show-close="false"
     custom-class="dialog-box"
     center
@@ -55,7 +55,8 @@ export default {
     return {
       dialogVisible: false,
       second: 5,
-      timer: null
+      timer: null,
+      width: '40%'
     };
   },
   computed: {},
@@ -65,6 +66,11 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
+      if (this.isMobile) {
+        this.width = '90%';
+      } else {
+        this.width = '40%';
+      }
       const dialogVisible = localStorage.getItem('dialogVisible');
       if (dialogVisible) {
         this.dialogVisible = false;

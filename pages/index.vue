@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-19 18:46:51
+ * @LastEditTime: 2021-10-20 15:46:04
  * @Description: home
 -->
 <template>
@@ -740,7 +740,10 @@ export default {
     /* this.domGlobal.addEventListener('scroll', () => {
       this.handleThrottle(this.handleScroll, 100);
     }); */
-    this.domGlobal.addEventListener('scroll', this.handleScroll);
+    this.domGlobal.addEventListener('scroll', this.handleScroll, true);
+  },
+  destroyed() {
+    this.domGlobal.removeEventListener('scroll', this.handleScroll, true);
   },
   methods: {
     handleScroll() {

@@ -224,10 +224,9 @@
       font-style: italic;
     }
     ul {
-      margin: 10px 0 10px 40px;
+      margin: 10px 0 10px 20px;
       li {
         position: relative;
-        text-indent: 2em;
         &::after {
           position: absolute;
           content: "";
@@ -235,8 +234,8 @@
           height: 5px;
           border-radius: 50%;
           background: #4c596a;
-          left: 10px;
-          top: 13px;
+          left: -20px;
+          top: 10px;
         }
       }
     }
