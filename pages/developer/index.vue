@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-10-21 17:25:40
+ * @LastEditTime: 2021-10-21 18:53:23
  * @Description: 
 -->
 <template>
@@ -87,10 +87,13 @@
               <el-col :xs="24" :lg="11" class="bass-white-fade">
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
-                    <h4 class="bass-white-title wow fadeInUp">
+                    <div class="bass-white-title wow fadeInUp">
                       <i class="bass-white-icon iconfont el-developer"></i>
-                      {{ $t('develope.document') }}
-                    </h4>
+                      <h4 class="title-h4">
+                        {{ $t('develope.document') }}
+                      </h4>
+                    </div>
+
                     <p class="wow fadeInUp">{{ $t('develope.use') }}</p>
                     <p class="wow fadeInUp">{{ $t('develope.doc') }}</p>
                   </div>
@@ -107,10 +110,12 @@
               <el-col :xs="24" :lg="11" class="bass-white-fade">
                 <div class="bass-white-box">
                   <div class="bass-white-box-content">
-                    <h4 class="bass-white-title wow fadeInUp">
-                      <i class="bass-white-icon iconfont el-forum"></i
-                      >{{ $t('develope.engineer') }}
-                    </h4>
+                    <div class="bass-white-title wow fadeInUp">
+                      <i class="bass-white-icon iconfont el-forum"></i>
+                      <h4 class="title-h4 wow fadeInUp">
+                        {{ $t('develope.engineer') }}
+                      </h4>
+                    </div>
                     <p class="wow fadeInUp">
                       {{ $t('develope.can') }}
                     </p>
@@ -157,10 +162,12 @@
                 </div>
               </el-col>
               <el-col :xs="24" :lg="8">
-                <h4 class="develop-title wow fadeInUp">
+                <div class="develop-title wow fadeInUp">
                   <i class="iconfont el-payment develop-title-icon"></i>
-                  <span>{{ $t('develope.paid') }}</span>
-                </h4>
+                  <h4 class="title-h4">
+                    {{ $t('develope.paid') }}
+                  </h4>
+                </div>
                 <p class="wow fadeInUp">
                   {{ $t('develope.there') }}
                 </p>
@@ -198,10 +205,12 @@
               class="el-row-wrap"
             >
               <el-col :xs="24" :lg="8">
-                <h4 class="develop-title wow fadeInUp">
+                <div class="develop-title wow fadeInUp">
                   <i class="iconfont el-code develop-title-icon"></i>
-                  <span>{{ $t('develope.audit') }}</span>
-                </h4>
+                  <h4 class="title-h4 wow fadeInUp">
+                    {{ $t('develope.audit') }}
+                  </h4>
+                </div>
                 <p class="wow fadeInUp">
                   {{ $t('develope.review') }}
                 </p>
@@ -247,10 +256,12 @@
                 </div>
               </el-col>
               <el-col :xs="24" :lg="8">
-                <h4 class="develop-title wow fadeInUp">
+                <div class="develop-title wow fadeInUp">
                   <i class="iconfont el-ecological develop-title-icon"></i>
-                  <span>{{ $t('develope.ecological') }}</span>
-                </h4>
+                  <h4 class="title-h4 wow fadeInUp">
+                    {{ $t('develope.ecological') }}
+                  </h4>
+                </div>
                 <p class="wow fadeInUp">
                   {{ $t('develope.quickly') }}
                 </p>
@@ -282,10 +293,12 @@
               class="el-row-wrap"
             >
               <el-col :xs="24" :lg="8">
-                <h4 class="develop-title wow fadeInUp">
+                <div class="develop-title wow fadeInUp">
                   <i class="iconfont el-contract develop-title-icon"></i>
-                  <span>{{ $t('develope.online') }}</span>
-                </h4>
+                  <h4 class="title-h4">
+                    {{ $t('develope.online') }}
+                  </h4>
+                </div>
                 <p class="wow fadeInUp">
                   {{ $t('develope.frameworks') }}
                 </p>
@@ -326,10 +339,12 @@
                 </div>
               </el-col>
               <el-col :xs="24" :lg="8">
-                <h4 class="bass-h4 home-new-title wow fadeInUp">
+                <div class="develop-title wow fadeInUp">
                   <i class="iconfont el-templates develop-title-icon"></i>
-                  <span>{{ $t('develope.template') }}</span>
-                </h4>
+                  <h4 class="title-h4">
+                    {{ $t('develope.template') }}
+                  </h4>
+                </div>
                 <p class="wow fadeInUp">
                   {{ $t('develope.number') }}
                 </p>

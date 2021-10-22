@@ -114,6 +114,9 @@
       font-size: 36px;
       display: flex;
       align-items: center;
+      .title-h4 {
+        margin-bottom: 0;
+      }
     }
     &-content {
       padding-bottom: 154px;

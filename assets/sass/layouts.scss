@@ -10,14 +10,16 @@
   margin-bottom: 30px;
 }
 .title-h1 {
-  font-size: 90px;
+  font-size: 60px;
+  //font-size: 90px;
   line-height: 1.067;
   margin: 0;
   padding-bottom: 34px;
   text-transform: capitalize;
 }
 .title-h2 {
-  font-size: 70px;
+  font-size: 50px;
+  //  font-size: 70px;
   line-height: 1.0625;
   text-transform: capitalize;
 }
@@ -360,10 +362,6 @@
     z-index: 100;
     text-align: center;
     padding: 50px 30px 130px 30px;
-  }
-  .bass-white-top {
-    padding-top: 50px;
-    padding-bottom: 0;
   }
   .bass-white-fade {
     margin-bottom: 30px;
@@ -725,6 +723,10 @@
       padding-left: 30px;
       padding-right: 30px;
     }
+  }
+  .bass-white-top {
+    padding-top: 50px;
+    padding-bottom: 0;
   }
   .bass-white-apply {
     padding-left: 30px;

@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-18 10:19:27
+ * @LastEditTime: 2021-10-22 10:45:02
  * @Description: ecolibs
 -->
 <template>
@@ -221,7 +221,7 @@
                   @keyup.enter.native="handleKeywords"
                 >
                   <template #prefix>
-                    <i class="el-icon-search"></i>
+                    <i class="el-icon-search" @click="handleKeywords"></i>
                   </template>
                 </el-input>
               </div>
@@ -423,6 +423,15 @@ export default {
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'subMenu--horizontal');
         this.$store.commit('handleIsTop', true);
+      }
+    },
+    async handleKeywords() {
+      this.thirdParam.where.keyword = this.keywords;
+      const res = await this.$axios.$post('/eventsfind', this.thirdParam);
+      if (!res.data.rets) {
+        this.arrWonderEvents = [];
+      } else {
+        this.arrWonderEvents = res.data.rets;
       }
     },
     async handleEventsfind(params) {
