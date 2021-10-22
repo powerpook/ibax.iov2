@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-21 17:56:50
+ * @LastEditTime: 2021-10-22 11:43:17
  * @Description: home
 -->
 <template>
@@ -663,6 +663,9 @@ export default {
         },
         {
           icon: 'iconfont el-arm_logo'
+        },
+        {
+          icon: 'iconfont el-red_hat'
         }
       ],
       domGlobal: '',

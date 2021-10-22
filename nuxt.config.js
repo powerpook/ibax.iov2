@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-18 19:35:40
+ * @LastEditTime: 2021-10-22 16:40:23
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -25,6 +25,7 @@ if (process.env.NODE_ENV !== 'production') {
   plugins.push('transform-remove-console');
   pattern = false;
 }
+const Timestamp = new Date().getTime();
 export default {
   mode: 'universal',
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -35,6 +36,17 @@ export default {
       {
         name: 'robots',
         content: 'noindex,nofollow'
+      },
+      {
+        hid: 'Pragma',
+        'http-equiv': 'Pragma',
+        content: 'no-cache'
+      },
+      {
+        hid: 'Cache-Control',
+        'http-equiv': 'Cache-Control',
+        // content: "no-cache, no-store, must-revalidate"
+        content: 'no-cache'
       },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'format-detection', content: 'telephone=no' },
@@ -70,9 +82,13 @@ export default {
       { rel: 'apple-touch-icon', href: '/favicon.ico' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', type: 'text/css', href: '/animate/animate.min.css' },
-      { rel: 'stylesheet', type: 'text/css', href: '/icon/iconfont.css' }
-    ]
-    // script: [{ src: '' }]
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: '//at.alicdn.com/t/font_2762091_1hpfqxal36b.css'
+      }
+    ],
+    script: [{ src: 'https://cdn.polyfill.io/v2/polyfill.min.js' }]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -86,6 +102,7 @@ export default {
     '@/plugins/http.js',
     '@/plugins/vueSlickCarousel.js',
     '@/plugins/day.js',
+    { src: '@/plugins/poly', ssr: true },
     { src: '@/plugins/vueSroll.js', ssr: false },
     { src: '@/plugins/vueP5.js', ssr: false }
   ],
@@ -198,6 +215,8 @@ export default {
         isDev ? '[path][name].[ext]' : 'videos/[hash:7].[ext]'
     },
     extend(config, ctx) {
+      config.output.filename = `js/[name].${Timestamp}.js`;
+      config.output.chunkFilename = `js/[name].${Timestamp}.js`;
       //
       if (ctx.isClient) {
         config.devtool = pattern ? 'eval-source-map' : 'none';
