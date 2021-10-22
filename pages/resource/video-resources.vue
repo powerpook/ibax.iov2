@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:43:39
  * @LastEditors: abc
- * @LastEditTime: 2021-10-20 15:06:39
+ * @LastEditTime: 2021-10-22 17:39:43
  * @Description: video resources
 -->
 <template>
@@ -208,18 +208,10 @@ export default {
   mounted() {
     this.$nextTick(() => {
       this.playerVars.origin = window.location.origin; // or http(S)://your.domain.com
-      this.numMiddleTop =
-        document.getElementById('resourseMiddle').getBoundingClientRect().top -
-        140;
-      console.log(this.numArchite);
-      this.numMiddleBottom =
-        document.getElementById('resourseMiddle').getBoundingClientRect()
-          .bottom - 140;
-      if (this.numMiddleTop) {
-        this.domGlobal.addEventListener('scroll', () => {
-          this.handleThrottle(this.handlerMiddleScroll, 100);
-        });
-      }
+
+      this.domGlobal.addEventListener('scroll', () => {
+        this.handleThrottle(this.handlerMiddleScroll, 100);
+      });
     });
   },
   methods: {
@@ -231,12 +223,19 @@ export default {
       const topHeight = document.getElementById('headerTop').offsetTop;
       const isFixed = scrollTop > topHeight;
       this.$store.commit('handleIsFixed', isFixed);
-      if (scrollTop >= this.numMiddleTop && scrollTop < this.numMiddleBottom) {
+      this.numMiddleTop = document
+        .getElementById('resourseMiddle')
+        .getBoundingClientRect().top;
+      // console.log(this.numArchite);
+      this.numMiddleBottom = document
+        .getElementById('resourseMiddle')
+        .getBoundingClientRect().bottom;
+      if (this.numMiddleTop <= 0 && this.numMiddleBottom > 0) {
         const obj = { headerColor: '#fff', color: '#37383c' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'news--horizontal');
         this.$store.commit('handleIsTop', false);
-      } else if (scrollTop >= this.numMiddleBottom) {
+      } else if (this.numMiddleBottom <= 0) {
         const obj = { headerColor: '#274235', color: '#fff' };
         this.$store.commit('handleChangeColor', obj);
         this.$store.commit('handleChangeClass', 'subMenu--horizontal');

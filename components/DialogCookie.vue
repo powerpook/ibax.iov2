@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-10-19 17:37:58
  * @LastEditors: abc
- * @LastEditTime: 2021-10-20 09:58:39
+ * @LastEditTime: 2021-10-22 17:15:04
  * @Description: 
 -->
 <template>
@@ -61,9 +61,7 @@ export default {
   },
   computed: {},
   watch: {},
-  created() {
-    this.handleTime();
-  },
+  created() {},
   mounted() {
     this.$nextTick(() => {
       if (this.isMobile) {
@@ -77,11 +75,13 @@ export default {
       } else {
         this.dialogVisible = true;
       }
+      this.handleTime();
     });
   },
   methods: {
     handleTime() {
       if (this.second <= 0) {
+        localStorage.setItem('dialogVisible', 'no');
         this.dialogVisible = false;
         clearTimeout(this.timer);
         this.timer = null;
