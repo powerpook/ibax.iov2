@@ -103,6 +103,7 @@
       &-item {
         padding: 28px 15px;
         width: 33%;
+        position: relative;
         .od-card-img {
           display: block;
           position: relative;
@@ -130,6 +131,9 @@
           overflow: hidden; */
         }
         .link {
+          position: absolute;
+          left: 0;
+          bottom: 0;
           font-size: 16px;
           margin-top: 16px;
         }

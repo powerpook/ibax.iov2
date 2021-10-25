@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-22 11:43:17
+ * @LastEditTime: 2021-10-25 11:28:54
  * @Description: home
 -->
 <template>
@@ -464,31 +464,33 @@
               :xs="23"
               :lg="7"
             >
-              <div class="home-new-img">
-                <img :src="item.img" alt="img" />
+              <div class="home-bottom-index">
+                <div class="home-new-img">
+                  <img :src="item.img" alt="img" />
+                </div>
+                <div class="home-story-text">
+                  <i class="iconfont" :class="item.icon"></i>
+                  <strong>{{ $t(item.strong) }}</strong>
+                </div>
+                <h4 class="home-story-text-h4">{{ $t(item.title) }}</h4>
+                <a
+                  v-if="item.href"
+                  :href="item.href"
+                  target="_blank"
+                  class="home-new-bottom link"
+                >
+                  <span>{{ $t(item.text) }}</span>
+                  <i class="el-icon-right"></i>
+                </a>
+                <nuxt-link
+                  v-if="item.path"
+                  :to="item.path"
+                  class="home-new-bottom home-bottom-index-link link"
+                >
+                  <span>{{ $t(item.text) }}</span>
+                  <i class="el-icon-right"></i>
+                </nuxt-link>
               </div>
-              <div class="home-story-text">
-                <i class="iconfont" :class="item.icon"></i>
-                <strong>{{ $t(item.strong) }}</strong>
-              </div>
-              <h4 class="home-story-text-h4">{{ $t(item.title) }}</h4>
-              <a
-                v-if="item.href"
-                :href="item.href"
-                target="_blank"
-                class="home-new-bottom link"
-              >
-                <span>{{ $t(item.text) }}</span>
-                <i class="el-icon-right"></i>
-              </a>
-              <nuxt-link
-                v-if="item.path"
-                :to="item.path"
-                class="home-new-bottom link"
-              >
-                <span>{{ $t(item.text) }}</span>
-                <i class="el-icon-right"></i>
-              </nuxt-link>
             </el-col>
           </el-row>
         </el-col>

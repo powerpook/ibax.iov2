@@ -312,6 +312,7 @@
       }
     }
   }
+
   &-loop {
     background-color: $primary-color;
     width: 100%;
@@ -394,6 +395,7 @@
   max-width: 688px;
   margin: 0 auto 112px;
   color: #fff;
+  padding: 0 30px;
   h6 {
     color: #f3ac34;
     margin-bottom: 20px;
@@ -401,4 +403,13 @@
 }
 .home-new-title .el-iconfont {
   margin-right: 10px;
+}
+.home-bottom-index {
+  position: relative;
+  height: 100%;
+  &-link {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
 }
