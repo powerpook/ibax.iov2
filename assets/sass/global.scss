@@ -72,6 +72,15 @@ section,
 summary {
   display: block;
 }
+/* @font-face {
+  font-family: "Apercu Pro";
+  src: url("./font/Apercu Pro/ApercuPro-Bold.eot");
+  src: url("./font/Apercu Pro/ApercuPro-Bold.eot?#iefix") format("embedded-opentype"),
+    url("./font/Apercu Pro/ApercuPro-Bold.woff2") format("woff2"),
+    url("./font/Apercu Pro/ApercuPro-Bold.woff") format("woff"),
+    url("./font/Apercu Pro/ApercuPro-Bold.ttf") format("truetype");
+  font-style: italic;
+} */
 @font-face {
   font-family: "Untitled Sans Regular";
   src: url("./font/Untitled Sans Regular/Untitled Sans Regular.eot") format("truetype");
@@ -79,6 +88,8 @@ summary {
     url("./font/Untitled Sans Regular/Untitled Sans Regular.woff") format("woff"),
     url("./font/Untitled Sans Regular/Untitled Sans Regular.ttf") format("truetype"),
     url("./font/Untitled Sans Regular/Untitled Sans Regular.svg") format("svg");
+  font-weight: 500;
+  font-style: normal;
 }
 @font-face {
   font-family: "Untitled Sans Light";
@@ -120,8 +131,8 @@ img {
 html,
 body,
 #__nuxt {
-  font: 18px/1.778 "Untitled Sans Light", "Helvetica Neue", Helvetica, sans-serif;
-  //background-color: #1f1f24;
+  font: 18px/1.778 "Untitled Sans Regular", "Helvetica Neue", Helvetica, sans-serif;
+  // background-color: #1f1f24;
   // background-color: $primary-color;
   color: #fff;
   height: 100%;

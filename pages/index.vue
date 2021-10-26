@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-25 11:28:54
+ * @LastEditTime: 2021-10-26 11:07:42
  * @Description: home
 -->
 <template>
@@ -11,7 +11,9 @@
       <el-row type="flex" justify="center">
         <el-col :xs="24" :sm="22" :md="20" :lg="18">
           <div class="home-top">
-            <h1 class="title-h1 animated fadeInUp">{{ $t('home.start') }}</h1>
+            <h1 class="title-h1-plus animated fadeInUp">
+              {{ $t('home.start') }}
+            </h1>
             <p class="p-lead animated fadeInUp">{{ $t('home.performance') }}</p>
           </div>
           <div class="home-picture animated fadeInUp hidden-sm-and-up">

@@ -17,6 +17,13 @@
   padding-bottom: 34px;
   text-transform: capitalize;
 }
+.title-h1-plus {
+  font-size: 90px;
+  line-height: 1.067;
+  margin: 0;
+  padding-bottom: 34px;
+  text-transform: capitalize;
+}
 .title-h2 {
   font-size: 50px;
   //  font-size: 70px;
@@ -145,7 +152,8 @@
     padding-left: 30px;
     padding-right: 30px;
   }
-  .title-h1 {
+  .title-h1,
+  .title-h1-plus {
     font-size: 32px;
     line-height: 1.0625;
     padding-bottom: 12px;
