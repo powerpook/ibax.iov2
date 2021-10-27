@@ -2,7 +2,7 @@
  * @Author: renlei
  * @Date: 2019-11-08 15:06:37
  * @LastEditors: abc
- * @LastEditTime: 2021-10-21 18:09:12
+ * @LastEditTime: 2021-10-27 14:34:20
  * @Description
  */
 import Vue from 'vue';
@@ -11,13 +11,16 @@ import VueI18n from 'vue-i18n';
 import zhCN from 'element-ui/lib/locale/lang/zh-CN';
 import zhTW from 'element-ui/lib/locale/lang/zh-TW';
 import zhBG from 'element-ui/lib/locale/lang/en';
+import frLocale from 'element-ui/lib/locale/lang/fr';
 import { handleGetLang } from '../assets/js/public.js';
 const en = require('@/lang/en-us.json');
 const zh = require('@/lang/zh-cn.json');
 const tw = require('@/lang/zh-tw.json');
+const french = require('@/lang/french.json');
 const mergeZH = Object.assign({}, zhCN, zh);
 const mergeEN = Object.assign({}, zhBG, en);
 const mergeTW = Object.assign({}, zhTW, tw);
+const mergeFR = Object.assign({}, frLocale, french);
 Vue.use(VueI18n);
 export default ({ app, store }) => {
   let strLang = handleGetLang();
@@ -33,7 +36,8 @@ export default ({ app, store }) => {
     messages: {
       en: mergeEN,
       zh: mergeZH,
-      tw: mergeTW
+      tw: mergeTW,
+      fr: mergeFR
     },
     silentTranslationWarn: true
   });

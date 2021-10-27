@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 10:44:45
+ * @LastEditTime: 2021-10-27 12:18:51
  * @Description: 
 -->
 <template>
@@ -143,7 +143,7 @@
             >
               <el-col :xs="24" :lg="14" class="hidden-sm-and-down">
                 <div class="home-new-img wow fadeInUp">
-                  <img src="@/assets/images/light.png" alt="light" />
+                  <img src="@/assets/images/light.jpg" alt="light" />
                 </div>
               </el-col>
               <el-col :xs="24" :lg="8">
@@ -160,7 +160,7 @@
               </el-col>
               <el-col :xs="24" :lg="14" class="hidden-sm-and-up">
                 <div class="home-new-img wow fadeInUp">
-                  <img src="@/assets/images/light.png" alt="light" />
+                  <img src="@/assets/images/light.jpg" alt="light" />
                 </div>
               </el-col>
             </el-row>

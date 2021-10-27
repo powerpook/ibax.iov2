@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-26 11:07:42
+ * @LastEditTime: 2021-10-27 12:03:38
  * @Description: home
 -->
 <template>
@@ -479,7 +479,7 @@
                   v-if="item.href"
                   :href="item.href"
                   target="_blank"
-                  class="home-new-bottom link"
+                  class="home-new-bottom link home-bottom-index-link"
                 >
                   <span>{{ $t(item.text) }}</span>
                   <i class="el-icon-right"></i>
@@ -541,6 +541,7 @@ const img2 = require('../assets/images/funnel-report-1.png');
 const img3 = require('../assets/images/funnel-report-1.png');
 const technology = require('../assets/images/technology.jpg');
 const videos = require('../assets/images/videos.jpg');
+const events = require('../assets/images/events.jpg');
 export default {
   data() {
     return {
@@ -571,7 +572,7 @@ export default {
         },
         {
           path: '/resource/events',
-          img: videos,
+          img: events,
           icon: 'el-activity',
           strong: 'resource.activity',
           title: 'home.exciting',

@@ -3,7 +3,7 @@
  * @LastEditors: abc
  * @Description: Vu
  * @Date: 2019-04-12 14:08:12
- * @LastEditTime: 2021-10-21 17:05:37
+ * @LastEditTime: 2021-10-27 14:56:13
  */
 
 import Vue from 'vue';
@@ -25,6 +25,10 @@ Vue.mixin({
         {
           label: '繁体中文',
           lang: 'tw'
+        },
+        {
+          label: 'Français',
+          lang: 'fr'
         }
       ],
       arrType: [
