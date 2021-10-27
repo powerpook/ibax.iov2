@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-24 16:15:10
  * @LastEditors: abc
- * @LastEditTime: 2021-10-18 09:58:27
+ * @LastEditTime: 2021-10-27 17:58:16
  * @Description: news
 -->
 <template>
@@ -18,6 +18,7 @@
             <el-select
               v-model="topics"
               clearable
+              :no-data-text="$t('resourse.no')"
               :placeholder="$t('resourse.source')"
               @change="handleChange($event, 'topics')"
             >
@@ -32,6 +33,7 @@
             <el-select
               v-model="type"
               clearable
+              :no-data-text="$t('resourse.no')"
               :placeholder="$t('resourse.type')"
               class="news-select-box-second"
               @change="handleChange($event, 'type')"

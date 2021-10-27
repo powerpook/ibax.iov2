@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-27 12:18:51
+ * @LastEditTime: 2021-10-27 18:33:16
  * @Description: 
 -->
 <template>
@@ -50,7 +50,7 @@
             <el-col :xs="24" :lg="8">
               <div
                 class="other-easeplus wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 1s"
+                style="animation-duration: 1s; animation-delay: 0.5s"
               >
                 <div class="other-easeplus-strong">
                   {{ $t('bass.in') }}
@@ -61,7 +61,7 @@
             <el-col :xs="24" :lg="7">
               <div
                 class="other-easeplus wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 1.5s"
+                style="animation-duration: 1s; animation-delay: 1s"
               >
                 <div class="other-easeplus-strong">
                   {{ $t('bass.choices') }}
@@ -72,7 +72,7 @@
             <el-col :xs="24" :lg="8">
               <div
                 class="other-easeplus wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 2s"
+                style="animation-duration: 1s; animation-delay: 1.5s"
               >
                 <div class="other-easeplus-strong">
                   {{ $t('bass.support') }}

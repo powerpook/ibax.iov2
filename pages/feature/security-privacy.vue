@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 11:23:07
+ * @LastEditTime: 2021-10-27 18:35:06
  * @Description: 
 -->
 <template>
@@ -49,7 +49,7 @@
             <el-col :xs="23" :lg="7">
               <div
                 class="other-ease wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 1s"
+                style="animation-duration: 1s; animation-delay: 0.5s"
               >
                 {{ $t('bass.keep') }}
               </div>
@@ -57,7 +57,7 @@
             <el-col :xs="23" :lg="7">
               <div
                 class="other-ease wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 1.5s"
+                style="animation-duration: 1s; animation-delay: 1s"
               >
                 {{ $t('bass.comply') }}
               </div>
@@ -65,7 +65,7 @@
             <el-col :xs="23" :lg="7">
               <div
                 class="other-ease wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 2s"
+                style="animation-duration: 1s; animation-delay: 1.5s"
               >
                 {{ $t('bass.data') }}
               </div>

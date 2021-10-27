@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:32:02
  * @LastEditors: abc
- * @LastEditTime: 2021-10-21 18:53:23
+ * @LastEditTime: 2021-10-27 18:20:30
  * @Description: 
 -->
 <template>
@@ -41,7 +41,11 @@
             </el-col>
             <el-col :xs="23" :lg="12">
               <div class="home-tag animated fadeInUp">
-                <el-tabs v-model="activeName" :tab-position="tabPosition">
+                <el-tabs
+                  v-model="activeName"
+                  :tab-position="tabPosition"
+                  @tab-click="handleTabClick"
+                >
                   <el-tab-pane
                     v-for="item in arrTags"
                     :key="item.name"
@@ -547,6 +551,19 @@ export default {
         this.$store.commit('handleIsTop', true);
       }
     },
+    handleTabClick(tab) {
+      // console.log(tab.name);
+      const index = this.arrTags.findIndex((item) => {
+        return item.name === tab.name;
+      });
+      this.count = index;
+      clearTimeout(this.timer);
+      this.timer = null;
+      setTimeout(() => {
+        this.handleLoopTime();
+      }, 3000);
+      // console.log(index);
+    },
     handleLoopTime() {
       if (this.count < 5) {
         this.count++;
@@ -560,7 +577,7 @@ export default {
       }
       this.timer = setTimeout(() => {
         this.handleLoopTime();
-      }, 1000);
+      }, 3000);
     }
   }
 };

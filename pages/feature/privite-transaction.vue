@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 10:51:47
+ * @LastEditTime: 2021-10-27 18:34:45
  * @Description: 
 -->
 <template>
@@ -51,7 +51,7 @@
             <el-col :xs="24" :lg="6">
               <div
                 class="other-ease wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 1s"
+                style="animation-duration: 1s; animation-delay: 0.5s"
               >
                 {{ $t('bass.protection') }}
               </div>
@@ -59,7 +59,7 @@
             <el-col :xs="24" :lg="6">
               <div
                 class="other-ease wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 1.5s"
+                style="animation-duration: 1s; animation-delay: 1s"
               >
                 {{ $t('bass.process') }}
               </div>
@@ -67,7 +67,7 @@
             <el-col :xs="24" :lg="6">
               <div
                 class="other-ease wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 2s"
+                style="animation-duration: 1s; animation-delay: 1.5s"
               >
                 {{ $t('bass.leaked') }}
               </div>

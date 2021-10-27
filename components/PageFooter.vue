@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 14:44:39
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 16:12:38
+ * @LastEditTime: 2021-10-27 17:04:17
  * @Description: footer
 -->
 <template>
@@ -15,7 +15,7 @@
           </nuxt-link>
         </div>
       </el-col>
-      <el-col :xs="12" :lg="4">
+      <el-col :xs="12" :lg="5">
         <h6 class="title-h6">{{ $t('footer.feature') }}</h6>
         <div v-for="item in arrFeature" :key="item.key" class="footer-link">
           <nuxt-link :to="{ path: item.key }">
@@ -23,7 +23,7 @@
           </nuxt-link>
         </div>
       </el-col>
-      <el-col :xs="12" :lg="4">
+      <el-col :xs="12" :lg="5">
         <h6 class="title-h6">{{ $t('nav.bass') }}</h6>
         <div v-for="item in arrBass" :key="item.key" class="footer-link">
           <nuxt-link :to="{ path: item.key }">
@@ -31,7 +31,7 @@
           </nuxt-link>
         </div>
       </el-col>
-      <el-col :xs="12" :lg="4">
+      <el-col :xs="12" :lg="5">
         <h6 class="title-h6">{{ $t('nav.resource') }}</h6>
         <div v-for="item in arrResource" :key="item.key" class="footer-link">
           <nuxt-link v-if="item.path" :to="{ path: item.path }">
@@ -42,7 +42,7 @@
           </a>
         </div>
       </el-col>
-      <el-col :xs="12" :lg="4">
+      <el-col :xs="12" :lg="5">
         <h6 class="title-h6">{{ $t('nav.solution') }}</h6>
         <div v-for="item in arrSolution" :key="item.path" class="footer-link">
           <nuxt-link :to="{ path: item.path }">
@@ -50,29 +50,30 @@
           </nuxt-link>
         </div>
       </el-col>
-      <el-col :xs="12" :lg="4">
+      <el-col :xs="12" :lg="5">
         <h6 class="title-h6">{{ $t('nav.development') }}</h6>
         <div v-for="item in arrDevelop" :key="item.path" class="footer-link">
           <nuxt-link :to="{ path: item.path }">
             {{ $t(item.title) }}
           </nuxt-link>
         </div>
-      </el-col>
-      <el-col :xs="12" :lg="4">
-        <h6 class="title-h6">{{ $t('footer.more') }}</h6>
+        <h6 class="title-h6" style="margin-top: 20px; margin-bottom: 10px">
+          {{ $t('footer.more') }}
+        </h6>
         <div v-for="item in arrAbout" :key="item.path" class="footer-link">
           <nuxt-link :to="{ path: item.path }">
             {{ $t(item.title) }}
           </nuxt-link>
         </div>
       </el-col>
+      <!-- <el-col :xs="12" :lg="4"> </el-col> -->
     </el-row>
     <div class="footer-icon">
       <div class="footer-icon-content">
         <a href="https://www.facebook.com/IBAXNetwork" target="_blank">
           <i class="iconfont el-facebook"></i>
         </a>
-        <a href="https://github.com/IBAX-io/documentation" target="_blank">
+        <a href="https://github.com/IBAX-io" target="_blank">
           <i class="iconfont el-github"></i>
         </a>
         <a href="https://t.me/IBAXNetwork" target="_blank">

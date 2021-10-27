@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-19 12:00:46
  * @LastEditors: abc
- * @LastEditTime: 2021-10-15 11:22:01
+ * @LastEditTime: 2021-10-27 18:34:22
  * @Description: 
 -->
 <template>
@@ -52,7 +52,7 @@
             <el-col :xs="24" :lg="8">
               <div
                 class="other-ease wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 1s"
+                style="animation-duration: 1s; animation-delay: 0.5s"
               >
                 {{ $t('bass.account') }}
               </div>
@@ -60,7 +60,7 @@
             <el-col :xs="24" :lg="7">
               <div
                 class="other-ease wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 1.5s"
+                style="animation-duration: 1s; animation-delay: 1s"
               >
                 {{ $t('bass.centralized') }}
               </div>
@@ -68,7 +68,7 @@
             <el-col :xs="24" :lg="8">
               <div
                 class="other-ease wow fadeIn"
-                style="animation-duration: 1s; animation-delay: 2s"
+                style="animation-duration: 1s; animation-delay: 1.5s"
               >
                 {{ $t('bass.each') }}
               </div>
