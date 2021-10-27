@@ -3,7 +3,7 @@
  * @LastEditors: abc
  * @Description: Vu
  * @Date: 2019-04-12 14:08:12
- * @LastEditTime: 2021-10-27 14:56:13
+ * @LastEditTime: 2021-10-27 15:22:39
  */
 
 import Vue from 'vue';
@@ -92,6 +92,9 @@ Vue.mixin({
           break;
         case 'zh':
           type = 2;
+          break;
+        case 'fr':
+          type = 3;
           break;
         case 'tw':
           type = 4;
