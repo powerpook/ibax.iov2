@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 15:01:26
  * @LastEditors: abc
- * @LastEditTime: 2021-10-21 14:46:42
+ * @LastEditTime: 2021-10-28 11:50:37
  * @Description:
 -->
 <template>
@@ -70,7 +70,8 @@
       </el-container>
     </el-scrollbar>
     <el-backtop target=".el-scrollbar__wrap"></el-backtop>
-    <dialog-cookie></dialog-cookie>
+    <!--  <dialog-cookie></dialog-cookie> -->
+    <show-cookie></show-cookie>
   </div>
 </template>
 <script>

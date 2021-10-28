@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-09-28 16:09:11
  * @LastEditors: abc
- * @LastEditTime: 2021-10-19 14:53:26
+ * @LastEditTime: 2021-10-28 11:16:01
  * @Description: 
 -->
 <template>
@@ -59,6 +59,13 @@
           <strong class="events-test-title">{{ $t('events.act') }}</strong>
           <div class="events-articles">
             <div class="news-box" v-html="objEvents.content"></div>
+            <div class="shareon">
+              <a class="facebook"></a>
+              <a class="linkedin"></a>
+              <button class="reddit"></button>
+              <button class="telegram"></button>
+              <button class="twitter"></button>
+            </div>
           </div>
           <strong class="events-test-title">{{ $t('events.much') }}</strong>
           <h2 class="news-articles-h2">{{ $t('events.content') }}</h2>
@@ -189,6 +196,7 @@ export default {
     this.handleArrEvents(this.langType);
   },
   mounted() {
+    this.shareon();
     this.$nextTick(() => {
       this.domGlobal.addEventListener('scroll', () => {
         this.handleThrottle(this.handleAlwaysScroll, 100);

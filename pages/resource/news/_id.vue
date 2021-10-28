@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-26 14:35:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-19 14:54:43
+ * @LastEditTime: 2021-10-28 11:05:16
  * @Description: news  news
 -->
 <template>
@@ -15,6 +15,13 @@
         <div class="news-articles-contnent">
           <h1 class="news-articles-h2">{{ objNews.title }}</h1>
           <div class="news-box" v-html="objNews.content"></div>
+          <div class="shareon">
+            <a class="facebook"></a>
+            <a class="linkedin"></a>
+            <button class="reddit"></button>
+            <button class="telegram"></button>
+            <button class="twitter"></button>
+          </div>
         </div>
         <div class="news-articles">
           <h2 class="news-articles-h2">{{ $t('feature.articles') }}</h2>
@@ -162,7 +169,9 @@ export default {
     this.obj.language_type = langType;
     this.handleNewsrandow(this.langType);
   },
-  mounted() {},
+  mounted() {
+    this.shareon();
+  },
   methods: {
     async handleSendEmail() {
       const params = this.obj;

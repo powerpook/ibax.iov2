@@ -2,7 +2,7 @@
  * @Author: abc
  * @Date: 2021-08-16 11:14:27
  * @LastEditors: abc
- * @LastEditTime: 2021-10-22 18:16:46
+ * @LastEditTime: 2021-10-28 10:59:31
  * @Description:nuxt setting
  */
 // const path = require('path')
@@ -104,6 +104,7 @@ export default {
     { src: '@/plugins/poly', ssr: true },
     { src: '@/plugins/vueSroll.js', ssr: false },
     { src: '@/plugins/vueP5.js', ssr: false },
+    { src: '@/plugins/shareon.js', ssr: false },
     '@/plugins/vueSlickCarousel.js'
   ],
   // Auto import components: https://go.nuxtjs.dev/config-components

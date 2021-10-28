@@ -3,7 +3,7 @@
  * @LastEditors: abc
  * @Description: Vu
  * @Date: 2019-04-12 14:08:12
- * @LastEditTime: 2021-10-27 16:59:14
+ * @LastEditTime: 2021-10-28 09:58:09
  */
 
 import Vue from 'vue';
@@ -18,10 +18,10 @@ Vue.mixin({
           label: 'English',
           lang: 'en'
         },
-        {
+        /* {
           label: 'Français',
           lang: 'fr'
-        },
+        }, */
         {
           label: '简体中文',
           lang: 'zh'

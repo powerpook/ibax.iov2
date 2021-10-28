@@ -518,3 +518,26 @@ a.nav-active-link {
     }
   }
 }
+.cookie {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 16px 0;
+  background-color: #323232;
+  color: #bebebe;
+  h4 {
+    color: #fff;
+    font-size: 20px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  .btn-lime {
+    background-color: #f3ac34;
+    padding: 15px 30px;
+  }
+  .cookie-agree {
+    margin-top: 20px;
+  }
+}
